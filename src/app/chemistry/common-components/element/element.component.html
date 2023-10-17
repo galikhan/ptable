@@ -1,0 +1,22 @@
+<div *ngFor="let y of yaxis" class="row">
+    <ng-container *ngFor="let x of xaxis">
+      <div class="column">
+
+        <ng-container *ngIf="elements.get(y) && elements.get(y)?.get(x)">
+          <div [ngStyle]="{'background': '#' + elements.get(y)?.get(x)?.cpkHex }">
+  
+            <div class="cell">
+              <div class="id">{{ elements.get(y)?.get(x)?.number }}</div>
+              {{ elements.get(y)?.get(x)?.symbol }}
+  
+              <div class="name">{{ elements.get(y)?.get(x)?.name }}</div>
+              <div class="atomic_mass">{{ elements.get(y)?.get(x)?.atomic_mass }}</div>
+            </div>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="!(elements.get(y) && elements.get(y)?.get(x))">
+          <div class="empty-cell"></div>
+        </ng-container>
+      </div>
+    </ng-container>
+  </div>

@@ -1,0 +1,34 @@
+.cell {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #ddd;
+    /* margin: 1px; */
+}
+
+.empty-cell {
+    height: 40px;
+    width: 40px;
+    /* margin: 1px; */
+}
+
+.column {
+    width: 41px;
+    float: left;
+}
+
+.row {
+    width: 100px;
+    height: 50px;
+}
+
+.cell .id {
+    font-size: 8px;
+    font-weight: bold;
+}
+.cell .name {
+    font-size: 6px;
+}
+
+.cell .atomic_mass {
+    font-size: 6px;
+}
