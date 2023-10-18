@@ -1,22 +1,49 @@
 <div *ngFor="let y of yaxis" class="row">
     <ng-container *ngFor="let x of xaxis">
-      <div class="column">
-
         <ng-container *ngIf="elements.get(y) && elements.get(y)?.get(x)">
-          <div [ngStyle]="{'background': '#' + elements.get(y)?.get(x)?.cpkHex }">
-  
-            <div class="cell">
-              <div class="id">{{ elements.get(y)?.get(x)?.number }}</div>
-              {{ elements.get(y)?.get(x)?.symbol }}
-  
-              <div class="name">{{ elements.get(y)?.get(x)?.name }}</div>
-              <div class="atomic_mass">{{ elements.get(y)?.get(x)?.atomic_mass }}</div>
+            <div class="column">
+
+                <div>
+                <!-- <div [ngStyle]="{'background': '#' + elements.get(y)?.get(x)?.cpkHex }"> -->
+                    <div class="cell" [ngClass]="
+                {'solid': (isSolid(elements.get(y)?.get(x)) && stateC), 
+                'liquid': (isLiquid(elements.get(y)?.get(x)) && stateHg),
+                'gas': (isGas(elements.get(y)?.get(x)) && stateH),
+                'unknown': (isUnknown(elements.get(y)?.get(x)) && stateRf),
+
+                'metal': (isMetal(elements.get(y)?.get(x)) && showMetals),
+                'alkali_metal': (isAlkaliMetal(elements.get(y)?.get(x)) && showAlkaliMetals),
+                'alkaline_earth_metal': (isAlkalineEarthMetal(elements.get(y)?.get(x)) && showAlkalineEarthMetal), 
+                'lanthanide': (isLanthanoid(elements.get(y)?.get(x)) && showLanthanoids),
+                'actinide': (isActinoid(elements.get(y)?.get(x)) && showActinoids), 
+                'transition_metal': (isTransitionMetal(elements.get(y)?.get(x)) && showTransitionMetals), 
+                'post-transition_metal': (isPostTransitionMetal(elements.get(y)?.get(x)) && showPostTransitionMetals), 
+                'metalloid': (isMetalloid(elements.get(y)?.get(x)) && showMetalloids), 
+                'non-metal': (isNonmetal(elements.get(y)?.get(x)) && showNonmetals), 
+                'reactive_non-metal': (isReactiveNonmetal(elements.get(y)?.get(x)) && showReactiveNonmetals), 
+                'noble_gas': (isNobleGas(elements.get(y)?.get(x)) && showNobleGas), 
+                }">
+                        <div class="id">{{ elements.get(y)?.get(x)?.number }}</div>
+                        {{ elements.get(y)?.get(x)?.symbol }}
+
+                        <div class="name">{{ elements.get(y)?.get(x)?.name }}</div>
+                        <div class="atomic_mass">{{ elements.get(y)?.get(x)?.atomic_mass }}</div>
+
+                        <!-- <div class="atomic_mass">g - {{ elements.get(y)?.get(x)?.group }}</div> -->
+                        <!-- <div class="atomic_mass">ct - {{ elements.get(y)?.get(x)?.category }}</div> -->
+                        <!-- <div class="atomic_mass">ap - {{ elements.get(y)?.get(x)?.appearance }}</div> -->
+                        <!-- <div class="atomic_mass">pd - {{ elements.get(y)?.get(x)?.period }}</div> -->
+                    </div>
+                </div>
+
             </div>
-          </div>
         </ng-container>
-        <ng-container *ngIf="!(elements.get(y) && elements.get(y)?.get(x))">
-          <div class="empty-cell"></div>
+        <ng-container *ngIf="hasEmptyCell">
+            <ng-container *ngIf="!(elements.get(y) && elements.get(y)?.get(x))">
+                <div class="column">
+                    <div class="empty-cell"></div>
+                </div>
+            </ng-container>
         </ng-container>
-      </div>
     </ng-container>
-  </div>
+</div>

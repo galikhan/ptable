@@ -1,7 +1,10 @@
 .cell {
-    height: 40px;
-    width: 40px;
-    border: 1px solid #ddd;
+    height: 38px;
+    width: 39px;
+    background-color: rgb(0, 0, 0);
+    padding: 0.5px;
+    /* color: #b5b5b5; */
+    /* border: 1px solid #ddd; */
     /* margin: 1px; */
 }
 
@@ -17,12 +20,11 @@
 }
 
 .row {
-    width: 100px;
-    height: 50px;
+    height: 40px;
 }
 
 .cell .id {
-    font-size: 8px;
+    font-size: 6px;
     font-weight: bold;
 }
 .cell .name {
@@ -31,4 +33,88 @@
 
 .cell .atomic_mass {
     font-size: 6px;
+}
+
+.body-elements .row {
+    width: 900px;
+}
+
+.righttop .row {
+    width: 270px;
+}
+
+.st-c {
+    color: white;
+    background-color: #563434;
+}
+
+.st-hg {
+  color: white;
+  background-color: #385c74;
+}
+
+.solid {
+    background-color: #ddd !important;
+    color: black !important;
+}
+
+.liquid {
+    background-color: #8f40d4 !important;
+    color: white !important;
+}
+.gas {
+    background-color: #f44 !important;
+    color: black !important;
+}
+.unknown {
+    background-color: #777 !important;
+    color: black !important;
+}
+
+
+
+.metals {
+    background-color: #8f40d4;
+    color: white;
+}
+
+.alkali_metal {
+    background-color: #6c3b01;
+    color: #b5b5b5;
+}
+.alkaline_earth_metal {
+    background-color: #846011;
+    color: #b5b5b5;
+}
+.lanthanide {
+    background-color: #402c17;
+    color: #b5b5b5;
+}
+.actinide {
+    background-color: #732e4c;
+    color: #b5b5b5;
+}
+
+.transition_metal {
+    background-color: #711019;
+    color: #ddd;
+}
+.post-transition_metal {
+    background-color: #003666;
+    color:#ddd;
+}
+.metalloid {
+    background-color: #015146;
+    color:#ddd;
+}
+.non-metal {
+    background-color: black;
+
+}
+.reactive_non-metal {
+    background-color:#3e6418;
+}
+
+.noble_gas {
+    background-color:#3a2151;
 }

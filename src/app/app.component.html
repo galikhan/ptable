@@ -1,486 +1,107 @@
-<style>
-  :host {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
-    color: #333;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 8px 0;
-  }
-
-  p {
-    margin: 0;
-  }
-
-  .spacer {
-    flex: 1;
-  }
-
-  .toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    background-color: #1976d2;
-    color: white;
-    font-weight: 600;
-  }
-
-  .toolbar img {
-    margin: 0 16px;
-  }
-
-  .toolbar #twitter-logo {
-    height: 40px;
-    margin: 0 8px;
-  }
-
-  .toolbar #youtube-logo {
-    height: 40px;
-    margin: 0 16px;
-  }
-
-  .toolbar #twitter-logo:hover,
-  .toolbar #youtube-logo:hover {
-    opacity: 0.8;
-  }
-
-  .content {
-    display: flex;
-    margin: 82px auto 32px;
-    padding: 0 16px;
-    max-width: 960px;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  svg.material-icons {
-    height: 24px;
-    width: auto;
-  }
-
-  svg.material-icons:not(:last-child) {
-    margin-right: 8px;
-  }
-
-  .card svg.material-icons path {
-    fill: #888;
-  }
-
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 16px;
-  }
-
-  .card {
-    all: unset;
-    border-radius: 4px;
-    border: 1px solid #eee;
-    background-color: #fafafa;
-    height: 40px;
-    width: 200px;
-    margin: 0 8px 16px;
-    padding: 16px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.2s ease-in-out;
-    line-height: 24px;
-  }
-
-  .card-container .card:not(:last-child) {
-    margin-right: 0;
-  }
-
-  .card.card-small {
-    height: 16px;
-    width: 168px;
-  }
-
-  .card-container .card:not(.highlight-card) {
-    cursor: pointer;
-  }
-
-  .card-container .card:not(.highlight-card):hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-  }
-
-  .card-container .card:not(.highlight-card):hover .material-icons path {
-    fill: rgb(105, 103, 103);
-  }
-
-  .card.highlight-card {
-    background-color: #1976d2;
-    color: white;
-    font-weight: 600;
-    border: none;
-    width: auto;
-    min-width: 30%;
-    position: relative;
-  }
-
-  .card.card.highlight-card span {
-    margin-left: 60px;
-  }
-
-  svg#rocket {
-    width: 80px;
-    position: absolute;
-    left: -10px;
-    top: -24px;
-  }
-
-  svg#rocket-smoke {
-    height: calc(100vh - 95px);
-    position: absolute;
-    top: 10px;
-    right: 180px;
-    z-index: -10;
-  }
-
-  a,
-  a:visited,
-  a:hover {
-    color: #1976d2;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #125699;
-  }
-
-  .terminal {
-    position: relative;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 6px;
-    padding-top: 45px;
-    margin-top: 8px;
-    overflow: hidden;
-    background-color: rgb(15, 15, 16);
-  }
-
-  .terminal::before {
-    content: "\2022 \2022 \2022";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 4px;
-    background: rgb(58, 58, 58);
-    color: #c2c3c4;
-    width: 100%;
-    font-size: 2rem;
-    line-height: 0;
-    padding: 14px 0;
-    text-indent: 4px;
-  }
-
-  .terminal pre {
-    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-    color: white;
-    padding: 0 1rem 1rem;
-    margin: 0;
-  }
-
-  .circle-link {
-    height: 40px;
-    width: 40px;
-    border-radius: 40px;
-    margin: 8px;
-    background-color: white;
-    border: 1px solid #eeeeee;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: 1s ease-out;
-  }
-
-  .circle-link:hover {
-    transform: translateY(-0.25rem);
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-  }
-
-  footer {
-    margin-top: 8px;
-    display: flex;
-    align-items: center;
-    line-height: 20px;
-  }
-
-  footer a {
-    display: flex;
-    align-items: center;
-  }
-
-  .github-star-badge {
-    color: #24292e;
-    display: flex;
-    align-items: center;
-    font-size: 12px;
-    padding: 3px 10px;
-    border: 1px solid rgba(27, 31, 35, .2);
-    border-radius: 3px;
-    background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
-    margin-left: 4px;
-    font-weight: 600;
-  }
-
-  .github-star-badge:hover {
-    background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
-    border-color: rgba(27, 31, 35, .35);
-    background-position: -.5em;
-  }
-
-  .github-star-badge .material-icons {
-    height: 16px;
-    width: 16px;
-    margin-right: 4px;
-  }
-
-  svg#clouds {
-    position: fixed;
-    bottom: -160px;
-    left: -230px;
-    z-index: -10;
-    width: 1920px;
-  }
-
-  /* Responsive Styles */
-  @media screen and (max-width: 767px) {
-
-    .card-container>*:not(.circle-link),
-    .terminal {
-      width: 100%;
-    }
-
-    .card:not(.highlight-card) {
-      height: 16px;
-      margin: 8px 0;
-    }
-
-    .card.highlight-card span {
-      margin-left: 72px;
-    }
-
-    svg#rocket-smoke {
-      right: 120px;
-      transform: rotate(-5deg);
-    }
-  }
-
-  @media screen and (max-width: 575px) {
-    svg#rocket-smoke {
-      display: none;
-      visibility: hidden;
-    }
-  }
-
-  .state-row {
-    width: 130px;
-    height: 20px;
-  }
-
-  .state-row .symbol {
-    border: 1px solid black;
-    height: 20px;
-    width: 20px;
-    display: inline-block;
-  }
-
-  .state-row .name {
-    display: inline-block;
-    width: 100px;
-
-  }
-
-  .chemical-table {
-    width: 900px;
-    height: 300px;
-  }
-
-  .state-table {
-    /* display: inline-block; */
-    float: left;
-    height: 150px;
-  }
-
-  .lefttop {
-    width: 90px;
-    height: 150px;
-    float: left;
-  }
-
-  .types {
-    height: 150px;
-    width: 271px;
-    float: left;
-  }
-
-  .righttop {
-    width: 260px;
-    height: 150px;
-    float: left;
-  }
-
-  .body-elements {
-    width: 900px;
-    height: 150px;
-  }
-
-  .body-elements .row {
-    width: 900px;
-  }
-
-  .righttop .row {
-    width: 270px;
-  }
-
-  .vertical-text {
-    writing-mode: vertical-rl;
-  }
-
-  .types-table {
-    font-size: 10px;
-  }
-
-  .types-table td {
-    border: 1px solid #ddd;
-  }
-
-  .types-table tr {
-    /* height: 130px; */
-  }
-</style>
-
-<h1>hello</h1>
-
 <div class="chemical-table">
 
-  <div class="lefttop">
+  <div class="header-elements">
+    <div class="lefttop">
+      <app-element [xaxis]="lefttop_xaxis" [yaxis]="lefttop_yaxis" [elements]="leftTopArray"></app-element>
+    </div>
 
-  <app-element [xaxis]="lefttop_xaxis" [yaxis]="lefttop_yaxis" [elements]="leftTopArray"></app-element>
+    <div class="state-table">
+      <div class="state-row" [ngClass]="{'st-c': stateC, 'st-hg': stateHg}" (mouseover)="updateState('C')"
+        (mouseout)="removeState()">
+        <div class="symbol">C</div>
+        <div class="name">Твердое тело</div>
+      </div>
 
-    <!-- <div *ngFor="let y of lefttop_yaxis" class="row">
-      <ng-container *ngFor="let x of lefttop_xaxis">
-        <div class="column">
-          <ng-container *ngIf="leftTopArray.get(y) && leftTopArray.get(y)?.get(x)">
-            <div [ngStyle]="{'background': '#' + leftTopArray.get(y)?.get(x)?.cpkHex }">
+      <div class="state-row" [ngClass]="{'st-c': stateC, 'st-hg': stateHg}" (mouseover)="updateState('Hg')"
+        (mouseout)="removeState()">
+        <div class="symbol">Hg</div>
+        <div class="name">Жидкость </div>
+      </div>
+      <div class="state-row" (mouseover)="updateState('H')" (mouseout)="removeState()">
+        <div class="symbol">H</div>
+        <div class="name">Газ </div>
+      </div>
 
-              <div class="cell">
-                <div class="id">{{ leftTopArray.get(y)?.get(x)?.number }}</div>
-                {{ leftTopArray.get(y)?.get(x)?.symbol }}
+      <div class="state-row" (mouseover)="updateState('Rf')" (mouseout)="removeState()">
+        <div class="symbol">Rf</div>
+        <div class="name">Незвестный </div>
+      </div>
+    </div>
 
-                <div class="name">{{ leftTopArray.get(y)?.get(x)?.name }}</div>
-                <div class="atomic_mass">{{ leftTopArray.get(y)?.get(x)?.atomic_mass }}</div>
-              </div>
+    <div (mouseout)="removeType()">
+
+      <div class="types types-grid">
+        <div class="metal">Металлы</div>
+
+        <div class="alkali_metal vertical-text" (mouseover)="highlightType('alkali metal')">
+          Щелочные <br>металлы</div>
+        <div class="alkaline_earth_metal vertical-text" (mouseover)="highlightType('alkaline earth metal')">Щёлочноземельные<br> металлы</div>
+        <div class="lanthanide" (mouseover)="highlightType('lanthanide')">Лантаноиды</div>
+        <div class="actinide" (mouseover)="highlightType('actinide')">Актиноиды</div>
+        <div class="transition_metal vertical-text" (mouseover)="highlightType('transition metal')">Переходные<br>
+          металлы</div>
+        <div class="post_transition_metal vertical-text" (mouseover)="highlightType('post-transition metal')">
+          Постпереходные<br> металлы</div>
+
+        <div class="metalloid vertical-text"  (mouseover)="highlightType('metalloid')">Полуметаллы</div>
+        <div class="non_metal">Неметаллы</div>
+
+        <div class="reactive_non_metal vertical-text" (mouseover)="highlightType('reactive non-metal')">Реактивные
+          <br>неметаллы</div>
+        <div class="noble_gas vertical-text" (mouseover)="highlightType('noble gas')">Благородные <br>газы</div>
+      </div>
+    </div>
+      <!-- 
+      <table class="types-table">
+        <tr>
+          <td colspan="5" (mouseover)="highlightType('metals')"  (mouseout)="removeType()">
+            <div>Металлы</div>
+          </td>
+          <td rowspan="3" (mouseover)="highlightType('metalloid')"  (mouseout)="removeType()" ><span class="vertical-text">Полуметаллы</span></td>
+          <td colspan="2" (mouseover)="highlightType('non-metal')"  (mouseout)="removeType()">Неметаллы0</td>
+        </tr>
+        <tr>
+          <td rowspan="2">
+            <div class="type-item-class" (mouseover)="highlightType('alkali metal')"  (mouseout)="removeType()" >
+              <span class="vertical-text">Щелочные <br>металлы</span>
             </div>
-          </ng-container>
-        </div>
-      </ng-container>
-    </div> -->
-  </div>
+          </td>
+          <td rowspan="2" (mouseover)="highlightType('alkaline earth metal')"  (mouseout)="removeType()" ><span class="vertical-text">Щёлочноземельные<br> металлы</span></td>
+          <td (mouseover)="highlightType('lanthanide')"  (mouseout)="removeType()"><span>Лантаноиды</span></td>
+          <td rowspan="2" (mouseover)="highlightType('transition metal')"  (mouseout)="removeType()"><span class="vertical-text">Переходные<br> металлы</span></td>
+          <td rowspan="2" (mouseover)="highlightType('post-transition metal')"  (mouseout)="removeType()" ><span class="vertical-text">Постпереходные<br> металлы</span></td>
+          <td rowspan="2" (mouseover)="highlightType('reactive non-metal')"  (mouseout)="removeType()" ><span class="vertical-text">Реактивные неметаллы</span></td>
+          <td rowspan="2" (mouseover)="highlightType('noble gas')"  (mouseout)="removeType()" ><span class="vertical-text">Благородные <br>газы</span></td>
+        </tr>
+        <tr>
+          <td (mouseover)="highlightType('actinide')"  (mouseout)="removeType()"><span>Актиноиды</span></td>
+        </tr>
 
-  <div class="state-table">
-    <div class="state-row">
-      <div class="symbol">C</div>
-      <div class="name">Твердое тело</div>
-    </div>
+      </table> -->
+    <!-- </div> -->
 
-    <div class="state-row">
-      <div class="symbol">Hg</div>
-      <div class="name">Жидкость </div>
-    </div>
-    <div class="state-row">
-      <div class="symbol">H</div>
-      <div class="name">Газ </div>
-    </div>
-
-    <div class="state-row">
-      <div class="symbol">Rf</div>
-      <div class="name">Незвестный </div>
+    <div class="righttop">
+      <app-element [hasEmptyCell]="true" [xaxis]="righttop_xaxis" [yaxis]="righttop_yaxis" [elements]="rightTopArray">
+      </app-element>
     </div>
   </div>
-
-  <div class="types">
-
-    <table class="types-table">
-      <tr>
-        <td colspan="5">Металлы</td>
-        <td rowspan="3"><span class="vertical-text">Полуметаллы</span></td>
-        <td colspan="2">Неметаллы</td>
-      </tr>
-      <tr>
-        <td rowspan="2"><span class="vertical-text">Щелочные <br>металлы</span></td>
-        <td rowspan="2"><span class="vertical-text">Щёлочноземельные<br> металлы</span></td>
-        <td>Лантаноиды</td>
-        <td rowspan="2"><span class="vertical-text">Переходные<br> металлы</span></td>
-        <td rowspan="2"><span class="vertical-text">Постпереходные<br> металлы</span></td>
-        <td rowspan="2"><span class="vertical-text">Неметаллы</span></td>
-        <td rowspan="2"><span class="vertical-text">Благородные <br>газы</span></td>
-      </tr>
-      <tr>
-        <td>Актиноиды</td>
-      </tr>
-
-    </table>
-  </div>
-<!-- 
-  <div class="righttop">
-    <div *ngFor="let y of righttop_yaxis" class="row">
-      <ng-container *ngFor="let x of righttop_xaxis">
-        <div class="column">
-
-          <ng-container *ngIf="rightTopArray.get(y) && rightTopArray.get(y)?.get(x)">
-            <div [ngStyle]="{'background': '#' + rightTopArray.get(y)?.get(x)?.cpkHex }">
-    
-              <div class="cell">
-                <div class="id">{{ rightTopArray.get(y)?.get(x)?.number }}</div>
-                {{ rightTopArray.get(y)?.get(x)?.symbol }}
-    
-                <div class="name">{{ rightTopArray.get(y)?.get(x)?.name }}</div>
-                <div class="atomic_mass">{{ rightTopArray.get(y)?.get(x)?.atomic_mass }}</div>
-              </div>
-            </div>
-          </ng-container>
-          <ng-container *ngIf="!(rightTopArray.get(y) && rightTopArray.get(y)?.get(x))">
-            <div class="empty-cell"></div>
-          </ng-container>
-        </div>
-      </ng-container>
-    </div>
-  </div> -->
 
   <div style="clear: both;"></div>
 
   <div class="body-elements">
-    <div *ngFor="let y of body_yaxis" class="row">
-      <ng-container *ngFor="let x of body_xaxis">
-        <div class="column">
-          <ng-container *ngIf="bodyelements[y] && bodyelements[y][x]">
-            <div class="cell">
-              {{bodyelements[y][x].symbol}}
-            </div>
-          </ng-container>
-        </div>
-      </ng-container>
+    <app-element [xaxis]="body_xaxis" [yaxis]="body_yaxis" [elements]="bodyArray"></app-element>
+  </div>
+
+  <div class="footer-elements">
+    <div class="footer-head">
+      <div class="dummy-cell cell"></div>
+      <div class="footer-text">For elements with no stable isotopes, the mass number of the isotope with the longest
+        half-life is in parentheses.</div>
+    </div>
+
+    <div class="footer-elements-body">
+      <app-element [xaxis]="footer_xaxis" [yaxis]="footer_yaxis" [elements]="footerArray"></app-element>
     </div>
   </div>
+
 </div>

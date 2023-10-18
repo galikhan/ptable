@@ -1,0 +1,218 @@
+.state-row {
+    height: 20px;
+}
+
+.state-row .symbol {
+    border: 1px solid black;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+}
+
+.state-row .name {
+    display: inline-block;
+    width: 80;
+}
+
+.chemical-table {
+    height: 400px;
+    width: 760px;
+    font-size: 13px;
+    margin:auto;
+    background-color: #051c30;
+    color: #c9c9c9;
+    padding: 21px;
+}
+
+.state-table {
+    /* display: inline-block; */
+    float: left;
+    font-size: 10px;
+}
+
+.lefttop {
+    width: 90px;
+    float: left;
+}
+
+.righttop {
+    width: 260px;
+    float: left;
+}
+
+.body-elements {
+    width: 900px;
+    height: 150px;
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+}
+
+.state-row {
+    /* width: 130px; */
+    height: 20px;
+}
+
+.state-row .symbol {
+    border: 1px solid black;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+}
+
+.state-row .name {
+    display: inline-block;
+    /* width: 100px; */
+}
+
+
+.header-elements {
+    height: 120px;
+}
+
+.state-table {
+    float: left;
+}
+
+.lefttop {
+    width: 90px;
+    float: left;
+}
+
+.righttop {
+    width: 260px;
+    float: left;
+}
+
+.body-elements {
+    width: 900px;
+    height: 160px;
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+}
+
+.footer-elements {
+    width: 740px;
+    height: 100px;
+}
+.footer-elements-body,
+.footer-head {
+    margin-left: 82.5px;
+}
+.footer-head {
+    height: 40px;
+}
+.dummy-cell {
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    float: left;
+}
+.footer-text {
+    font-size: 12px;
+    /* float: left; */
+}
+
+.type-item-class {
+    background-color: #ddd;
+}
+
+.item1 {
+    grid-area: header;
+}
+.item2 {
+    grid-area: menu;
+}
+.item3 {
+    grid-area: main;
+}
+.item4 {
+    grid-area: right;
+}
+.item5 {
+    grid-area: footer;
+}
+
+.types {
+    float: left;
+    width: 303px;
+    font-size: 10px;
+    margin-right: 11.5px;
+    margin-left: 9px;
+}
+
+.types-grid {
+    display: grid;
+    grid-template-areas:
+        "metal metal metal metal metal metalloid non_metal non_metal"
+        "alkali_metal alkaline_earth_metal lanthanide transition_metal post_transition_metal metalloid reactive_nonmetal noble_gas"
+        "alkali_metal alkaline_earth_metal actinide transition_metal post_transition_metal metalloid reactive_nonmetal noble_gas";
+    /* gap: 1.5px; */
+    /* background-color: #2196f3; */
+    /* padding: 5px; */
+    font-size: 10px;
+    color: #ddd;
+    border: 0.5px solid #ddd
+}
+
+.types-grid > div {
+    text-align: center;
+    cursor:pointer;
+    border: 1px solid #ddd;
+    padding: 2px;
+}
+.types-grid > div:hover {
+    padding: 0px;
+    border: 3px solid #5fa5e3;
+}
+.metal {
+    grid-area: metal;
+    background-color: black;
+    color: #ddd;
+}
+.metalloid {
+    grid-area: metalloid;
+    background-color: #015146;
+}
+.non_metal {
+    grid-area: non_metal;
+    background-color: black;
+}
+
+.alkali_metal {
+    grid-area: alkali_metal;
+    background-color: #6c3b01;
+}
+
+.alkaline_earth_metal {
+    grid-area: alkaline_earth_metal;
+    background-color: #846011;
+}
+.lanthanide {
+    grid-area: lanthanide;
+    background-color: #402c17;
+}
+.actinide {
+    grid-area: actinide;
+    background-color: #732e4c;
+}
+.transition_metal {
+    grid-area: transition_metal;
+    background-color: #711019;
+}
+.post_transition_metal {
+    grid-area: post_transition_metal;
+    background-color: #003666;
+}
+.reactive_non_metal {
+    grid-area: reactive_nonmetal;
+    background-color:#3e6418;
+}
+.noble_gas {
+    grid-area: noble_gas;
+    background-color:#3a2151;
+}
+
