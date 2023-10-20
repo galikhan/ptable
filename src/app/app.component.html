@@ -31,7 +31,7 @@
     <div (mouseout)="removeType()">
 
       <div class="types types-grid">
-        <div class="metal">Металлы</div>
+        <div class="metal" (mouseover)="highlightType('metal')">Металлы</div>
 
         <div class="alkali_metal vertical-text" (mouseover)="highlightType('alkali metal')">
           Щелочные <br>металлы</div>
@@ -44,7 +44,7 @@
           Постпереходные<br> металлы</div>
 
         <div class="metalloid vertical-text"  (mouseover)="highlightType('metalloid')">Полуметаллы</div>
-        <div class="non_metal">Неметаллы</div>
+        <div class="non_metal" (mouseover)="highlightType('none')">Неметаллы</div>
 
         <div class="reactive_non_metal vertical-text" (mouseover)="highlightType('reactive non-metal')">Реактивные
           <br>неметаллы</div>

@@ -4,9 +4,9 @@
             <div class="column">
 
                 <div>
-                <!-- <div [ngStyle]="{'background': '#' + elements.get(y)?.get(x)?.cpkHex }"> -->
                     <div class="cell" [ngClass]="
-                {'solid': (isSolid(elements.get(y)?.get(x)) && stateC), 
+                {
+                'solid': (isSolid(elements.get(y)?.get(x)) && stateC), 
                 'liquid': (isLiquid(elements.get(y)?.get(x)) && stateHg),
                 'gas': (isGas(elements.get(y)?.get(x)) && stateH),
                 'unknown': (isUnknown(elements.get(y)?.get(x)) && stateRf),
@@ -22,17 +22,17 @@
                 'non-metal': (isNonmetal(elements.get(y)?.get(x)) && showNonmetals), 
                 'reactive_non-metal': (isReactiveNonmetal(elements.get(y)?.get(x)) && showReactiveNonmetals), 
                 'noble_gas': (isNobleGas(elements.get(y)?.get(x)) && showNobleGas), 
+                
+                'melted': findElementCurrentState(elements.get(y)?.get(x)),
+                'boiled': findElementCurrentState(elements.get(y)?.get(x)),
+                'solidated': findElementCurrentState(elements.get(y)?.get(x))        
+                
                 }">
                         <div class="id">{{ elements.get(y)?.get(x)?.number }}</div>
-                        {{ elements.get(y)?.get(x)?.symbol }}
+                        <div class="symbol-name">{{ elements.get(y)?.get(x)?.symbol }}</div>
 
                         <div class="name">{{ elements.get(y)?.get(x)?.name }}</div>
                         <div class="atomic_mass">{{ elements.get(y)?.get(x)?.atomic_mass }}</div>
-
-                        <!-- <div class="atomic_mass">g - {{ elements.get(y)?.get(x)?.group }}</div> -->
-                        <!-- <div class="atomic_mass">ct - {{ elements.get(y)?.get(x)?.category }}</div> -->
-                        <!-- <div class="atomic_mass">ap - {{ elements.get(y)?.get(x)?.appearance }}</div> -->
-                        <!-- <div class="atomic_mass">pd - {{ elements.get(y)?.get(x)?.period }}</div> -->
                     </div>
                 </div>
 

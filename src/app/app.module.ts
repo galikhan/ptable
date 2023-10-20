@@ -4,6 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CoreComponent } from './core/core.component';
 import { ElementComponent } from './chemistry/common-components/element/element.component';
+import { FormsModule } from '@angular/forms';
+import { MatSliderModule } from '@angular/material/slider';
+
 
 @NgModule({
   declarations: [
@@ -12,7 +15,9 @@ import { ElementComponent } from './chemistry/common-components/element/element.
     ElementComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MatSliderModule,
+    FormsModule
   ],
   exports: [
     ElementComponent

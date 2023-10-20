@@ -33,6 +33,7 @@ export class AppComponent implements OnInit {
   footerArray: Map<number, Map<number, ChemicalElement>> = new Map;
   stateC = false;
   stateHg = false;
+  value = 50;
 
   constructor(
     public highlightStateService: HighlightStateService,

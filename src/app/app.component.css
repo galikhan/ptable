@@ -22,6 +22,10 @@
     background-color: #051c30;
     color: #c9c9c9;
     padding: 21px;
+
+    line-height: 10px;
+    font-family: Roboto, sans-serif;
+    letter-spacing: 0em;
 }
 
 .state-table {

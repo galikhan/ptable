@@ -76,11 +76,22 @@ export class ElementComponent implements OnInit {
 // unknown, probably metalloid
 // unknown, predicted to be noble gas
 // unknown, but predicted to be an alkali metal
-        console.log('hightlightService', result);
-        
       
-      if (result === 'noble gas') {
-        this.disableAllTypes(); this.showNobleGas = true;
+      if (result === 'metal') {
+        this.disableAllTypes(); 
+        this.showAlkaliMetals = true;
+        this.showAlkalineEarthMetal = true;
+        this.showPostTransitionMetals = true;
+        this.showTransitionMetals = true;
+        this.showLanthanoids = true;
+        this.showActinoids = true;
+
+      } else if (result === 'non-metal') {
+
+        this.disableAllTypes(); 
+        this.showReactiveNonmetals = true;
+        this.showNobleGas = true;
+
       } else if (result === 'alkali metal') {
         this.disableAllTypes(); this.showAlkaliMetals = true;
       } else if (result === 'alkaline earth metal') {
@@ -180,5 +191,10 @@ export class ElementComponent implements OnInit {
     type?.category === 'polyatomic nonmetal' ||
     type?.category === 'diatomic nonmetal' ? true : false ;
     return ternary;
+  }
+
+  findElementCurrentState(type: any): boolean {
+    // const element = type?.
+    return true;
   }
 }
