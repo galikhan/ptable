@@ -6,12 +6,12 @@
                 <div>
                     <div class="cell" [ngClass]="
                 {
-                'solid': (isSolid(elements.get(y)?.get(x)) && stateC), 
-                'liquid': (isLiquid(elements.get(y)?.get(x)) && stateHg),
-                'gas': (isGas(elements.get(y)?.get(x)) && stateH),
+                'solid': (isSolidated(elements.get(y)?.get(x), currentTemperature) && stateC), 
+                'liquid': (isMelted(elements.get(y)?.get(x), currentTemperature) && stateHg),
+                'gas': (isBoiled(elements.get(y)?.get(x), currentTemperature) && stateH),
                 'unknown': (isUnknown(elements.get(y)?.get(x)) && stateRf),
 
-                'metal': (isMetal(elements.get(y)?.get(x)) && showMetals),
+                'metal': (isMetal(elements.get(y)?.get(x)?.category) && showMetals),
                 'alkali_metal': (isAlkaliMetal(elements.get(y)?.get(x)) && showAlkaliMetals),
                 'alkaline_earth_metal': (isAlkalineEarthMetal(elements.get(y)?.get(x)) && showAlkalineEarthMetal), 
                 'lanthanide': (isLanthanoid(elements.get(y)?.get(x)) && showLanthanoids),
@@ -22,12 +22,13 @@
                 'non-metal': (isNonmetal(elements.get(y)?.get(x)) && showNonmetals), 
                 'reactive_non-metal': (isReactiveNonmetal(elements.get(y)?.get(x)) && showReactiveNonmetals), 
                 'noble_gas': (isNobleGas(elements.get(y)?.get(x)) && showNobleGas), 
-                
-                'melted': findElementCurrentState(elements.get(y)?.get(x)),
-                'boiled': findElementCurrentState(elements.get(y)?.get(x)),
-                'solidated': findElementCurrentState(elements.get(y)?.get(x))        
-                
-                }">
+
+                'melted': isMelted(elements.get(y)?.get(x), currentTemperature),
+                'boiled': isBoiled(elements.get(y)?.get(x), currentTemperature),
+                'solidated': isSolidated(elements.get(y)?.get(x), currentTemperature) ,      
+
+            }">
+
                         <div class="id">{{ elements.get(y)?.get(x)?.number }}</div>
                         <div class="symbol-name">{{ elements.get(y)?.get(x)?.symbol }}</div>
 

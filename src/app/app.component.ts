@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as json from '../assets/PeriodicTableJSON.json'
 import { ChemicalElement } from './interface/chemical-element';
+import { HighlightByTemperatureService } from './service/highlight-by-temperature.service';
 import { HighlightStateService } from './service/highlight-state.service';
 import { HighlightTypeService } from './service/highlight-type.service';
 
@@ -11,7 +12,10 @@ import { HighlightTypeService } from './service/highlight-type.service';
 })
 export class AppComponent implements OnInit {
 
-
+  //in kelvin 
+  max = 5727;
+  min = -273;
+  temparature = 0;
 
   title = 'ptable';
   lefttop_yaxis = [1, 2, 3];
@@ -33,11 +37,12 @@ export class AppComponent implements OnInit {
   footerArray: Map<number, Map<number, ChemicalElement>> = new Map;
   stateC = false;
   stateHg = false;
-  value = 50;
 
   constructor(
     public highlightStateService: HighlightStateService,
-    public highlightTypeService: HighlightTypeService) {
+    public highlightTypeService: HighlightTypeService,
+    public byTemperatureService: HighlightByTemperatureService
+    ) {
 
   }
 
@@ -52,8 +57,6 @@ export class AppComponent implements OnInit {
     this.elements.forEach(items => {
       cts.add(items.category);
     });
-    console.log(cts);
-    
 
     const leftTopTemp = this.filterBySymbol(['H', 'Li', 'Be', 'Na', 'Mg']);
     this.leftTopArray = this.convertToMap(leftTopTemp);
@@ -86,7 +89,7 @@ export class AppComponent implements OnInit {
     this.footerArray = this.convertToMap(footerTemp);
 
 
-
+    this.temperatureUpdated(this.temparature);
   }
 
   filterBySymbol(symbols: string[]): ChemicalElement[] {
@@ -125,6 +128,11 @@ export class AppComponent implements OnInit {
   }
   removeType(): void {
       this.highlightTypeService.setNext('removeAllType');
+  }
+
+  temperatureUpdated(temperature: number): void {
+    const tempInKalvin = temperature + 273;
+    this.byTemperatureService.setNext(tempInKalvin);
   }
 
 }

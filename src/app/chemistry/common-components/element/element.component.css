@@ -116,9 +116,29 @@
 }
 
 .noble_gas {
-    background-color:#3a2151;
+    background-color:#9236e9;
 }
 
-.symbol {
 
+.melted{
+    color:#99f;
+}
+.boiled{
+    color: #f44;
+}
+.solidated{
+    color: #ddd;
+}
+
+.melted-temp-class{
+    color: #ddd;
+    background-color:#99f;
+}
+.boiled-temp-class{
+    color: #ddd;
+    background-color: #f44;
+}
+.solidated-temp-class{
+    color: rgb(6, 6, 6);
+    background-color: #ddd;
 }

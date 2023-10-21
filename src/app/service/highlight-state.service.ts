@@ -8,10 +8,10 @@ export class HighlightStateService {
 
 
   private tokenSubject: BehaviorSubject<string> = new BehaviorSubject<string>('');
-  public token: Observable<string> | undefined;
+  public stateObservable: Observable<string>;
 
   constructor() {
-    this.token = this.tokenSubject.asObservable();
+    this.stateObservable = this.tokenSubject.asObservable();
   }
 
   public setNext(next: string) {

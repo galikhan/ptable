@@ -15,13 +15,13 @@
 }
 
 .chemical-table {
-    height: 400px;
+    height: 450px;
     width: 760px;
     font-size: 13px;
-    margin:auto;
+    margin: auto;
     background-color: #051c30;
     color: #c9c9c9;
-    padding: 21px;
+    padding: 10px;
 
     line-height: 10px;
     font-family: Roboto, sans-serif;
@@ -69,7 +69,6 @@
     display: inline-block;
     /* width: 100px; */
 }
-
 
 .header-elements {
     height: 120px;
@@ -159,12 +158,12 @@
     /* padding: 5px; */
     font-size: 10px;
     color: #ddd;
-    border: 0.5px solid #ddd
+    border: 0.5px solid #ddd;
 }
 
 .types-grid > div {
     text-align: center;
-    cursor:pointer;
+    cursor: pointer;
     border: 1px solid #ddd;
     padding: 2px;
 }
@@ -213,10 +212,13 @@
 }
 .reactive_non_metal {
     grid-area: reactive_nonmetal;
-    background-color:#3e6418;
+    background-color: #3e6418;
 }
 .noble_gas {
     grid-area: noble_gas;
-    background-color:#3a2151;
+    background-color: #3a2151;
 }
 
+mat-slider {
+    width: 450px;
+}

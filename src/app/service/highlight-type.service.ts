@@ -7,7 +7,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export class HighlightTypeService {
 
   private typeSubject: BehaviorSubject<string> = new BehaviorSubject<string>('');
-  public type: Observable<string> | undefined;
+  public type: Observable<string>;
 
   constructor() {
     this.type = this.typeSubject.asObservable();

@@ -1,4 +1,11 @@
 <div class="chemical-table">
+  Температура(k): [-]
+  <mat-slider class="example-margin" [max]="max" [min]="min" [step]="7">
+    <input matSliderThumb [(ngModel)]="temparature"  (valueChange)="temperatureUpdated(temparature)" #slider>
+  </mat-slider> [+]&nbsp;
+  <span>{{temparature|number:'1.0-0'  }} C</span>&nbsp;
+  <span>{{temparature*9/5 + 32|number:'1.0-0'}} F</span>&nbsp;
+  <span>{{temparature + 273|number:'1.0-0'}} K</span>
 
   <div class="header-elements">
     <div class="lefttop">
@@ -35,7 +42,8 @@
 
         <div class="alkali_metal vertical-text" (mouseover)="highlightType('alkali metal')">
           Щелочные <br>металлы</div>
-        <div class="alkaline_earth_metal vertical-text" (mouseover)="highlightType('alkaline earth metal')">Щёлочноземельные<br> металлы</div>
+        <div class="alkaline_earth_metal vertical-text" (mouseover)="highlightType('alkaline earth metal')">
+          Щёлочноземельные<br> металлы</div>
         <div class="lanthanide" (mouseover)="highlightType('lanthanide')">Лантаноиды</div>
         <div class="actinide" (mouseover)="highlightType('actinide')">Актиноиды</div>
         <div class="transition_metal vertical-text" (mouseover)="highlightType('transition metal')">Переходные<br>
@@ -43,15 +51,16 @@
         <div class="post_transition_metal vertical-text" (mouseover)="highlightType('post-transition metal')">
           Постпереходные<br> металлы</div>
 
-        <div class="metalloid vertical-text"  (mouseover)="highlightType('metalloid')">Полуметаллы</div>
+        <div class="metalloid vertical-text" (mouseover)="highlightType('metalloid')">Полуметаллы</div>
         <div class="non_metal" (mouseover)="highlightType('none')">Неметаллы</div>
 
         <div class="reactive_non_metal vertical-text" (mouseover)="highlightType('reactive non-metal')">Реактивные
-          <br>неметаллы</div>
+          <br>неметаллы
+        </div>
         <div class="noble_gas vertical-text" (mouseover)="highlightType('noble gas')">Благородные <br>газы</div>
       </div>
     </div>
-      <!-- 
+    <!-- 
       <table class="types-table">
         <tr>
           <td colspan="5" (mouseover)="highlightType('metals')"  (mouseout)="removeType()">
