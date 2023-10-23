@@ -5,7 +5,8 @@
 
                 <div>
                     <div class="cell" [ngClass]="
-                {
+            {
+
                 'solid': (isSolidated(elements.get(y)?.get(x), currentTemperature) && stateC), 
                 'liquid': (isMelted(elements.get(y)?.get(x), currentTemperature) && stateHg),
                 'gas': (isBoiled(elements.get(y)?.get(x), currentTemperature) && stateH),

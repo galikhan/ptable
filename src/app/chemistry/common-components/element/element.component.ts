@@ -71,22 +71,6 @@ export class ElementComponent implements OnInit {
     });
 
     this.hightlightService.type.subscribe(result => {
-      // noble gas
-      // alkali metal
-      // alkaline earth metal
-      // metalloid
-      // post-transition metal
-      // transition metal
-      // lanthanide
-      // actinide
-
-      // polyatomic nonmetal
-      // diatomic nonmetal
-      // unknown, probably transition metal
-      // unknown, probably post-transition metal
-      // unknown, probably metalloid
-      // unknown, predicted to be noble gas
-      // unknown, but predicted to be an alkali metal
 
       if (result === 'metal') {
         this.disableAllTypes();
@@ -207,45 +191,46 @@ export class ElementComponent implements OnInit {
 
   isSolidated(element: ChemicalElement | undefined, temperature: number): boolean {
     if (element) {
-      if(!element.melt && element.phase === 'Solid') { return true; }
       if(temperature < element.melt) {
-        // this.showSolidated = true;
-        // setTimeout(() => {
-        //   this.showSolidated = false;
-        // }, 1500);
         return true;        
       }
+      if(!element.melt && element.phase === 'Solid') { return true; }
     }
     return false;
   }
 
   isMelted(element: ChemicalElement | undefined, temperature: number): boolean {
+
+    let result = false;
     if (element) {
-      let boilPoint = element.boil;
-      if(!element.melt && element.phase === 'Liquid') { return true; }
-      if(!element.boil) { boilPoint = element.melt+10000; }
+      if(!element.melt) {
+        return result;
+      }
+      if(!element.melt && element.phase === 'Liquid') { result = true; }
       if(temperature >= element.melt && temperature < element.boil) {
-        // this.showMelted = true;
-        // setTimeout(() => {
-        //   this.showMelted = false;
-        // }, 1500);
-        return true;        
+        result = true;
       }
     }
-    return false;
+    return result;
   }
 
   isBoiled(element: ChemicalElement | undefined, temperature: number): boolean {
+    let result = false;
     if (element) {
-      if(!element.boil && element.phase === 'Gas') { return true; }
+
+      if(!element.boil && element.phase === 'Gas') { result = true; }
       if(temperature >= element.boil) {
         // this.showBoiled = true;
         // setTimeout(() => {
         //   this.showBoiled = false;
         // }, 1500);
-        return true;        
+        result = true;        
       }
+      // if(element.name == 'Oganesson') {
+      //   console.log(element.name, result, temperature, element.boil);
+      // }
     }
-    return false;
+    
+    return result;
   }
 }

@@ -1,5 +1,5 @@
 <div class="chemical-table">
-  Температура(k): [-]
+  Температура: [-]
   <mat-slider class="example-margin" [max]="max" [min]="min" [step]="7">
     <input matSliderThumb [(ngModel)]="temparature"  (valueChange)="temperatureUpdated(temparature)" #slider>
   </mat-slider> [+]&nbsp;
@@ -60,35 +60,7 @@
         <div class="noble_gas vertical-text" (mouseover)="highlightType('noble gas')">Благородные <br>газы</div>
       </div>
     </div>
-    <!-- 
-      <table class="types-table">
-        <tr>
-          <td colspan="5" (mouseover)="highlightType('metals')"  (mouseout)="removeType()">
-            <div>Металлы</div>
-          </td>
-          <td rowspan="3" (mouseover)="highlightType('metalloid')"  (mouseout)="removeType()" ><span class="vertical-text">Полуметаллы</span></td>
-          <td colspan="2" (mouseover)="highlightType('non-metal')"  (mouseout)="removeType()">Неметаллы0</td>
-        </tr>
-        <tr>
-          <td rowspan="2">
-            <div class="type-item-class" (mouseover)="highlightType('alkali metal')"  (mouseout)="removeType()" >
-              <span class="vertical-text">Щелочные <br>металлы</span>
-            </div>
-          </td>
-          <td rowspan="2" (mouseover)="highlightType('alkaline earth metal')"  (mouseout)="removeType()" ><span class="vertical-text">Щёлочноземельные<br> металлы</span></td>
-          <td (mouseover)="highlightType('lanthanide')"  (mouseout)="removeType()"><span>Лантаноиды</span></td>
-          <td rowspan="2" (mouseover)="highlightType('transition metal')"  (mouseout)="removeType()"><span class="vertical-text">Переходные<br> металлы</span></td>
-          <td rowspan="2" (mouseover)="highlightType('post-transition metal')"  (mouseout)="removeType()" ><span class="vertical-text">Постпереходные<br> металлы</span></td>
-          <td rowspan="2" (mouseover)="highlightType('reactive non-metal')"  (mouseout)="removeType()" ><span class="vertical-text">Реактивные неметаллы</span></td>
-          <td rowspan="2" (mouseover)="highlightType('noble gas')"  (mouseout)="removeType()" ><span class="vertical-text">Благородные <br>газы</span></td>
-        </tr>
-        <tr>
-          <td (mouseover)="highlightType('actinide')"  (mouseout)="removeType()"><span>Актиноиды</span></td>
-        </tr>
-
-      </table> -->
-    <!-- </div> -->
-
+    
     <div class="righttop">
       <app-element [hasEmptyCell]="true" [xaxis]="righttop_xaxis" [yaxis]="righttop_yaxis" [elements]="rightTopArray">
       </app-element>

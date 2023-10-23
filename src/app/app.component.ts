@@ -42,20 +42,23 @@ export class AppComponent implements OnInit {
     public highlightStateService: HighlightStateService,
     public highlightTypeService: HighlightTypeService,
     public byTemperatureService: HighlightByTemperatureService
-    ) {
+  ) {
 
   }
 
   ngOnInit(): void {
 
-
-
     const importedJson = json;
     this.elements = importedJson.elements
 
     const cts: Set<string> = new Set();
-    this.elements.forEach(items => {
-      cts.add(items.category);
+    this.elements.forEach(item => {
+      cts.add(item.category);
+      if (item.phase == 'Solid') {
+        if (!item.melt || !item.boil) {
+          console.log(item.phase, item.name, item.melt, item.boil);
+        }
+      }
     });
 
     const leftTopTemp = this.filterBySymbol(['H', 'Li', 'Be', 'Na', 'Mg']);
@@ -124,10 +127,10 @@ export class AppComponent implements OnInit {
   }
 
   highlightType(type: string): void {
-      this.highlightTypeService.setNext(type);
+    this.highlightTypeService.setNext(type);
   }
   removeType(): void {
-      this.highlightTypeService.setNext('removeAllType');
+    this.highlightTypeService.setNext('removeAllType');
   }
 
   temperatureUpdated(temperature: number): void {
