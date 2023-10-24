@@ -50,16 +50,21 @@ export class AppComponent implements OnInit {
 
     const importedJson = json;
     this.elements = importedJson.elements
-
+    //.filter(i=> i.number > 99 && i.number <104);
+    // const unkns=[104]
     const cts: Set<string> = new Set();
+    const arr: any []= [];
     this.elements.forEach(item => {
       cts.add(item.category);
-      if (item.phase == 'Solid') {
-        if (!item.melt || !item.boil) {
-          console.log(item.phase, item.name, item.melt, item.boil);
-        }
-      }
+      // // if (item.number <= 104) {
+      //   if ((!item.melt || !item.boil) && item.phase != 'Unknown') {
+      //     console.log(item.phase, item.name, item.melt, item.boil);
+      //     arr.push(item);
+      //   }
+      // }
     });
+    console.log('cts.size', arr.length);
+    
 
     const leftTopTemp = this.filterBySymbol(['H', 'Li', 'Be', 'Na', 'Mg']);
     this.leftTopArray = this.convertToMap(leftTopTemp);
@@ -120,7 +125,9 @@ export class AppComponent implements OnInit {
   }
 
   updateState(state: string): void {
-    this.highlightStateService.setNext(state);
+    // setTimeout(() => {
+      this.highlightStateService.setNext(state);
+    // }, 400);
   }
   removeState(): void {
     this.highlightStateService.setNext('removeAllState');

@@ -13,24 +13,24 @@
     </div>
 
     <div class="state-table">
-      <div class="state-row" [ngClass]="{'st-c': stateC, 'st-hg': stateHg}" (mouseover)="updateState('C')"
+      <div class="state-row" (mouseover)="updateState('C')"
         (mouseout)="removeState()">
-        <div class="symbol">C</div>
+        <div class="solid symbol">C</div>
         <div class="name">Твердое тело</div>
       </div>
 
-      <div class="state-row" [ngClass]="{'st-c': stateC, 'st-hg': stateHg}" (mouseover)="updateState('Hg')"
+      <div class="state-row " (mouseover)="updateState('Hg')"
         (mouseout)="removeState()">
-        <div class="symbol">Hg</div>
+        <div class="liquid symbol">Hg</div>
         <div class="name">Жидкость </div>
       </div>
       <div class="state-row" (mouseover)="updateState('H')" (mouseout)="removeState()">
-        <div class="symbol">H</div>
+        <div class="gas symbol">H</div>
         <div class="name">Газ </div>
       </div>
 
       <div class="state-row" (mouseover)="updateState('Rf')" (mouseout)="removeState()">
-        <div class="symbol">Rf</div>
+        <div class="unknown symbol">Rf</div>
         <div class="name">Незвестный </div>
       </div>
     </div>
@@ -52,7 +52,7 @@
           Постпереходные<br> металлы</div>
 
         <div class="metalloid vertical-text" (mouseover)="highlightType('metalloid')">Полуметаллы</div>
-        <div class="non_metal" (mouseover)="highlightType('none')">Неметаллы</div>
+        <div class="non_metal" (mouseover)="highlightType('non-metal')">Неметаллы</div>
 
         <div class="reactive_non_metal vertical-text" (mouseover)="highlightType('reactive non-metal')">Реактивные
           <br>неметаллы
@@ -60,7 +60,7 @@
         <div class="noble_gas vertical-text" (mouseover)="highlightType('noble gas')">Благородные <br>газы</div>
       </div>
     </div>
-    
+
     <div class="righttop">
       <app-element [hasEmptyCell]="true" [xaxis]="righttop_xaxis" [yaxis]="righttop_yaxis" [elements]="rightTopArray">
       </app-element>

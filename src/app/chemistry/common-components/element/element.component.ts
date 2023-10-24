@@ -66,7 +66,7 @@ export class ElementComponent implements OnInit {
 
     this.temperatureService.observable.subscribe(result => {
       console.log('currenttemp', result);
-      
+
       this.currentTemperature = result;
     });
 
@@ -170,7 +170,8 @@ export class ElementComponent implements OnInit {
   }
 
   isMetal(type: any): boolean { //console.log('ismelted');
-  return type?.category === 'metals' ? true : false }
+    return type?.category === 'metals' ? true : false
+  }
   isAlkaliMetal(type: any): boolean { return type?.category === 'alkali metal' ? true : false }
   isAlkalineEarthMetal(type: any): boolean { return type?.category === 'alkaline earth metal' ? true : false }
   isLanthanoid(type: any): boolean { return type?.category === 'lanthanide' ? true : false }
@@ -191,46 +192,33 @@ export class ElementComponent implements OnInit {
 
   isSolidated(element: ChemicalElement | undefined, temperature: number): boolean {
     if (element) {
-      if(temperature < element.melt) {
-        return true;        
-      }
-      if(!element.melt && element.phase === 'Solid') { return true; }
+      if (element.phase === 'Unknown') { return false; }
+      if (temperature < element.melt) { return true; }
+      if (!element.melt && element.phase === 'Solid') { return true; }
     }
     return false;
   }
 
   isMelted(element: ChemicalElement | undefined, temperature: number): boolean {
-
-    let result = false;
     if (element) {
-      if(!element.melt) {
-        return result;
-      }
-      if(!element.melt && element.phase === 'Liquid') { result = true; }
-      if(temperature >= element.melt && temperature < element.boil) {
-        result = true;
+      if (element.phase === 'Unknown') { return false; }
+      if (!element.melt) { return false; }
+      if (!element.melt && element.phase === 'Liquid') { return true; }
+      if (temperature >= element.melt && (!element.boil || (element.boil && temperature < element.boil))) {
+        return true;
       }
     }
-    return result;
+    return false;
   }
 
   isBoiled(element: ChemicalElement | undefined, temperature: number): boolean {
-    let result = false;
     if (element) {
-
-      if(!element.boil && element.phase === 'Gas') { result = true; }
-      if(temperature >= element.boil) {
-        // this.showBoiled = true;
-        // setTimeout(() => {
-        //   this.showBoiled = false;
-        // }, 1500);
-        result = true;        
+      if (element.phase === 'Unknown') { return false; }
+      if (!element.boil && element.phase === 'Gas') { return true; }
+      if (element.boil && temperature >= element.boil) {
+        return true;
       }
-      // if(element.name == 'Oganesson') {
-      //   console.log(element.name, result, temperature, element.boil);
-      // }
     }
-    
-    return result;
+    return false;
   }
 }

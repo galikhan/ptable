@@ -1,18 +1,50 @@
 .state-row {
     height: 20px;
+    cursor: pointer;
+    padding: 2px;
+
 }
 
-.state-row .symbol {
-    border: 1px solid black;
-    height: 20px;
-    width: 20px;
+.symbol {
+    text-align: center;
+    border: 2px solid #DDD;
+    /* height: 20px; */
+    width: 14px;
     display: inline-block;
+    padding: 3px;
 }
 
-.state-row .name {
-    display: inline-block;
-    width: 80;
+.symbol:hover{
+    border: 2px solid rgb(90, 200, 200);
 }
+
+.name {
+    display: inline-block;
+    width: 84;
+    padding-left:5px;
+}
+.state-table {
+    float: left;
+}
+
+.solid {
+    background-color: #ddd !important;
+    color: black !important;
+}
+
+.liquid {
+    background-color: #8f40d4 !important;
+    color: white !important;
+}
+.gas {
+    background-color: #f44 !important;
+    color: black !important;
+}
+.unknown {
+    background-color: #777 !important;
+    color: black !important;
+}
+
 
 .chemical-table {
     height: 450px;
@@ -26,12 +58,6 @@
     line-height: 10px;
     font-family: Roboto, sans-serif;
     letter-spacing: 0em;
-}
-
-.state-table {
-    /* display: inline-block; */
-    float: left;
-    font-size: 10px;
 }
 
 .lefttop {
@@ -53,33 +79,13 @@
     writing-mode: vertical-rl;
 }
 
-.state-row {
-    /* width: 130px; */
-    height: 20px;
-}
-
-.state-row .symbol {
-    border: 1px solid black;
-    height: 20px;
-    width: 20px;
-    display: inline-block;
-}
-
-.state-row .name {
-    display: inline-block;
-    /* width: 100px; */
-}
-
 .header-elements {
     height: 120px;
 }
 
-.state-table {
-    float: left;
-}
 
 .lefttop {
-    width: 90px;
+    width: 82px;
     float: left;
 }
 
@@ -141,10 +147,11 @@
 
 .types {
     float: left;
-    width: 303px;
+    width: 287.5px;
     font-size: 10px;
-    margin-right: 4.5px;
-    margin-left: 9px;
+    margin-right: 3px;
+    margin-left: 1.5px;
+
 }
 
 .types-grid {
@@ -165,11 +172,11 @@
     text-align: center;
     cursor: pointer;
     border: 1px solid #ddd;
-    padding: 2px;
+    padding: 1px;
 }
 .types-grid > div:hover {
     padding: 0px;
-    border: 3px solid #5fa5e3;
+    border: 2px solid #5fa5e3;
 }
 .metal {
     grid-area: metal;
