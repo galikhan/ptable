@@ -1,7 +1,7 @@
 <div *ngFor="let y of yaxis" class="row">
     <ng-container *ngFor="let x of xaxis">
         <ng-container *ngIf="elements.get(y) && elements.get(y)?.get(x)">
-            <div class="column">
+            <div class="column" (click)="showElement(elements.get(y)?.get(x))">
 
                 <div>
                     <div class="cell" [ngClass]="
@@ -34,7 +34,7 @@
                         <div class="symbol-name">{{ elements.get(y)?.get(x)?.symbol }}</div>
 
                         <div class="name">{{ elements.get(y)?.get(x)?.name }}</div>
-                        <div class="atomic_mass">{{ elements.get(y)?.get(x)?.atomic_mass }}</div>
+                        <div class="atomic_mass">{{ elements.get(y)?.get(x)?.atomic_mass | number:'1.0-3' }}</div>
                     </div>
                 </div>
 

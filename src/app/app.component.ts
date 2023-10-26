@@ -4,6 +4,7 @@ import { ChemicalElement } from './interface/chemical-element';
 import { HighlightByTemperatureService } from './service/highlight-by-temperature.service';
 import { HighlightStateService } from './service/highlight-state.service';
 import { HighlightTypeService } from './service/highlight-type.service';
+import { ShowElementService } from './service/show-element.service';
 
 @Component({
   selector: 'app-root',
@@ -41,7 +42,8 @@ export class AppComponent implements OnInit {
   constructor(
     public highlightStateService: HighlightStateService,
     public highlightTypeService: HighlightTypeService,
-    public byTemperatureService: HighlightByTemperatureService
+    public byTemperatureService: HighlightByTemperatureService,
+    public elementService: ShowElementService
   ) {
 
   }
@@ -50,6 +52,7 @@ export class AppComponent implements OnInit {
 
     const importedJson = json;
     this.elements = importedJson.elements
+    this.elementService.setNext(this.elements[0]);
     //.filter(i=> i.number > 99 && i.number <104);
     // const unkns=[104]
     const cts: Set<string> = new Set();

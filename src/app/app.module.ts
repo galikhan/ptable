@@ -7,6 +7,7 @@ import { ElementComponent } from './chemistry/common-components/element/element.
 import { FormsModule } from '@angular/forms';
 import { MatSliderModule } from '@angular/material/slider';
 import { LightswitchComponent } from './tests/lightswitch/lightswitch.component';
+import { ElementInfoComponent } from './chemistry/element-info/element-info.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { LightswitchComponent } from './tests/lightswitch/lightswitch.component'
     AppComponent,
     CoreComponent,
     ElementComponent,
-    LightswitchComponent
+    LightswitchComponent,
+    ElementInfoComponent
   ],
   imports: [
     BrowserModule,

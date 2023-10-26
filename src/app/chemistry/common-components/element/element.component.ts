@@ -3,6 +3,7 @@ import { ChemicalElement } from 'src/app/interface/chemical-element';
 import { HighlightByTemperatureService } from 'src/app/service/highlight-by-temperature.service';
 import { HighlightStateService } from 'src/app/service/highlight-state.service';
 import { HighlightTypeService } from 'src/app/service/highlight-type.service';
+import { ShowElementService } from 'src/app/service/show-element.service';
 
 @Component({
   selector: 'app-element',
@@ -41,6 +42,7 @@ export class ElementComponent implements OnInit {
     public stateService: HighlightStateService,
     public hightlightService: HighlightTypeService,
     public temperatureService: HighlightByTemperatureService,
+    public showElementService: ShowElementService
   ) {
 
   }
@@ -221,4 +223,9 @@ export class ElementComponent implements OnInit {
     }
     return false;
   }
-}
+
+  showElement(element: ChemicalElement | undefined) {
+    this.showElementService.setNext(element);
+  }
+
+ }

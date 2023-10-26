@@ -1,0 +1,38 @@
+{
+    "3": {},
+    "4": {
+        "atomic_properties": {
+            "E_K": "1s²2s²",
+            "A_P": "112 пм",
+            "ET": "1,57",
+            "I_E": "899 кДж/моль",
+            "T_D": "0, +2",
+            "isotop": "7Be, 9Be, 10Be"
+        },
+        "physical_properties": {
+            "image_1": "/assets/elements/4/phys-image-1.png",
+            "image_info_1": "Be мен оның қосылыстарыулы улы! (бериллиоз ауруы)",
+            "phase": "қатты",
+            "boil": 2469,
+            "melt": 1287,
+            "image_2": "/assets/elements/4/phys-image-2.png",
+            "image_info_2": "ГКТ Қаттылығы: 5,5(Моос шкаласымен)",
+            "description": "Ашық сұр түсті, қатты, жеңіл, сынғыш, морт металл. Созыл-ғыштығы жоғары. d=1,85 г/см3"
+        },
+        "chemical_properties": {
+            "description": "<p>2Be + O2 = 2BeO Be + F<sub>2 </sub>= BeF<sub>2</sub></p><p>2Be + 3H<sub>2</sub>O (t<sup>o</sup>)= BeO + Be(OH)<sub>2</sub> + 2H<sub>2</sub></p><p>Be + 2HCl<sub>(сұй)</sub> = BeCl<sub>2</sub> + H<sub>2</sub></p><p>3Be + 8HNO<sub>3(сұй)</sub> = 3Be(NO<sub>3</sub>)<sub>2</sub> + 2NO + 4H<sub>2</sub>O</p><p>Be + 2NaOH<sub>(конц)</sub> + 2H<sub>2</sub>O = Na<sub>2</sub>[Be(OH)<sub>4</sub>] + H<sub>2</sub></p><p>Be + BaO = BeO + Ba</p>"
+        },
+        "how-taken": {
+            "formula":"BeCl₂= Be + Cl₂ (электролиз) BeF₂ + Mg = Be + MgF₂ (тотықсыздандыру)",
+            "description": "Алғаш синтездеген: Ф.Велер, А.Бюсси. Атауы: Белур қаласынан (Үндістан)."
+        },
+        "how-spread": {
+            "space": "10⁹",
+            "sun": "10"
+        },
+        "how-used": {
+            
+        }
+
+    }
+}

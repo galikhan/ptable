@@ -1,0 +1,51 @@
+<div class="element-info">
+    <div class="element-info-grid">
+
+        <ng-container *ngIf="element">
+            <div class="symbol-properties">
+                <div>{{element.number}}</div>
+                <div class="symbol">{{element.symbol}}</div>
+                <div>{{element.name}}</div>
+                <div>{{element.atomic_mass}}</div>
+            </div>
+            <div class="atomic-properties">
+                <h3>Атомдық қасиеттер</h3>
+                <div><span class="bold">Э/К</span>&nbsp;{{addInfo.atomic_properties.E_K}}</div>
+                <div><span class="bold">A/Р</span>&nbsp;{{ addInfo.atomic_properties.A_P }} </div>
+                    <!-- <span class="bold">И/Р</span>&nbsp;112 пм -->
+                <div><span class="bold">ЭТ</span>&nbsp;{{ addInfo.atomic_properties.ET }}</div>
+                <div><span class="bold">И/Э</span>&nbsp;{{ addInfo.atomic_properties.I_E }}</div>
+                <div><span class="bold">Т/Д</span>&nbsp;{{ addInfo.atomic_properties.T_D }}</div>
+                <div><span class="bold">Изотоптары</span>&nbsp;{{ addInfo.atomic_properties.isotop }}</div>
+            </div>
+            <div class="physical-properties">
+                <div class="phys-title"><h3>Физикалық қасиеттері</h3></div>
+
+                <div class="state">Күйi :  &nbsp;{{ addInfo.physical_properties.phase }}</div>
+                <div class="melt">Еруі: {{ addInfo.physical_properties.melt }} C</div>
+                <div class="boil">Қайнауы: {{ addInfo.physical_properties.boil }} C</div>
+
+                <div  class="phys-image-1" ><img [src]="addInfo.physical_properties.image_1" ></div>
+                <div class="phys-image-info-1">{{ addInfo.physical_properties.image_info_1 }}</div>
+
+                <img class="phys-image-2" [src]="addInfo.physical_properties.image_2" >
+                <div class="phys-image-info-2">{{ addInfo.physical_properties.image_info_2 }}</div>
+                <div class="phys-description">{{ addInfo.physical_properties.description }}</div>
+
+            </div>
+            <div class="chemical-properties">
+                <h3>Химиялық қасиеттері</h3>
+            </div>
+            <div class="how-taken">
+                <h3>Алынуы</h3>
+            </div>
+            <div class="how-spread">
+                <h3>Таралуы (элемент күйінде)</h3>
+            </div>
+            <div class="how-used">
+                <h3>Қолданылуы</h3>
+            </div>
+        </ng-container>
+    </div>
+</div>
+

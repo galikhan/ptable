@@ -2,26 +2,25 @@
     height: 20px;
     cursor: pointer;
     padding: 2px;
-
 }
 
 .symbol {
     text-align: center;
-    border: 2px solid #DDD;
+    border: 2px solid #ddd;
     /* height: 20px; */
     width: 14px;
     display: inline-block;
     padding: 3px;
 }
 
-.symbol:hover{
+.symbol:hover {
     border: 2px solid rgb(90, 200, 200);
 }
 
 .name {
     display: inline-block;
-    width: 84;
-    padding-left:5px;
+    width: 82.5px;
+    padding-left: 5px;
 }
 .state-table {
     float: left;
@@ -45,13 +44,11 @@
     color: black !important;
 }
 
-
 .chemical-table {
-    height: 450px;
     width: 760px;
     font-size: 13px;
     margin: auto;
-    background-color: #051c30;
+    /* background-color: #13202b; */
     color: #c9c9c9;
     padding: 10px;
 
@@ -83,7 +80,6 @@
     height: 120px;
 }
 
-
 .lefttop {
     width: 82px;
     float: left;
@@ -105,11 +101,11 @@
 
 .footer-elements {
     width: 740px;
-    height: 100px;
+    /* height: 100px; */
 }
 .footer-elements-body,
 .footer-head {
-    margin-left: 82.5px;
+    margin-left: 84px;
 }
 .footer-head {
     height: 40px;
@@ -149,9 +145,8 @@
     float: left;
     width: 287.5px;
     font-size: 10px;
-    margin-right: 3px;
+    margin-right: 5px;
     margin-left: 1.5px;
-
 }
 
 .types-grid {
@@ -160,7 +155,7 @@
         "metal metal metal metal metal metalloid non_metal non_metal"
         "alkali_metal alkaline_earth_metal lanthanide transition_metal post_transition_metal metalloid reactive_nonmetal noble_gas"
         "alkali_metal alkaline_earth_metal actinide transition_metal post_transition_metal metalloid reactive_nonmetal noble_gas";
-    /* gap: 1.5px; */
+    gap: 1.5px;
     /* background-color: #2196f3; */
     /* padding: 5px; */
     font-size: 10px;
@@ -228,4 +223,8 @@
 
 mat-slider {
     width: 450px;
+}
+
+.temperature {
+        border-bottom: 1px solid white;
 }

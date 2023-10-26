@@ -17,6 +17,7 @@
 .column {
     width: 41px;
     float: left;
+    cursor: pointer;
 }
 
 .row {
