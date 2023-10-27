@@ -1,6 +1,10 @@
 <div class="element-info">
     <div class="element-info-grid">
-
+        <!-- <div class="home">
+            <mat-icon class="svg-icon" >home</mat-icon>
+            <mat-icon class="svg-icon" svgIcon="be_factory"></mat-icon>
+            <mat-icon color="warn" class="svg-icon" svgIcon="supercoil"></mat-icon>
+        </div> -->
         <ng-container *ngIf="element">
             <div class="symbol-properties">
                 <div>{{element.number}}</div>
@@ -9,43 +13,110 @@
                 <div>{{element.atomic_mass}}</div>
             </div>
             <div class="atomic-properties">
-                <h3>Атомдық қасиеттер</h3>
-                <div><span class="bold">Э/К</span>&nbsp;{{addInfo.atomic_properties.E_K}}</div>
-                <div><span class="bold">A/Р</span>&nbsp;{{ addInfo.atomic_properties.A_P }} </div>
-                    <!-- <span class="bold">И/Р</span>&nbsp;112 пм -->
-                <div><span class="bold">ЭТ</span>&nbsp;{{ addInfo.atomic_properties.ET }}</div>
-                <div><span class="bold">И/Э</span>&nbsp;{{ addInfo.atomic_properties.I_E }}</div>
-                <div><span class="bold">Т/Д</span>&nbsp;{{ addInfo.atomic_properties.T_D }}</div>
-                <div><span class="bold">Изотоптары</span>&nbsp;{{ addInfo.atomic_properties.isotop }}</div>
+                <ng-container *ngIf=""></ng-container>
+                <div class="title">Атомдық қасиеттер</div>
+
+                <ng-container *ngIf="addInfo && addInfo.atomic_properties">
+                    <div><span class="bold">Э/К</span>&nbsp;{{addInfo.atomic_properties.E_K}}</div>
+                    <div><span class="bold">A/Р</span>&nbsp;{{ addInfo.atomic_properties.A_P }} </div>
+                    <span class="bold">И/Р</span>&nbsp;{{ addInfo.atomic_properties.I_P }}
+                    <div><span class="bold">ЭТ</span>&nbsp;{{ addInfo.atomic_properties.ET }}</div>
+                    <div><span class="bold">И/Э</span>&nbsp;{{ addInfo.atomic_properties.I_E }}</div>
+                    <div><span class="bold">Т/Д</span>&nbsp;{{ addInfo.atomic_properties.T_D }}</div>
+                    <div><span class="bold">Изотоптары</span>&nbsp;{{ addInfo.atomic_properties.isotop }}</div>
+                </ng-container>
+
             </div>
             <div class="physical-properties">
-                <div class="phys-title"><h3>Физикалық қасиеттері</h3></div>
+                <div class="phys-title title">
+                    Физикалық қасиеттері
+                </div>
+                <ng-container *ngIf="addInfo && addInfo.physical_properties">
+                    <div class="state-temperature">
+                        <div>Күйi : &nbsp;{{ addInfo.physical_properties.phase }}</div>
+                        <div>Еруі: {{ addInfo.physical_properties.melt }} C</div>
+                        <div>Қайнауы: {{ addInfo.physical_properties.boil }} C</div>
+                    </div>
 
-                <div class="state">Күйi :  &nbsp;{{ addInfo.physical_properties.phase }}</div>
-                <div class="melt">Еруі: {{ addInfo.physical_properties.melt }} C</div>
-                <div class="boil">Қайнауы: {{ addInfo.physical_properties.boil }} C</div>
+                    <div class="phys-image-1">
+                        <mat-icon svgIcon="scull" class="svg-icon"></mat-icon>
+                    </div>
+                    <div class="phys-image-info-1">{{ addInfo.physical_properties.image_info_1 }}</div>
 
-                <div  class="phys-image-1" ><img [src]="addInfo.physical_properties.image_1" ></div>
-                <div class="phys-image-info-1">{{ addInfo.physical_properties.image_info_1 }}</div>
-
-                <img class="phys-image-2" [src]="addInfo.physical_properties.image_2" >
-                <div class="phys-image-info-2">{{ addInfo.physical_properties.image_info_2 }}</div>
-                <div class="phys-description">{{ addInfo.physical_properties.description }}</div>
+                    <img class="phys-image-2" [src]="addInfo.physical_properties.image_2">
+                    <div class="phys-image-info-2">{{ addInfo.physical_properties.image_info_2 }}</div>
+                    <div class="phys-description">{{ addInfo.physical_properties.description }}</div>
+                </ng-container>
 
             </div>
             <div class="chemical-properties">
-                <h3>Химиялық қасиеттері</h3>
+                <div class="chem-title title">
+                    Химиялық қасиеттері
+                </div>
+                <div *ngIf="addInfo && addInfo.chemical_properties" [innerHtml]="addInfo.chemical_properties.description">
+                </div>
             </div>
             <div class="how-taken">
-                <h3>Алынуы</h3>
+                <div class="how-taken-title title">
+                    Алынуы
+                </div>
+                <ng-container *ngIf="addInfo && addInfo.how_taken">
+                    <div class="formula">
+                        {{addInfo.how_taken.formula}}
+                    </div>
+                    <div class="description">
+                        {{addInfo.how_taken.description}}
+                    </div>
+                </ng-container>
             </div>
             <div class="how-spread">
-                <h3>Таралуы (элемент күйінде)</h3>
+                <div class="how-spread-title title">
+                    Таралуы (элемент күйінде)
+                </div>
+                <div class="how-spread-container" *ngIf="addInfo && addInfo.how_spread">
+                    <div class="how-spread-item">
+                        <div>
+                            <span class="bold">Ғарыш</span>
+                            {{addInfo.how_spread.space}}
+                        </div>
+                        <div>
+                            <span class="bold">Күн</span> {{addInfo.how_spread.sun}}
+                        </div>
+                        <div>
+                            <span class="bold">Жер қыртысы</span> {{addInfo.how_spread.earth}}
+                        </div>
+                        <div>
+                            <span class="bold">Адам денесі</span> {{addInfo.how_spread.man}}
+                        </div>
+                    </div>
+                    <div class="how-spread-item">
+                        <mat-icon svgIcon="picker" class="svg-icon"></mat-icon>
+                    </div>
+
+                </div>
             </div>
-            <div class="how-used">
-                <h3>Қолданылуы</h3>
+            <div class="how-used" *ngIf="addInfo && addInfo.how_used">
+                <!-- <div class="how-spread-title title">
+                    Қолданылуы
+                </div>
+                <div> -->
+                <div class="grid-item">
+                    <mat-icon class="svg-icon" svgIcon="shuttle"></mat-icon>
+                    <div>Ұшақтар материалдары</div>
+                </div>
+
+                <div class="grid-item">
+                    <mat-icon class="svg-icon" svgIcon="chemical"></mat-icon>
+                    <div>Be айналары телескоп жасауда</div>
+                </div>
+
+                <div class="grid-item">
+                    <mat-icon class="svg-icon" svgIcon="be_factory"></mat-icon>
+                    <div>Атомдық реакторда</div>
+                </div>
+
+                <!-- </div> -->
             </div>
         </ng-container>
     </div>
 </div>
-

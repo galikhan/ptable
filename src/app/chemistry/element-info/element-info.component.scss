@@ -1,3 +1,6 @@
+$grid-border:  2px solid #DDD;
+$grid-border-radius: 10px;
+
 .element-info {
     margin-top: 50px;
     width: 750px;
@@ -8,17 +11,17 @@
 .element-info-grid {
     display: grid;
     grid-template-areas:
-        "symbol-properties atomic-properties atomic-properties "
+        "symbol-properties atomic-properties how-taken"
         "physical-properties chemical-properties chemical-properties"
-        "how-taken how-spread how-used";
+        "how-spread how-used how-used";
     gap: 5px;
     color: #ddd;
 }
 
 .element-info-grid > div {
     /* background-color: rgb(18, 18, 66); */
-    border: 2px solid #DDD;
-    border-radius: 10px;
+    border: $grid-border;
+    border-radius: $grid-border-radius;
     line-height: 15px;
     padding: 10px;
 }
@@ -26,6 +29,7 @@
 .symbol  {
     font-size: 80px;
     line-height: 80px;
+    color:#1ba47f;
 }
 
 .symbol-properties {
@@ -62,8 +66,7 @@
     grid-template-areas: 
     "phys-title phys-title phys-title"
 
-    "state melt boil"
-    "phys-image-1  phys-image-info-1 phys-image-info-1"
+    "state-temperature phys-image-1 phys-image-info-1"
     "phys-image-2 phys-image-info-2 phys-description";
 
     /* "phys-image-1 state phys-image-2"
@@ -72,25 +75,20 @@
     gap: 5px;
 }
 .physical-properties div {
-    /* border: 1px solid #ddd; */
+    // border: $grid-border;
+    // border-radius: $grid-border-radius;
 }
 .phys-image-1 {
     grid-area: phys-image-1;
 }
 div > img{
-    height: 6   0px;
+    height: 60px;
 }
 .phys-image-info-1 {
     grid-area: phys-image-info-1;
 }
-.melt {
-    grid-area: melt;
-}
-.boil {
-    grid-area: boil;
-}
-.state {
-    grid-area: state;
+.state-temperature {
+    grid-area: state-temperature;
 }
 .phys-image-2 {
     grid-area: phys-image-2;
@@ -103,4 +101,33 @@ div > img{
 }
 .phys-title {
     grid-area: phys-title;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+
+.how-spread-container {
+    display: grid;
+    grid-template-columns: auto auto; 
+}
+
+mat-icon{
+    font-size: 50px !important;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+}
+.svg-icon {
+    // &:hover {
+    // }
+    color:#1ba47f;
+    font-size: 70px;
+
+}
+.how-used {
+    display: grid;
+    grid-template-columns: auto auto auto;
 }

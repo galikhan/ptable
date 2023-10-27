@@ -6,12 +6,13 @@ import * as json from '../../../assets/ElementsAdditionalInfo.json';
 @Component({
   selector: 'app-element-info',
   templateUrl: './element-info.component.html',
-  styleUrls: ['./element-info.component.css']
+  styleUrls: ['./element-info.component.scss']
 })
 export class ElementInfoComponent implements OnInit {
 
   element: ChemicalElement | undefined;
   addInfo: any;
+  importedJson: any;
 
   constructor(public elementService: ShowElementService) {
     console.log('constructor');
@@ -20,15 +21,20 @@ export class ElementInfoComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('ngOnInit');
-    const importedJson = json;
-    const be = importedJson["4"];
+    this.importedJson = json;
+    const be = this.importedJson["4"];
     console.log(be);
     this.addInfo = be;
     
 
     this.elementService.element.subscribe(result => {
       console.log('result', result);
-      this.element = result;
+      if(result) {
+        this.element = result;
+        this.addInfo = this.importedJson[result.number];
+        console.log('addinfo', this.addInfo);
+        
+      }
     });
   }
 }

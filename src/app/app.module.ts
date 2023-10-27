@@ -8,6 +8,10 @@ import { FormsModule } from '@angular/forms';
 import { MatSliderModule } from '@angular/material/slider';
 import { LightswitchComponent } from './tests/lightswitch/lightswitch.component';
 import { ElementInfoComponent } from './chemistry/element-info/element-info.component';
+import { MatIconModule } from '@angular/material/icon';
+import { AddIconComponent } from './icon/add-icon/add-icon.component';
+import { AddIconModule } from './icon/add-icon/add-icon.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -16,15 +20,20 @@ import { ElementInfoComponent } from './chemistry/element-info/element-info.comp
     CoreComponent,
     ElementComponent,
     LightswitchComponent,
-    ElementInfoComponent
+    ElementInfoComponent,
+    // AddIconComponent
   ],
   imports: [
     BrowserModule,
     MatSliderModule,
-    FormsModule
+    FormsModule,
+    MatIconModule,
+    AddIconModule,
+    HttpClientModule
   ],
   exports: [
-    ElementComponent
+    ElementComponent,
+    AddIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

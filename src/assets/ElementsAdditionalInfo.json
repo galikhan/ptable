@@ -1,9 +1,20 @@
 {
-    "3": {},
+    "13": {
+        "atomic_properties": {
+            "E_K": "1s22s22p63s23p¹",
+            "A_P": "112 пм",
+            "I_P": "114 пм",
+            "ET": "1,57",
+            "I_E": "899 кДж/моль",
+            "T_D": "0, +2",
+            "isotop": "7Be, 9Be, 10Be"
+        }
+    },
     "4": {
         "atomic_properties": {
             "E_K": "1s²2s²",
             "A_P": "112 пм",
+            "I_P": "114 пм",
             "ET": "1,57",
             "I_E": "899 кДж/моль",
             "T_D": "0, +2",
@@ -20,19 +31,20 @@
             "description": "Ашық сұр түсті, қатты, жеңіл, сынғыш, морт металл. Созыл-ғыштығы жоғары. d=1,85 г/см3"
         },
         "chemical_properties": {
-            "description": "<p>2Be + O2 = 2BeO Be + F<sub>2 </sub>= BeF<sub>2</sub></p><p>2Be + 3H<sub>2</sub>O (t<sup>o</sup>)= BeO + Be(OH)<sub>2</sub> + 2H<sub>2</sub></p><p>Be + 2HCl<sub>(сұй)</sub> = BeCl<sub>2</sub> + H<sub>2</sub></p><p>3Be + 8HNO<sub>3(сұй)</sub> = 3Be(NO<sub>3</sub>)<sub>2</sub> + 2NO + 4H<sub>2</sub>O</p><p>Be + 2NaOH<sub>(конц)</sub> + 2H<sub>2</sub>O = Na<sub>2</sub>[Be(OH)<sub>4</sub>] + H<sub>2</sub></p><p>Be + BaO = BeO + Ba</p>"
+            "description": "2Be + O2 = 2BeO Be + F₂= BeF₂ <br> 2Be + 3H₂O (tᴼ)= BeO + Be(OH)² + 2H₂ <br>Be + 2HCl₍сұй₎ = BeCl<sub>2</sub> + H<sub>2</sub></p><p>3Be + 8HNO<sub>3(сұй)</sub> = 3Be(NO<sub>3</sub>)<sub>2</sub> + 2NO + 4H<sub>2</sub>O</p><p>Be + 2NaOH<sub>(конц)</sub> + 2H<sub>2</sub>O = Na<sub>2</sub>[Be(OH)<sub>4</sub>] + H<sub>2</sub></p><p>Be + BaO = BeO + Ba</p>"
         },
-        "how-taken": {
-            "formula":"BeCl₂= Be + Cl₂ (электролиз) BeF₂ + Mg = Be + MgF₂ (тотықсыздандыру)",
+        "how_taken": {
+            "formula": "BeCl₂= Be + Cl₂ (электролиз) BeF₂ + Mg = Be + MgF₂ (тотықсыздандыру)",
             "description": "Алғаш синтездеген: Ф.Велер, А.Бюсси. Атауы: Белур қаласынан (Үндістан)."
         },
-        "how-spread": {
+        "how_spread": {
             "space": "10⁹",
-            "sun": "10"
+            "sun": "10⁹",
+            "earth": "10⁹",
+            "man": "10⁻⁹ ",
+            "description": "",
+            "image": "/assets/elements/4/how-spread-image.png"
         },
-        "how-used": {
-            
-        }
-
+        "how_used": {}
     }
 }
