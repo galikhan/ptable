@@ -1,16 +1,4 @@
 {
-    "13": {
-        "atomic_properties": {
-            "E_K": "1s22s22p63s23p¹",
-            "A_P": "112 пм",
-            "I_P": "114 пм",
-            "ET": "1,57",
-            "I_E": "899 кДж/моль",
-            "T_D": "0, +2",
-            "isotop": "7Be, 9Be, 10Be",
-            "icon": ""
-        }
-    },
     "4": {
         "atomic_properties": {
             "E_K": "1s²2s²",

@@ -1,10 +1,5 @@
 <div class="element-info">
     <div class="element-info-grid">
-        <!-- <div class="home">
-            <mat-icon class="svg-icon" >home</mat-icon>
-            <mat-icon class="svg-icon" svgIcon="be_factory"></mat-icon>
-            <mat-icon color="warn" class="svg-icon" svgIcon="supercoil"></mat-icon>
-        </div> -->
         <ng-container *ngIf="element">
             <div class="symbol-properties">
                 <div>{{element.number}}</div>
@@ -91,6 +86,7 @@
                     </div>
                     <div class="how-spread-item">
                         <mat-icon svgIcon="picker" class="svg-icon"></mat-icon>
+                        {{ addInfo.how_spread.description }}
                     </div>
 
                 </div>
@@ -101,18 +97,18 @@
                 </div>
                 <div> -->
                 <div class="grid-item">
-                    <mat-icon class="svg-icon" svgIcon="shuttle"></mat-icon>
-                    <div>Ұшақтар материалдары</div>
+                    <mat-icon class="svg-icon" [svgIcon]="addInfo.how_used.icon_1"></mat-icon>
+                    <div>{{addInfo.how_used.icon_info_1}}</div>
                 </div>
 
                 <div class="grid-item">
-                    <mat-icon class="svg-icon" svgIcon="chemical"></mat-icon>
-                    <div>Be айналары телескоп жасауда</div>
+                    <mat-icon class="svg-icon" [svgIcon]="addInfo.how_used.icon_2"></mat-icon>
+                    <div>{{addInfo.how_used.icon_info_2}}</div>
                 </div>
 
                 <div class="grid-item">
-                    <mat-icon class="svg-icon" svgIcon="be_factory"></mat-icon>
-                    <div>Атомдық реакторда</div>
+                    <mat-icon class="svg-icon" [svgIcon]="addInfo.how_used.icon_3"></mat-icon>
+                    <div>{{addInfo.how_used.icon_info_3}}</div>
                 </div>
 
                 <!-- </div> -->

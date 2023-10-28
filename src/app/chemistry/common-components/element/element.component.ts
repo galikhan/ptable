@@ -8,7 +8,7 @@ import { ShowElementService } from 'src/app/service/show-element.service';
 @Component({
   selector: 'app-element',
   templateUrl: './element.component.html',
-  styleUrls: ['./element.component.css']
+  styleUrls: ['./element.component.scss']
 })
 export class ElementComponent implements OnInit {
 
@@ -33,9 +33,10 @@ export class ElementComponent implements OnInit {
   showNonmetals = true;
   showReactiveNonmetals = true;
   showNobleGas = true;
-  showMelted = false;
-  showBoiled = false;
-  showSolidated = false;
+
+  fireMelted = false;
+  fireBoiled = false;
+  fireSolidated = false;
 
   btn = 'mybutton';
   constructor(
@@ -67,8 +68,6 @@ export class ElementComponent implements OnInit {
     });
 
     this.temperatureService.observable.subscribe(result => {
-      console.log('currenttemp', result);
-
       this.currentTemperature = result;
     });
 
@@ -124,7 +123,6 @@ export class ElementComponent implements OnInit {
     this.stateHg = false;
     this.stateH = false;
     this.stateRf = false;
-    // console.log('disableAllStates');
   }
 
   disableAllTypes() {
@@ -228,4 +226,16 @@ export class ElementComponent implements OnInit {
     this.showElementService.setNext(element);
   }
 
+
+  // fireOnBoiled(element: ChemicalElement | undefined, temperature: number): boolean {
+  //   // return this.isBoiled(element)
+  //   ret
+  // }
+
+  // this.fireBoiled = true;
+  // this.disableFire();
+
+  disableFire(): void {
+    this.fireBoiled = false;
+  }
  }

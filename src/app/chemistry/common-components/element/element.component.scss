@@ -1,3 +1,5 @@
+$opacityAnimate: 0.5s;
+
 .cell {
     height: 38px;
     width: 39px;
@@ -122,24 +124,44 @@
 
 
 .melted{
+    animation:melted-opacity $opacityAnimate;
     color:#99f;
 }
 .boiled{
+    animation:boiled-opacity $opacityAnimate;
     color: #f44;
 }
 .solidated{
+    animation:solidated-opacity $opacityAnimate;
     color: #ddd;
 }
-
-.melted-temp-class{
-    color: #ddd;
-    background-color:#99f;
+@keyframes melted-opacity{
+	from{
+        background-color: #99f;
+        color: #ddd;
+        opacity:1
+    } 
+    to  {
+        opacity:0.4
+    }
 }
-.boiled-temp-class{
-    color: #ddd;
-    background-color: #f44;
+@keyframes boiled-opacity{
+	from{
+        background-color: #f44;
+        color: #ddd;
+        opacity:1
+    } 
+    to  {
+        opacity:0.4
+    }
 }
-.solidated-temp-class{
-    color: rgb(6, 6, 6);
-    background-color: #ddd;
+@keyframes solidated-opacity{
+	from{
+        background-color: #ddd;
+        color: rgb(6, 6, 6);
+        opacity:1
+    } 
+    to  {
+        opacity:0.4
+    }
 }
