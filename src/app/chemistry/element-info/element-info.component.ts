@@ -22,7 +22,7 @@ export class ElementInfoComponent implements OnInit {
   ngOnInit(): void {
     console.log('ngOnInit');
     this.importedJson = json;
-    const be = this.importedJson["4"];
+    const be = this.importedJson["1"];
     console.log(be);
     this.addInfo = be;
     

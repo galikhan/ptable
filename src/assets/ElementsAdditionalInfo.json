@@ -1345,7 +1345,6 @@
         "symbol": "Pb",
         "name": "ҚОРҒАСЫН",
         "atomic_properties": {
-
             "E_K": "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p²",
             "A_P": "175 пм",
             "E_T": "2,33",
@@ -1358,72 +1357,133 @@
             "formula": ""
         },
         "how_taken": {
-            "formula":"<p>PbS + 1,<sub>5</sub>O<sub>2</sub> &rarr; PbO + SO<sub>2</sub></p><p>PbO + CO &rarr; Pb + CO<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp; PbO + C &rarr; Pb + CO</p>",
+            "formula": "<p>PbS + 1,<sub>5</sub>O<sub>2</sub> &rarr; PbO + SO<sub>2</sub></p><p>PbO + CO &rarr; Pb + CO<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp; PbO + C &rarr; Pb + CO</p>",
             "description": "<p>Ашқан: ежелден белгілі</p><p>Атауы: лат. plumbum - «сұйық күміс».</p>"
         },
         "how_spread": {
-            "space": "-",
-            "sun": "-",
-            "earth": "-",
-            "water": "-",
+            "space": "1×10⁻⁷ %",
+            "sun": "1×10⁻⁷ %",
+            "earth": "1×10⁻³ %",
+            "water": "3×10⁻⁹ %",
+            "man": "1.7×10⁻⁴ %",
+            "air": "",
+            "meteorit": "",
+            "atmosphere": "",
+            "description": "Минералдары: <br>галенит, церуссит, англезит, бетехтинит, джемсонит, тиллит, т.б. Саф күйінде өте сирек кездеседі."
+        },
+        "how_used": {
+            "icon_1": "",
+            "icon_info_1": "Аккумуляторлар жасауда",
+            "icon_2": "",
+            "icon_info_2": "Кабель орау, сантехникада, патрондар жасауда",
+            "icon_3": "",
+            "icon_info_3": "Рентген сәулелерінен қорғағыш"
+        },
+        "physical_properties": {
+            "icon_1": "",
+            "icon_info_1": " Қорғасынның өзі, тұздары, органикалық қосылыстары - улы заттар.",
+            "phase": "қатты",
+            "melt": 327,
+            "boil": 1749,
+            "icon_2": "",
+            "icon_info_2": "Pb - сұр түсті, көкшілдеу, ауыр, өте жұмсақ, жаншылатын, пластикалық металл. Ауада оксидтік қабатпен қапталады. Реакцияға түсу қабілеті төмен. d=11,35 г/см³."
+        }
+    },
+    "50": {
+        "symbol": "Sn",
+        "name": "ҚАЛАЙЫ",
+        "atomic_properties": {
+            "E_K": "[Kr] 4d¹⁰ 5s² 5p²",
+            "A_P": "162 пм",
+            "E_T": "1,96",
+            "I_E": "708,2 кДж/моль",
+            "T_D": "+2, +4",
+            "isotop": "¹¹²Sn - ¹²⁶Sn"
+        },
+        "chemical_properties": {
+            "description": "<p> Sn + O<sub>2</sub> <sub> (</sub><sub>2</sub><sub>0</sub><sub>0</sub><sub>°C</sub><sub> )</sub> → SnO<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Sn + 2F<sub>2</sub> → SnF<sub>4</sub></p><p> Sn + 4HNO<sub>3</sub><sub>(конц)</sub> → SnO<sub>2</sub>↓ + 4NO<sub>2</sub>↑ + 2H<sub>2</sub>O</p><p> Sn + 2H<sub>2</sub>SO<sub>4</sub><sub>(конц)</sub> → SnSO<sub>4</sub> + SO<sub>2</sub>↑ + 2H<sub>2</sub>O</p><p> Sn + NaOH<sub>(конц)</sub>+ 2H<sub>2</sub>O → Na[Sn(OH)<sub>3</sub>] + H<sub>2</sub>↑</p><p> Sn + 3HCl<sub>(конц)</sub> → H[SnCl<sub>3</sub>] + H<sub>2</sub>↑&nbsp;&nbsp;&nbsp;&nbsp;Sn + S<sub>(t)</sub> → SnS</p><p> Sn + 2I<sub>2</sub> → SnI<sub>4</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Sn + CuSO<sub>4</sub>→ SnSO<sub>4</sub> + Cu↓</p>",
+            "formula": ""
+        },
+        "how_taken": {
+            "formula": "<p> SnO<sub>2</sub> + 2C → Sn + 2CO↑</p>",
+            "description": "<p>Ашқан: ежелден белгілі</p><p>Атауы: лат. stannum - «берік, тұрақты».</p>"
+        },
+        "how_spread": {
+            "space": "4×10⁻⁷ %",
+            "sun": "9×10⁻⁷ %",
+            "earth": "2.2×10⁻⁴ %",
+            "water": "1×10⁻⁹ %",
+            "man": "2×10⁻⁵ %",
+            "air": "",
+            "meteorit": "",
+            "atmosphere": "",
+            "description": "Минералдары: <br>касситерит, станнин, цилиндрит, франкеит, канфилдит, теаллит, т.б"
+        },
+        "how_used": {
+            "icon_1": "",
+            "icon_info_1": "Pb-мен бірге дәнекерлеуде",
+            "icon_2": "",
+            "icon_info_2": "Коррозияға қарсы қаптама жасауда",
+            "icon_3": "",
+            "icon_info_3": "Қола секілді құймалар өндіруде"
+        },
+        "physical_properties": {
+            "icon_1": "",
+            "icon_info_1": " «Қалайы обасы» - ақ түсті қалайы 14°С-тан төмен температурада сұр қалайыға айналып, ұнтақ боп кетеді.",
+            "phase": "қатты",
+            "melt": 232,
+            "boil": 2602,
+            "icon_2": "",
+            "icon_info_2": "Sn - күмістей ақ түсті, өте жұмсақ, жеңіл металл. 4 аллоторпиялық өзгерісі бар. Балқуы төмен to-да, қайнауы жоғары to-да өтеді. Қолданылуы d=7,31 г/см³."
+        }
+    },
+    "81": {
+        "symbol": "Tl",
+        "name": "ТАЛЛИЙ",
+        "atomic_properties": {
+            "E_K": "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p¹",
+            "A_P": "171 пм",
+            "I_P": "95 пм, 147 пм",
+            "E_T": "1,62",
+            "I_E": "589 кДж/моль",
+            "T_D": "+1, +3",
+            "isotop":" ²⁰³Tl ²⁰⁵Tl"
+        },
+        "chemical_properties": {
+            "description": "<p>4Tl + 2O<sub>2</sub> <sub> (</sub><sub>4</sub><sub>0</sub><sub>0</sub><sub>&deg;C</sub><sub> )</sub> &rarr; Tl<sub>2</sub>O + Tl<sub>2</sub>O<sub>3</sub>;&nbsp;&nbsp;&nbsp;&nbsp; 2Tl + Cl<sub>2</sub> &rarr; 2TlCl</p><p>3Tl + 4HNO<sub>3</sub>(cұй.ыст) &rarr; 3TlNO<sub>3</sub> + NO&uarr; + 2H<sub>2</sub>O</p><p>Tl + 6HNO<sub>3</sub><sub>(конц)</sub> &rarr; Tl(NO<sub>3</sub><sub> )</sub><sub>3</sub> + 3NO<sub>2</sub>&uarr; + 3H<sub>2</sub>O</p><p>2Tl + S &rarr; Tl<sub>2</sub>S;&nbsp;&nbsp;&nbsp;&nbsp; 2Tl + 3S &rarr; Tl<sub>2</sub>S<sub>3</sub></p><p>2Tl + 3H<sub>2</sub>O<sub>2</sub><sub>(конц)</sub> &rarr; Tl<sub>2</sub>O<sub>3</sub>&darr; + 3H<sub>2</sub>O</p><p>4Tl + 2H<sub>2</sub>O + O<sub>2</sub> &rarr; 4TlOH;&nbsp;&nbsp;&nbsp;&nbsp; 2Tl + 2O<sub>3</sub> &rarr; Tl<sub>2</sub>O<sub>3</sub></p>s",
+            "formula": ""
+        },
+        "how_taken": {
+            "formula": "<p>2TlCl + H<sub>2</sub> &rarr; 2Tl + 2HCl; Tl<sub>2</sub>O + H<sub>2</sub> &rarr; 2Tl + 2H<sub>2</sub>O</p><p>2Tl<sub>2</sub>SO<sub>4</sub> + 2H<sub>2</sub>O (э.т.) &rarr; 4Tl(к)&darr; + O<sub>2</sub>&uarr;(а) + 2H<sub>2</sub>SO<sub>4</sub>&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "description": "<p>Ашқан: сэр У. Крукс (1861)</p><p>Атауы: грек. thallos - «жас, жасыл бұтақ»</p>"
+        },
+        "how_spread": {
+            "space": "5*10⁻⁸ %",
+            "sun": "1*10⁻⁷ %",
+            "earth": "5.3*10⁻⁵ %",
+            "water": "1*10⁻¹⁰ %",
             "man": "-",
             "air": "",
             "meteorit": "",
             "atmosphere": "",
-            "description": "Минералдары: <br>Табиғатта кездеспейді. 10 шақты атомы ғана синтезделген."
+            "description": "Минералдары: <br>круксит, лорандит, врбаит, гутчинсонит, авиценнит, т.б.Колчедандар, калий тұздары құрамында да кездеседі."
         },
         "how_used": {
             "icon_1": "",
-            "icon_info_1": "Қазіргі уақытта нихонийдің ғылыми зерт- теулерден өзге қолданылыс аясы жоқ.",
+            "icon_info_1": "Tl-Hg термо- метр жасауда",
             "icon_2": "",
-            "icon_info_2": "",
+            "icon_info_2": "Tl₂SO₄, Tl₂CO₃ кеміргіш- терді жоюда",
             "icon_3": "",
-            "icon_info_3": ""
+            "icon_info_3": "Tl(III) органикалық синтезде"
         },
         "physical_properties": {
             "icon_1": "",
-            "icon_info_1": " Nh-дің ең ұзақ өмір сүретін изотопы 286Nh, оның жартылай ыдырау периоды 20 секунд.",
+            "icon_info_1": "Tl және қосылыстары - улы!",
             "phase": "қатты",
-            "melt": "(430)",
-            "boil": "(1130)",
+            "melt": 204,
+            "boil": 1473,
             "icon_2": "",
-            "icon_info_2": "Nh - синтетикалық элемент. Өте радиоактивті. Тек радио- активті изотоптары ғана синтезделген. d=(16) г/см³."
-        }
-    },
-    "50": {
-        "atomic_properties": {
-            "symbol": "Sn",
-            "name": "ҚАЛАЙЫ",
-            "E_K": "[Kr] 4d10 5s2 5p2",
-            "A_P": "162 пм",
-            "E_T": "ЭТ 1,96",
-            "I_E": "И/Э 708,2 кДж/моль",
-            "T_D": "Т/Д +2, +4"
-        },
-        "chemical_properties": {
-            "description": "<p> SnO<sub>2</sub> + 2C → Sn + 2CO↑</p><p> Sn + O<sub>2</sub> <sub> (</sub><sub>2</sub><sub>0</sub><sub>0</sub><sub>°C</sub><sub> )</sub> → SnO<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Sn + 2F<sub>2</sub> → SnF<sub>4</sub></p><p> Sn + 4HNO<sub>3</sub><sub>(конц)</sub> → SnO<sub>2</sub>↓ + 4NO<sub>2</sub>↑ + 2H<sub>2</sub>O</p><p> Sn + 2H<sub>2</sub>SO<sub>4</sub><sub>(конц)</sub> → SnSO<sub>4</sub> + SO<sub>2</sub>↑ + 2H<sub>2</sub>O</p><p> Sn + NaOH<sub>(конц)</sub>+ 2H<sub>2</sub>O → Na[Sn(OH)<sub>3</sub>] + H<sub>2</sub>↑</p><p> Sn + 3HCl<sub>(конц)</sub> → H[SnCl<sub>3</sub>] + H<sub>2</sub>↑&nbsp;&nbsp;&nbsp;&nbsp;Sn + S<sub>(t)</sub> → SnS</p><p> Sn + 2I<sub>2</sub> → SnI<sub>4</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Sn + CuSO<sub>4</sub>→ SnSO<sub>4</sub> + Cu↓</p>",
-            "formula": ""
-        },
-        "how_taken": {
-            "description": "<p>Ашқан: ежелден белгілі</p><p>Атауы: лат. stannum - «берік, тұрақты».</p>"
-        }
-    },
-    "81": {
-        "atomic_properties": {
-            "symbol": "Tl",
-            "name": "ТАЛЛИЙ",
-            "E_K": "[Xe] 4f14 5d10 6s2 6p1",
-            "A_P": "171 пм",
-            "E_T": "ЭТ 1,62",
-            "I_E": "И/Э 589 кДж/моль",
-            "T_D": "Т/Д +1, +3"
-        },
-        "chemical_properties": {
-            "description": "<p>Tl<sub>2</sub>SO<sub>4</sub>, Tl<sub>2</sub>CO<sub>3</sub></p><p>Tl(III)</p><p>TlI, TlBr</p><p> 2TlCl + H<sub>2</sub> → 2Tl + 2HCl; Tl<sub>2</sub>O + H<sub>2</sub> → 2Tl + 2H<sub>2</sub>O  </p><p> 2Tl<sub>2</sub>SO<sub>4</sub> + 2H<sub>2</sub>O (э.т.) → 4Tl(к)↓ + O<sub>2</sub>↑(а) + 2H<sub>2</sub>SO<sub>4</sub>&nbsp;&nbsp;&nbsp;&nbsp;</p><p> 4Tl + 2O<sub>2</sub> <sub> (</sub><sub>4</sub><sub>0</sub><sub>0</sub><sub>°C</sub><sub> )</sub> → Tl<sub>2</sub>O + Tl<sub>2</sub>O<sub>3</sub>;&nbsp;&nbsp;&nbsp;&nbsp;   2Tl + Cl<sub>2</sub> → 2TlCl  </p><p> 3Tl + 4HNO<sub>3</sub>(cұй.ыст) → 3TlNO<sub>3</sub> + NO↑ + 2H<sub>2</sub>O</p><p> Tl + 6HNO<sub>3</sub><sub>(конц)</sub> → Tl(NO<sub>3</sub><sub> )</sub><sub>3</sub> + 3NO<sub>2</sub>↑ + 3H<sub>2</sub>O</p><p> 2Tl + S → Tl<sub>2</sub>S;&nbsp;&nbsp;&nbsp;&nbsp; 2Tl + 3S → Tl<sub>2</sub>S<sub>3</sub></p><p> 2Tl + 3H<sub>2</sub>O<sub>2</sub><sub>(конц)</sub> → Tl<sub>2</sub>O<sub>3</sub>↓ + 3H<sub>2</sub>O</p><p> 4Tl + 2H<sub>2</sub>O + O<sub>2</sub> → 4TlOH;&nbsp;&nbsp;&nbsp;&nbsp; 2Tl + 2O<sub>3</sub> → Tl<sub>2</sub>O<sub>3</sub></p>",
-            "formula": ""
-        },
-        "how_taken": {
-            "description": "<p>Ашқан: сэр У. Крукс (1861)</p><p>Атауы: грек. thallos - «жас, жасыл бұтақ»</p>"
+            "icon_info_2": "Tl - ақ күміс түсті, өте жұмсақ, пластикалық, жеңіл балқитын металл. Ауада оксидтік қабат- пен қапталады. Пышақпен оңай кесіледі. d=11,849 г/см³.Қосылыстары - канцерогенді."
         }
     },
     "87": {
@@ -1477,21 +1537,53 @@
         }
     },
     "88": {
+        "symbol": "Ra",
+        "name": "РАДИЙ",
+        "radiactive": "true",
         "atomic_properties": {
-            "symbol": "Ra",
-            "name": "РАДИЙ",
-            "E_K": "[Rn] 7s2.    2)8)18)32)18)8)2",
+            "E_K": "[Rn] 7s².    2)8)18)32)18)8)2",
             "A_P": "221 пм",
+            "I_P": "143 пм",
             "E_T": "ЭТ 0,90",
-            "I_E": "И/Э 509,5 кДж/моль",
-            "T_D": "Т/Д +2"
+            "I_E": "509,5 кДж/моль",
+            "T_D": "+2",
+            "isotop": "228Ra-228Ra"
         },
         "chemical_properties": {
-            "description": "<p> RaCl<sub>2</sub> (балқ. электролизі) → Ra↓ + Cl<sub>2</sub>↑</p><p> 3RaO + 2Al <sub> (</sub><sub>1</sub><sub>2</sub><sub>0</sub><sub>0</sub><sub>°C</sub><sub> )</sub> → 3Ra + Al<sub>2</sub>O<sub>3</sub></p><p> 2Ra + O<sub>2</sub> <sub> (</sub><sub>1</sub><sub>0</sub><sub>0</sub><sub>°C</sub><sub> )</sub> → 2RaO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Ra + Cl<sub>2</sub> → RaCl<sub>2</sub></p><p> 4Ra + 10HNO<sub>3</sub><sub>(сұй)</sub> → 4Ra(NO<sub>3</sub><sub> )</sub><sub>2</sub> + N<sub>2</sub>O↑ + 5H<sub>2</sub>O</p><p> Ra + 2HCl<sub>(сұй)</sub> → RaCl<sub>2</sub> + H<sub>2</sub>↑&nbsp;&nbsp;&nbsp;&nbsp;  Ra + S(t<sub>°C</sub><sub> )</sub> → RaS</p><p> 3Ra + N<sub>2</sub><sub> (</sub><sub>1</sub><sub>0</sub><sub>0</sub><sub>°C</sub><sub> )</sub> → Ra<sub>3</sub>N<sub>2</sub></p><p> Ra + 2H<sub>2</sub>O → Ra(OH)<sub>2</sub> + H<sub>2</sub>↑</p><p> Ra + 2C<sub>2</sub>H<sub>5</sub>OH → Ra(C<sub>2</sub>H<sub>5</sub>O)<sub>2</sub> + H<sub>2</sub>↑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+            "description": "<p> 2Ra + O<sub>2</sub> <sub> (</sub><sub>1</sub><sub>0</sub><sub>0</sub><sub>°C</sub><sub> )</sub> → 2RaO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Ra + Cl<sub>2</sub> → RaCl<sub>2</sub></p><p> 4Ra + 10HNO<sub>3</sub><sub>(сұй)</sub> → 4Ra(NO<sub>3</sub><sub> )</sub><sub>2</sub> + N<sub>2</sub>O↑ + 5H<sub>2</sub>O</p><p> Ra + 2HCl<sub>(сұй)</sub> → RaCl<sub>2</sub> + H<sub>2</sub>↑&nbsp;&nbsp;&nbsp;&nbsp;  Ra + S(t<sub>°C</sub><sub> )</sub> → RaS</p><p> 3Ra + N<sub>2</sub><sub> (</sub><sub>1</sub><sub>0</sub><sub>0</sub><sub>°C</sub><sub> )</sub> → Ra<sub>3</sub>N<sub>2</sub></p><p> Ra + 2H<sub>2</sub>O → Ra(OH)<sub>2</sub> + H<sub>2</sub>↑</p><p> Ra + 2C<sub>2</sub>H<sub>5</sub>OH → Ra(C<sub>2</sub>H<sub>5</sub>O)<sub>2</sub> + H<sub>2</sub>↑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>",
             "formula": ""
         },
         "how_taken": {
+            "formula": "<p>RaCl<sub>2</sub> (балқ. электролизі) &rarr; Ra&darr; + Cl<sub>2</sub>&uarr;</p><p>3RaO + 2Al <sub> (</sub><sub>1</sub><sub>2</sub><sub>0</sub><sub>0</sub><sub>&deg;C</sub><sub> )</sub> &rarr; 3Ra + Al<sub>2</sub>O<sub>3</sub></p>",
             "description": "<p>Ашқан: Пьер және Мария Кюри (1898)</p><p>Атауы: лат. Radius - «сәуле» сөзі.</p>"
+        },
+        "how_spread": {
+            "space": "-",
+            "sun": "-",
+            "earth": "1×10⁻¹¹ %",
+            "water": "1×10⁻¹⁵ %",
+            "man": "1×10⁻¹³ %",
+            "air": "",
+            "meteorit": "",
+            "atmosphere": "",
+            "description": "Минералдары: <br>уран кендері.М.С.Кюри мен күйеуі 10 т кенінен 1 г ғана Ra-ді бөліп алған!"
+        },
+        "how_used": {
+            "icon_1": "",
+            "icon_info_1": "Медицинада радонды ванна жасауда",
+            "icon_2": "",
+            "icon_info_2": "Заттарды түнде жарқырату үшін",
+            "icon_3": "",
+            "icon_info_3": "Нейтрон көзі ретінде"
+        },
+        "physical_properties": {
+            "icon_1": "",
+            "icon_info_1": "М.С.Кюри мен П.Кюри осы элементті ашқаны үшін Нобель сыйлығына ие болды.",
+            "phase": "қатты",
+            "melt": 700,
+            "boil": 1737,
+            "icon_2": "",
+            "icon_info_2": "Ra - жарқыраған, күмістей ақ түсті, сілтілік-жер металл. Ауада тез күңгірттенеді.Өте улы. Радиоактивті.d=5,5 г/см³."
         }
     }
 }
