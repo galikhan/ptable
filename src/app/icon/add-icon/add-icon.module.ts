@@ -23,6 +23,11 @@ export class AddIconModule {
     iconRegistry.addSvgIcon('scull', sanitizer.bypassSecurityTrustResourceUrl('assets/elements/4/scull.svg'));
     iconRegistry.addSvgIcon('picker', sanitizer.bypassSecurityTrustResourceUrl('assets/elements/4/picker.svg'));
 
-  }
+    // he 2
+    iconRegistry.addSvgIcon('heliumballoon',  sanitizer.bypassSecurityTrustResourceUrl('assets/elements/2/HeliumBalloon.svg'));
+    iconRegistry.addSvgIcon('airship',  sanitizer.bypassSecurityTrustResourceUrl('assets/elements/2/Airship.svg'));
+    iconRegistry.addSvgIcon('gas',  sanitizer.bypassSecurityTrustResourceUrl('assets/elements/2/Gas.svg'));
+    iconRegistry.addSvgIcon('helium',  sanitizer.bypassSecurityTrustResourceUrl('assets/elements/2/Helium.svg'));
+    iconRegistry.addSvgIcon('space',  sanitizer.bypassSecurityTrustResourceUrl('assets/elements/2/Space.svg'));  }
 
 }
