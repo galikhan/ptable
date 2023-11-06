@@ -13,12 +13,12 @@
             "icon": ""
         },
         "physical_properties": {
-            "icon_1": "scull",
+            "icon_1": "skull",
             "icon_info_1": "Be мен оның қосылыстарыулы улы! (бериллиоз ауруы)",
             "phase": "қатты",
             "boil": 2469,
             "melt": 1287,
-            "icon_2": "3d_icon",
+            "icon_2": "hex",
             "icon_info_2": "Ашық сұр түсті, қатты, жеңіл, сынғыш, морт металл. Созыл-ғыштығы жоғары. d=1,85 г/см³<br>  ГКТ Қаттылығы: 5,5(Моос шкаласымен)"
         },
         "chemical_properties": {
@@ -36,11 +36,11 @@
             "description": "Минералдары: <br>- берилл (зүбәжат, аквамарин)<br> - хризоберилл<br> - бертрандит, т.б."
         },
         "how_used": {
-            "icon_1": "shuttle",
+            "icon_1": "plane",
             "icon_info_1": "Ұшақтар материалдары",
-            "icon_2": "chemical",
+            "icon_2": "radiationglasses",
             "icon_info_2": "Be айналары телескоп жасауда",
-            "icon_3": "be_factory",
+            "icon_3": "atomicreactor",
             "icon_info_3": "Атомдық реакторда"
         }
     },
@@ -60,7 +60,7 @@
             "icon": ""
         },
         "physical_properties": {
-            "icon_1": "scull",
+            "icon_1": "h2",
             "icon_info_1": "Түссіз, иіссіз, жеңіл, екіатомды газ, бейметалл. d=0,08987 г/л",
             "phase": "",
             "boil": -253,
@@ -69,11 +69,11 @@
             "icon_info_2": ""
         },
         "chemical_properties": {
-            "icon": "",
+            "icon": "chembulb",
             "description": "<p>H<sub>2</sub> + F<sub>2</sub> = 2HF</p><p>2H<sub>2</sub> + O<sub>2</sub> = 2H<sub>2</sub>O</p><p>H<sub>2</sub> + 2Na = 2NaH</p><p>H<sub>2</sub> + Cu<sub>2</sub>O = 2Cu + H<sub>2</sub>O</p><p>4H<sub>2</sub> + CO<sub>2</sub> = CH<sub>4</sub> + 2H<sub>2</sub>O</p>"
         },
         "how_taken": {
-            "icon": "",
+            "icon": "tube",
             "formula": "<p>2H<sub>2</sub>O = 2H<sub>2</sub> + O<sub>2</sub></p><p>C + H<sub>2</sub>O = H<sub>2</sub> + CO</p><p>CH<sub>4</sub> + H<sub>2</sub>O (1100&deg;C) = 3H<sub>2</sub> + CO</p><p>Zn + 2HCl = ZnCl<sub>2 </sub>+ H<sub>2</sub></p><p>Zn + 2NaOH + 2H<sub>2</sub>O = Na<sub>2</sub>[Zn(OH)<sub>4</sub>] + H<sub>2</sub></p>",
             "description": ""
         },
@@ -83,14 +83,15 @@
             "earth": "1%",
             "water": "11,1%",
             "man": "10%",
-            "description": ""
+            "description": "",
+            "icon":"planets"
         },
         "how_used": {
-            "icon_1": "",
+            "icon_1": "rocket",
             "icon_info_1": "Ракета отыны",
-            "icon_2": "",
+            "icon_2": "margarine",
             "icon_info_2": "Маргарин өндірісі",
-            "icon_3": "",
+            "icon_3": "fuel",
             "icon_info_3": "Авто отын"
         }
     },
@@ -158,7 +159,7 @@
             "icon": "cube"
         },
         "physical_properties": {
-            "icon_1": "fire",
+            "icon_1": "flame",
             "icon_info_1": "Li⁺ ионы жалынды кармин қызыл түске бояйды",
             "phase": "қатты",
             "melt": 181,
@@ -185,11 +186,11 @@
             "description": "Минералдары:<br> - лепидолит<br>  - пироксен<br>  -сподумен"
         },
         "how_used": {
-            "icon_1": "phone",
+            "icon_1": "liionbattery",
             "icon_info_1": "Li-ионды батареялар",
-            "icon_2": "glass",
+            "icon_2": "ceramicglass",
             "icon_info_2": "Керамика, шыны",
-            "icon_3": "plastic_bottle",
+            "icon_3": "lubrication",
             "icon_info_3": "Консистентті майлауда"
         }
     },
@@ -208,8 +209,9 @@
             "icon": ""
         },
         "physical_properties": {
-            "icon_1": "carbons",
-            "icon_info_1": "Графит - қара түсті, сынғыш, тоқ өткізгіш зат, d=2,25 г/см3. Алмаз - өте қатты, мөлдір, нашар өткізгіш зат, d=3,51 г/см3 C аллотроптары: 20-дан астам."
+            "icon_1": "diamond",
+            "icon_info_1": "Графит - қара түсті, сынғыш, тоқ өткізгіш зат, d=2,25 г/см3. Алмаз - өте қатты, мөлдір, нашар өткізгіш зат, d=3,51 г/см3 C аллотроптары: 20-дан астам.",
+            "icon_2": "graphite"
         },
         "chemical_properties": {
             "icon": "",
@@ -230,11 +232,11 @@
             "description": "Табиғатта:<br>- көмір, қоңыр көмір<br>- мұнай мен газ<br>- ауада CO₂<br>- шунгит, карбонат"
         },
         "how_used": {
-            "icon_1": "phone",
+            "icon_1": "pencil",
             "icon_info_1": "Қарындаш өндірісі",
-            "icon_2": "glass",
+            "icon_2": "electrode",
             "icon_info_2": "Электрод өндірісі",
-            "icon_3": "plastic_bottle",
+            "icon_3": "brilliant",
             "icon_info_3": "Бриллиант бұйымдар"
         }
     },
@@ -253,7 +255,7 @@
             "icon": ""
         },
         "physical_properties": {
-            "icon_1": "carbons",
+            "icon_1": "gas",
             "icon_info_1": "N₂ - түссіз, иіссіз, дәмсіз, екі- атомды, қалыпты жағдайда инертті газ. d=0,001251 г/см³. Бейметалл, түссіз сұйыққа, ақ қатты затқа айнала алады",
             "phase": "газ",
             "melt": -210,
@@ -279,11 +281,11 @@
             "description": "Минералдары:<br> - нитраттар<br> нитриттер"
         },
         "how_used": {
-            "icon_1": "phone",
+            "icon_1": "cooler",
             "icon_info_1": "Суытқыш, мұздатқыш",
-            "icon_2": "glass",
+            "icon_2": "ammoniasynthesis",
             "icon_info_2": "Аммиак синтезі үшін",
-            "icon_3": "plastic_bottle",
+            "icon_3": "fireextinguisher",
             "icon_info_3": "Өрт сөндіру ісінде"
         }
     },
@@ -302,7 +304,7 @@
             "icon": ""
         },
         "physical_properties": {
-            "icon_1": "carbons",
+            "icon_1": "gas1",
             "icon_info_1": "O² - түссіз, иіссіз, дәмсіз, екі- атомды газ. d=1,429 г/л. Бейметалл, жануды қолдайды; ашық көгілдір сұйыққа, ашық көк қатты затқа айнала алады",
             "phase": "газ",
             "melt": -218,
@@ -328,11 +330,11 @@
             "description": "Табиғатта оксидтер, ауада O₂ газ күйінде кездеседі."
         },
         "how_used": {
-            "icon_1": "phone",
+            "icon_1": "medicinemask",
             "icon_info_1": "Медицинада",
-            "icon_2": "glass",
+            "icon_2": "spacesuit",
             "icon_info_2": "Ғарышта (скафандр)",
-            "icon_3": "plastic_bottle",
+            "icon_3": "metallurgyo",
             "icon_info_3": "Металлургияда"
         }
     },
@@ -351,9 +353,10 @@
             "icon": ""
         },
         "physical_properties": {
-            "icon_1": "carbons",
+            "icon_1": "skullf",
             "icon_info_1": "F² - ашық-сары түсті екіатомды газ. d=1,696 г/л. Өте улы. Бейметалл, жануды қолдайды; Аз концентрацияда озон, хлор- дың иісіне ұқсайды",
             "phase": "газ",
+            "icon_2": "gasf",
             "melt": -219,
             "boil": -188
         },
@@ -377,11 +380,11 @@
             "description": "Табиғатта флюорит минералы құрамында кездеседі."
         },
         "how_used": {
-            "icon_1": "phone",
+            "icon_1": "freon",
             "icon_info_1": "Фреондар алуда",
-            "icon_2": "glass",
+            "icon_2": "ftorin",
             "icon_info_2": "Металдар фторидін алуда",
-            "icon_3": "plastic_bottle",
+            "icon_3": "ftoroplast",
             "icon_info_3": "Фторо пластар алуда"
         }
     },
@@ -400,7 +403,7 @@
             "icon": ""
         },
         "physical_properties": {
-            "icon_1": "carbons",
+            "icon_1": "gasne",
             "icon_info_1": "Ne - біратомды, түссіз, иіссіз, инертті газ. Жоғары электрөт- кізгіш, ток әсерінен от-қызыл түске боялады. Қиын сығылады. d=0,90035 г/л.",
             "phase": "газ",
             "melt": -248.6,
@@ -426,11 +429,11 @@
             "description": "Табиғатта ауа құра- мында кездеседі (1,82*10⁻³%)"
         },
         "how_used": {
-            "icon_1": "phone",
+            "icon_1": "refrigerant",
             "icon_info_1": "Креогенді қондырғыда салқындат- қыш",
-            "icon_2": "glass",
+            "icon_2": "inertenvironment",
             "icon_info_2": "Инертті орта жасауда",
-            "icon_3": "plastic_bottle",
+            "icon_3": "fame",
             "icon_info_3": "Газ- разрядты шамдарды толтыруда"
         }
     },
@@ -449,12 +452,12 @@
             "icon": ""
         },
         "physical_properties": {
-            "icon_1": "carbons",
+            "icon_1": "flame",
             "icon_info_1": "Mg бөлме жағ- дайында жарқы- раған ақ түсті жалынмен жанады.",
             "phase": "қатты",
             "melt": 650,
             "boil": 1090,
-            "icon_2": "",
+            "icon_2": "hex",
             "icon_info_2": "Күмістей ақ түсті, жеңіл, майысқыш, сілтілік-жер металл. d=1,738 г/см³"
         },
         "chemical_properties": {
@@ -477,11 +480,11 @@
             "description": "Минералдары: - карналлит<br>- бишофит<br>- эпсомит<br>- магнезит<br>- доломит, т.б"
         },
         "how_used": {
-            "icon_1": "phone",
+            "icon_1": "plane",
             "icon_info_1": "Авиа өндірісінде",
-            "icon_2": "glass",
+            "icon_2": "car",
             "icon_info_2": "Автомобиль өндірісінде",
-            "icon_3": "plastic_bottle",
+            "icon_3": "photocamera",
             "icon_info_3": "Цифрлы фото аппараттарда"
         }
     },
@@ -500,7 +503,7 @@
             "icon": ""
         },
         "physical_properties": {
-            "icon_1": "carbons",
+            "icon_1": "cubeal",
             "icon_info_1": "КБО",
             "phase": "қатты",
             "melt": 660,
@@ -528,11 +531,11 @@
             "description": "Минералдары: <br>- боксит<br>- нефелиндер<br>- глиноземдер<br> - корунд<br>- каолинит, т.б"
         },
         "how_used": {
-            "icon_1": "phone",
+            "icon_1": "termiticmixture",
             "icon_info_1": "Термиттік қоспа",
-            "icon_2": "glass",
+            "icon_2": "rocket",
             "icon_info_2": "Ракета отыны құрамында",
-            "icon_3": "plastic_bottle",
+            "icon_3": "folga",
             "icon_info_3": "Al фольга жасауда"
         }
     },
@@ -599,7 +602,7 @@
             "T_D": "-3, 0, +3, +5",
             "isotop": "³¹P",
             "valense": "",
-            "icon": ""
+            "icon": "redp"
         },
         "physical_properties": {
             "icon_1": "carbons",
@@ -631,11 +634,11 @@
             "description": "Минералдары: <br>- апатиттер,<br>- фосфорит, <br> (шамамен 190-дай минералы бар)"
         },
         "how_used": {
-            "icon_1": "phone",
+            "icon_1": "matches",
             "icon_info_1": "Сіріңке өндірісінде",
-            "icon_2": "glass",
+            "icon_2": "fertilizer",
             "icon_info_2": "Минералды тыңайтқыш құрамында",
-            "icon_3": "plastic_bottle",
+            "icon_3": "steelproduction",
             "icon_info_3": "Болат өндірісінде"
         }
     },
@@ -651,10 +654,10 @@
             "T_D": "0, +1",
             "isotop": "³⁹K ⁴¹K ⁴⁰K",
             "valense": "",
-            "icon": ""
+            "icon": "cubek"
         },
         "physical_properties": {
-            "icon_1": "carbons",
+            "icon_1": "flame",
             "icon_info_1": "K⁺ ионы жалынды күлгін түске бояйды.",
             "phase": "қатты",
             "melt": 64,
@@ -683,11 +686,11 @@
             "description": "Минералдары: <br>далалық шпат, слюда, сильвин, сильвинит, карналлит, каинит"
         },
         "how_used": {
-            "icon_1": "phone",
+            "icon_1": "fertilizer",
             "icon_info_1": "Қосылыстары минералды тыңайтқыш ретінде",
-            "icon_2": "glass",
+            "icon_2": "medicinecs",
             "icon_info_2": "Медицинада (KBr, калий цитраты)",
-            "icon_3": "plastic_bottle",
+            "icon_3": "atomicreactor",
             "icon_info_3": "Атомдық реакторда (K-Na құймасы)"
         }
     },
@@ -795,7 +798,7 @@
             "icon_info_3": "Пиротехникада"
         }
     },
-    "34": {
+    "37": {
         "name": "РУБИДИЙ",
         "color": "#ddd",
         "atomic_properties": {
@@ -807,7 +810,7 @@
             "T_D": "0, +1",
             "isotop": "⁸⁵Rb ⁸⁷Rb",
             "valense": "",
-            "icon": ""
+            "icon": "flame"
         },
         "physical_properties": {
             "icon_1": "carbons",
@@ -839,11 +842,11 @@
             "description": "Минералдары: <br>лепидолит, лейцит, поллуцит, карналлит, циннвальдит және калий минералдары құрамында кездеседі."
         },
         "how_used": {
-            "icon_1": "phone",
+            "icon_1": "ingots",
             "icon_info_1": "Кейбір құймалар құрамында",
-            "icon_2": "glass",
+            "icon_2": "catalizator",
             "icon_info_2": "Катализатор ретінде",
-            "icon_3": "plastic_bottle",
+            "icon_3": "laser",
             "icon_info_3": "Rb буы лазерлік технологияларда"
         }
     },
@@ -859,10 +862,10 @@
             "T_D": "0, +1",
             "isotop": "¹³³Cs",
             "valense": "",
-            "icon": ""
+            "icon": "cube"
         },
         "physical_properties": {
-            "icon_1": "carbons",
+            "icon_1": "flame",
             "icon_info_1": "Cs тұздары жалынды көк-күлгін түске бояйды.",
             "phase": "қатты",
             "melt": 28.5,
@@ -891,11 +894,11 @@
             "description": "Минералдары: <br>поллуцит, лепидолит, флогопит, биотит, берилл, амазонит, петалит, карналлит минералдары құрамында кездеседі."
         },
         "how_used": {
-            "icon_1": "phone",
+            "icon_1": "photoelements",
             "icon_info_1": "Фотоэлементтер жасауда",
-            "icon_2": "glass",
+            "icon_2": "oilproduction",
             "icon_info_2": "Қосылысы мұнай өндірісінде",
-            "icon_3": "plastic_bottle",
+            "icon_3": "atomicclock",
             "icon_info_3": "Сs-133 атомдық сағаттар жасауда"
         }
     },
@@ -1497,7 +1500,8 @@
             "E_T": "ЭТ 0,70",
             "I_E": "И/Э 393 кДж/моль",
             "T_D": "Т/Д +1",
-            "isotop": "²¹⁰Fr-²²⁷Fr"
+            "isotop": "²¹⁰Fr-²²⁷Fr",
+            "icon":"cubefr"
         },
         "chemical_properties": {
             "description": "Франций таза күйінде синтезделіп алынба- ғандықтан, оның қасиеттері сілтілік металдар- дың қасиеттеріне ұқсас деп болжауға болады.",
@@ -1585,5 +1589,2873 @@
             "icon_2": "",
             "icon_info_2": "Ra - жарқыраған, күмістей ақ түсті, сілтілік-жер металл. Ауада тез күңгірттенеді.Өте улы. Радиоактивті.d=5,5 г/см³."
         }
-    }
+    },
+
+    "47": {
+        "name": "КҮМІС",
+        "symbol": "Ag",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Ag",
+          "name": "КҮМІС",
+          "E_K": "[Kr] 4d¹⁰ 5s¹",
+          "A_P": "145,4 пм",
+          "I_P": "",
+          "E_T": "ЭТ 1,93",
+          "I_E": "И/Э 731 кДж/моль",
+          "T_D": "Т/Д +1, +2, +3",
+          "isotop": "¹⁰⁷Ag ¹⁰⁹Ag",
+          "icon":"cube"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": " Сирек кездесетін, қымбат металл. Алтыннан қаттылау, жақсы созылады. Таза Ag электр тогы мен жылуды өте жақсы өткізеді.",
+          "phase": "қатты",
+          "melt": "962",
+          "boil": "2162",
+          "icon_2": "",
+          "icon_info_2": "Ag - ақ-сұр түсті, ауыр, плас- тикалық металл. d=10,5 г/см3. Белсенділігі төмен, асыл металл. Әлсіз тотықсыздан- дырғыш. Сынаппен амальгама түзеді.Ag - ақ-сұр түсті, ауыр, плас- тикалық металл. d=10,5 г/см³. Белсенділігі төмен, асыл металл. Әлсіз тотықсыздан- дырғыш. Сынаппен амальгама түзеді."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "6*10⁻⁸ %",
+          "sun": "1*10⁻⁷ %",
+          "earth": "8*10⁻⁸ %",
+          "water": "1*10⁻⁸ %",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>электрум, кюстелит, ар- гентит, прустит, керар- гирит, пираргирит, сте- фанит, т.б. Табиғатта саф күйінде де кездеседі."
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "<p> 2K[Ag(CN)<sub>2</sub>] → KCN + 2Ag + C<sub>2</sub>N<sub>2</sub>   </p><p> Ag<sub>2</sub>S + O<sub>2</sub> → 2Ag + SO<sub>2</sub>   </p>",
+          "description": "<p>Ашқан: ежелден белгілі.</p><p>Атауы: argentum - ақ, жылтыр, siolfor-күміс. </p>"
+        },
+        "chemical_properties": {
+          "description": "<p> Аg + 2HCl ↔ <sub>2</sub>AgCl + H<sub>2</sub>↑</p><p> 2Аg + 2H<sub>2</sub>SO<sub>4</sub>(конц, ыст.) → Ag<sub>2</sub>SO<sub>4</sub>↓ + SO<sub>2</sub>↑ + 2H<sub>2</sub>O</p><p> 3Ag + 4HNO<sub>3</sub>(сұйыл.) → 3AgNO<sub>3</sub> + NO↑ + 2H<sub>2</sub>O</p><p> 2Ag + 2H<sub>2</sub>S + O<sub>2</sub>(ауа) → 2Ag<sub>2</sub>S + 2H<sub>2</sub>O</p><p> Ag + F<sub>2</sub> → AgF<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   2Ag + Cl<sub>2</sub> → 2AgCl</p><p> 2Ag + S → Ag<sub>2</sub>S&nbsp;&nbsp;&nbsp;&nbsp; Ag + Hg → Ag<sub>4</sub>Hg<sub>3</sub>, Ag<sub>5</sub>Hg<sub>8</sub></p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "Әшекей бұйым жасауда",
+          "icon_2": "",
+          "icon_info_2": "Медицинада қосылыстары дәрі ретінде",
+          "icon_3": "",
+          "icon_info_3": "Электроникада",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "18": {
+        "name": "АРГОН",
+        "symbol": "Ar",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Ar",
+          "name": "АРГОН",
+          "E_K": "1s²2s²2p⁶3s²3p⁶",
+          "A_P": "106 пм",
+          "I_P": "154 пм",
+          "E_T": "4,3",
+          "I_E": "1520 кДж/моль",
+          "T_D": "0",
+          "isotop": "³⁶Ar ³⁸Ar ⁴⁰Ar"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "газ",
+          "melt": "-189",
+          "boil": "-186",
+          "icon_2": "",
+          "icon_info_2": " Аргон - инертті, біратомды, иіссіз, түссіз, дәмсіз газ. Суда өте нашар ериді.d = 1,7839 кг/м³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "0.2 %",
+          "sun": "-",
+          "earth": "1.5*10⁻⁴ %",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Табиғатта ауа құрамында бар (0,934 %). Литосферада - 4•10−6 %, Мұхит суында бар."
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "Өнеркәсіпте: ауаны сұйылту арқылы алады",
+          "description": "<p>Алғаш синтездеген:  Рэлей, Рамзай (1894).</p><p>Атауы: Argos- «жалқау», «баяу».</p>"
+        },
+        "chemical_properties": {
+          "description": "<p>Ешқай дерлік химиялық қосылыспен реакцияласпайды. Арнайы жағдайда HArF қосылысы алынған.<br />Су сияқты заттармен клатраттар түзеді: 8Ar*46H<sub>2</sub>O, Ar*4C<sub>6</sub>H<sub>5</sub>OH, Ar*2HCl, Ar*2HBr.</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "Инертті атмосфера жасауда",
+          "icon_2": "",
+          "icon_info_2": "Металдарды газды пісіруде, кесуде",
+          "icon_3": "",
+          "icon_info_3": "Медицинада аргонды лазерлерде",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+    
+      "85": {
+        "name": "АСТАТ",
+        "symbol": "At",
+        "radiactive": "true",
+        "atomic_properties": {
+          "symbol": "At",
+          "name": "АСТАТ",
+          "E_K": "[Xe] 4f¹⁴ 5d¹⁰ 6s² 6p⁵",
+          "A_P": "145 пм",
+          "I_P": "62 пм",
+          "E_T": "2,20",
+          "I_E": "899 кДж/моль",
+          "T_D": "-1, +1, +3, +5, +7",
+          "isotop": "²⁰⁷At - ²¹¹At",
+          "icon": "cube"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": " Ең ұзақ өмір сүретін ²¹⁰At изотопының жартылай ыдырау периоды небәрі 8,3 сағатты құрайды.",
+          "phase": "қатты",
+          "melt": "230",
+          "boil": "302",
+          "icon_2": "",
+          "icon_info_2": "At - сұр, металдық жылтыры бар, ұшқыш, радиоактивті галоген. Бензол мен CCl4-те ериді. Металдық кристалл түзеді. d=8,91–8,95 г/см³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "-",
+          "sun": "-",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>Жер қыртысындағы жалпы мөлшері 30 г-нан аз. Уран мен торий минерал- дарында аздап бар."
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "<p><sup>209</sup><sub>83</sub>Bi + <sup>4</sup><sub>2</sub>He&nbsp;&rarr; <sup>211</sup><sub>85</sub> At + 2 <sup>1</sup><sub>0</sub>n</p><p><sup>209</sup><sub>83</sub>Bi + <sup>4</sup><sub>2</sub>He &rarr; <sup>201</sup><sub>85</sub> At + 3&nbsp;<sup>1</sup><sub>0</sub>n</p>",
+          "description": "<p>Ашқан: Д. Корсон, Маккензи, Сегре (1940)</p><p>Атауы: грек. Astatos - «тұрақсыз» сөзі.</p>"
+        },
+        "chemical_properties": {
+          "description": "<p>At + H<sup>0</sup>(Zn, конц HCl) &rarr; HAt&uarr;</p><p>2At + Br<sub>2</sub> &rarr; 2AtBr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2At + I<sub>2</sub> &rarr; 2AtI</p><p>2At + 2H<sub>2</sub>O + SO<sub>2</sub> &rarr; 2HAt + H<sub>2</sub>SO<sub>4</sub></p><p>2At + 3NaOH + Na[Sn(OH)<sub>3</sub>] &rarr; 2NaAt +&nbsp;Na<sub>2</sub>[Sn(OH)<sub>6</sub>]</p><p>3At + HNO<sub>3</sub> + H<sub>2</sub>O &rarr; 3HAtO + NO&uarr;</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "Қазіргі уақытта астаттың ғылыми зерттеу- лерден өзге қолданылыс аясы жоқ.",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "79": {
+        "name": "АЛТЫН",
+        "symbol": "Au",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Au",
+          "name": "АЛТЫН",
+          "E_K": "[Xe] 4f¹⁴ 5d¹⁰ 6s¹",
+          "A_P": "144 пм",
+          "I_P": "185; 137 пм",
+          "E_T": "2,64",
+          "I_E": "889,3 кДж/моль",
+          "T_D": "0, +1, +3",
+          "isotop": "¹⁹⁷Au",
+          "icon":"cube"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": " Алтын - өте созылғыш (28 г Au-ды 80 км-ге созуға болады), әрі жан- шылғыш (0,1 мкм фольга жасауға болады) металл.",
+          "phase": "қатты",
+          "melt": "1064",
+          "boil": "2856",
+          "icon_2": "",
+          "icon_info_2": "Au - сары түсті, Cu мен Ag-ке қарағанда жұмсақ, ауыр, оңай жаншылатын металл. Құрғақ, ылғал ауада тұрақты. Арнайы жағдайда коллоидты Au түзеді. d= 19,3 г/см³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "6*10⁻⁸ %",
+          "sun": "1*10⁻⁷ %",
+          "earth": "3.1*10⁻⁷ %",
+          "water": "5*10⁻⁹ %",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>Жер қыртысында саф күйінде кездеседі. Теңіз суынан да табуға болады. Минералдары да бар."
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "<p>4Au + 8CN<sup>-</sup> + 2H<sub>2</sub>O + O<sub>2</sub> &rarr; 2[Au(CN)<sub>2</sub>]<sup>-</sup> + 4OH<sup>-</sup></p><p>2[Au(CN)<sub>2</sub>]<sup>-</sup> + Zn &rarr; [Zn(CN)<sub>4</sub>]<sup>2-</sup> + 2Au</p>",
+          "description": "<p>Ашқан: ежелден белгілі</p><p>Атауы: лат. «aurum» - «алтын».</p>"
+        },
+        "chemical_properties": {
+          "description": "<p>Au+HNO<sub>3</sub><sub>(конц)</sub>+<sub>4</sub>HCl<sub>(конц)</sub>&rarr;H[AuCl<sub>4</sub>] +NO&uarr;+<sub>2</sub>H<sub>2</sub>O</p><p>2Au + 6H<sub>2</sub>SeO<sub>4</sub> &rarr; Au<sub>2</sub>(SeO<sub>4</sub><sub> )</sub><sub>3</sub> + 3SeO<sub>2</sub> + 6H<sub>2</sub>O</p><p>2Au + 3F<sub>2</sub> &rarr; 2AuF<sub>3</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2Au + 3Cl<sub>2</sub> &rarr; 2AuCl<sub>3</sub></p><p>4Au + 8NaCN<sub>(конц)</sub> + 2H<sub>2</sub>O + O<sub>2</sub> &rarr;</p><p>&rarr; 4Na[Au(CN)<sub>2</sub>] + 4KOH</p><p>Au + NaNO<sub>3</sub> &rarr; NaAuO<sub>2</sub> + NO&uarr;</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "Медицинада (Au-198)",
+          "icon_2": "",
+          "icon_info_2": "Алтын жұқалтыр (безендіру ісінде)",
+          "icon_3": "",
+          "icon_info_3": "Әшекей бұйымдар жасауда",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "5": {
+        "name": "БОР",
+        "symbol": "B",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "B",
+          "name": "БОР",
+          "E_K": "1s²2s²2p¹",
+          "A_P": "98 пм",
+          "I_P": "23 пм",
+          "E_T": "2,04",
+          "I_E": "800,2 кДж/моль",
+          "T_D": "-3, 0, +3",
+          "isotop": "¹⁰B ¹¹B"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "Бор иондары жалынды ашық жасыл түске бояйды",
+          "phase": "қатты",
+          "melt": "2453",
+          "boil": "4273",
+          "icon_2": "",
+          "icon_info_2": "Қоңыр ұнтақ, жылтыр, күміс- сұр түсті кристалл, бейметалл d=2,34 г/см³. Аллотроптар саны: 10 Крист. бор - өте қатты (9,5)"
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "1*10⁻⁹ %",
+          "sun": "-",
+          "earth": "8700*10⁻⁹ %",
+          "water": "-",
+          "man": "700*10⁻⁹ %",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>- датолит, данбурит<br> - бура, ашарит<br>- кернит <br>- борацит, т.б."
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "<p>B₂H₆ (t&ordm;)= 2B + 3H₂ (пиролиз)</p><p>B₂O₃ + 3Mg = 3MgO + 2B (металлотермия)</p>",
+          "description": "<p>Алғаш синтездеген: Х.Дэви, Ж.Г.Люссак</p><p>Атауы: бура минералынан.</p>"
+        },
+        "chemical_properties": {
+          "description": "<p>4B + 3O<sub>2</sub> (t&ordm;)= 2B₂O₃&nbsp;&nbsp;&nbsp;&nbsp; 2B + 3Br<sub>2</sub> (t&ordm;)= 2BBr₃</p><p>2B + 3H<sub>2</sub>O (t&ordm;)= B₂O₃ + 3H<sub>2</sub></p><p>B + 3HNO<sub>3</sub><sub>(конц ыстық)</sub> = B(OH)<sub>3</sub> + 3NO<sub>2</sub></p><p>2B + 2NaOH<sub>(конц)</sub> + 6H₂O = Na[B(OH)₄] + 3H<sub>2</sub></p><p>4B + 3SiO₂ (t&ordm;)= 2B₂O₃ + 3Si</p><p>2B + 6HF (t&ordm;)= 2BF₃ + 3H₂</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "Боросиликатты шынылар",
+          "icon_2": "",
+          "icon_info_2": "Боркарбидті керамика",
+          "icon_3": "",
+          "icon_info_3": "Болат өндірісінде",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "35": {
+        "name": "БРОМ",
+        "symbol": "Br",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Br",
+          "name": "БРОМ",
+          "E_K": "1s²2s²2p⁶3s²3p⁶3d¹⁰4s²4p⁵",
+          "A_P": "119 пм",
+          "I_P": "47 пм, 196 пм",
+          "E_T": "2,96",
+          "I_E": "1142 кДж/моль",
+          "T_D": "−1, 0, +1, +3, +5, +7",
+          "isotop": "⁷⁹Br ⁸¹Br"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "сұйық",
+          "melt": "-7.25",
+          "boil": "59.2",
+          "icon_2": "",
+          "icon_info_2": "Br2 - химиялық белсенді бейметалл, ауыр, қызыл-қоңыр түсті күйдіргіш сұйықтық. Ұшқыш әрі улы зат. d=3,102 г/см³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "7*10⁻⁷ %",
+          "sun": "-",
+          "earth": "3*10⁻⁴ %",
+          "water": "6.7*10⁻³ %",
+          "man": "2.9*10⁻⁴ %",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>бромаргирит, йодобро- мит, эмболит, т.б. Теңіз, мұхит суында кездеседі."
+        },
+
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "<p>NaBr + H<sub>2</sub>SO<sub>4</sub> &rarr; HBr&uarr; + NaHSO<sub>4</sub></p><p>2HBr + H<sub>2</sub>SO<sub>4</sub> &rarr; Br<sub>2</sub>&uarr; + SO<sub>2</sub>&uarr; + 2H<sub>2</sub>O</p>",
+          "description": "<p>Ашқан: А.Ж.Балар (1826)</p><p>Атауы: грек. bromos- «сасық иіс».</p>"
+        },
+        "chemical_properties": {
+          "description": "<p>Br<sub>2</sub> + nH<sub>2</sub>O &harr; Br<sub>2</sub>nH<sub>2</sub>O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Br<sub>2</sub> + H<sub>2</sub><sub>(t)</sub> &rarr; 2HBr</p><p>Br<sub>2</sub> + 2NaOH<sub>(сұйыл.)</sub>&rarr; NaBr + NaBrO + H<sub>2</sub>O</p><p>3Br<sub>2</sub> + 6NaOH<sub>(конц)</sub>&rarr; 5NaBr + NaBrO<sub>3</sub> + 3H<sub>2</sub>O</p><p>Br<sub>2</sub> + F<sub>2</sub> &rarr; BrF, BrF<sub>3</sub>, BrF<sub>5</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Br<sub>2</sub> + 2Al &rarr; 2AlBr<sub>3</sub>&nbsp;&nbsp;&nbsp;&nbsp;</p><p>Br<sub>2</sub> + 2NaI &rarr; 2NaBr + I<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Br<sub>2</sub> + Cl<sub>2</sub> &rarr; 2BrCl</p><p>Br<sub>2</sub> + H<sub>2</sub>S &rarr; 2HBr + S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Br<sub>2</sub> + I<sub>2</sub> &rarr; 2IBr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "Органикалық синтезде",
+          "icon_2": "",
+          "icon_info_2": "Бром суы қанықпаған орг. қосыл-ды анықтауда",
+          "icon_3": "",
+          "icon_info_3": "Полимер өндірісінде",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "48": {
+        "name": "КАДМИЙ",
+        "symbol": "Cd",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Cd",
+          "name": "КАДМИЙ",
+          "E_K": "[Kr] 4d¹⁰ 5s²",
+          "A_P": "154 пм",
+          "I_P": "97 пм",
+          "E_T": "1,69",
+          "I_E": "867,2 кДж/моль",
+          "T_D": "0, +1, +2",
+          "isotop": "¹⁰⁶Cd, ¹⁰⁸Cd, ¹²³⁴⁵⁶⁷⁸⁹⁰Cd, 111Cd ¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "Cd мен оның қосылыстары улы заттар.",
+          "phase": "қатты",
+          "melt": "321",
+          "boil": "765",
+          "icon_2": "",
+          "icon_info_2": "Cd - күміс-ақ түсті металл. Ауыр, жұмсақ, оңай жаншы- лады, ылғал ауада тұрақты оксидтік қабатпен қапталады. Тотықсыздандырғыш. d=8,65 г/см³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "2*10⁻⁷ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "1.5*10⁻⁵ %",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br> гринокит, ксантохроит, отавит, монтепонит, кадмоселит, хоулиит."
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "<p>Zn кендер. қосалқы өнім ретінде алынады.</p><p>2CdSO<sub>4</sub> + 2H<sub>2</sub>O<sub>(эл.тоғы) </sub>&rarr; 2Cd&darr; + O<sub>2</sub>&uarr; + 2H<sub>2</sub>SO<sub>4</sub></p><p>2CdSO<sub>4</sub> + 2H<sub>2</sub>O<sub>(эл.тоғы) </sub>&rarr; 2Cd&darr; + O<sub>2</sub>&uarr; + 2H<sub>2</sub>SO<sub>4</sub></p>",
+          "description": "<p>Ашқан: Ф. Штромейер (1817)</p><p>Атауы: лат. «Cadmia» - «каламин».</p>"
+        },
+        "chemical_properties": {
+          "description": "<p>Cd + H<sub>2</sub>O<sub>(бу)</sub> &rarr; CdO + H<sub>2</sub>&uarr;&nbsp;&nbsp;&nbsp;&nbsp; Cd + I<sub>2(сусп.) </sub>&rarr; CdI<sub>2</sub></p><p>Cd + 2HCl<sub>(сұй.)</sub> &rarr; CdСl<sub>2</sub> + H<sub>2</sub>&uarr;</p><p>Cd + 4HNO<sub>3</sub><sub>(конц)</sub> &rarr; Cd(NO<sub>3</sub><sub> )</sub><sub>2</sub> + 2NO<sub>2</sub>&uarr; + 2H<sub>2</sub>O</p><p>2Cd + O<sub>2</sub> &rarr; 2CdO&nbsp;&nbsp;&nbsp;&nbsp; Cd + Cl<sub>2</sub> &rarr; CdCl<sub>2</sub></p><p>Cd + S &rarr; CdS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3Cd + 2P &rarr; Cd<sub>3</sub>P<sub>2</sub></p><p>Cd + CuSO<sub>4</sub> &rarr; CdSO<sub>4</sub> + Cu&darr;</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "Қайта зарядталатын батареялар жасауда",
+          "icon_2": "",
+          "icon_info_2": "CdO қызыл бояу ретінде",
+          "icon_3": "",
+          "icon_info_3": "Флуоресценттi микроскоп жасауда",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "58": {
+        "name": "ЦЕРИЙ",
+        "symbol": "Ce",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Ce",
+          "name": "ЦЕРИЙ",
+          "E_K": "[Xe] 4f1 5d1 6s2",
+          "A_P": "181 пм",
+          "I_P": "",
+          "E_T": "ЭТ 1,12",
+          "I_E": "И/Э 540,1 кДж/моль",
+          "T_D": "Т/Д +2, +3, +4",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: В.Хизингер, Й. Я. Берцелиус (1803)</p><p>Атауы: «Ceres» - астероид атауы.</p>"
+        },
+        "chemical_properties": {
+          "description": "<p><sub>0</sub>Ce, <sub>1</sub>4<sub>2</sub>Ce</p><p>Ce<sub>3</sub>+ ионы түссіз, ал </p><p>Сe<sub>4</sub>+ ионы ([Ce<sub>6</sub>(OH)<sub>1</sub><sub>2</sub>]) сары</p><p> 2CeCl<sub>3</sub> + 3Ca → 2Ce + 3CaF<sub>2</sub></p><p> 2CeСl<sub>3</sub>(+NaCl)<sub>(электролиз)</sub> → 2Ce + 3Cl<sub>2</sub>↑</p><p> 2Сe + 6H<sub>2</sub>O(ыст.)  → 2Ce(OH)<sub>3</sub>↓ + 3H<sub>2</sub>↑&nbsp;&nbsp;&nbsp;&nbsp;  </p><p> 2Ce + 6HCl(cұй.)  → 2CeCl<sub>3</sub> + 3H<sub>2</sub>↑</p><p> Ce + 4HNO<sub>3</sub>(сұй.)  → Ce(NO<sub>3</sub><sub> )</sub><sub>3</sub> + NO↑ + 2H<sub>2</sub>O</p><p> 2Ce + nH<sub>2</sub> → 2CeHn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ce + O<sub>2</sub> → CeO<sub>2</sub></p><p> 2Ce + 3Cl<sub>2</sub> → 2CeCl<sub>3</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   2Ce + 3S → Ce<sub>2</sub>S<sub>3</sub></p><p> 2Ce + N<sub>2</sub> → 2CeN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ce + 2C → CeC<sub>2</sub></p><p>CeO<sub>3</sub></p><p>Ce(SO<sub>4</sub><sub> )</sub><sub>2</sub> </p><p>(Ce<sub>2</sub>S<sub>3</sub><sub> )</sub></p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "17": {
+        "name": "ХЛОР",
+        "symbol": "Cl",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Cl",
+          "name": "ХЛОР",
+          "E_K": "1s²2s²2p63s23p5",
+          "A_P": "99 пм",
+          "I_P": "",
+          "E_T": "ЭТ 3,16",
+          "I_E": "И/Э 1255 кДж/моль",
+          "T_D": "Т/Д -1, 0, +1, +3, +5, +7",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Алғаш синтездеген: Дж.Пристли, Шееле.</p><p>Атауы: Chlorum - «жасыл».</p>"
+        },
+        "chemical_properties": {
+          "description": "<p> Электролиз: <sub>2</sub>NaCl + H<sub>2</sub>O —› <sub>2</sub>NaOH + H<sub>2</sub> + Cl<sub>2</sub></p><p> Зертханада: MnO<sub>2</sub>+<sub>4</sub>HCl —›MnCl<sub>2</sub> + 2H<sub>2</sub>O + Cl<sub>2</sub></p><p> Cl<sub>2</sub> + H<sub>2</sub> = 2HCl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3Cl<sub>2</sub> + 2Sb = 2SbCl<sub>3</sub></p><p> Cl<sub>2</sub> + nH<sub>2</sub>O = Cl<sub>2</sub>•nH<sub>2</sub>O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cl<sub>2</sub> + Br<sub>2</sub> = 2BrCl</p><p> Cl<sub>2</sub> + 2NaOH(салқын) = NaCl + NaClO + H<sub>2</sub>O</p><p> 3Cl<sub>2</sub> + 6NaOH(ыстық) = 5NaCl + NaClO<sub>3</sub> + 3H<sub>2</sub>O</p><p> Cl<sub>2</sub> + 2O<sub>3</sub> = 2ClO<sub>3</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Cl<sub>2</sub> + 2P = 2PCl<sub>3</sub></p><p> Cl<sub>2</sub> + 2NaI = 2NaCl + I<sub>2</sub>   </p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "27": {
+        "name": "КОБАЛЬТ",
+        "symbol": "Co",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Co",
+          "name": "КОБАЛЬТ",
+          "E_K": "1s²2s²2p6 3s23p6 3d74s2",
+          "A_P": "125 пм",
+          "I_P": "",
+          "E_T": "ЭТ 1,88",
+          "I_E": "И/Э 758 кДж/моль",
+          "T_D": "Т/Д +2, +3",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: Г.Брандт (1735)</p><p>Атауы: нем. Kobald - «гоблин»</p>"
+        },
+        "chemical_properties": {
+          "description": "<p>Co(OH)<sub>3</sub> = Co<sub>2</sub>O<sub>3</sub> + 3H<sub>2</sub>O;  2Co<sub>2</sub>O<sub>3</sub> + 3C = 4Co + 3CO<sub>2</sub></p><p> 2Co + O<sub>2</sub> (ауа)<sub>(to)</sub> = 2CoO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Co + Br<sub>2</sub> = CoBr<sub>2</sub></p><p> 3Co + 2O<sub>2</sub>(ауа)<sub>(to)</sub> = (СoIICo<sub>2</sub></p><p> Co + 2HCl(cұй.)<sub>(to)</sub> = CoCl<sub>2</sub> + H<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Co + Cl<sub>2</sub> = CoCl<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p> 3Co + 8HNO<sub>3</sub>(cұй.ыст) = 3Сo(NO<sub>3</sub><sub> )</sub><sub>3</sub> + 2NO + 4H<sub>2</sub>O</p><p> 4Co + 4NaOH + 3O<sub>2</sub><sub>(to)</sub> = 4NaCoO<sub>2</sub> + 2H<sub>2</sub>O&nbsp;&nbsp;&nbsp;&nbsp;</p><p> Co + S<sub>(to)</sub> = CoS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Co + P<sub>(to)</sub> = Co<sub>2</sub>P, CoP, CoP<sub>3</sub></p><p>Co<sub>2</sub>+, Co<sub>3</sub>+, Co(OH)<sub>2</sub>, CoCO<sub>3</sub>,</p><p>[Co(NH<sub>3</sub><sub> )</sub><sub>6</sub>]Cl<sub>2</sub>, K<sub>3</sub>[Co(NO<sub>2</sub><sub> )</sub><sub>6</sub>],</p><p>CoO, CoO(OH). </p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "24": {
+        "name": "ХРОМ",
+        "symbol": "Cr",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Cr",
+          "name": "ХРОМ",
+          "E_K": "1s²2s²2p6 3s23p6 3d54s1",
+          "A_P": "130 пм",
+          "I_P": "",
+          "E_T": "ЭТ 1,66",
+          "I_E": "И/Э 652 кДж/моль",
+          "T_D": "Т/Д 0, +2, +3, +4, +6",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан:  Л. Н. Воклен (1797)  </p><p>Атауы: лат. Chroma - «түс» деген сөз.</p>"
+        },
+        "chemical_properties": {
+          "description": "<p> Fe(CrO<sub>2</sub><sub> )</sub><sub>2</sub> + 4C = Fe + 2Cr + 4CO</p><p> Cr<sub>2</sub>O<sub>3</sub> + 2Al = Al<sub>2</sub>O<sub>3</sub> + 2Cr (алюмотермия)</p><p> 4Сr(ұнтақ) + 3O<sub>2</sub> = 2Cr<sub>2</sub>O<sub>3</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cr + 2F<sub>2</sub> = CrF<sub>4</sub></p><p> 2Cr + 3H<sub>2</sub>O(бу) = Cr<sub>2</sub>O<sub>3</sub> + 3H<sub>2</sub></p><p> Cr + HCl <sub>(to)</sub> = CrCl<sub>2</sub> + H<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p> 2Cr + 6H<sub>2</sub>SO<sub>4</sub>(ыстық, <sub>></sub><sub>6</sub><sub>0</sub><sub>%</sub><sub> )</sub> = Cr<sub>2</sub>(SO<sub>4</sub><sub> )</sub><sub>3</sub> + 3SO<sub>2</sub> + 6H<sub>2</sub>O</p><p> 2Cr + N<sub>2</sub> = 2CrN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2Cr + 3I<sub>2</sub> = 2CrI<sub>3</sub></p><p> 2Cr + KClO<sub>3</sub> = Cr<sub>2</sub>O<sub>3</sub> + KCl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Cr + S = CrS</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "29": {
+        "name": "МЫС",
+        "symbol": "Cu",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Cu",
+          "name": "МЫС",
+          "E_K": "1s²2s²2p6 3s23p6 3d104s1",
+          "A_P": "128 пм",
+          "I_P": "",
+          "E_T": "ЭТ 1,90",
+          "I_E": "И/Э 746 кДж/моль",
+          "T_D": "Т/Д +1, +2",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан:  ежелден белгілі</p><p>Атауы: лат. Сuprum- «Кипр» аралы.</p>"
+        },
+        "chemical_properties": {
+          "description": "<p>Cu<sub>2</sub>+ ионы</p><p> 2Cu<sub>2</sub>S + 3O<sub>2</sub> = 2Cu<sub>2</sub>O + 2SO<sub>2</sub></p><p>Cu<sub>2</sub>O + Cu<sub>2</sub>S = 6Cu + SO<sub>2</sub>   т.б. әдістер.</p><p> 2Сu + O<sub>2</sub> <sub>(t)</sub> → 2CuO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4Cu + O<sub>2</sub> → 2Cu<sub>2</sub>O</p><p> 2Cu + H<sub>2</sub>O + CO<sub>2</sub> + O<sub>2</sub> → Cu<sub>2</sub>CO<sub>3</sub>(OH)<sub>2</sub>↓ </p><p> 2Cu + 4HCl(cұй.) + O<sub>2</sub> → 2CuCl<sub>2</sub> + 2H<sub>2</sub>O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p> Cu + 2H<sub>2</sub>SO<sub>4</sub><sub>(конц ыстық)</sub> → CuSO<sub>4</sub> + SO<sub>2</sub> + 2H<sub>2</sub>O</p><p> Cu + 2AgNO<sub>3</sub> → Cu(NO<sub>3</sub><sub> )</sub><sub>2</sub> + 2Ag↓</p><p> Cu + Cl<sub>2</sub> → CuCl<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2Cu + S <sub>(t)</sub>→ Cu<sub>2</sub>S</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "105": {
+        "name": "ДУБНИЙ",
+        "symbol": "Db",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Db",
+          "name": "ДУБНИЙ",
+          "E_K": "[Xe] 5f14 6d3 7s2",
+          "A_P": "(139) пм",
+          "I_P": "",
+          "E_T": "ЭТ -",
+          "I_E": "И/Э 665 кДж/моль",
+          "T_D": "Т/Д (+3), (+4), +5",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: Дубна және Калифорния инс. (1967) </p><p>Атауы: Дубна ядрол.институты атынаККО</p>"
+        },
+        "chemical_properties": {
+          "description": "<p><sub>8</sub>Db (жарт. ыд. пер. <sub>1</sub>6 сағ). </p><p><sub>7</sub>Db, <sub>2</sub>6<sub>8</sub>Db, <sub>2</sub>7<sub>0</sub>Db</p><p><sub>5</sub>Db + 4 <sub>1</sub>n</p><p><sub>5</sub>Db + 4 <sub>1</sub>n</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "26": {
+        "name": "ТЕМІР",
+        "symbol": "Fe",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Fe",
+          "name": "ТЕМІР",
+          "E_K": "1s²2s²2p6 3s23p6 3d64s2",
+          "A_P": "126 пм",
+          "I_P": "",
+          "E_T": "ЭТ 1,83",
+          "I_E": "И/Э 759 кДж/моль",
+          "T_D": "Т/Д +2, +3, +6",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: белгісіз</p><p>Атауы: Iron - «темір», «қасиетті металл»</p>"
+        },
+        "chemical_properties": {
+          "description": "<p> Fe<sub>2</sub>O<sub>3</sub> + 3CO = 2Fe + 3CO<sub>2</sub></p><p> FeCl<sub>2</sub> (эл.тогы) = Fe + Cl<sub>2</sub> <sub>(электролиз)</sub></p><p> 3Fe + 4H<sub>2</sub>O(бу) = (FeIIFe<sub>2</sub></p><p> Fe + HCl(cұй.) = FeCl<sub>2</sub> + H<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  2Fe + 3Cl<sub>2</sub> = 2FeCl<sub>3</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p> Fe + 4HNO<sub>3</sub>(cұй.) = Fe(NO<sub>3</sub><sub> )</sub><sub>3</sub> + NO + 2H<sub>2</sub>O</p><p> 2Fe + 2H<sub>2</sub>O + O<sub>2</sub> = 2Fe(OH)<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;</p><p> Fe + S = FeS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fe + CuSO<sub>4</sub> = FeSO<sub>4</sub> + Cu</p><p>FeO<sub>4</sub></p><p>Fe<sub>2</sub>+, Fe(OH)<sub>2</sub></p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "72": {
+        "name": "ХАФНИЙ",
+        "symbol": "Hf",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Hf",
+          "name": "ХАФНИЙ",
+          "E_K": "[Xe] 4f14 5d2 6s2",
+          "A_P": "167 пм",
+          "I_P": "",
+          "E_T": "ЭТ 1,3",
+          "I_E": "И/Э 575,2 кДж/моль",
+          "T_D": "Т/Д 0, +2, +3, +4",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: Д. Костер, Дж. Ч. фон Хевеси (1923)</p><p>Атауы: лат. «Hafnia» - «Копенгаген».</p>"
+        },
+        "chemical_properties": {
+          "description": "<p><sub>9</sub>Hf, <sub>1</sub>8<sub>0</sub>Hf</p><p>Hf HF, HF+HNO<sub>3</sub>, «Патша</p><p> K<sub>2</sub>[HfF<sub>6</sub>] + 4KCl(эл.тоғы) → Hf↓ + 2Cl<sub>2</sub>↑ + 6KF</p><p> Hf + 2H<sub>2</sub>O(бу)→ HfO<sub>2</sub> + 2H<sub>2</sub>↑&nbsp;&nbsp;&nbsp;&nbsp;   Hf + C → HfC</p><p> 3Hf + 6HCl<sub>(конц)</sub> + 4HNO<sub>3</sub><sub>(конц)</sub>→ [Hf<sub>3</sub>Cl<sub>3</sub>(OH)<sub>6</sub>]Cl<sub>3</sub></p><p> Hf + 4HF<sub>(конц)</sub> + H<sub>2</sub>O → H<sub>2</sub>[HfOF<sub>4</sub>] + 2H<sub>2</sub>↑</p><p> Hf + O<sub>2</sub> → HfO<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hf(ұнтақ) + 2Cl<sub>2</sub> → HfCl<sub>4</sub></p><p> Hf + S → HfS<sub>3</sub> → HfS<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;  2Hf + N<sub>2</sub> → 2HfN </p><p><sub>6</sub>Hf</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "80": {
+        "name": "СЫНАП",
+        "symbol": "Hg",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Hg",
+          "name": "СЫНАП",
+          "E_K": "[Xe] 4f14 5d10 6s2",
+          "A_P": "157 пм",
+          "I_P": "",
+          "E_T": "ЭТ 2,00",
+          "I_E": "И/Э 1 006 кДж/моль",
+          "T_D": "Т/Д 0, +1, +2",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: ежелден белгілі</p><p>Атауы: лат. «hydrargyrum» - сұйық күміс</p>"
+        },
+        "chemical_properties": {
+          "description": "<p><sub>8</sub>Hg, <sub>1</sub>9<sub>9</sub>Hg, <sub>2</sub>0<sub>0</sub>Hg,</p><p><sub>1</sub>Hg, <sub>2</sub>0<sub>2</sub>Hg, <sub>2</sub>0<sub>4</sub>Hg</p><p> 2Hg + 2H<sub>2</sub>SO<sub>4</sub><sub>(конц)</sub> → Hg<sub>2</sub>SO<sub>4</sub>↓ + 2H<sub>2</sub>O + SO<sub>2</sub>↑&nbsp;&nbsp;&nbsp;&nbsp;  </p><p> 6Hg + 8HNO<sub>3</sub>(cұй.) → 3Hg<sub>2</sub>(NO<sub>3</sub><sub> )</sub><sub>2</sub> + 4H<sub>2</sub>O + 2NO↑&nbsp;&nbsp;&nbsp;&nbsp;  </p><p> Hg + 4HNO<sub>3</sub><sub>(конц)</sub> → Hg(NO<sub>3</sub><sub> )</sub><sub>2</sub> + 2H<sub>2</sub>O + 2NO<sub>2</sub>↑</p><p> Hg + 4HI<sub>(конц)</sub> → H<sub>2</sub>[HgI<sub>4</sub>] + H<sub>2</sub>↑</p><p> 2Hg + O<sub>2</sub> → 2HgO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hg + Cl<sub>2</sub> → HgCl<sub>2</sub>  </p><p> Hg + S  → HgS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hg + HgCl<sub>2</sub> → Hg<sub>2</sub>Cl<sub>2</sub></p><p> HgS + O<sub>2</sub> → Hg + SO<sub>2</sub>↑</p><p> 4HgS + 4CaO → 4Hg↑ + 3CaS + CaSO<sub>4</sub></p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "53": {
+        "name": "ЙОД",
+        "symbol": "I",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "I",
+          "name": "ЙОД",
+          "E_K": "[Kr] 4d10 5s2 5p5",
+          "A_P": "136 пм",
+          "I_P": "",
+          "E_T": "ЭТ 2,66",
+          "I_E": "И/Э 1008 кДж/моль",
+          "T_D": "Т/Д -1, 0, +1, +3, +5, +7",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: Б.Куртуа (1811)</p><p>Атауы: грек. iodes - «күлгін» сөзі.</p>"
+        },
+        "chemical_properties": {
+          "description": "<p> 8KI + 9H<sub>2</sub>SO<sub>4</sub> → 4I<sub>2</sub>↓ + H<sub>2</sub>S↑ + 4H<sub>2</sub>O + 8KHSO<sub>4</sub></p><p> I<sub>2</sub> + H<sub>2</sub> → 2HI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  I<sub>2</sub> + F<sub>2</sub> → IF<sub>3</sub>, IF<sub>5</sub></p><p> I<sub>2</sub> + 2H<sub>2</sub>O ↔ HI + HIO&nbsp;&nbsp;&nbsp;&nbsp;I<sub>2</sub> + 5H<sub>2</sub>O<sub>2</sub> ↔ HIO<sub>3</sub> + 4H<sub>2</sub>O</p><p> I<sub>2</sub> + 2NaOH<sub>(сұй)</sub> → NaI + NaIO + H<sub>2</sub>O</p><p> 3I<sub>2</sub> + 6NaOH(ыст) → 5NaI + NaIO<sub>3</sub> + 3H<sub>2</sub>O</p><p> I<sub>2</sub> + 10HNO<sub>3</sub><sub>(сұй)</sub> → 6HIO<sub>3</sub> + 10NO<sub>2</sub>↑ + 4H<sub>2</sub>O</p><p> I<sub>2</sub> + 2Na → 2NaI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3I<sub>2</sub> + 2Al → 2AlI<sub>3</sub> </p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "77": {
+        "name": "ИРИДИЙ",
+        "symbol": "Ir",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Ir",
+          "name": "ИРИДИЙ",
+          "E_K": "[Xe] 4f14 5d7 6s2",
+          "A_P": "136 пм",
+          "I_P": "",
+          "E_T": "ЭТ 2,20",
+          "I_E": "И/Э 868,1 кДж/моль",
+          "T_D": "Т/Д [0; +9]",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: С. Теннант және т.б. (1803)</p><p>Атауы: грек. «iris» - «кемпірқосақ» сөзі.</p>"
+        },
+        "chemical_properties": {
+          "description": "<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ir + 6HCl + O<sub>2</sub> → H<sub>2</sub>[IrCl<sub>6</sub>] + 2H<sub>2</sub>O</p><p> H<sub>2</sub>[IrCl<sub>6</sub>] + 2NH<sub>4</sub>Cl → (NH<sub>4</sub><sub> )</sub><sub>2</sub>[IrCl<sub>6</sub>] + 2HCl</p><p> (NH<sub>4</sub><sub> )</sub><sub>2</sub>[IrCl<sub>6</sub>] → 3Ir + 2N<sub>2</sub>↑ + 2NH<sub>4</sub>Cl + 16HCl</p><p> Ir + 6HCl<sub>(конц)</sub> + O<sub>2</sub> → H<sub>2</sub>[IrCl<sub>6</sub>] + 2H<sub>2</sub>O&nbsp;&nbsp;&nbsp;&nbsp;  </p><p> Ir + O<sub>2</sub> → IrO<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  3Ir + 4O<sub>2</sub> → IrO<sub>2</sub> + 2IrO<sub>3</sub>&nbsp;&nbsp;&nbsp;&nbsp;  </p><p> Ir + 3F<sub>2</sub> → IrF<sub>6</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   2Ir + 5F<sub>2</sub> → 2IrF<sub>5</sub></p><p> Ir + S → Ir<sub>2</sub>S<sub>3</sub>, IrS<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  2Ir + 3Cl<sub>2</sub> → 2IrCl<sub>3</sub>&nbsp;&nbsp;&nbsp;&nbsp;  </p><p> 3Ir + 8Na<sub>2</sub>O<sub>2</sub> → Ir<sub>3</sub>O<sub>8</sub> + 8Na<sub>2</sub>O</p><p> Ir +Na<sub>2</sub>CO<sub>3</sub> +<sub>2</sub>NaNO<sub>3</sub>  → Na<sub>3</sub>IrO<sub>3</sub> +<sub>2</sub>NaNO<sub>2</sub> +CO<sub>2</sub></p><p>Ir алынған. Ir<sub>3</sub>+ катионы</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "36": {
+        "name": "КРИПТОН",
+        "symbol": "Kr",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Kr",
+          "name": "КРИПТОН",
+          "E_K": "1s²2s²2p63s23p63d104s24p6",
+          "A_P": "198 пм",
+          "I_P": "",
+          "E_T": "ЭТ 3,00",
+          "I_E": "И/Э 1350 кДж/моль",
+          "T_D": "Т/Д 0, +2",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: У. Рэмзай, М. В. Трэверс (1898)</p><p>Атауы: грек. kryptos - «жасырын».</p>"
+        },
+        "chemical_properties": {
+          "description": "<p>Kr, <sub>8</sub>6Kr</p><p>Kr химиялық инертті газ. Өте қатаң жағдайда</p><p> Кr + F<sub>2</sub> → KrF<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2Кr + F<sub>2</sub> → 2KrF</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "57": {
+        "name": "ЛАНТАН",
+        "symbol": "La",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "La",
+          "name": "ЛАНТАН",
+          "E_K": "[Xe] 5d1 6s2",
+          "A_P": "187 пм",
+          "I_P": "",
+          "E_T": "ЭТ 1,10",
+          "I_E": "И/Э 541 кДж/моль",
+          "T_D": "Т/Д 0, +3",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: К. Г. Мосандер (1839)</p><p>Атауы: грек. «lanthanein» - «жасырынған».</p>"
+        },
+        "chemical_properties": {
+          "description": "<p> 2LaF<sub>3</sub> + 3Ca → 2La + 3CaF<sub>2</sub></p><p> 2LaСl<sub>3</sub><sub>(сұй)</sub><sub>(электролиз)</sub> → 2La + 3Cl<sub>2</sub>↑</p><p> 2La + 6H<sub>2</sub>O(ыст.)  → 2La(OH)<sub>3</sub>↓ + 3H<sub>2</sub>↑&nbsp;&nbsp;&nbsp;&nbsp;  </p><p> 2La + 6HCl(cұй.)  → 2LaCl<sub>3</sub> + 3H<sub>2</sub>↑</p><p> 8La + 30HNO<sub>3</sub>(өте сұй.)  → 8La(NO<sub>3</sub><sub> )</sub><sub>3</sub> + 3NH<sub>4</sub>NO<sub>3</sub></p><p> 2La + nH<sub>2</sub> → 2LaHn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4La + 3O<sub>2</sub> → 2La<sub>2</sub>O<sub>3</sub></p><p> 2La + 3Cl<sub>2</sub> → 2LaCl<sub>3</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  2La + N<sub>2</sub> → 2LaN</p><p>La<sub>2</sub>O<sub>3</sub></p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "116": {
+        "name": "ЛИВЕРМОРИЙ",
+        "symbol": "Lv",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Lv",
+          "name": "ЛИВЕРМОРИЙ",
+          "E_K": "[Rn] 5f14 6d10 7s2 7p4",
+          "A_P": "(183) пм",
+          "I_P": "",
+          "E_T": "ЭТ -",
+          "I_E": "И/Э (664) кДж/моль",
+          "T_D": "Т/Д (-2, +2, +4)",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: Дубна, Ресей (2000)</p><p>Атауы: Лоуренс Ливермор ұлттық</p>"
+        },
+        "chemical_properties": {
+          "description": "<p>реакциясында <sub>2</sub>9<sub>2</sub>Lv </p><p><sub>6</sub>Lv + 4 <sub>1</sub></p><p><sub>6</sub>Lv + 4</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "25": {
+        "name": "МАРГАНЕЦ",
+        "symbol": "Mn",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Mn",
+          "name": "МАРГАНЕЦ",
+          "E_K": "1s²2s²2p6 3s23p6 3d54s2",
+          "A_P": "127 пм",
+          "I_P": "",
+          "E_T": "ЭТ 1,55",
+          "I_E": "И/Э 717 кДж/моль",
+          "T_D": "Т/Д [0, +7]",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан:  И. Ган (1774)  </p><p>Атауы: лат. Magnes - «магнит».</p>"
+        },
+        "chemical_properties": {
+          "description": "<p>MnO<sub>2</sub></p><p> Mn<sub>2</sub>O<sub>3</sub> + 2Al= 2Mn + Al<sub>2</sub>O<sub>3</sub> (алюмотермия) </p><p> 2MnSO<sub>4</sub> + 2H<sub>2</sub>O (эл.тогы) = 2Mn + O<sub>2</sub> + 2H<sub>2</sub>SO<sub>4</sub>   </p><p> Mn(ұнтақ) + O<sub>2</sub> <sub>(t)</sub> = MnO<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;   4Mn + 3O<sub>2</sub> <sub>(t)</sub> = 2Mn<sub>2</sub>O<sub>3</sub></p><p> Mn(ұнтақ) + 2H<sub>2</sub>O(бу) = Mn(OH)<sub>2</sub> + H<sub>2</sub></p><p> Mn(ұнтақ) + HCl(cұй.) = MnCl<sub>2</sub> + H<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p> Mn + 2H<sub>2</sub>SO<sub>4</sub><sub>(конц)</sub> = MnSO<sub>4</sub> + SO<sub>2</sub> + 2H<sub>2</sub>O</p><p> Mn + 2F<sub>2</sub> = MnF<sub>4</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mn + Cl<sub>2</sub> = MnCl<sub>2</sub></p><p> Mn + S = MnS&nbsp;&nbsp;&nbsp;&nbsp;  Mn + N<sub>2</sub> <sub>(t)</sub>= Mn<sub>2</sub>N, Mn<sub>4</sub>N, Mn<sub>3</sub>N<sub>2</sub> </p><p>MnO<sub>4</sub></p><p>Mn<sub>3</sub>O<sub>4</sub>, Mn<sub>2</sub>+, Mn(OH)<sub>2</sub></p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "42": {
+        "name": "МОЛИБДЕН",
+        "symbol": "Mo",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Mo",
+          "name": "МОЛИБДЕН",
+          "E_K": "[Kr] 4d5 5s1",
+          "A_P": "139 пм",
+          "I_P": "",
+          "E_T": "ЭТ 2,16",
+          "I_E": "И/Э 684,8 кДж/моль",
+          "T_D": "Т/Д +2, +3, +4, +5, +6",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: К. У. Шееле (1781)</p><p>Атауы: грек. «Molybdos» - «қорғасын».</p>"
+        },
+        "chemical_properties": {
+          "description": "<p>Mo, <sub>9</sub>7Mo, <sub>9</sub>8Mo, <sub>1</sub>0<sub>0</sub>Mo </p><p>Mo ұнтағы</p><p> MoS<sub>2</sub> + 2H<sub>2</sub> <sub> (</sub><sub>8</sub><sub>0</sub><sub>0</sub><sub>°C</sub><sub> )</sub> → Mo + 2H<sub>2</sub>S</p><p> Mo + 2H<sub>2</sub>O(бу) → MoO<sub>2</sub> + 2H<sub>2</sub>↑</p><p> Mo+<sub>4</sub>H<sub>2</sub>SO<sub>4</sub><sub>(конц)</sub>↔ H<sub>4</sub>[Mo(SO<sub>4</sub><sub> )</sub>O<sub>4</sub>] +<sub>3</sub>SO<sub>2</sub>↑ +<sub>2</sub>H<sub>2</sub>O</p><p> Mo + 2HNO<sub>3</sub><sub> (</sub><sub>3</sub><sub>0</sub><sub>%</sub> ыст.) → MoO<sub>3</sub>↓ + 2NO↑ + H<sub>2</sub>O</p><p> 2Mo + 4NaOH + 3O<sub>2</sub> → 2Na<sub>2</sub>MoO<sub>4</sub> + 2H<sub>2</sub>O</p><p> Mo + 3F<sub>2</sub> → MoF<sub>6</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2Mo + 5Cl<sub>2</sub> → 2MoCl<sub>5</sub></p><p> Mo + 2S → MoS<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2Mo + 3O<sub>2</sub> → 2MoO<sub>3</sub></p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "11": {
+        "name": "НАТРИЙ",
+        "symbol": "Na",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Na",
+          "name": "НАТРИЙ",
+          "E_K": "1s²2s²2p63s1",
+          "A_P": "190 пм",
+          "I_P": "",
+          "E_T": "ЭТ 0,93",
+          "I_E": "И/Э 495,8 кДж/моль",
+          "T_D": "Т/Д 0, +1",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан:  Х.Дэви (1807)  </p><p>Атауы: Natrium- «сода» сөзінен.</p>"
+        },
+        "chemical_properties": {
+          "description": "<p>Na</p><p>Na+ ионы</p><p> 2NaCl = 2Na + Cl₂ <sub>(электролиз)</sub></p><p> Na₂CO<sub>3</sub> + 2C = 2Na + 3CO (көміртектермия)</p><p> 2Na + O<sub>2</sub> = Na<sub>2</sub>O<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;   6Na + N<sub>2</sub> = 2Na<sub>3</sub>N</p><p> 2Na + 2H<sub>2</sub>O = 2NaOH + H<sub>2</sub></p><p> 2Na + 2HCl<sub>(сұй)</sub> = 2NaCl + H<sub>2</sub></p><p> 8Na+<sub>1</sub><sub>0</sub>HNO<sub>3</sub>(өте сұй.)= 8NaNO<sub>3</sub>+NH<sub>4</sub>NO<sub>3</sub>+<sub>3</sub>H<sub>2</sub>O</p><p> 2Na + 2NH<sub>3</sub>(c) = 2NaNH<sub>2</sub> + H<sub>2</sub></p><p> 2Na + 2C<sub>2</sub>H<sub>5</sub>OH = 2(C<sub>2</sub>H<sub>5</sub>O)Na + H<sub>2</sub> </p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "41": {
+        "name": "НИОБИЙ",
+        "symbol": "Nb",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Nb",
+          "name": "НИОБИЙ",
+          "E_K": "[Kr] 4d4 5s1",
+          "A_P": "146 пм",
+          "I_P": "",
+          "E_T": "ЭТ 1,60",
+          "I_E": "И/Э 663,6 кДж/моль",
+          "T_D": "Т/Д +1, +2, +3, +4, +5",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: Ч. Хэтчетт (1801)</p><p>Атауы: грек. «Niobe» - «Танталдың қызы».</p>"
+        },
+        "chemical_properties": {
+          "description": "<p> NbCl<sub>5</sub> + 5Na <sub> (</sub><sub>4</sub><sub>5</sub><sub>0</sub><sub>°C</sub><sub> )</sub> → 5NaCl + Nb</p><p> 2K<sub>2</sub>[NbF<sub>7</sub>] (эл.тоғы) → 2Nb↓ + 5F<sub>2</sub>↑ + 4KF</p><p> 2Nb + 12HF<sub>(конц)</sub> → 2H[NbF<sub>6</sub>] + 5H<sub>2</sub>↑</p><p> 3Nb + 18HF<sub>(конц)</sub> + 5HNO<sub>3</sub><sub>(конц)</sub>→</p><p>  → 3H[NbF<sub>6</sub>] + 5NO↑ + 10H<sub>2</sub>O</p><p> 4Nb + 5O<sub>2</sub> → 2Nb<sub>2</sub>O<sub>5</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2Nb + 5Cl<sub>2</sub> → 2NbCl<sub>5</sub></p><p> 2Nb + 2NaOH<sub>(конц)</sub> + 4H<sub>2</sub>O → 2(NaNb)O<sub>3</sub>↓ + 5H<sub>2</sub>↑</p><p> 2Nb + 2H<sub>2</sub>O(эл.тоғы) → 2NbH<sub>2</sub>↓ + O<sub>2</sub>↑</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "60": {
+        "name": "НЕОДИМ",
+        "symbol": "Nd",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Nd",
+          "name": "НЕОДИМ",
+          "E_K": "[Xe] 4f4 6s2    (2.8.18.22.8.2)",
+          "A_P": "182 пм",
+          "I_P": "",
+          "E_T": "ЭТ 1,14",
+          "I_E": "И/Э 531,5 кДж/моль",
+          "T_D": "Т/Д +3",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: К. Ф. А. фон Вельсбах (1885)</p><p>Атауы: грек. «neos didymos» - жаңа егіздер.</p>"
+        },
+        "chemical_properties": {
+          "description": "<p><sub>2</sub>Nd,</p><p><sub>3</sub>Nd, <sub>1</sub>4<sub>4</sub>Nd, <sub>1</sub>4<sub>5</sub>Nd,</p><p><sub>6</sub>Nd, <sub>1</sub>4<sub>8</sub>Nd, <sub>1</sub>5<sub>0</sub>Nd</p><p> 2NdF<sub>3</sub> + 3Ca → 2Nd + 3CaF<sub>2</sub></p><p> 2NdСl<sub>3</sub>(еріт. электролизі) → 2Nd + 3Cl<sub>2</sub>↑</p><p> 2Nd + 6H<sub>2</sub>O(ыст.)  → 2Nd(OH)<sub>3</sub>↓ + 3H<sub>2</sub>↑&nbsp;&nbsp;&nbsp;&nbsp;  </p><p> 2Nd + 6HCl(cұй.)  → 2NdCl<sub>3</sub> + 3H<sub>2</sub>↑</p><p> Nd + 6HNO<sub>3</sub><sub>(конц)</sub>  → Nd(NO<sub>3</sub><sub> )</sub><sub>3</sub> + 3NO<sub>2</sub>↑ + 3H<sub>2</sub>O</p><p> 4Nd + 3O<sub>2</sub> → 2Nd<sub>2</sub>O<sub>3</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2Nd + 3Cl<sub>2</sub> → 2NdCl<sub>3</sub></p><p> 4Nd + 6H<sub>2</sub>O + 3O<sub>2</sub> → 4Nd(OH)<sub>3</sub></p><p> 2Nd + 3S → Nd<sub>2</sub>S<sub>3</sub>&nbsp;&nbsp;&nbsp;&nbsp;Nd+<sub>6</sub>NO<sub>2</sub>→<sub>3</sub>NO+Nd(NO<sub>3</sub><sub> )</sub><sub>3</sub> </p><p>(Nd<sub>2</sub>Fe<sub>1</sub><sub>4</sub>B)</p><p>түсті. Nd қосылыстарының</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "28": {
+        "name": "НИКЕЛЬ",
+        "symbol": "Ni",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Ni",
+          "name": "НИКЕЛЬ",
+          "E_K": "1s²2s²2p6 3s23p6 3d84s2",
+          "A_P": "124 пм",
+          "I_P": "",
+          "E_T": "ЭТ 1,91",
+          "I_E": "И/Э 736 кДж/моль",
+          "T_D": "Т/Д +2, +3",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: А. Кронстедт (1751)</p><p>Атауы: нем. kupfernickel- «Шайтан мысы»</p>"
+        },
+        "chemical_properties": {
+          "description": "<p> Ni + 4CO <sub> (</sub><sub>5</sub><sub>0</sub><sub>°C</sub><sub> )</sub> = Ni(CO)<sub>4</sub> <sub> (</sub><sub>2</sub><sub>3</sub><sub>0</sub><sub>°C</sub><sub> )</sub> = Ni + 4CO</p><p> 3NiO + 2Al = 3Ni +Al<sub>2</sub>O<sub>3</sub></p><p> 2Ni + O<sub>2</sub> <sub>(to)</sub> = 2NiO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ni + Br<sub>2</sub> = NiBr<sub>2</sub></p><p> Ni + S<sub>(to)</sub> = NiS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ni + As<sub>(to)</sub> = NiAs&nbsp;&nbsp;&nbsp;&nbsp; </p><p> Ni + 2HCl(cұй.)<sub>(to)</sub> = NiCl<sub>2</sub> + H<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Ni + Cl<sub>2</sub> = NiCl<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p> 3Ni + 8HNO<sub>3</sub>(cұй.) = 3Ni(NO<sub>3</sub><sub> )</sub><sub>2</sub> + 2NO + 4H<sub>2</sub>O</p><p> Ni(ұнт.) + 4СO = [Ni(CO)<sub>4</sub>]&nbsp;&nbsp;&nbsp;&nbsp;</p><p> Ni + 4PF<sub>3</sub><sub>(to)</sub> = [Ni(PF<sub>3</sub><sub> )</sub><sub>4</sub>]</p><p>Ni<sub>2</sub>+, NiS, NiO, NiOOH,</p><p>[Ni(NH<sub>3</sub><sub> )</sub><sub>6</sub>]Cl<sub>2</sub>, K<sub>2</sub>[Ni(CN)<sub>4</sub>].</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "118": {
+        "name": "ОГАНЕСОН",
+        "symbol": "Og",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Og",
+          "name": "ОГАНЕСОН",
+          "E_K": "[Rn] 5f14 6d10 7s2 7p6",
+          "A_P": "(152) пм",
+          "I_P": "",
+          "E_T": "ЭТ -",
+          "I_E": "И/Э (975) кДж/моль",
+          "T_D": "Т/Д (-1, 0, +2, +4)",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: Біріккен зерттеу орт.-тары (2016)</p><p>Атауы: Ю. Ц. Оганесян құрметіне</p>"
+        },
+        "chemical_properties": {
+          "description": "<p><sub>4</sub>Og изотопының</p><p><sub>8</sub>Og + 31n</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "76": {
+        "name": "ОСМИЙ",
+        "symbol": "Os",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Os",
+          "name": "ОСМИЙ",
+          "E_K": "[Xe] 4f14 5d6 6s2",
+          "A_P": "135 пм",
+          "I_P": "",
+          "E_T": "ЭТ 2,20",
+          "I_E": "И/Э 820 кДж/моль",
+          "T_D": "Т/Д +2, +3, +4, +8",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: С. Теннант (1803)</p><p>Атауы: грек. «osme» - «иіс» сөзі.</p>"
+        },
+        "chemical_properties": {
+          "description": "<p><sub>8</sub>Os, <sub>1</sub>8<sub>9</sub>Os, <sub>1</sub>9<sub>0</sub>Os, <sub>1</sub>9<sub>2</sub>Os</p><p> OsO<sub>4</sub> + 2KOH + KNO<sub>2</sub> + H<sub>2</sub>O → K<sub>2</sub>[OsO<sub>2</sub>(OH)<sub>4</sub>] + KNO<sub>3</sub></p><p> K<sub>2</sub>[OsO<sub>2</sub>(OH)<sub>4</sub>] + 3H<sub>2</sub> → Os + 2KOH + 4H<sub>2</sub>O </p><p> Os + 6HCl<sub>(конц)</sub> + O<sub>2</sub> → H<sub>2</sub>[OsCl<sub>6</sub>] + 2H<sub>2</sub>O&nbsp;&nbsp;&nbsp;&nbsp;  </p><p> Os + 8HNO<sub>3</sub><sub>(конц)</sub> → [Os(H<sub>2</sub>O)<sub>2</sub>O<sub>4</sub>] + 8NO<sub>2</sub>↑ + 2H<sub>2</sub>O</p><p> Os + H<sub>2</sub>O<sub>2</sub><sub>(конц)</sub> → [Os(H<sub>2</sub>O)<sub>2</sub>O<sub>4</sub>] + 2H<sub>2</sub>O</p><p> Os + 2O<sub>2</sub> → OsO<sub>4</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Os + 3F<sub>2</sub> → OsF<sub>6</sub></p><p> 2Os + 7F<sub>2</sub> → 2OsF<sub>7</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Os + 2S → Os(S)<sub>2</sub></p><p> 2Os + 10HF → 2OsF<sub>5</sub> + 5H<sub>2</sub>   </p><p>OsO<sub>4</sub> саусақ</p><p>(Os+W)</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "46": {
+        "name": "ПАЛЛАДИЙ",
+        "symbol": "Pd",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Pd",
+          "name": "ПАЛЛАДИЙ",
+          "E_K": "[Kr] 4d10",
+          "A_P": "137 пм",
+          "I_P": "",
+          "E_T": "ЭТ 2,20",
+          "I_E": "И/Э 803,5 кДж/моль",
+          "T_D": "Т/Д 0, +1, +2, +3, +4",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: У. Х. Уолластон (1803)</p><p>Атауы: грек. «Pallas» - Паллада астериоды.</p>"
+        },
+        "chemical_properties": {
+          "description": "<p><sub>6</sub>Pd, <sub>1</sub>0<sub>8</sub>Pd, <sub>1</sub>1<sub>0</sub>Pd</p><p>ты, жұқа дисперсті Pd</p><p> Au, Pd, Pt қоспасынан бөлініп алынады.  </p><p>  3[Pd(NH<sub>3</sub><sub> )</sub><sub>2</sub>Cl<sub>2</sub>] → 3Pd + 4NH<sub>4</sub>Cl + 2HCl + N<sub>2</sub>↑</p><p> Pd + 2HCl<sub>(конц)</sub> + 2Cl<sub>2</sub> → H<sub>2</sub>[PdCl<sub>6</sub>]</p><p> Pd + 2H<sub>2</sub>SO<sub>4</sub><sub>(конц)</sub>→ PdSO<sub>4</sub>↓ + SO<sub>2</sub>↑ + 2H<sub>2</sub>O</p><p> Pd + 4HNO<sub>3</sub><sub>(конц)</sub> → Pd(NO<sub>3</sub><sub> )</sub><sub>2</sub>↓ + 2NO<sub>2</sub>↑ + 2H<sub>2</sub>O</p><p> 2Pd(қара) + O<sub>2</sub> → 2PdO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  2Pd + 3F<sub>2</sub> → 2PdF<sub>3</sub></p><p> Pd + Cl<sub>2</sub> → PdCl<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pd + S → PdS, Pd(S<sub>2</sub><sub> )</sub></p><p> Pd + 4HCl<sub>(конц)</sub><sub>(электролиз)</sub> → H<sub>2</sub>↑ + H<sub>2</sub>[PdCl<sub>4</sub>]</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "84": {
+        "name": "ПОЛОНИЙ",
+        "symbol": "Po",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Po",
+          "name": "ПОЛОНИЙ",
+          "E_K": "[Xe] 4f14 5d10 6s2 6p4",
+          "A_P": "176 пм",
+          "I_P": "",
+          "E_T": "ЭТ 2,30",
+          "I_E": "И/Э 813 кДж/моль",
+          "T_D": "Т/Д −2, +2, +4, +6",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: М. C.-Кюри (1898)</p><p>Атауы: Poland - Польша елі.</p>"
+        },
+        "chemical_properties": {
+          "description": "<p>Po темекі түтінінен де </p><p> H<sub>2</sub>[PoCl<sub>6</sub>] <sub>(электролиз)</sub> → Po↓ + 2Cl<sub>2</sub>↑ + 2HCl </p><p> Po + O<sub>2</sub> <sub> (</sub><sub>2</sub><sub>5</sub><sub>0</sub><sub>°C</sub><sub> )</sub> → PoO<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Po + Pb<sub>(t)</sub>→ PbPo&nbsp;&nbsp;&nbsp;&nbsp;  </p><p> Po + 8HNO<sub>3</sub><sub>(конц)</sub> → Po(NO<sub>3</sub><sub> )</sub><sub>4</sub>↓ + 4NO<sub>2</sub>↑ + 4H<sub>2</sub>O</p><p> Po + 4H<sub>2</sub>SO<sub>4</sub><sub>(конц)</sub> → Po(SO<sub>4</sub><sub> )</sub><sub>2</sub> + 2SO<sub>2</sub>↑ + 4H<sub>2</sub>O</p><p> Po + 2(NaOHH<sub>2</sub>O)<sub> (</sub><sub>4</sub><sub>5</sub><sub>0</sub><sub>°C</sub><sub> )</sub> → Na<sub>2</sub>PoO<sub>3</sub> + 2H<sub>2</sub>↑ + H<sub>2</sub>O </p><p> Po + 6HCl<sub>(конц)</sub> → H<sub>2</sub>[PoCl<sub>6</sub>] + 2H<sub>2</sub>↑</p><p> Po + Cl<sub>2</sub> → PoCl<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;Po + 2H<sub>0</sub> (Mg, HCl) → H<sub>2</sub>Po↑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "59": {
+        "name": "ПРАЗЕОДИМ",
+        "symbol": "Pr",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Pr",
+          "name": "ПРАЗЕОДИМ",
+          "E_K": "[Xe] 4f3 6s2    (2.8.18.21.8.2)",
+          "A_P": "182 пм",
+          "I_P": "",
+          "E_T": "ЭТ 1,13",
+          "I_E": "И/Э 526,6 кДж/моль",
+          "T_D": "Т/Д +3, +4",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: К. Ф. А. фон Вельсбах (1885)</p><p>Атауы: гр.«prasios didymos»- жасыл егіздер.</p>"
+        },
+        "chemical_properties": {
+          "description": "<p> 2PrF<sub>3</sub> + 3Ca → 2Pr + 3CaF<sub>2</sub></p><p> 2PrСl<sub>3</sub>(балқыма электролизі) → 2Pr + 3Cl<sub>2</sub>↑</p><p> 2Pr + 6H<sub>2</sub>O(ыст.)  → 2Pr(OH)<sub>3</sub>↓ + 3H<sub>2</sub>↑&nbsp;&nbsp;&nbsp;&nbsp;  </p><p> 2Pr + 6HCl(cұй.)  → 2PrCl<sub>3</sub> + 3H<sub>2</sub>↑</p><p> Pr + 6HNO<sub>3</sub><sub>(конц)</sub>  → Pr(NO<sub>3</sub><sub> )</sub><sub>3</sub> + 3NO<sub>2</sub>↑ + 3H<sub>2</sub>O</p><p> 12Pr + 11O<sub>2</sub> → 2Pr<sub>6</sub>O<sub>1</sub><sub>1</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2Pr<sub>6</sub>O<sub>1</sub><sub>1</sub> + O<sub>2</sub> → 12PrO<sub>2</sub></p><p> 2Pr + 3Cl<sub>2</sub> → 2PrCl<sub>3</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2Pr + 3S → Pr<sub>2</sub>S<sub>3</sub></p><p> Pr + 6NO<sub>2</sub> → 3NO + Pr(NO<sub>3</sub><sub> )</sub><sub>3</sub></p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "78": {
+        "name": "ПЛАТИНА",
+        "symbol": "Pt",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Pt",
+          "name": "ПЛАТИНА",
+          "E_K": "[Xe] 4f14 5d9 6s1",
+          "A_P": "139 пм",
+          "I_P": "",
+          "E_T": "ЭТ 2,28",
+          "I_E": "И/Э 868 кДж/моль",
+          "T_D": "Т/Д 0, +2, +4",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: А. де Уллоа (1735)</p><p>Атауы: испан. «platina» - «күміс» сөзі.</p>"
+        },
+        "chemical_properties": {
+          "description": "<p><sub>5</sub>Pt, <sub>1</sub>9<sub>6</sub>Pt, <sub>1</sub>9<sub>8</sub>Pt</p><p> 3Pt + 18HCl + 4HNO<sub>3</sub> → 3H<sub>2</sub>[PtCl<sub>6</sub>] + 8H<sub>2</sub>O + 4NO↑</p><p> H<sub>2</sub>[PtCl<sub>6</sub>] + 2NH<sub>4</sub>Cl → (NH<sub>4</sub><sub> )</sub><sub>2</sub>[PtCl<sub>6</sub>] + 2HCl</p><p> 3(NH<sub>4</sub><sub> )</sub><sub>2</sub>[PtCl<sub>6</sub>] → 2N<sub>2</sub>↑ + 3Pt + 2NH<sub>3</sub> + 18HCl</p><p> Pt + 2HCl<sub>(конц)</sub> + 2Cl<sub>2</sub> → H<sub>2</sub>[PtCl<sub>6</sub>]&nbsp;&nbsp;&nbsp;&nbsp;  </p><p> 3Pt + 18HCl + 4HNO<sub>3</sub> → 3H<sub>2</sub>[PtCl<sub>6</sub>] + 4NO↑ + 8H<sub>2</sub>O&nbsp;&nbsp;&nbsp;&nbsp;  </p><p> 2Pt + O<sub>2</sub> → 2PtO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pt + O<sub>2</sub> → PtO<sub>2</sub></p><p> Pt + 2F<sub>2</sub> → PtF<sub>4</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pt + O<sub>2</sub> + 3F<sub>2</sub> → (O<sub>2</sub></p><p>+)[PtF<sub>6</sub>]&nbsp;&nbsp;&nbsp;&nbsp;  </p><p> Pt + XeF<sub>4</sub> → PtF<sub>4</sub> + Xe↑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pt + S → PtS </p><p> Pt + 6HCl <sub>(электролиз)</sub>   → 2H<sub>2</sub>↑ + H<sub>2</sub>[PtCl<sub>6</sub>]</p><p>Pt тобы металдарымен, Fe,</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "75": {
+        "name": "РЕНИЙ",
+        "symbol": "Re",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Re",
+          "name": "РЕНИЙ",
+          "E_K": "[Xe] 4f14 5d5 6s2",
+          "A_P": "137 пм",
+          "I_P": "",
+          "E_T": "ЭТ 1,90",
+          "I_E": "И/Э 759 кДж/моль",
+          "T_D": "Т/Д +1, +2, +3, +4, +5, +6, +7",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: У. Ноддак, И.Таке, О. Берг (1925)</p><p>Атауы: грек. «Rhenus» - «Рейн» өзені.</p>"
+        },
+        "chemical_properties": {
+          "description": "<p> Re<sub>2</sub>O<sub>7</sub> + 2(NH<sub>3</sub> H<sub>2</sub>O) → 2NH<sub>4</sub>ReO<sub>4</sub> + H<sub>2</sub>O</p><p>  2NH<sub>4</sub>ReO<sub>4</sub> + 7H<sub>2</sub> → 2NH<sub>3</sub> + 2Re + 8H<sub>2</sub>O</p><p> 2Re + 7H<sub>2</sub>SO<sub>4</sub><sub>(конц)</sub>→ 2HReO<sub>4</sub> + 7SO<sub>2</sub>↑ + 6H<sub>2</sub>O&nbsp;&nbsp;&nbsp;&nbsp;  </p><p> Re + 7HNO<sub>3</sub><sub> (</sub><sub>3</sub><sub>0</sub><sub>%</sub><sub> )</sub> → HReO<sub>4</sub> + 7NO<sub>2</sub>↑ + 3H<sub>2</sub>O</p><p> 2Re + 7H<sub>2</sub>O<sub>2</sub><sub>(конц)</sub>→ 2HReO<sub>4</sub> + 6H<sub>2</sub>O</p><p> 4Re + 4NaOH<sub>(конц)</sub> + O<sub>2</sub> → 2NaReO<sub>4</sub> + 2H<sub>2</sub>O</p><p> 4Re + 7O<sub>2</sub> → 2Re<sub>2</sub>O<sub>7</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Re + 3F<sub>2</sub> → ReF<sub>6</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p> 2Re + 3Br<sub>2</sub> → 2ReBr<sub>3</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Re + 2S → ReS<sub>2</sub></p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "104": {
+        "name": "РЕЗЕРФОРДИЙ",
+        "symbol": "Rf",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Rf",
+          "name": "РЕЗЕРФОРДИЙ",
+          "E_K": "[Xe] 5f14 6d2 7s2",
+          "A_P": "150 пм",
+          "I_P": "",
+          "E_T": "ЭТ -",
+          "I_E": "И/Э 580 кДж/моль",
+          "T_D": "Т/Д +2, +3, +4",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: Дубна және Калифорния инс. (1964) </p><p>Атауы: Э. Резерфорд құрметіне қойылған.</p>"
+        },
+        "chemical_properties": {
+          "description": "<p><sub>1</sub>Rf (жарт. ыдырау периоды</p><p><sub>7</sub>Rf</p><p> Rf + 2Cl<sub>2</sub> → RfCl<sub>4</sub> </p><p><sub>4</sub>Rf + 4 <sub>1</sub>n</p><p><sub>4</sub>Rf + 4 <sub>1</sub>n</p><p>бақитын RfO<sub>2</sub> түзеді; галогендермен RfX<sub>4</sub></p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "45": {
+        "name": "РОДИЙ",
+        "symbol": "Rh",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Rh",
+          "name": "РОДИЙ",
+          "E_K": "[Kr] 4d8 5s1",
+          "A_P": "134 пм",
+          "I_P": "",
+          "E_T": "ЭТ 2,28",
+          "I_E": "И/Э 719,5 кДж/моль",
+          "T_D": "Т/Д -3, -1, 0, +1, +2, +3, +4, +5, +6, +7",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: У. Х. Уолластон (1803)</p><p>Атауы: грек. «Rhodon» - «раушан, роза».</p>"
+        },
+        "chemical_properties": {
+          "description": "<p>коллоидты Rh алуға болады.</p><p>Сулы ерітіндіде Rh<sub>3</sub>+ ионы</p><p><sub>0</sub><sub>0</sub><sub>0</sub> т Rh өндіріледі.</p><p> 4Rh(қара) + 24HCl<sub>(конц)</sub> + O<sub>2</sub> → 4H<sub>3</sub>[RhCl<sub>6</sub>] + 6H<sub>2</sub>O</p><p> 2Rh(қара) +<sub>6</sub>H<sub>2</sub>SO<sub>4</sub><sub>(конц)</sub>→ Rh<sub>2</sub>(SO<sub>4</sub><sub> )</sub><sub>3</sub>+<sub>3</sub>SO<sub>2</sub>↑ +<sub>6</sub>H<sub>2</sub>O</p><p> 2Rh(қара) + 6HCl<sub>(конц)</sub> +  HNO<sub>3</sub><sub>(конц)</sub> → </p><p>  → H<sub>3</sub>[RhCl<sub>6</sub>] + NO↑ + 2H<sub>2</sub>O</p><p> 4Rh + 3O<sub>2</sub> → 2Rh<sub>2</sub>O<sub>3</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  2Rh + 5F<sub>2</sub> → 2RhF<sub>5</sub></p><p> 2Rh + 3Cl<sub>2</sub> → 2RhCl<sub>3</sub></p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "86": {
+        "name": "РАДОН",
+        "symbol": "Rn",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Rn",
+          "name": "РАДОН",
+          "E_K": "[Xe] 4f14 5d10 6s2 6p6",
+          "A_P": "214 пм",
+          "I_P": "",
+          "E_T": "ЭТ -",
+          "I_E": "И/Э 1036,5 кДж/моль",
+          "T_D": "Т/Д 0, +2, +6",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: Ф. Э. Дорн (1900)</p><p>Атауы: Радий элементі атына қойылған.</p>"
+        },
+        "chemical_properties": {
+          "description": "<p><sub>2</sub>Rn, <sub>2</sub>2<sub>4</sub>Rn,</p><p>изотопы: <sub>2</sub>2<sub>2</sub>Rn</p><p> 22<sub>6</sub>Ra → 22<sub>2</sub>Rn + 4He</p><p>Cумен клатрат түзеді: <sub>8</sub>Rn×<sub>4</sub><sub>6</sub>H<sub>2</sub>O</p><p> Rn + F<sub>2</sub> → RnF<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2Кr + F<sub>2</sub> → 2KrF</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "44": {
+        "name": "РУТЕНИЙ",
+        "symbol": "Ru",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Ru",
+          "name": "РУТЕНИЙ",
+          "E_K": "[Kr] 4d 7 5s1",
+          "A_P": "134 пм",
+          "I_P": "",
+          "E_T": "ЭТ 2,2",
+          "I_E": "И/Э 710 кДж/моль",
+          "T_D": "Т/Д 0, +2, +3, +4, +6, +8",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: К. К. Клаус (1844)</p><p>Атауы: лат. «Ruthenia» - «Ресей».</p>"
+        },
+        "chemical_properties": {
+          "description": "<p><sub>0</sub>Ru, <sub>1</sub>0<sub>1</sub>Ru, <sub>1</sub>0<sub>2</sub>Ru, <sub>1</sub>0<sub>4</sub>Ru</p><p> Ru Pt тобы металдарын тазартуда қалған</p><p> Ru + 6HCl<sub>(конц)</sub> + O<sub>2</sub> → H<sub>2</sub>[RuCl<sub>6</sub>] + H<sub>2</sub>O</p><p> Ru + O<sub>2</sub> → RuO<sub>2</sub></p><p> 2Ru + 5F<sub>2</sub> → 2RuF<sub>5</sub>&nbsp;&nbsp;&nbsp;&nbsp;  Ru + 3F<sub>2</sub> → RuF<sub>6</sub> </p><p> Ru + 2S → Ru(S)<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   2Ru + 3Cl<sub>2</sub> → 2RuCl<sub>3</sub></p><p> Ru + 5CO → [Ru(CO)<sub>5</sub>]</p><p> 2Ru + 4KOH + 3O<sub>2</sub> → 2K<sub>2</sub>RuO<sub>4</sub> + 2H<sub>2</sub>O</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "16": {
+        "name": "КҮКІРТ",
+        "symbol": "S",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "S",
+          "name": "КҮКІРТ",
+          "E_K": "1s²2s²2p63s23p4",
+          "A_P": "102 пм",
+          "I_P": "",
+          "E_T": "ЭТ 2,58",
+          "I_E": "И/Э 999 кДж/моль",
+          "T_D": "Т/Д -2, -1, 0, +1, +2, +4, +6",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Атауы: Sulfur- «жанғыш тас».</p>"
+        },
+        "chemical_properties": {
+          "description": "<p> S + H<sub>2</sub> = H<sub>2</sub>S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S + O<sub>2</sub> = SO<sub>2</sub></p><p> S + Cl<sub>2</sub> = SCl<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2S + Br<sub>2</sub> = S<sub>2</sub>Br<sub>2</sub></p><p> S + 2HI = H<sub>2</sub>S + I<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2S + C = CS<sub>2</sub></p><p> S + 2H<sub>2</sub>O = 2H<sub>2</sub>S + SO<sub>2</sub></p><p> S + 2H<sub>2</sub>SO<sub>4</sub><sub>(конц)</sub> = 3SO<sub>2</sub> + 2H<sub>2</sub>O</p><p> 4S + 6NaOH<sub>(конц)</sub> = Na<sub>2</sub>S<sub>2</sub>O<sub>3</sub> + 2Na<sub>2</sub>S + 3H<sub>2</sub>O   </p><p>S октаатомды молекула</p><p>HgS, CuS, Cu<sub>2</sub>S, </p><p>Sb<sub>2</sub>S<sub>3</sub>, CuFeS<sub>2</sub>, т.б.</p><p>CHEMIST</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "21": {
+        "name": "СКАНДИЙ",
+        "symbol": "Sc",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Sc",
+          "name": "СКАНДИЙ",
+          "E_K": "1s²2s²2p6 3s23p6 3d14s2",
+          "A_P": "162 пм",
+          "I_P": "",
+          "E_T": "ЭТ 1,36",
+          "I_E": "И/Э 631 кДж/моль",
+          "T_D": "Т/Д 0, +3",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан:  Л.Ф.Нильсон (1879)  </p><p>Атауы: лат. Scandia- «Скандинавия» сөзі.</p>"
+        },
+        "chemical_properties": {
+          "description": "<p>Sc<sub>2</sub>O<sub>3</sub></p><p>ScHn </p><p>Sc<sub>2</sub>O<sub>3</sub></p><p> 2ScF<sub>3</sub> + 3Ca = 2Sc + 3CaF<sub>2</sub></p><p> 2ScCl<sub>3</sub> = 2Sc + 3Cl<sub>2</sub> <sub>(электролиз)</sub></p><p> 4Sc + 3O<sub>2</sub> = 2Sc<sub>2</sub>O<sub>3</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2Sc + nH<sub>2</sub> = 2ScHn</p><p> 2Sc + 6H<sub>2</sub>O(ыст.) = 2Sc(OH)<sub>3</sub> + 3H<sub>2</sub></p><p> 2Sc + 6HCl<sub>(сұй)</sub> = 2ScCl<sub>3</sub> + 3H<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p> 8Sc + 30HNO<sub>3</sub>(өте сұй)=<sub>8</sub>Sc(NO<sub>3</sub><sub> )</sub><sub>3</sub> + 3NH<sub>4</sub>NO<sub>3</sub> + 9H<sub>2</sub>O</p><p> 2Sc + 3Cl<sub>2</sub> = 2ScCl<sub>3</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2Sc + 3S = Sc<sub>2</sub>S<sub>3</sub></p><p> 4Sc + 6H<sub>2</sub>O + 3O<sub>2</sub> = 4Sc(OH)<sub>3</sub></p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "34": {
+        "name": "СЕЛЕН",
+        "symbol": "Se",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Se",
+          "name": "СЕЛЕН",
+          "E_K": "1s²2s²2p63s23p63d104s24p4",
+          "A_P": "140 пм",
+          "I_P": "",
+          "E_T": "ЭТ 2,55",
+          "I_E": "И/Э 940 кДж/моль",
+          "T_D": "Т/Д −2, 0, +4, +6",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: Йонс Берцелиус (1817)</p><p>Атауы: грек. Selene - «Ай».</p>"
+        },
+        "chemical_properties": {
+          "description": "<p>Қызыл селен <sub>8</sub> атомды (Se<sub>8</sub><sub> )</sub>.</p><p>Se, <sub>8</sub>2Se,</p><p>SeO<sub>2</sub></p><p>ZnSe, CdSe</p><p>Se отта жанғанда</p><p> 2Se + Na<sub>2</sub>CO<sub>3</sub> + 2O<sub>2</sub> → 2CuO + Na<sub>2</sub>SeO<sub>3</sub> + CO<sub>2</sub> </p><p> H<sub>2</sub>SeO<sub>3</sub> + 2SO<sub>2</sub> + H<sub>2</sub>O → Se + 2H<sub>2</sub>SO<sub>4</sub></p><p> Se + O<sub>2</sub> <sub> (</sub><sub>2</sub><sub>5</sub><sub>0</sub><sub>°C</sub>, NO<sub>2</sub><sub> )</sub> → SeO<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Se + H<sub>2</sub><sub>(t)</sub> → H<sub>2</sub>Se</p><p> Se + 4HNO<sub>3</sub><sub>(конц)</sub> → H<sub>2</sub>SeO<sub>3</sub> + 4NO<sub>2</sub>↑ + H<sub>2</sub>O</p><p> Se + 2H<sub>2</sub>SO<sub>4</sub><sub>(конц)</sub> → SeO<sub>2</sub>↓ + 2SO<sub>2</sub>↑ + 2H<sub>2</sub>O</p><p> 3Se + 6NaOH<sub>(конц)</sub><sub>(t)</sub>→ Na<sub>2</sub>SeO<sub>3</sub> + 2Na<sub>2</sub>Se + 3H<sub>2</sub>O </p><p> Se + 2H<sub>2</sub>O(бу) → SeO<sub>2</sub> + 2H<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Se + 2Cl<sub>2</sub> → SeCl<sub>4</sub></p><p> Se + 2Na → Na<sub>2</sub>Se&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3Se + 2Al<sub>(t)</sub>→ Al<sub>2</sub>Se<sub>3</sub></p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "73": {
+        "name": "ТАНТАЛ",
+        "symbol": "Ta",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Ta",
+          "name": "ТАНТАЛ",
+          "E_K": "[Xe] 4f14 5d3 6s2",
+          "A_P": "149 пм",
+          "I_P": "",
+          "E_T": "ЭТ 1,50",
+          "I_E": "И/Э 760 кДж/моль",
+          "T_D": "Т/Д +5",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: А. Экеберг (1802)</p><p>Атауы: грек. «Tantalos» - «Ниобе әкесі».</p>"
+        },
+        "chemical_properties": {
+          "description": "<p>құрамында бар <sub> (</sub><sub>9</sub><sub>%</sub> Ta).  </p><p> Ta<sub>2</sub>O<sub>5</sub> + 6HF + 4K(HF<sub>2</sub><sub> )</sub> → 2K<sub>2</sub>[TaF<sub>7</sub>] + 5H<sub>2</sub>O</p><p>  K<sub>2</sub>[TaF<sub>7</sub>] + 5Na → Ta + 5NaF + 2KF</p><p> 2Ta + 16HF<sub>(конц)</sub>→ 2H<sub>3</sub>[TaF<sub>8</sub>] + 5H<sub>2</sub>↑&nbsp;&nbsp;&nbsp;&nbsp;  </p><p> 3Ta + 21HF<sub>(конц)</sub> + 5HNO<sub>3</sub><sub>(конц)</sub>→ 3H<sub>2</sub>[TaF<sub>7</sub>] + </p><p> 2Ta + 2NaOH<sub>(конц)</sub> + 4H<sub>2</sub>O → 2(NaTa)O<sub>3</sub> + 5H<sub>2</sub>↑</p><p> 2Ta + H<sub>2</sub> → 2TaH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  4Ta + 5O<sub>2</sub> → 2Ta<sub>2</sub>O<sub>5</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p> 2Ta + 5F<sub>2</sub> → 2TaF<sub>5</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ta + 2Br<sub>2</sub> → TaBr<sub>4</sub>&nbsp;&nbsp;&nbsp;&nbsp; </p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "43": {
+        "name": "ТЕХНЕЦИЙ",
+        "symbol": "Tc",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Tc",
+          "name": "ТЕХНЕЦИЙ",
+          "E_K": "[Kr] 4d5 5s2",
+          "A_P": "136 пм",
+          "I_P": "",
+          "E_T": "ЭТ 1,9",
+          "I_E": "И/Э 702 кДж/моль",
+          "T_D": "Т/Д −1, (+1 - +7)",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: К. Перьер, Э. Сегре (1937)</p><p>Атауы: грек. «Technikos» - «жасанды».</p>"
+        },
+        "chemical_properties": {
+          "description": "<p>тарына <sub>9</sub>8Tc, <sub>9</sub>9Tc жатады.</p><p>·<sub>1</sub><sub>0</sub>−<sub>1</sub><sub>0</sub> г Tc кездеседі.</p><p> 4NH<sub>4</sub>TcO<sub>4</sub> + 2H<sub>2</sub>SO<sub>4</sub> (э.т.) → 4Tc + 7O<sub>2</sub> + 2H<sub>2</sub>O + 2(NH<sub>4</sub><sub> )</sub><sub>2</sub>SO<sub>4</sub> </p><p> 4Tc + 7O<sub>2</sub> → 2Tc<sub>2</sub>O<sub>7</sub></p><p> Tc + 7HNO<sub>3</sub>(конц. ыст.) → HTcO<sub>4</sub> + 7NO<sub>2</sub>↑ + 3H<sub>2</sub>O</p><p> 3Tc +<sub>1</sub><sub>8</sub>HCl +<sub>4</sub>HNO<sub>3</sub> → 3H<sub>2</sub>[TcCl<sub>6</sub>]+<sub>8</sub>H<sub>2</sub>O+<sub>4</sub>NO↑</p><p> 2Tc + 5F<sub>2</sub> → 2TcF<sub>5</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tc + 3F<sub>2</sub> → TcF<sub>6</sub></p><p> 2Tc + O<sub>2</sub> + 4F<sub>2</sub>→ 2Tc(O)F<sub>4</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tc + 2Cl<sub>2</sub> → TcCl<sub>4</sub></p><p> Tc + 7Ce(NO<sub>3</sub><sub> )</sub><sub>3</sub>OH →HTcO<sub>4</sub> + 7Ce(NO<sub>3</sub><sub> )</sub><sub>3</sub> + 3H<sub>2</sub>O</p><p>KTcO<sub>4</sub></p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "52": {
+        "name": "ТЕЛЛУР",
+        "symbol": "Te",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Te",
+          "name": "ТЕЛЛУР",
+          "E_K": "[Kr] 4d10 5s2 5p4",
+          "A_P": "160 пм",
+          "I_P": "",
+          "E_T": "ЭТ 2,10",
+          "I_E": "И/Э 869 кДж/моль",
+          "T_D": "Т/Д −2, +2, +4, +6",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: Ф. Дж. М. фон Рейхштейн (1783)</p><p>Атауы: лат. Telluris- «жер».</p>"
+        },
+        "chemical_properties": {
+          "description": "<p><sub>5</sub>Te, <sub>1</sub>2<sub>6</sub>Te, <sub>1</sub>2<sub>8</sub>Te, <sub>1</sub>3<sub>0</sub>Te </p><p> Cu<sub>2</sub>Te + Na<sub>2</sub>CO<sub>3</sub> + 2O<sub>2</sub> → 2CuO + Na<sub>2</sub>TeO<sub>3</sub> + CO<sub>2</sub>↑ </p><p> TeO<sub>2</sub> + 2NaOH → Na<sub>2</sub>TeO<sub>3</sub> + H<sub>2</sub>O → Te + 2NaOH + O<sub>2</sub>↑</p><p> Te + O<sub>2</sub> <sub> (</sub><sub>></sub><sub>4</sub><sub>5</sub><sub>0</sub><sub>°C</sub><sub> )</sub> → TeO<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;  Te + 2H<sub>0</sub> (Al, HCl) → H<sub>2</sub>Te</p><p> 2Te + 8HNO<sub>3</sub><sub>(конц)</sub> → 2TeO<sub>2</sub>↓ + 8NO<sub>2</sub>↑ + 4H<sub>2</sub>O</p><p> 4Te + 4H<sub>2</sub>SO<sub>4</sub><sub>(конц)</sub> → (Te<sub>2</sub>+</p><p> 3Te + 6NaOH<sub>(конц)</sub><sub>(t)</sub>→ Na<sub>2</sub>TeO<sub>3</sub> + 2Na<sub>2</sub>Te + 3H<sub>2</sub>O </p><p> Te + 2H<sub>2</sub>O(бу) → TeO<sub>2</sub> + 2H<sub>2</sub>↑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Te + 2Cl<sub>2</sub> → TeCl<sub>4</sub></p><p> Te + 2Na → Na<sub>2</sub>Te&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3Te + 2Al<sub>(t)</sub>→ Al<sub>2</sub>Te<sub>3</sub></p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "22": {
+        "name": "ТИТАН",
+        "symbol": "Ti",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Ti",
+          "name": "ТИТАН",
+          "E_K": "1s²2s²2p6 3s23p6 3d24s2",
+          "A_P": "147 пм",
+          "I_P": "",
+          "E_T": "ЭТ 1,54",
+          "I_E": "И/Э 658 кДж/моль",
+          "T_D": "Т/Д +2, +3, +4",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан:  Й. Я. Берцелиус (1825)  </p><p>Атауы: лат. Titans - грек мифол. кейіпкері.</p>"
+        },
+        "chemical_properties": {
+          "description": "<p>TiO<sub>2</sub></p><p> 2TiFeO<sub>3</sub>+<sub>7</sub>Cl<sub>2</sub>+<sub>6</sub>C (t<sub>°C</sub><sub> )</sub> = 2TiCl<sub>4</sub>+ 2FeCl<sub>3</sub> + 6CO</p><p> TiCl<sub>4</sub> + 2Mg = 2MgCl<sub>2</sub> + Ti</p><p> Ti + O<sub>2</sub> (t</p><p>oC<sub> )</sub>= TiO<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Ti + 2Cl<sub>2</sub> = TiCl<sub>4</sub></p><p> Ti + 2H<sub>2</sub>O(бу) = TiO<sub>2</sub> + 2H<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   2Ti + N<sub>2</sub> = 2TiN</p><p> Ti + 6HCl(конц., ыстық) = TiCl<sub>4</sub> + 3H<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p> 2Ti + 6H<sub>2</sub>SO<sub>4</sub>(конц., ыст) = Ti<sub>2</sub>(SO<sub>4</sub><sub> )</sub><sub>3</sub> + 3SO<sub>2</sub> + 6H<sub>2</sub>O</p><p> Ti + 4HNO<sub>3</sub>(конц., ыст) = TiO(OH)<sub>2</sub> + 4NO<sub>2</sub> + H<sub>2</sub>O</p><p> Ti + 2Si = TiSi<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Ti + 2PbBr<sub>2</sub> = TiBr<sub>4</sub> + 2Pb</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "117": {
+        "name": "ТЕННЕССИН",
+        "symbol": "Ts",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Ts",
+          "name": "ТЕННЕССИН",
+          "E_K": "[Rn] 5f14 6d10 7s2 7p5",
+          "A_P": "(138) пм",
+          "I_P": "",
+          "E_T": "ЭТ -",
+          "I_E": "И/Э (742.9) кДж/моль",
+          "T_D": "Т/Д (-1, +1, +3, +5)",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: Біріккен зерттеу орт.-тары (2010)</p><p>Атауы: Теннесси штаты аты.</p>"
+        },
+        "chemical_properties": {
+          "description": "<p><sub>4</sub>Ts изотопының</p><p><sub>7</sub>Ts* → 29<sub>3</sub></p><p><sub>7</sub>Ts + 4 <sub>1</sub></p><p><sub>7</sub>Ts* → 29<sub>3</sub></p><p><sub>7</sub>Ts + 3 <sub>1</sub></p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "23": {
+        "name": "ВАНАДИЙ",
+        "symbol": "V",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "V",
+          "name": "ВАНАДИЙ",
+          "E_K": "1s²2s²2p6 3s23p6 3d34s2",
+          "A_P": "122 пм",
+          "I_P": "",
+          "E_T": "ЭТ 1,63",
+          "I_E": "И/Э 650 кДж/моль",
+          "T_D": "Т/Д 0, +2, +3, +4, +5",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: А. М. дель Рио Фернандез (1801)  </p><p>Атауы: лат. Vanadís - Cканд. миф. кейіпкері.</p>"
+        },
+        "chemical_properties": {
+          "description": "<p>VO<sub>5</sub></p><p> 2NaOH + V<sub>2</sub>O<sub>5</sub> = 2NaVO<sub>3</sub> + H<sub>2</sub>O</p><p>NaVO<sub>3</sub> + 2H<sub>2</sub>SO<sub>4</sub> = V<sub>2</sub>O<sub>5</sub> + 2NaHSO<sub>4</sub> + H<sub>2</sub>O</p><p> 4V(ұнтақ) + 5O<sub>2</sub> = 2V<sub>2</sub>O<sub>5</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   2V + H<sub>2</sub> = 2VH</p><p> V + 3H<sub>2</sub>SO<sub>4</sub><sub>(конц)</sub> = (VO)SO<sub>4</sub> + 2SO<sub>2</sub> + 3H<sub>2</sub>O</p><p> 3V + 12HCl + 4HNO<sub>3</sub> = 3VCl<sub>4</sub> + 4NO + 8H<sub>2</sub>O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p> 4V + 4NaOH + 5O<sub>2</sub> = 4NaVO<sub>3</sub> + 2H<sub>2</sub>O</p><p> 2V + 4F<sub>2</sub> = 2VF<sub>5</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V + S = VS, VS<sub>2</sub>, V<sub>2</sub>S<sub>3</sub>, V(S)<sub>2</sub> </p><p> 2V + N<sub>2</sub> = 2VN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2V + Ca<sub>3</sub>P<sub>2</sub> = 2VP + 3Ca</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "74": {
+        "name": "ВОЛЬФРАМ",
+        "symbol": "W",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "W",
+          "name": "ВОЛЬФРАМ",
+          "E_K": "[Xe] 4f14 5d4 6s2",
+          "A_P": "137 пм",
+          "I_P": "",
+          "E_T": "ЭТ 2,30",
+          "I_E": "И/Э 770 кДж/моль",
+          "T_D": "Т/Д +2, +3, +4, +5, +6",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: Фаусто и Х. Х. де Эльхуяр (1783)</p><p>Атауы: нем. «Wolf Rahm» - «қасқыр көбігі».</p>"
+        },
+        "chemical_properties": {
+          "description": "<p><sub>3</sub>W, <sub>1</sub>8<sub>4</sub>W, <sub>1</sub>8<sub>6</sub>W</p><p> WO<sub>3</sub> + 3H<sub>2</sub> → W + 3H<sub>2</sub>O</p><p> WS<sub>2</sub> → W + 2S</p><p> W + 2H<sub>2</sub>O → WO<sub>2</sub> + 2H<sub>2</sub>↑&nbsp;&nbsp;&nbsp;&nbsp;  </p><p> W + 4HF<sub>(конц)</sub> + 2HNO<sub>3</sub><sub>(конц)</sub>→ H<sub>2</sub>[WO<sub>2</sub>F<sub>4</sub>] + </p><p> 2W + 2NaOH + 3O<sub>2</sub> → 2Na<sub>2</sub>WO<sub>4</sub> + 2H<sub>2</sub>O</p><p> W + 3F<sub>2</sub> → WF<sub>6</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2W + 3O<sub>2</sub> → 2WO<sub>3</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p> W + C → WC, W<sub>2</sub>C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;W + 2S → WS<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp; </p><p>(WC<sub> )</sub></p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "54": {
+        "name": "КСЕНОН",
+        "symbol": "Xe",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Xe",
+          "name": "КСЕНОН",
+          "E_K": "[Kr] 4d10 5s2 5p6",
+          "A_P": "108 пм",
+          "I_P": "",
+          "E_T": "ЭТ 2,6",
+          "I_E": "И/Э 1170,4 кДж/моль",
+          "T_D": "Т/Д 0, +1, +2, +4, +6, +8",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: У. Рэмзай, М. В. Трэверс (1898)</p><p>Атауы: грек. xenos - «бөтен, жат».</p>"
+        },
+        "chemical_properties": {
+          "description": "<p><sub>2</sub>Xe, <sub>1</sub>3<sub>4</sub>Xe, <sub>1</sub>3<sub>6</sub>Xe</p><p>Xe Жер атмосферасы,</p><p> Xe + F<sub>2</sub> → XeF<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Xe + 2F<sub>2</sub> → XeF<sub>4</sub> </p><p>  Xe + 3F<sub>2</sub> → XeF<sub>6</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Xe + Cl<sub>2</sub> → XeCl<sub>2</sub></p><p> Xe + 3KrF<sub>2</sub> → XeF<sub>6</sub> + 3Kr</p><p>  4XeF<sub>6</sub> + 36NaOH(ыст.конц) → </p><p>  → 3Na<sub>4</sub>XeO<sub>6</sub> + Xe + 24NaF + 18H<sub>2</sub>O</p><p> Xe + O<sub>2</sub>F<sub>2</sub> → XeO<sub>2</sub>F<sub>6</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Xe + PtF<sub>6</sub> → Xe[PtF<sub>6</sub>]</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "39": {
+        "name": "ИТТРИЙ",
+        "symbol": "Y",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Y",
+          "name": "ИТТРИЙ",
+          "E_K": "[Kr] 4d1 5s2",
+          "A_P": "178 пм",
+          "I_P": "",
+          "E_T": "ЭТ 1,22",
+          "I_E": "И/Э 615,4 кДж/моль",
+          "T_D": "Т/Д +3",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: Ю. Гадолин (1794)</p><p>Атауы: Швециядағы «Иттерби» ауылы.</p>"
+        },
+        "chemical_properties": {
+          "description": "<p>ксенотим YPO<sub>4</sub>,</p><p>гадолинит Y<sub>2</sub>FeBe<sub>2</sub>Si<sub>2</sub>O<sub>1</sub><sub>0</sub>.</p><p> 2YF<sub>3</sub> + 3Ca → 2Y + 3CaF<sub>2</sub>; YCl<sub>3</sub> + 3Li → Y + 3LiCl</p><p> 2YCl<sub>3</sub>(cұй.)(эл.тоғы) → 2Y↓ + 3Cl<sub>2</sub>↑   </p><p> 2Y + 6H<sub>2</sub>O(ыст.) → 2Y(OH)<sub>3</sub>↓ + 3H<sub>2</sub>↑</p><p> 2Y + 6HCl(cұй.) → 2YCl<sub>3</sub> + 3H<sub>2</sub>↑</p><p> 8Y + 30HNO<sub>3</sub>(өте сұй.)→<sub>8</sub>Y(NO<sub>3</sub><sub> )</sub><sub>3</sub> + NH<sub>4</sub>NO<sub>3</sub> +<sub>9</sub>H<sub>2</sub>O</p><p> 2Y + nH<sub>2</sub> → 2YHn <sub> (</sub><sub>2</sub><n<<sub>3</sub><sub> )</sub>&nbsp;&nbsp;&nbsp;&nbsp;  4Y + 3O<sub>2</sub> → 2Y<sub>2</sub>O<sub>3</sub></p><p> 2Y + 3Cl<sub>2</sub> → 2YCl<sub>3</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  2Y + 3S → Y<sub>2</sub>S<sub>3</sub></p><p> 2Y + N<sub>2</sub> → 2YN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4Y + 6H<sub>2</sub>O + 3O<sub>2</sub>→ 4Y(OH)<sub>3</sub></p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "30": {
+        "name": "МЫРЫШ",
+        "symbol": "Zn",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Zn",
+          "name": "МЫРЫШ",
+          "E_K": "1s²2s²2p6 3s23p6 3d104s2",
+          "A_P": "125 пм",
+          "I_P": "",
+          "E_T": "ЭТ 1,65",
+          "I_E": "И/Э 906 кДж/моль",
+          "T_D": "Т/Д 0, +2",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан:  А. Маргграф (1746)</p><p>Атауы: нем. zink- «тіс» сөзі.</p>"
+        },
+        "chemical_properties": {
+          "description": "<p>Zn, <sub>7</sub>0Zn</p><p>Zn алюминий секілді</p><p> ZnO + C → Zn + CO;&nbsp;&nbsp;&nbsp;&nbsp; ZnO + CO → Zn + CO<sub>2</sub></p><p> 2ZnSO<sub>4</sub> + 2H<sub>2</sub>O (эл.тогы) → 2Zn↓ + O<sub>2</sub>↑ + 2H<sub>2</sub>SO<sub>4</sub></p><p> 2Zn + O<sub>2</sub> <sub>(t)</sub> → 2ZnO&nbsp;&nbsp;&nbsp;&nbsp;  Zn + H<sub>2</sub>O(бу) → ZnO + H<sub>2</sub>↑</p><p> 2Zn + 2H<sub>2</sub>O + O<sub>2</sub> + CO<sub>2</sub> → Zn<sub>2</sub>CO<sub>3</sub>(OH)<sub>2</sub>↓ </p><p> Zn + 2HCl(cұй.) → ZnCl<sub>2</sub> + H<sub>2</sub>↑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zn + S <sub>(t)</sub>→ ZnS&nbsp;&nbsp;&nbsp;&nbsp;   </p><p> 4Zn + 5H<sub>2</sub>SO<sub>4</sub><sub>(конц)</sub> → 4ZnSO<sub>4</sub> + H<sub>2</sub>S↑ + 4H<sub>2</sub>O</p><p> Zn + 2NaOH<sub>(конц)</sub> + 2H<sub>2</sub>O → Na<sub>2</sub>[Zn(OH)<sub>4</sub>] + H<sub>2</sub>↑</p><p> Zn + Cl<sub>2</sub> → ZnCl<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zn + CuSO<sub>4</sub> → ZnSO<sub>4</sub>  + Cu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      },
+      "40": {
+        "name": "ЦИРКОНИЙ",
+        "symbol": "Zr",
+        "radiactive": "false",
+        "atomic_properties": {
+          "symbol": "Zr",
+          "name": "ЦИРКОНИЙ",
+          "E_K": "[Kr] 4d2 5s2",
+          "A_P": "160 пм",
+          "I_P": "",
+          "E_T": "ЭТ 1,33",
+          "I_E": "И/Э 659,7 кДж/моль",
+          "T_D": "Т/Д 0, +1, +2, +3, +4",
+          "isotop": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        },
+        "physical_properties": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon_1": "",
+          "icon_info_1": "",
+          "phase": "қатты",
+          "melt": "",
+          "boil": "",
+          "icon_2": "",
+          "icon_info_2": "³."
+        },
+        "how_spread": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "space": "5*10⁻⁸⁻⁷⁵⁻¹⁰ %",
+          "sun": "5*10⁻⁴⁹ %",
+          "earth": "-",
+          "water": "-",
+          "man": "-",
+          "air": "",
+          "meteorit": "",
+          "atmosphere": "",
+          "description": "Минералдары: <br>"
+        },
+        "how_taken": {
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "formula": "",
+          "description": "<p>Ашқан: М. Х. Клапрот (1789)</p><p>Атауы: араб. «zargun» - «алтын түс».</p>"
+        },
+        "chemical_properties": {
+          "description": "<p>Zr, <sub>9</sub>6Zr</p><p>(UZrH)</p><p>ферроцирконий <sub> (</sub><sub>4</sub><sub>0</sub><sub>%</sub> Zr)</p><p> ZrO<sub>2</sub> + 2Cl<sub>2</sub> + 2C <sub> (</sub><sub>9</sub><sub>0</sub><sub>0</sub><sub>°C</sub><sub> )</sub> → ZrCl<sub>4</sub> + 2CO↑</p><p>  ZrCl<sub>4</sub> + 2Mg <sub> (</sub><sub>1</sub><sub>1</sub><sub>0</sub><sub>0</sub><sub>°C</sub><sub> )</sub> → 2MgCl<sub>2</sub> + Zr</p><p> Zr + 2H<sub>2</sub>O(бу) → ZrO<sub>2</sub> + 2H<sub>2</sub>↑</p><p> Zr + 4H<sub>2</sub>SO<sub>4</sub><sub>(конц)</sub> →H<sub>2</sub>[Zr(SO<sub>4</sub><sub> )</sub><sub>2</sub>O] + 2SO<sub>2</sub>↑ + 3H<sub>2</sub>O</p><p> Zr + 4HF<sub>(конц)</sub> + H<sub>2</sub>O → H<sub>2</sub>[ZrOF<sub>4</sub>] + 2H<sub>2</sub>↑</p><p> 2Zr + N<sub>2</sub> → 2ZrN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Zr + S → ZrS<sub>3</sub>, ZrS<sub>2</sub></p><p> Zr + 2I<sub>2</sub> → ZrI<sub>4</sub>&nbsp;&nbsp;&nbsp;&nbsp;   Zr + O<sub>2</sub> → ZrO<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;  Zr + H<sub>2</sub> → ZrH<sub>2</sub></p><p> Zr + P<sub> (</sub><sub>8</sub><sub>0</sub><sub>0</sub><sub>°C</sub><sub> )</sub> → ZrP<sub>2</sub>, ZrP&nbsp;&nbsp;&nbsp;&nbsp;   Zr + C<sub> (</sub><sub>2</sub><sub>0</sub><sub>0</sub><sub>0</sub><sub>°C</sub><sub> )</sub> → ZrC</p>"
+        },
+        "how_used": {
+          "icon_1": "",
+          "icon_info_1": "",
+          "icon_2": "",
+          "icon_info_2": "",
+          "icon_3": "",
+          "icon_info_3": "",
+          "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
+        }
+      }
+    
+
 }

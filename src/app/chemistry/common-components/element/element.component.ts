@@ -222,6 +222,13 @@ export class ElementComponent implements OnInit {
     return false;
   }
 
+  isUnknownPhase(element: ChemicalElement | undefined, temperature: number): boolean {
+    if (element) {
+      if (element.phase === 'Unknown') { return true; }
+    }
+    return false;
+  }
+
   showElement(element: ChemicalElement | undefined) {
     this.showElementService.setNext(element);
   }

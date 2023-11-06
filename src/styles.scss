@@ -1,16 +1,105 @@
 /* You can add global styles to this file, and also import other style files */
-body {
-    /* background-color: #2b2929; */
-    background-color: #ffffff;
+
+$solidBgColor: rgb(0, 0, 0);
+$liquidBgColor: #00D;
+$gasBgColor: #900;
+$unknownBgColor: #676;
+
+$solidBgColorImportant: rgb(0, 0, 0) !important;
+$liquidBgColorImportant: #00D !important;
+$gasBgColorImportant: #900    !important;
+$unknownBgColorImportant: #676 !important;
+
+$solidColor: rgb(255, 255, 255) !important;
+$liquidColor: rgb(255, 255, 255) !important;
+$gasColor: rgb(255, 255, 255) !important;
+$unknownColor: rgb(255, 255, 255) !important;
+
+$metalBgColor: rgb(255, 255, 255);
+$metalloidBgColor: #9ee5d4;
+$nonMetalBgColor: rgb(255, 255, 255);
+$alkaliMetalBgColor: #eace5d;
+$alkalineEarthMetalBgColor: #f1f165;
+$lanthanideEarthMetalBgColor: #e8d19c;
+$actinideEarthMetalBgColor: #f5ccda;
+$transitionMetalEarthMetalBgColor: #fac5b7;
+$postTansitionMtalBgColor: #acdfec;
+$reactiveNonMetalBgColor: #8ced8c;
+$nobleGasBgColor: #e5bde5;
+
+
+.chemical-table {
+    width: 900px;
+    margin: auto;
+// /    color: #000000;
+    // padding: 10px;
+
+    // line-height: 13px;
+    // font-family: Roboto, sans-serif;
+    // letter-spacing: 0em;
 }
 
-html,
-body {
-    height: 100%;
-    background-color: #13202b;
-    line-height: 9px !important;
+.chemical-table {
+    font-size: 17px;
+    color: #000000;
+    padding: 10px;
+
+    line-height: 13px;
+    font-family: Roboto, sans-serif;
+    letter-spacing: 0em;
 }
-body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+
+.lefttop {
+    width: 105px;
+    float: left;
+}
+.righttop {
+    width: 350px;
+    float: left;
+}
+
+.body-elements {
+    // width: 900px;
+    height: 245px;
+}
+.header-elements {
+    height: 120px;
+}
+
+.cell {
+    height: 55px;
+    width: 50px;
+    background-color: white;
+    // color:#fff;
+    // padding: 0.5px;
+    /* color: #b5b5b5; */
+    /* margin: 1px; */
+}
+
+.empty-cell {
+    height: 55px;
+    width: 50px;
+    /* margin: 1px; */
+}
+
+.column {
+    width: 50px;
+    float: left;
+    cursor: pointer;
+}
+
+.row {
+    height: 60px;
+}
+
+.cell .id {
+    font-size: 6px;
+    font-weight: bold;
+}
+.cell .name {
+    font-size: 6px;
+}
+
+.cell .atomic_mass {
+    font-size: 6px;
 }
