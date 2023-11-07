@@ -79,10 +79,10 @@ $opacityAnimate: 0.5s;
     from {
         background-color: #99f;
         color: #ddd;
-        opacity: 1;
+        opacity: 0.8;
     }
     to {
-        opacity: 0.4;
+        opacity: 1;
     }
 }
 
@@ -90,20 +90,20 @@ $opacityAnimate: 0.5s;
     from {
         background-color: #f44;
         color: #ddd;
-        opacity: 1;
+        opacity: 0.8;
     }
     to {
-        opacity: 0.4;
+        opacity: 1;
     }
 }
 @keyframes solidated-opacity {
     from {
         background-color: #ddd;
         color: rgb(6, 6, 6);
-        opacity: 1;
+        opacity: 0.8;
     }
     to {
-        opacity: 0.4;
+        opacity: 1;
     }
 }
 

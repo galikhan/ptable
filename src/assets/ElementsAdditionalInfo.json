@@ -115,7 +115,7 @@
             "phase": "",
             "boil": -267,
             "melt": -272,
-            "icon_2": "space",
+            "icon_2": "physical-prop",
             "icon_info_2": ""
         },
         "chemical_properties": {
@@ -134,7 +134,8 @@
             "water": "",
             "man": "",
             "atmosphere": "7,24·10⁻⁵%",
-            "description": ""
+            "description": "",
+            "icon": "space"
         },
         "how_used": {
             "icon_1": "gas",
@@ -706,10 +707,10 @@
             "T_D": "0, +2",
             "isotop": "⁴⁰Ca ⁴²Ca ⁴³Ca",
             "valense": "",
-            "icon": ""
+            "icon": "kbo"
         },
         "physical_properties": {
-            "icon_1": "carbons",
+            "icon_1": "flame",
             "icon_info_1": "Ca²⁺ ионы жалынды кірпіш-қызыл түске бояйды",
             "phase": "қатты",
             "melt": 839,
@@ -738,11 +739,11 @@
             "description": "Минералдары: <br>силикаттар, анортит кальцит, гипс, флюорит, апатит, доломит, т.б."
         },
         "how_used": {
-            "icon_1": "phone",
+            "icon_1": "stainless-steel",
             "icon_info_1": "Ni, Cu, тот баспайтын болат алуда",
-            "icon_2": "glass",
+            "icon_2": "battery",
             "icon_info_2": "Ca-Pb құймасы батареяларда",
-            "icon_3": "plastic_bottle",
+            "icon_3": "rare-metal",
             "icon_info_3": "Сирек металдарды алуда"
         }
     },
@@ -914,10 +915,10 @@
             "T_D": "0, +2",
             "isotop": "¹³⁰Ba ¹³²Ba ¹³⁴Ba ¹³⁵Ba ¹³⁶Ba ¹³⁷Ba ¹³⁸Ba",
             "valense": "",
-            "icon": ""
+            "icon": "kko"
         },
         "physical_properties": {
-            "icon_1": "carbons",
+            "icon_1": "flame",
             "icon_info_1": " Ba-дің ұшқыш тұздары жалынды жасыл түске бояйды",
             "phase": "қатты",
             "melt": 727,
@@ -946,11 +947,11 @@
             "description": "барит, витерит, цельзиан, барийлі дала шпаты, гиалофан, нитробарит, т.б."
         },
         "how_used": {
-            "icon_1": "phone",
+            "icon_1": "metal-ignots",
             "icon_info_1": "Металлургияда құйма жасауда",
-            "icon_2": "glass",
+            "icon_2": "oil",
             "icon_info_2": "BaSO4 мұнай өндірісінде",
-            "icon_3": "plastic_bottle",
+            "icon_3": "xray",
             "icon_info_3": "BaSO4 рентгено- графияда"
         }
     },
@@ -971,11 +972,11 @@
             "description": "<p> 4As + 3O<sub>2</sub> <sub> (</sub><sub>></sub><sub>3</sub><sub>5</sub><sub>0</sub><sub>°C</sub><sub> )</sub> → 2As<sub>2</sub>O<sub>3</sub></p><p> As + 5HNO<sub>3</sub><sub>(конц)</sub> → H<sub>3</sub>AsO<sub>4</sub> + 5NO<sub>2</sub>↑ + H<sub>2</sub>O</p><p> 2As + 3H<sub>2</sub>SO<sub>4</sub><sub>(конц ыстық)</sub> → As<sub>2</sub>O<sub>3</sub> + 3SO<sub>2</sub>↑ + 3H<sub>2</sub>O</p><p> 2As + 2NaOH<sub> (</sub><sub>2</sub><sub>0</sub><sub>%</sub><sub> )</sub> + 2H<sub>2</sub>O → 2NaAsO<sub>2</sub> + 3H<sub>2</sub>↑ </p><p> 2As + 5F<sub>2</sub> → 2AsF<sub>5</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2As + 3Cl<sub>2</sub> → 2AsCl<sub>3</sub></p><p> As + 3Li<sub>(t)</sub> → Li<sub>3</sub>As&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2As + S<sub>(t)</sub>→ As<sub>2</sub>S<sub>3</sub>, As<sub>2</sub>S<sub>5</sub></p>"
         },
         "physical_properties": {
-            "icon_1": "",
+            "icon_1": "toxic",
             "icon_info_1": "Улы әрі концероген элементтердің бірі.",
             "phase": "қатты",
             "boil": 615,
-            "icon_2": "",
+            "icon_2": "anti-cancer",
             "icon_info_2": "As - сынғыш, металдық жыл- тыры бар металлоид. 3 аллотропиялық түрөзгерісі бар: сұр As, қара As, сары As. d=5,73 г/см³."
         },
         "how_taken": {
@@ -994,11 +995,11 @@
             "description": "саф күйінде де кездеседі; реальгар, аурипигмент, арсенопирит, лёллингит, скородит, т.б. минерал- дар құрамында бар."
         },
         "how_used": {
-            "icon_1": "phone",
+            "icon_1": "some-ignots",
             "icon_info_1": "Кейбір құймалар құрамында",
-            "icon_2": "glass",
+            "icon_2": "medicine",
             "icon_info_2": "Медицинада дәрілер құрамында",
-            "icon_3": "plastic_bottle",
+            "icon_3": "insecticide",
             "icon_info_3": "Инсектицид әрі уландырғыштар"
         }
     },
@@ -1034,11 +1035,11 @@
             "description": "Минералдары: <br>висмутин, тетрадимит, козалит, бисмит, висму- тит, т.б. минералдар құрамында, және саф күйінде де кездеседі."
         },
         "how_used": {
-            "icon_1": "phone",
+            "icon_1": "medicine",
             "icon_info_1": "Дәрілер жасауда қолданылады",
-            "icon_2": "glass",
+            "icon_2": "cosmetics",
             "icon_info_2": "BiOCl косметикада пигмент",
-            "icon_3": "plastic_bottle",
+            "icon_3": "pigment",
             "icon_info_3": "Бояулар құрамында пигмент ретінде"
         },
         "physical_properties": {
@@ -1110,7 +1111,8 @@
             "E_T": "1,81",
             "I_E": "579 кДж/моль",
             "T_D": "0, +1, +3",
-            "isotop": "⁶⁹Ga ⁷¹Ga"
+            "isotop": "⁶⁹Ga ⁷¹Ga",
+            "icon": "opk"
         },
         "chemical_properties": {
             "description": "<p> 2Ga + 6HCl(cұй.) → 2GaCl<sub>3</sub> + 3H<sub>2</sub>↑</p><p> Ga + 6HNO<sub>3</sub><sub>(конц)</sub><sub>(t)</sub> → Ga(NO<sub>3</sub><sub> )</sub><sub>3</sub> + 3NO<sub>2</sub>↑ + 3H<sub>2</sub>O</p><p> 2Ga + 2NaOH<sub>(конц)</sub> + 6H<sub>2</sub>O →<sub>2</sub>Na[Ga(OH)<sub>4</sub>] + 3H<sub>2</sub>↑</p><p> 2Ga + 3Cl<sub>2</sub><sub>(to)</sub> → 2GaCl<sub>3</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  2Ga + 3S<sub>(to)</sub> → Ga<sub>2</sub>S<sub>3</sub></p><p> 2Ga + 3H<sub>2</sub>S<sub>(to)</sub> → Ga<sub>2</sub>S<sub>3</sub> + 3H<sub>2</sub></p>",
@@ -1132,15 +1134,15 @@
             "description": "Минералдары: <br>сфалерит, магнетит, касситерит, гранат, берилл, турмалин, сподумен, флогопит, т.б. минералдар құрам. бар"
         },
         "how_used": {
-            "icon_1": "",
+            "icon_1": "semiconductor",
             "icon_info_1": "Жартылай өткізгіштер өндірісінде (GaAs, GaN)",
-            "icon_2": "",
+            "icon_2": "led-lamp",
             "icon_info_2": "LED",
-            "icon_3": "",
+            "icon_3": "ir-laser",
             "icon_info_3": "ИҚ лазерлік диодтар жасауда (AlGaAs)"
         },
         "physical_properties": {
-            "icon_1": "",
+            "icon_1": "liquid",
             "icon_info_1": " Ga сынап, цезий, рубидий металдары секілді бөлме жағдайында сұйық күйде кездесе алады.",
             "phase": "қатты",
             "melt": 30,
@@ -1159,6 +1161,7 @@
             "E_T": "2,01",
             "I_E": "761 кДж/моль",
             "T_D": "0, +2, +4",
+            "icon": "diamond",
             "isotop": " ⁷⁰Ge ⁷²Ge ⁷³Ge ⁷⁴Ge ⁷⁶Ge"
         },
         "chemical_properties": {
@@ -1181,11 +1184,11 @@
             "description": "Минералдары: <br>германит, аргиродит, конфильдит, ранерит, ультрабазит, франкеит, т.б. секілді минералдар құрамында бар."
         },
         "how_used": {
-            "icon_1": "",
+            "icon_1": "optical-fibers",
             "icon_info_1": "Оптикалық талшықтар жасауд",
-            "icon_2": "",
+            "icon_2": "ir-optic",
             "icon_info_2": "ИҚ- оптикалық жүйелерде (линза)",
-            "icon_3": "",
+            "icon_3": "catalyzer",
             "icon_info_3": "Полимерлену реакция. катализатор"
         },
         "physical_properties": {
@@ -1638,11 +1641,11 @@
           "description": "<p> Аg + 2HCl ↔ <sub>2</sub>AgCl + H<sub>2</sub>↑</p><p> 2Аg + 2H<sub>2</sub>SO<sub>4</sub>(конц, ыст.) → Ag<sub>2</sub>SO<sub>4</sub>↓ + SO<sub>2</sub>↑ + 2H<sub>2</sub>O</p><p> 3Ag + 4HNO<sub>3</sub>(сұйыл.) → 3AgNO<sub>3</sub> + NO↑ + 2H<sub>2</sub>O</p><p> 2Ag + 2H<sub>2</sub>S + O<sub>2</sub>(ауа) → 2Ag<sub>2</sub>S + 2H<sub>2</sub>O</p><p> Ag + F<sub>2</sub> → AgF<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   2Ag + Cl<sub>2</sub> → 2AgCl</p><p> 2Ag + S → Ag<sub>2</sub>S&nbsp;&nbsp;&nbsp;&nbsp; Ag + Hg → Ag<sub>4</sub>Hg<sub>3</sub>, Ag<sub>5</sub>Hg<sub>8</sub></p>"
         },
         "how_used": {
-          "icon_1": "",
+          "icon_1": "jewelry",
           "icon_info_1": "Әшекей бұйым жасауда",
-          "icon_2": "",
+          "icon_2": "medicine",
           "icon_info_2": "Медицинада қосылыстары дәрі ретінде",
-          "icon_3": "",
+          "icon_3": "electronic",
           "icon_info_3": "Электроникада",
           "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
         }
@@ -1664,12 +1667,12 @@
         },
         "physical_properties": {
           "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
-          "icon_1": "",
+          "icon_1": "gas",
           "icon_info_1": "",
           "phase": "газ",
           "melt": "-189",
           "boil": "-186",
-          "icon_2": "",
+          "icon_2": "physical-prop",
           "icon_info_2": " Аргон - инертті, біратомды, иіссіз, түссіз, дәмсіз газ. Суда өте нашар ериді.d = 1,7839 кг/м³."
         },
         "how_spread": {
@@ -1693,11 +1696,11 @@
           "description": "<p>Ешқай дерлік химиялық қосылыспен реакцияласпайды. Арнайы жағдайда HArF қосылысы алынған.<br />Су сияқты заттармен клатраттар түзеді: 8Ar*46H<sub>2</sub>O, Ar*4C<sub>6</sub>H<sub>5</sub>OH, Ar*2HCl, Ar*2HBr.</p>"
         },
         "how_used": {
-          "icon_1": "",
+          "icon_1": "atmosphere",
           "icon_info_1": "Инертті атмосфера жасауда",
-          "icon_2": "",
+          "icon_2": "metal-cut",
           "icon_info_2": "Металдарды газды пісіруде, кесуде",
-          "icon_3": "",
+          "icon_3": "medicine-laser",
           "icon_info_3": "Медицинада аргонды лазерлерде",
           "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
         }
@@ -1717,7 +1720,7 @@
           "I_E": "899 кДж/моль",
           "T_D": "-1, +1, +3, +5, +7",
           "isotop": "²⁰⁷At - ²¹¹At",
-          "icon": "cube"
+          "icon": "kbo"
         },
         "physical_properties": {
           "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
@@ -1806,11 +1809,11 @@
           "description": "<p>Au+HNO<sub>3</sub><sub>(конц)</sub>+<sub>4</sub>HCl<sub>(конц)</sub>&rarr;H[AuCl<sub>4</sub>] +NO&uarr;+<sub>2</sub>H<sub>2</sub>O</p><p>2Au + 6H<sub>2</sub>SeO<sub>4</sub> &rarr; Au<sub>2</sub>(SeO<sub>4</sub><sub> )</sub><sub>3</sub> + 3SeO<sub>2</sub> + 6H<sub>2</sub>O</p><p>2Au + 3F<sub>2</sub> &rarr; 2AuF<sub>3</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2Au + 3Cl<sub>2</sub> &rarr; 2AuCl<sub>3</sub></p><p>4Au + 8NaCN<sub>(конц)</sub> + 2H<sub>2</sub>O + O<sub>2</sub> &rarr;</p><p>&rarr; 4Na[Au(CN)<sub>2</sub>] + 4KOH</p><p>Au + NaNO<sub>3</sub> &rarr; NaAuO<sub>2</sub> + NO&uarr;</p>"
         },
         "how_used": {
-          "icon_1": "",
+          "icon_1": "medicine",
           "icon_info_1": "Медицинада (Au-198)",
-          "icon_2": "",
+          "icon_2": "decorate",
           "icon_info_2": "Алтын жұқалтыр (безендіру ісінде)",
-          "icon_3": "",
+          "icon_3": "jewelry",
           "icon_info_3": "Әшекей бұйымдар жасауда",
           "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
         }
@@ -1832,7 +1835,7 @@
         },
         "physical_properties": {
           "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
-          "icon_1": "",
+          "icon_1": "flame",
           "icon_info_1": "Бор иондары жалынды ашық жасыл түске бояйды",
           "phase": "қатты",
           "melt": "2453",
@@ -1861,11 +1864,11 @@
           "description": "<p>4B + 3O<sub>2</sub> (t&ordm;)= 2B₂O₃&nbsp;&nbsp;&nbsp;&nbsp; 2B + 3Br<sub>2</sub> (t&ordm;)= 2BBr₃</p><p>2B + 3H<sub>2</sub>O (t&ordm;)= B₂O₃ + 3H<sub>2</sub></p><p>B + 3HNO<sub>3</sub><sub>(конц ыстық)</sub> = B(OH)<sub>3</sub> + 3NO<sub>2</sub></p><p>2B + 2NaOH<sub>(конц)</sub> + 6H₂O = Na[B(OH)₄] + 3H<sub>2</sub></p><p>4B + 3SiO₂ (t&ordm;)= 2B₂O₃ + 3Si</p><p>2B + 6HF (t&ordm;)= 2BF₃ + 3H₂</p>"
         },
         "how_used": {
-          "icon_1": "",
+          "icon_1": "borosilicateglasses",
           "icon_info_1": "Боросиликатты шынылар",
-          "icon_2": "",
+          "icon_2": "boroncarbideceramics",
           "icon_info_2": "Боркарбидті керамика",
-          "icon_3": "",
+          "icon_3": "steelproduction",
           "icon_info_3": "Болат өндірісінде",
           "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
         }
@@ -1887,12 +1890,12 @@
         },
         "physical_properties": {
           "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
-          "icon_1": "",
+          "icon_1": "caustic",
           "icon_info_1": "",
           "phase": "сұйық",
           "melt": "-7.25",
           "boil": "59.2",
-          "icon_2": "",
+          "icon_2": "toxic",
           "icon_info_2": "Br2 - химиялық белсенді бейметалл, ауыр, қызыл-қоңыр түсті күйдіргіш сұйықтық. Ұшқыш әрі улы зат. d=3,102 г/см³."
         },
         "how_spread": {
@@ -1917,11 +1920,11 @@
           "description": "<p>Br<sub>2</sub> + nH<sub>2</sub>O &harr; Br<sub>2</sub>nH<sub>2</sub>O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Br<sub>2</sub> + H<sub>2</sub><sub>(t)</sub> &rarr; 2HBr</p><p>Br<sub>2</sub> + 2NaOH<sub>(сұйыл.)</sub>&rarr; NaBr + NaBrO + H<sub>2</sub>O</p><p>3Br<sub>2</sub> + 6NaOH<sub>(конц)</sub>&rarr; 5NaBr + NaBrO<sub>3</sub> + 3H<sub>2</sub>O</p><p>Br<sub>2</sub> + F<sub>2</sub> &rarr; BrF, BrF<sub>3</sub>, BrF<sub>5</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3Br<sub>2</sub> + 2Al &rarr; 2AlBr<sub>3</sub>&nbsp;&nbsp;&nbsp;&nbsp;</p><p>Br<sub>2</sub> + 2NaI &rarr; 2NaBr + I<sub>2</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Br<sub>2</sub> + Cl<sub>2</sub> &rarr; 2BrCl</p><p>Br<sub>2</sub> + H<sub>2</sub>S &rarr; 2HBr + S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Br<sub>2</sub> + I<sub>2</sub> &rarr; 2IBr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>"
         },
         "how_used": {
-          "icon_1": "",
+          "icon_1": "organic-synthesis",
           "icon_info_1": "Органикалық синтезде",
-          "icon_2": "",
+          "icon_2": "brom",
           "icon_info_2": "Бром суы қанықпаған орг. қосыл-ды анықтауда",
-          "icon_3": "",
+          "icon_3": "polymer",
           "icon_info_3": "Полимер өндірісінде",
           "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
         }
@@ -1939,16 +1942,17 @@
           "E_T": "1,69",
           "I_E": "867,2 кДж/моль",
           "T_D": "0, +1, +2",
-          "isotop": "¹⁰⁶Cd, ¹⁰⁸Cd, ¹²³⁴⁵⁶⁷⁸⁹⁰Cd, 111Cd ¹²³⁴⁵⁶⁷⁸⁹⁰"
+          "isotop": "¹⁰⁶Cd, ¹⁰⁸Cd, ¹²³⁴⁵⁶⁷⁸⁹⁰Cd, 111Cd ¹²³⁴⁵⁶⁷⁸⁹⁰",
+          "icon":"gkt"
         },
         "physical_properties": {
           "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
-          "icon_1": "",
+          "icon_1": "toxic",
           "icon_info_1": "Cd мен оның қосылыстары улы заттар.",
           "phase": "қатты",
           "melt": "321",
           "boil": "765",
-          "icon_2": "",
+          "icon_2": "carcinogen",
           "icon_info_2": "Cd - күміс-ақ түсті металл. Ауыр, жұмсақ, оңай жаншы- лады, ылғал ауада тұрақты оксидтік қабатпен қапталады. Тотықсыздандырғыш. d=8,65 г/см³."
         },
         "how_spread": {
@@ -1972,11 +1976,11 @@
           "description": "<p>Cd + H<sub>2</sub>O<sub>(бу)</sub> &rarr; CdO + H<sub>2</sub>&uarr;&nbsp;&nbsp;&nbsp;&nbsp; Cd + I<sub>2(сусп.) </sub>&rarr; CdI<sub>2</sub></p><p>Cd + 2HCl<sub>(сұй.)</sub> &rarr; CdСl<sub>2</sub> + H<sub>2</sub>&uarr;</p><p>Cd + 4HNO<sub>3</sub><sub>(конц)</sub> &rarr; Cd(NO<sub>3</sub><sub> )</sub><sub>2</sub> + 2NO<sub>2</sub>&uarr; + 2H<sub>2</sub>O</p><p>2Cd + O<sub>2</sub> &rarr; 2CdO&nbsp;&nbsp;&nbsp;&nbsp; Cd + Cl<sub>2</sub> &rarr; CdCl<sub>2</sub></p><p>Cd + S &rarr; CdS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3Cd + 2P &rarr; Cd<sub>3</sub>P<sub>2</sub></p><p>Cd + CuSO<sub>4</sub> &rarr; CdSO<sub>4</sub> + Cu&darr;</p>"
         },
         "how_used": {
-          "icon_1": "",
+          "icon_1": "re-battery",
           "icon_info_1": "Қайта зарядталатын батареялар жасауда",
-          "icon_2": "",
+          "icon_2": "red-color",
           "icon_info_2": "CdO қызыл бояу ретінде",
-          "icon_3": "",
+          "icon_3": "microscope",
           "icon_info_3": "Флуоресценттi микроскоп жасауда",
           "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
         }
@@ -1994,7 +1998,8 @@
           "E_T": "1,12",
           "I_E": "540,1 кДж/моль",
           "T_D": "+2, +3, +4",
-          "isotop": "¹³⁶Ce,¹³⁸Ce,¹⁴⁰Ce,¹⁴²Ce"
+          "isotop": "¹³⁶Ce,¹³⁸Ce,¹⁴⁰Ce,¹⁴²Ce",
+          "icon": "kbo"
         },
         "physical_properties": {
           "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
@@ -2027,15 +2032,15 @@
           "description": "<p>2Сe + 6H<sub>2</sub> O<sub>(ыст.) </sub>&rarr; 2Ce(OH)<sub>3</sub>&darr; + 3H<sub>2</sub> &uarr;&nbsp;</p><p>&nbsp;2Ce + 6HCl<sub>(cұй.)</sub> &rarr; 2CeCl<sub>3</sub> + 3H<sub>2</sub> &uarr;&nbsp;</p><p>Ce + 4HNO<sub>3(сұй.)</sub> &rarr; Ce(NO<sub>3</sub>) <sub>3</sub> + NO&uarr; + 2H<sub>2</sub> O&nbsp;</p><p>2Ce + nH<sub>2</sub> &rarr; 2CeH <sub>n</sub>&nbsp; &nbsp;Ce + O<sub>2</sub> &rarr; CeO<sub>2</sub>&nbsp;</p><p>2Ce + 3Cl<sub>2</sub> &rarr; 2CeCl<sub>3&nbsp;</sub> 2Ce + 3S &rarr; Ce<sub>2</sub> S<sub>3</sub>&nbsp;</p><p>2Ce + N<sub>2</sub> &rarr; 2CeN&nbsp; Ce + 2C &rarr; CeC<sub>2</sub></p>"
         },
         "how_used": {
-          "icon_1": "",
+          "icon_1": "catalyzer",
           "icon_info_1": "CeO₃ Ce(SO₄)₂ катализатор ретінде",
-          "icon_2": "",
+          "icon_2": "glass",
           "icon_info_2": "Шыны өндірісінде",
-          "icon_3": "",
+          "icon_3": "thermoelectric",
           "icon_info_3": "Термоэлектрлік материал(Ce₂S₃)",
-          "icon_4": "",
+          "icon_4": "various-ingots",
           "icon_info_4": "Әр түрлі құймалар жасауда",
-          "icon_5": "",
+          "icon_5": "tv-display",
           "icon_info_5": "Теледидар экранында Сe-P түс береді",
           "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
         }
@@ -2057,12 +2062,12 @@
         },
         "physical_properties": {
           "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
-          "icon_1": "",
+          "icon_1": "physical-prop",
           "icon_info_1": "Cl₂- екіатомды молекула",
           "phase": "қатты",
           "melt": "-101",
           "boil": "-35",
-          "icon_2": "",
+          "icon_2": "danger",
           "icon_info_2": "Хлор - ашық жасыл-сары түсті, өте улы, тұншықтырғыш, ауадан ауыр газ, химиялық өте белсенді галоген, тотықтырғыш. d = 3,21 г/л."
         },
         "how_spread": {
@@ -2086,15 +2091,15 @@
           "description": "<p>Cl<sub>2</sub> + H<sub>2 </sub>= 2HCl 3Cl<sub>2</sub> + 2Sb = 2SbCl<sub>3&nbsp;</sub></p><p>Cl<sub>2</sub> + nH<sub>2</sub> O = Cl<sub>2</sub> &bull;nH<sub>2</sub> O Cl<sub>2</sub> + Br<sub>2</sub> = 2BrCl&nbsp;</p><p>Cl<sub>2</sub> + 2NaOH<sub>(салқын)</sub> = NaCl + NaClO + H<sub>2</sub> O&nbsp;</p><p>3Cl<sub>2</sub> + 6NaOH<sub>(ыстық) </sub>= 5NaCl + NaClO<sub>3</sub> + 3H<sub>2</sub> O&nbsp;</p><p>Cl<sub>2</sub> + 2O<sub>3</sub> = 2ClO<sub>3</sub> 3Cl<sub>2</sub> + 2P = 2PCl<sub>3</sub>&nbsp;</p><p>Cl<sub>2</sub> + 2NaI = 2NaCl + I<sub>2</sub></p>"
         },
         "how_used": {
-          "icon_1": "",
+          "icon_1": "pvh",
           "icon_info_1": "ПВХ өндірісінде",
-          "icon_2": "",
+          "icon_2": "hydrochloric-acid",
           "icon_info_2": "Хлорлы ағартқыш өндірісінде",
-          "icon_3": "",
+          "icon_3": "water-chlorine",
           "icon_info_3": "Суды хлорлауда",
-          "icon_4": "",
+          "icon_4": "hydrochloric-acid",
           "icon_info_4": "Тұз қышқылы өндірісінде",
-          "icon_5": "",
+          "icon_5": "chlorine-organic",
           "icon_info_5": "Хлор органикалық заттар алудa",
           "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
         }
@@ -2112,7 +2117,8 @@
           "E_T": "1,88",
           "I_E": "758 кДж/моль",
           "T_D": "+2, +3",
-          "isotop": "⁵⁹Co"
+          "isotop": "⁵⁹Co",
+          "icon": "gkt"
         },
         "physical_properties": {
           "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
@@ -2145,15 +2151,15 @@
           "description": "<p>&middot; 2Co + O<sub>2</sub> <sub>(ауа)(to)</sub> = 2CoO Co + Br<sub>2</sub> = CoBr<sub>2</sub> &middot; 3Co + 2O<sub>2(ауа)(to)</sub> = (Сo<sup>II</sup>Co<sub>2</sub> <sup>III</sup>)O<sub>4</sub> &middot; Co+ 2HCl<sub>(cұй.)(to) </sub>= CoCl<sub>2</sub> + H<sub>2</sub> Co + Cl<sub>2</sub> = CoCl<sub>2</sub> &middot; 3Co + 8HNO<sub>3(cұй.ыст) </sub>= 3Сo(NO<sub>3</sub>) <sub>3</sub> + 2NO + 4H<sub>2</sub> O &middot; 4Co + 4NaOH + 3O<sub>2(to)</sub> = 4NaCoO<sub>2</sub> + 2H<sub>2</sub> O &middot; Co + S<sub>(to)</sub> = CoS Co + P<sub>(to) </sub>= Co<sub>2</sub> P, CoP, CoP<sub>3</sub></p>"
         },
         "how_used": {
-          "icon_1": "",
+          "icon_1": "plane-engine",
           "icon_info_1": "Ұшақтардың реактивті қозғалтқыштары",
-          "icon_2": "",
+          "icon_2": "metal-ignots",
           "icon_info_2": "Kөптеген құймалар құрамында бар",
-          "icon_3": "",
+          "icon_3": "li-battery",
           "icon_info_3": "Li-ионды батарея құрамында катод",
-          "icon_4": "",
+          "icon_4": "glass",
           "icon_info_4": "Қою көктүсті шыны алуда",
-          "icon_5": "",
+          "icon_5": "theraphy",
           "icon_info_5": "Co-60 изотопы сәулелік терапияда",
           "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
         }
@@ -2171,7 +2177,8 @@
           "E_T": "1,66",
           "I_E": "652 кДж/моль",
           "T_D": "0, +2, +3, +4, +6",
-          "isotop": "⁵⁰Cr,⁵²Cr,⁵³Cr,⁵⁴Cr"
+          "isotop": "⁵⁰Cr,⁵²Cr,⁵³Cr,⁵⁴Cr",
+          "icon": "kko"
         },
         "physical_properties": {
           "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
@@ -2204,15 +2211,15 @@
           "description": "<p>&middot; 4Сr<sub>(ұнтақ)</sub> + 3O<sub>2</sub> = 2Cr<sub>2</sub> O<sub>3</sub> Cr + 2F<sub>2</sub> = CrF<sub>4</sub></p><p>&middot; 2Cr + 3H<sub>2</sub> O<sub>(бу) </sub>= Cr<sub>2</sub> O<sub>3</sub> + 3H<sub>2</sub></p><p>&middot; Cr + HCl (t<sup>o</sup> ) = CrCl<sub>2</sub> + H<sub>2</sub></p><p>&middot; 2Cr + 6H<sub>2 </sub>SO<sub>4(ыстық, &gt;60%)</sub> = Cr<sub>2</sub> (SO<sub>4</sub>) <sub>3</sub> + 3SO<sub>2</sub> + 6H<sub>2</sub> O</p><p>&middot; 2Cr + N<sub>2</sub> = 2CrN 2Cr + 3I<sub>2</sub> = 2CrI<sub>3</sub></p><p>&middot; 2Cr + KClO<sub>3</sub> = Cr<sub>2 </sub>O<sub>3 </sub>+ KCl Cr + S = CrS</p>"
         },
         "how_used": {
-          "icon_1": "",
+          "icon_1": "steel",
           "icon_info_1": "Болат өндірісінде легирлеуші қоспа",
-          "icon_2": "",
+          "icon_2": "crv-ignots",
           "icon_info_2": "Сr-V құймалары құрамында",
-          "icon_3": "",
-          "icon_info_3": "Гальваникалыққаптауда",
-          "icon_4": "",
+          "icon_3": "electroplating",
+          "icon_info_3": "Гальваникалық қаптауда",
+          "icon_4": "crocoite",
           "icon_info_4": "Крокоит минералы бояу ретінде",
-          "icon_5": "",
+          "icon_5": "corundum",
           "icon_info_5": "Корунд құрамында бар (рубин,сапфир)",
           "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
         }
@@ -2230,11 +2237,12 @@
           "E_T": "1,90",
           "I_E": "746 кДж/моль",
           "T_D": "+1, +2",
-          "isotop": "⁶³Cu,⁶⁵Cu"
+          "isotop": "⁶³Cu,⁶⁵Cu",
+          "icon": "kbo"
         },
         "physical_properties": {
           "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
-          "icon_1": "",
+          "icon_1": "flame",
           "icon_info_1": "Cu²⁺ ионы жалынды көкшіл-жасыл түске бояйды",
           "phase": "қатты",
           "melt": "1083",
@@ -2263,15 +2271,15 @@
           "description": "<p>&middot; 2Сu + O<sub>2 (t)</sub> &rarr; 2CuO 4Cu + O<sub>2</sub> &rarr; 2Cu<sub>2</sub> O</p><p>&middot; 2Cu + H<sub>2</sub> O+ CO<sub>2</sub> + O<sub>2</sub> &rarr; Cu<sub>2</sub> CO<sub>3</sub>(OH)<sub>2</sub> &darr;</p><p>&middot; 2Cu+ 4HCl<sub>(cұй.)</sub> + O<sub>2</sub> &rarr; 2CuCl<sub>2</sub> + 2H<sub>2</sub> O</p><p>&middot; Cu + 2H<sub>2</sub> SO<sub>4(конц.ыст) </sub>&rarr; CuSO<sub>4</sub> + SO<sub>2</sub> + 2H<sub>2</sub> O</p><p>&middot; Cu + 2AgNO<sub>3</sub> &rarr; Cu(NO<sub>3</sub>) <sub>2</sub> + 2Ag&darr;</p><p>&middot; Cu + Cl<sub>2</sub> &rarr; CuCl<sub>2</sub> 2Cu + S <sub>(t)</sub>&rarr; Cu<sub>2</sub> S</p>"
         },
         "how_used": {
-          "icon_1": "",
+          "icon_1": "electric",
           "icon_info_1": "Электротехникада",
-          "icon_2": "",
+          "icon_2": "roofs",
           "icon_info_2": "Ғимарат шатырларын қаптауда",
-          "icon_3": "",
+          "icon_3": "bronze",
           "icon_info_3": "Қола, жез секілді құймалар жасауда",
-          "icon_4": "",
+          "icon_4": "pipe",
           "icon_info_4": "Cу құбырларын жасауда",
-          "icon_5": "",
+          "icon_5": "coins",
           "icon_info_5": "Монеталар құрамында",
           "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
         }
@@ -2289,7 +2297,8 @@
           "E_T": "-",
           "I_E": "665 кДж/моль",
           "T_D": "(+3), (+4), +5",
-          "isotop": " ²⁶²Db,²⁶³Db, ²⁶⁶Db, ²⁶⁷Db, ²⁶⁸Db, ²⁷⁰Db"
+          "isotop": " ²⁶²Db,²⁶³Db, ²⁶⁶Db, ²⁶⁷Db, ²⁶⁸Db, ²⁷⁰Db",
+          "icon": "kko"
         },
         "physical_properties": {
           "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
@@ -2344,7 +2353,8 @@
           "E_T": "1,83",
           "I_E": "759 кДж/моль",
           "T_D": "+2, +3, +6",
-          "isotop": " ⁵⁴Fe,⁵⁶Fe,⁵⁷Fe,⁵⁸Fe"
+          "isotop": " ⁵⁴Fe,⁵⁶Fe,⁵⁷Fe,⁵⁸Fe",
+          "icon": "kko"
         },
         "physical_properties": {
           "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰",
@@ -2377,15 +2387,15 @@
           "description": "<p>&middot; 3Fe<sub>(ұнтақ) </sub>+ 2O<sub>2 (150-500oC)</sub> = (Fe<sup>II</sup>Fe2<sup> III</sup>)O<sub>4</sub></p><p>&middot; 3Fe + 4H<sub>2</sub> O<sub>(бу)</sub> = (Fe<sup>II</sup>Fe<sub>2</sub> <sup>III</sup>)O<sub>4</sub> + 4H<sub>2</sub></p><p>&middot; Fe+ HCl<sub>(cұй.)</sub> = FeCl<sub>2</sub> + H<sub>2</sub> 2Fe + 3Cl<sub>2</sub> = 2FeCl<sub>3</sub></p><p>&middot; Fe + 4HNO<sub>3(cұй.)</sub> = Fe(NO<sub>3</sub>) <sub>3</sub> + NO + 2H<sub>2</sub> O</p><p>&middot; 2Fe + 2H<sub>2</sub> O + O<sub>2</sub> = 2Fe(OH)<sub>2</sub></p><p>&middot; Fe + S = FeS Fe + CuSO<sub>4 </sub>= FeSO<sub>4 </sub>+ Cu</p>"
         },
         "how_used": {
-          "icon_1": "",
+          "icon_1": "steel",
           "icon_info_1": "Болат пен шойын құрамында нег.металл",
-          "icon_2": "",
+          "icon_2": "magnetic-disk",
           "icon_info_2": "Магнетит компьютер. құрылғылар жасауда",
-          "icon_3": "",
+          "icon_3": "railways",
           "icon_info_3": "Темір жол жасауда",
-          "icon_4": "",
+          "icon_4": "car-details",
           "icon_info_4": "Әр түрлі машиналар құрылғылар",
-          "icon_5": "",
+          "icon_5": "fittings",
           "icon_info_5": "Арматура жасауда",
           "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
         }
@@ -2403,6 +2413,7 @@
           "E_T": "1,3",
           "I_E": " 575,2 кДж/моль",
           "T_D": " 0, +2, +3, +4",
+          "icon": "gkt",
           "isotop": " ¹⁷⁶Hf,¹⁷⁷Hf,¹⁷⁸Hf,¹⁷⁹Hf,¹⁸⁰Hf"
         },
         "physical_properties": {
@@ -2436,15 +2447,15 @@
           "description": "<p>&middot; Hf + 2H<sub>2</sub> O<sub>(бу)</sub>&rarr; HfO<sub>2</sub> + 2H<sub>2 </sub>&uarr; &middot; Hf + C &rarr; HfC</p><p>&middot; 3Hf + 6HCl<sub>(конц)</sub> + 4HNO<sub>3(конц)</sub>&rarr; [Hf<sub>3</sub>Cl<sub>3</sub>(OH)<sub>6</sub>]Cl<sub>3</sub> + 4NO&uarr; + 2H<sub>2</sub> O</p><p>&middot; Hf + 4HF<sub>(конц)</sub> + H<sub>2</sub> O &rarr; H<sub>2</sub> [HfOF<sub>4</sub>] + 2H<sub>2</sub> &uarr;</p><p>&middot; Hf + O<sub>2</sub> &rarr; HfO<sub>2 </sub>&middot; Hf<sub>(ұнтақ)</sub> + 2Cl<sub>2</sub> &rarr; HfCl<sub>4</sub></p><p>&middot; Hf + S &rarr; HfS<sub>3</sub> &rarr; HfS<sub>2</sub> &middot; 2Hf + N<sub>2</sub> &rarr; 2HfN</p>"
         },
         "how_used": {
-          "icon_1": "",
+          "icon_1": "various-ingots",
           "icon_info_1": "Құймаларжасауда(Fe, Ta, Nb,т.б. мет.)",
-          "icon_2": "",
+          "icon_2": "nuclear-reactor",
           "icon_info_2": "Ядролық реакторда",
-          "icon_3": "",
+          "icon_3": "metal-cut",
           "icon_info_3": "Металды кесетін қуатты кескіште",
-          "icon_4": "",
+          "icon_4": "microchip",
           "icon_info_4": "Электронды микрочиптер жасауда",
-          "icon_5": "",
+          "icon_5": "geochemistry",
           "icon_info_5": "¹⁷⁶Hf изотопы геохимияда",
           "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"
         }
@@ -2462,6 +2473,7 @@
           "E_T": "2,00",
           "I_E": "1 006 кДж/моль",
           "T_D": " 0, +1, +2",
+          "icon": "",
           "isotop": " ¹⁹⁸Hg,¹⁹⁹Hg,²⁰⁰Hg,²⁰¹Hg,²⁰²Hg,²⁰⁴Hg"
         },
         "physical_properties": {
@@ -2495,15 +2507,15 @@
           "description": "<p>&middot; 2Hg + 2H<sub>2</sub> SO<sub>4(конц)</sub> &rarr; Hg<sub>2</sub> SO<sub>4</sub>&darr; + 2H<sub>2</sub> O + SO<sub>2</sub> &uarr;</p><p>&middot; 6Hg + 8HNO<sub>3(cұй.)</sub> &rarr; 3Hg<sub>2</sub> (NO<sub>3</sub>) <sub>2</sub> + 4H<sub>2</sub> O + 2NO&uarr;</p><p>&middot; Hg + 4HNO<sub>3(конц)</sub> &rarr; Hg(NO<sub>3</sub>) <sub>2</sub> + 2H<sub>2</sub> O + 2NO<sub>2</sub> &uarr;</p><p>&middot; Hg + 4HI<sub>(конц)</sub> &rarr; H<sub>2 </sub>[HgI<sub>4</sub>] + H<sub>2</sub> &uarr;</p><p>&middot; 2Hg + O<sub>2</sub> &rarr; 2HgO &middot; Hg + Cl<sub>2</sub> &rarr; HgCl<sub>2</sub></p><p>&middot; Hg + S &rarr; HgS &middot; Hg + HgCl<sub>2</sub> &rarr; Hg<sub>2</sub> Cl<sub>2</sub></p>"
         },
         "how_used": {
-          "icon_1": "",
+          "icon_1": "thermometer",
           "icon_info_1": "Сынапты термометрлер жасауда",
-          "icon_2": "",
+          "icon_2": "Amalgam",
           "icon_info_2": "Амальгамалар дайындауда",
-          "icon_3": "",
+          "icon_3": "luminescent",
           "icon_info_3": "Люминесцентті шамдар жасауда",
-          "icon_4": "",
+          "icon_4": "aluminum",
           "icon_info_4": "Алюминийді қайта өңдеуде",
-          "icon_5": "",
+          "icon_5": "battery",
           "icon_info_5": "Кейбір батареяларды жасауда",
           
           "dummy_text": "¹²³⁴⁵⁶⁷⁸⁹⁰"

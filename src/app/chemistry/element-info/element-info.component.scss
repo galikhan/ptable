@@ -3,9 +3,7 @@ $grid-border-radius: 10px;
 
 .element-info {
     margin-top: 50px;
-    width: 750px;
     height: 200px;
-    color:#DDD;
 }
 
 .element-info-grid {
@@ -15,14 +13,13 @@ $grid-border-radius: 10px;
         "physical-properties chemical-properties chemical-properties"
         "how-spread how-used how-used";
     gap: 5px;
-    color: #ddd;
 }
 
 .element-info-grid > div {
     /* background-color: rgb(18, 18, 66); */
     border: $grid-border;
     border-radius: $grid-border-radius;
-    line-height: 15px;
+    line-height: 25px;
     padding: 10px;
 }
 
@@ -34,12 +31,12 @@ $grid-border-radius: 10px;
 
 .symbol-properties {
     grid-area: symbol-properties;
-	/* height: 100px; */
-    /* width: 70px; */
+    column-span: 1;
 }
 
 .atomic-properties {
     grid-area: atomic-properties;
+    column-span: 1;
 }
 .physical-properties {
 	grid-area: physical-properties;
@@ -49,6 +46,7 @@ $grid-border-radius: 10px;
 }
 .how-taken {
     grid-area: how-taken;	
+    column-span: 2;
 }
 .how-spread {
     grid-area: how-spread;	
