@@ -27,35 +27,26 @@ $postTansitionMtalBgColor: #acdfec;
 $reactiveNonMetalBgColor: #8ced8c;
 $nobleGasBgColor: #e5bde5;
 
-
 .chemical-table {
-    width: 900px;
-    margin: auto;
-// /    color: #000000;
-    // padding: 10px;
-
-    // line-height: 13px;
-    // font-family: Roboto, sans-serif;
-    // letter-spacing: 0em;
-}
-
-.chemical-table {
-    font-size: 17px;
+    font-size: 14px;
     color: #000000;
     padding: 10px;
 
     line-height: 13px;
     font-family: Roboto, sans-serif;
     letter-spacing: 0em;
+    width: 960px;
+    margin: auto;
 }
 
 .lefttop {
-    width: 105px;
+    width: 110px;
     float: left;
 }
 .righttop {
-    width: 350px;
+    // width: 350px;
     float: left;
+    margin-left: 115px;
 }
 
 .body-elements {
@@ -66,6 +57,14 @@ $nobleGasBgColor: #e5bde5;
     height: 120px;
 }
 
+.footer-elements-body,
+.footer-head {
+    margin-left:106px;
+}
+.footer-head {
+    height: 40px;
+}
+
 .cell {
     height: 55px;
     width: 50px;
@@ -73,7 +72,8 @@ $nobleGasBgColor: #e5bde5;
     // color:#fff;
     // padding: 0.5px;
     /* color: #b5b5b5; */
-    /* margin: 1px; */
+    margin: 1px;
+
 }
 
 .empty-cell {
@@ -83,7 +83,7 @@ $nobleGasBgColor: #e5bde5;
 }
 
 .column {
-    width: 50px;
+    width: 53px;
     float: left;
     cursor: pointer;
 }
@@ -93,13 +93,14 @@ $nobleGasBgColor: #e5bde5;
 }
 
 .cell .id {
-    font-size: 6px;
-    font-weight: bold;
+    font-size: 9px;
+    // font-weight: bold;
 }
 .cell .name {
-    font-size: 6px;
+    font-size: 9px;
+    letter-spacing: -0.0833333em;
 }
 
 .cell .atomic_mass {
-    font-size: 6px;
+    font-size: 9px;
 }

@@ -37,30 +37,29 @@
             <div class="name">Беймәлім </div>
           </div>
         </div>
-
         <div (mouseout)="removeType()">
 
           <div class="types types-grid">
-            <div class="metal" (mouseover)="highlightType('metal')">Металлы</div>
+            <div class="metal" (mouseover)="highlightType('metal')">Металдар</div>
 
             <div class="alkali_metal vertical-text" (mouseover)="highlightType('alkali metal')">
-              Щелочные <br>металлы</div>
+              Сілтілік <br>металдар</div>
             <div class="alkaline_earth_metal vertical-text" (mouseover)="highlightType('alkaline earth metal')">
-              Щёлочноземельные<br> металлы</div>
-            <div class="lanthanide" (mouseover)="highlightType('lanthanide')">Лантаноиды</div>
-            <div class="actinide" (mouseover)="highlightType('actinide')">Актиноиды</div>
-            <div class="transition_metal vertical-text" (mouseover)="highlightType('transition metal')">Переходные<br>
-              металлы</div>
+              Сілтілік<br> жер металдары</div>
+            <div class="lanthanide" (mouseover)="highlightType('lanthanide')">Лантанидтер</div>
+            <div class="actinide" (mouseover)="highlightType('actinide')">Актиноидтар</div>
+            <div class="transition_metal vertical-text" (mouseover)="highlightType('transition metal')">Өтпелі<br>
+              металдар</div>
             <div class="post_transition_metal vertical-text" (mouseover)="highlightType('post-transition metal')">
-              Постпереходные<br> металлы</div>
+              Пост-Өтпелі<br> металдар</div>
 
-            <div class="metalloid vertical-text" (mouseover)="highlightType('metalloid')">Полуметаллы</div>
-            <div class="non_metal" (mouseover)="highlightType('non-metal')">Неметаллы</div>
+            <div class="metalloid vertical-text" (mouseover)="highlightType('metalloid')">Жартылай металдар</div>
+            <div class="non_metal" (mouseover)="highlightType('non-metal')">Бейметалдар</div>
 
-            <div class="reactive_non_metal vertical-text" (mouseover)="highlightType('reactive non-metal')">Реактивные
-              <br>неметаллы
+            <div class="reactive_non_metal vertical-text" (mouseover)="highlightType('reactive non-metal')">Реактивті
+              <br>бейметалдар
             </div>
-            <div class="noble_gas vertical-text" (mouseover)="highlightType('noble gas')">Благородные <br>газы</div>
+            <div class="noble_gas vertical-text" (mouseover)="highlightType('noble gas')">Асыл <br>газдар</div>
           </div>
         </div>
 
@@ -79,9 +78,9 @@
 
       <div class="footer-elements">
         <div class="footer-head">
-          <div class="dummy-cell cell"></div>
-          <div class="footer-text">For elements with no stable isotopes, the mass number of the isotope with the longest
-            half-life is in parentheses.</div>
+          <!-- <div class="dummy-cell cell"></div> -->
+          <!-- <div class="footer-text">For elements with no stable isotopes, the mass number of the isotope with the longest
+            half-life is in parentheses.</div> -->
         </div>
 
         <div class="footer-elements-body">
@@ -89,7 +88,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="chemical-element">
       <app-element-info></app-element-info>
     </div>
