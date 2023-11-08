@@ -1,6 +1,6 @@
 <div *ngFor="let y of yaxis" class="row">
     <ng-container *ngFor="let x of xaxis">
-        <ng-container *ngIf="elements.get(y) && elements.get(y)?.get(x)">
+        <ng-container *ngIf="elements.get(y) && elements.get(y)?.get(x) && elements.get(y)?.get(x)?.number">
             <div class="column" (click)="showElement(elements.get(y)?.get(x))">
 
                 <div>
@@ -39,6 +39,13 @@
                     </div>
                 </div>
 
+            </div>
+        </ng-container>
+        <ng-container *ngIf="(elements.get(y) && elements.get(y)?.get(x) && !elements.get(y)?.get(x)?.number)">
+            <div class="column">
+                <div class="address-cell">
+                    <div class="address">{{ elements.get(y)?.get(x)?.symbol }}</div>
+                </div>
             </div>
         </ng-container>
         <ng-container *ngIf="hasEmptyCell">
