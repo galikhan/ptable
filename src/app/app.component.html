@@ -2,9 +2,10 @@
 
 
   <div class="chemical-table">
+
     <div class="table">
       <h3>Химиялық таблица</h3>
-      Температура: [-]
+        Температура: [-]
       <mat-slider class="example-margin" [max]="max" [min]="min" [step]="7">
         <input matSliderThumb [(ngModel)]="temparature" (valueChange)="temperatureUpdated(temparature)" #slider>
       </mat-slider> [+]&nbsp;
@@ -13,6 +14,12 @@
       <span class="temperature">{{temparature + 273|number:'1.0-0'}} K</span>
 
       <div class="header-elements">
+        <div class="id-row-element">
+          <app-id-element [items]="rows"></app-id-element>
+        </div>
+          <div class="id-column-element">
+          <app-id-element [items]="columns"></app-id-element>
+        </div>
         <div class="lefttop">
           <app-element [xaxis]="lefttop_xaxis" [yaxis]="lefttop_yaxis" [elements]="leftTopArray"></app-element>
         </div>
@@ -71,7 +78,7 @@
         </div>
       </div>
 
-      <div style="clear: both;"></div>
+      <!-- <div style="clear: both;"></div> -->
 
       <div class="body-elements">
         <app-element [xaxis]="body_xaxis" [yaxis]="body_yaxis" [elements]="bodyArray"></app-element>

@@ -1,0 +1,19 @@
+<ng-container *ngIf="type==='row'">
+    <div>
+        <div *ngFor="let item of items"  class="column">
+            <div class="row-cell">
+                <div class="">{{ item }}</div>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="type==='column'">
+    <div *ngFor="let item of items" class="row">
+        <div class="column">
+            <div class="column-cell">
+                <div class="">{{ item }}</div>
+            </div>
+        </div>
+    </div>
+</ng-container>

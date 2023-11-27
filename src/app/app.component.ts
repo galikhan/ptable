@@ -19,6 +19,9 @@ export class AppComponent implements OnInit {
   temparature = 0;
 
   title = 'ptable';
+  columns = [1,2,3,4,5,6,7];
+  rows = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
+  
   lefttop_yaxis = [1, 2, 3];
   lefttop_xaxis = [1, 2];
 

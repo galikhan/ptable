@@ -9,9 +9,10 @@ import { MatSliderModule } from '@angular/material/slider';
 import { LightswitchComponent } from './tests/lightswitch/lightswitch.component';
 import { ElementInfoComponent } from './chemistry/element-info/element-info.component';
 import { MatIconModule } from '@angular/material/icon';
-import { AddIconComponent } from './icon/add-icon/add-icon.component';
+import { MatCardModule } from '@angular/material/card';
 import { AddIconModule } from './icon/add-icon/add-icon.module';
 import { HttpClientModule } from '@angular/common/http';
+import { IdElementComponent } from './chemistry/common-components/id-element/id-element.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     ElementComponent,
     LightswitchComponent,
     ElementInfoComponent,
+    IdElementComponent,
     // AddIconComponent
   ],
   imports: [
@@ -29,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     MatIconModule,
     AddIconModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule
   ],
   exports: [
     ElementComponent,

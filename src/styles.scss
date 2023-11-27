@@ -37,7 +37,7 @@ $cellWidth: 55px;
     line-height: 13px;
     font-family: Roboto, sans-serif;
     letter-spacing: 0em;
-    width: 1026px;
+    width: 1041px;
     margin: auto;
 }
 
@@ -56,14 +56,14 @@ $cellWidth: 55px;
     height: 215px;
 }
 .header-elements {
-    height: 120px;
+    height: 180px;
 }
 
 .footer-elements-body{
-    margin-left:114px;
+    margin-left:129px;
 }
 .footer-head {
-    margin-left:113px;
+    margin-left:128px;
 }
 .footer-head {
     height: 32px;
@@ -95,8 +95,9 @@ $cellWidth: 55px;
     font-size: 9px;
 }
 .cell .name {
-    font-size: 10px;
-    letter-spacing: -0.075em;
+    font-size: 12px;
+    letter-spacing: -0.08em;
+    font-family: serif;
 }
 
 .cell .atomic_mass {
@@ -116,3 +117,24 @@ $cellWidth: 55px;
     border-left:1px solid #000;
     border-right:1px solid #000;
 }
+
+.id-row-element {
+    margin-left:15px;
+    height: 18px;
+    text-align: center;
+    color: #0d0d8c;
+}
+.id-column-element {
+    float:left;
+    color: #0d0d8c;
+}
+.column-cell {
+    width: 15px;
+    height: 54px;
+}
+.row-cell {
+    width: 55px;
+    height: 10px;
+    margin: 1px;
+}
+
