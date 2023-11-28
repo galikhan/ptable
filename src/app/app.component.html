@@ -1,17 +1,40 @@
 <div class="main">
 
-
+  
   <div class="chemical-table">
+
+    <mat-card>
+      
+
+      
+      <div class="config-panel" (mouseout)="removeType()">
+        <div class="filter">Сүзгі &nbsp;&nbsp;<mat-icon>tune</mat-icon></div>
+
+        <div class="type-button metal" (mouseover)="highlightType('metal')">Металдар</div>
+        <div class="type-button metalloid" (mouseover)="highlightType('metalloid')">Жартылай металдар</div>
+        <div class="type-button non_metal" (mouseover)="highlightType('non-metal')">Бейметалдар</div>
+
+
+        <div class="type-button alkali_metal" (mouseover)="highlightType('alkali metal')">
+          Сілтілік <br>металдар</div>
+        <div class="type-button alkaline_earth_metal" (mouseover)="highlightType('alkaline earth metal')">
+          Сілтілік<br> жер металдары</div>
+        <div class="type-button lanthanide" (mouseover)="highlightType('lanthanide')">Лантанидтер</div>
+        <div class="type-button actinide" (mouseover)="highlightType('actinide')">Актиноидтар</div>
+        <div class="type-button transition_metal" (mouseover)="highlightType('transition metal')">Өтпелі<br>
+          металдар</div>
+        <div class="type-button post_transition_metal" (mouseover)="highlightType('post-transition metal')">
+          Пост-Өтпелі<br> металдар</div>
+        <div class="type-button reactive_non_metal" (mouseover)="highlightType('reactive non-metal')">Реактивті
+          <br>бейметалдар
+        </div>
+        <div class="type-button noble_gas" (mouseover)="highlightType('noble gas')">Асыл <br>газдар</div>
+      </div>
+    </mat-card>
 
     <div class="table">
       <h3>Химиялық таблица</h3>
         Температура: [-]
-      <mat-slider class="example-margin" [max]="max" [min]="min" [step]="7">
-        <input matSliderThumb [(ngModel)]="temparature" (valueChange)="temperatureUpdated(temparature)" #slider>
-      </mat-slider> [+]&nbsp;
-      <span class="temperature">{{temparature|number:'1.0-0' }} C</span>&nbsp;
-      <span class="temperature">{{temparature*9/5 + 32|number:'1.0-0'}} F</span>&nbsp;
-      <span class="temperature">{{temparature + 273|number:'1.0-0'}} K</span>
 
       <div class="header-elements">
         <div class="id-row-element">
@@ -24,51 +47,7 @@
           <app-element [xaxis]="lefttop_xaxis" [yaxis]="lefttop_yaxis" [elements]="leftTopArray"></app-element>
         </div>
 
-        <div class="state-table">
-          <div class="state-row" (mouseover)="updateState('C')" (mouseout)="removeState()">
-            <div class="solid symbol">C</div>
-            <div class="name">Қатты</div>
-          </div>
-
-          <div class="state-row " (mouseover)="updateState('Hg')" (mouseout)="removeState()">
-            <div class="liquid symbol">Hg</div>
-            <div class="name">Сұйық </div>
-          </div>
-          <div class="state-row" (mouseover)="updateState('H')" (mouseout)="removeState()">
-            <div class="gas symbol">H</div>
-            <div class="name">Газ</div>
-          </div>
-
-          <div class="state-row" (mouseover)="updateState('Rf')" (mouseout)="removeState()">
-            <div class="unknown symbol">Rf</div>
-            <div class="name">Беймәлім </div>
-          </div>
-        </div>
-        <div (mouseout)="removeType()">
-
-          <div class="types types-grid">
-            <div class="metal" (mouseover)="highlightType('metal')">Металдар</div>
-
-            <div class="alkali_metal vertical-text" (mouseover)="highlightType('alkali metal')">
-              Сілтілік <br>металдар</div>
-            <div class="alkaline_earth_metal vertical-text" (mouseover)="highlightType('alkaline earth metal')">
-              Сілтілік<br> жер металдары</div>
-            <div class="lanthanide" (mouseover)="highlightType('lanthanide')">Лантанидтер</div>
-            <div class="actinide" (mouseover)="highlightType('actinide')">Актиноидтар</div>
-            <div class="transition_metal vertical-text" (mouseover)="highlightType('transition metal')">Өтпелі<br>
-              металдар</div>
-            <div class="post_transition_metal vertical-text" (mouseover)="highlightType('post-transition metal')">
-              Пост-Өтпелі<br> металдар</div>
-
-            <div class="metalloid vertical-text" (mouseover)="highlightType('metalloid')">Жартылай металдар</div>
-            <div class="non_metal" (mouseover)="highlightType('non-metal')">Бейметалдар</div>
-
-            <div class="reactive_non_metal vertical-text" (mouseover)="highlightType('reactive non-metal')">Реактивті
-              <br>бейметалдар
-            </div>
-            <div class="noble_gas vertical-text" (mouseover)="highlightType('noble gas')">Асыл <br>газдар</div>
-          </div>
-        </div>
+       
 
 
         <div class="righttop">
@@ -96,11 +75,11 @@
         </div>
       </div>
     </div>
-
+<!-- 
     <div class="chemical-element">
       <app-element-info></app-element-info>
     </div>
-
+ -->
   </div>
 
 </div>

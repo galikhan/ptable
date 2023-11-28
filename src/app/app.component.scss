@@ -46,17 +46,13 @@
     color: $unknownColor;
 }
 
+// .vertical-text {
+//     writing-mode: vertical-rl;
+// }
 
-
-.vertical-text {
-    writing-mode: vertical-rl;
-}
-
-.vertical-text {
-    writing-mode: vertical-rl;
-}
-
-
+// .vertical-text {
+//     writing-mode: vertical-rl;
+// }
 
 .footer-text {
     font-size: 12px;
@@ -104,61 +100,72 @@
     // border: 0.5px solid rgb(0, 0, 0);
 }
 
-.types-grid > div {
+.type-button {
     text-align: center;
     cursor: pointer;
     border: 2px solid #ddd;
-    padding:2px;
+    padding: 2px;
 }
-.types-grid > div:hover {
+.type-button:hover {
     padding: 2px;
     border: 2px solid #5fa5e3;
 }
 .metal {
     grid-area: metal;
     background-color: $metalBgColor;
+    border: 0.5px solid #ddd;
 }
 .metalloid {
     grid-area: metalloid;
     background-color: $metalloidBgColor;
+    border: 0.5px solid $metalloidBorderBgColor;
 }
 .non_metal {
     grid-area: non_metal;
     background-color: $nonMetalBgColor;
+    border: 0.5px solid $nonMetalBorderBgColor;
 }
 
 .alkali_metal {
     grid-area: alkali_metal;
     background-color: $alkaliMetalBgColor;
+    border: 0.5px solid $alkaliMetalBorderBgColor;
 }
 
 .alkaline_earth_metal {
     grid-area: alkaline_earth_metal;
     background-color: $alkalineEarthMetalBgColor;
+    border: 0.5px solid $alkalineEarthMetalBorderBgColor;
 }
 .lanthanide {
     grid-area: lanthanide;
     background-color: $lanthanideEarthMetalBgColor;
+    border: 0.5px solid $lanthanideEarthMetalBorderBgColor;
 }
 .actinide {
     grid-area: actinide;
     background-color: $actinideEarthMetalBgColor;
+    border: 0.5px solid $actinideEarthMetalBorderBgColor;    
 }
 .transition_metal {
     grid-area: transition_metal;
-    background-color:$transitionMetalEarthMetalBgColor;
+    background-color: $transitionMetalEarthMetalBgColor;
+    border: 0.5px solid $transitionMetalEarthMetalBorderBgColor;    
 }
 .post_transition_metal {
     grid-area: post_transition_metal;
     background-color: $postTansitionMtalBgColor;
+    border: 0.5px solid $postTansitionMtalBorderBgColor;    
 }
 .reactive_non_metal {
     grid-area: reactive_nonmetal;
     background-color: $reactiveNonMetalBgColor;
+    border: 0.5px solid $reactiveNonMetalBorderBgColor;    
 }
 .noble_gas {
     grid-area: noble_gas;
     background-color: $nobleGasBgColor;
+    border: 0.5px solid $nobleGasBorderBgColor;    
 }
 
 mat-slider {
@@ -170,5 +177,91 @@ mat-slider {
 }
 
 .chemical-element {
-    color:black;
+    color: black;
+}
+
+mat-card {
+    border-radius: 10px;
+    background: #f4f5f6;
+    padding: 20px;
+}
+
+.config-panel {
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(7, 14%);
+    grid-template-rows: repeat(3, 33%);
+    gap: 4px;
+}
+
+.config-panel .type-button {
+    // background-color: #5fa5e3;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // font-size: 14px;
+    // font-style: normal;
+    // font-weight: 400;
+    // line-height: 14px;
+    cursor: pointer;
+}
+
+.filter{
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+
+}
+.metal{
+    grid-column: 2;
+    grid-row: 1;
+}
+.metalloid{
+    grid-column: 3;
+    grid-row: 1;
+}
+.non_metal{
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.alkali_metal {
+    grid-column: 2;
+    grid-row: 2;
+}
+.alkaline_earth_metal {
+    grid-column: 3;
+    grid-row: 2;
+}
+.lanthanide{
+    grid-column: 4;
+    grid-row: 2;
+}
+.actinide {
+    grid-column: 5;
+    grid-row: 2;
+}
+.transition_metal {
+    grid-column: 6;
+    grid-row: 2;
+}
+.post_transition_metal {
+    grid-column: 7;
+    grid-row: 2;
+}
+
+.reactive_non_metal {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.noble_gas {
+    grid-column: 3;
+    grid-row: 3;
 }

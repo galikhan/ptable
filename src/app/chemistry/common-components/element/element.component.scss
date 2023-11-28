@@ -25,39 +25,60 @@ $opacityAnimate: 0.5s;
 
 .alkali_metal {
     background-color: $alkaliMetalBgColor;
-    // border: 3px solid $alkaliMetalBgColor;
+    border: $elementBorder $alkaliMetalBorderBgColor;
+    border-radius: $elementBorderRadius;
 }
 
 .alkaline_earth_metal {
     background-color: $alkalineEarthMetalBgColor;
+    border: $elementBorder $alkalineEarthMetalBorderBgColor;
+    border-radius: $elementBorderRadius;
 }
 .lanthanide {
     background-color: $lanthanideEarthMetalBgColor;
+    border: $elementBorder $lanthanideEarthMetalBorderBgColor;
+    border-radius: $elementBorderRadius;
 }
 .actinide {
     background-color: $actinideEarthMetalBgColor;
+    border: $elementBorder $actinideEarthMetalBorderBgColor;
+    border-radius: $elementBorderRadius;
 }
 
 .transition_metal {
     background-color: $transitionMetalEarthMetalBgColor;
+    border: $elementBorder $transitionMetalEarthMetalBorderBgColor;
+    border-radius: $elementBorderRadius;
 }
 .post-transition_metal {
     background-color: $postTansitionMtalBgColor;
+    border: $elementBorder $postTansitionMtalBorderBgColor;
+    border-radius: $elementBorderRadius;
 }
 .metalloid {
     background-color: $metalloidBgColor;
+    border: $elementBorder $metalloidBorderBgColor;
+    border-radius: $elementBorderRadius;
+
 }
 .non-metal {
     background-color: $nonMetalBgColor;
+    border: $elementBorder $nonMetalBorderBgColor;
+    border-radius: $elementBorderRadius;
 }
 
 .reactive_non-metal {
     background-color: $reactiveNonMetalBgColor;
+    border: $elementBorder $reactiveNonMetalBorderBgColor;
+    border-radius: $elementBorderRadius;
 }
 
 .noble_gas {
     background-color: $nobleGasBgColor;
+    border: $elementBorder $nobleGasBorderBgColor;
+    border-radius: $elementBorderRadius;
 }
+
 
 .melted {
     animation: melted-opacity $opacityAnimate;
