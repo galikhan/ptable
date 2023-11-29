@@ -1,5 +1,5 @@
 <div class="element-info">
-    <div class="info-title" [ngStyle]="{background: borderColor}">{{addInfo.name}}</div>    
+    <div class="info-title" [ngStyle]="{background: borderColor}">{{addInfo.name}}</div>
     <div class="info">
         <mat-accordion multi>
             <mat-expansion-panel [expanded]="true">
@@ -19,12 +19,15 @@
             <mat-expansion-panel [expanded]="true">
                 <mat-expansion-panel-header>
                     <mat-panel-title>
-                        
+
                         <span class="bold">Физикалық қасиеттері</span>
                     </mat-panel-title>
                 </mat-expansion-panel-header>
-
+                <!-- 7052300522 wamgun -->
                 <ng-container *ngIf="addInfo && addInfo.physical_properties">
+                    <div class="physical-panel">
+
+                    </div>
                     <div class="state-temperature">
                         <span class="bold">Күйi:</span>{{ addInfo.physical_properties.phase }} &nbsp;&nbsp;
                         <span class="bold">Еруі:</span>{{ addInfo.physical_properties.melt }} C
@@ -32,12 +35,14 @@
                     </div>
 
                     <div class="phys-image-1">
-                        <mat-icon [svgIcon]="addInfo.physical_properties.icon_1" class="svg-icon"></mat-icon>
+                        <mat-icon *ngIf="addInfo.physical_properties.icon_1"
+                            [svgIcon]="addInfo.physical_properties.icon_1" class="svg-icon"></mat-icon>
                         {{ addInfo.physical_properties.icon_info_1 }}
                     </div>
                     <!-- <div class="phys-image-info-1"></div> -->
                     <div class="phys-image-2">
-                        <mat-icon [svgIcon]="addInfo.physical_properties.icon_2" class="svg-icon"></mat-icon>
+                        <mat-icon *ngIf="addInfo.physical_properties.icon_2"
+                            [svgIcon]="addInfo.physical_properties.icon_2" class="svg-icon"></mat-icon>
                         {{ addInfo.physical_properties.icon_info_2 }}
                     </div>
                     <!-- <div class="phys-image-info-2"></div> -->
@@ -50,40 +55,46 @@
             <mat-expansion-panel [expanded]="true">
                 <mat-expansion-panel-header>
                     <mat-panel-title>
-                        
+
                         <span class="bold">Таралуы (элемент күйінде)</span>
                     </mat-panel-title>
                 </mat-expansion-panel-header>
 
                 <div class="how-spread-container" *ngIf="addInfo && addInfo.how_spread">
-                    <div class="how-spread-item popup-panel">
-                        <div class="popup-left" *ngIf="addInfo.how_spread.icon">
-                            <mat-icon [svgIcon]="addInfo.how_spread.icon" class="svg-icon"></mat-icon>
-                        </div>
-                        <div class="popup-right">
-                            <div>
-                                <span class="bold">Ғарыш</span>
-                                {{addInfo.how_spread.space}}
-                            </div>
-                            <div>
-                                <span class="bold">Күн</span> {{addInfo.how_spread.sun}}
-                            </div>
-                            <div>
-                                <span class="bold">Жер қыртысы</span> {{addInfo.how_spread.earth}}
-                            </div>
-                            <div>
-                                <span class="bold">Cу</span> {{addInfo.how_spread.water}}
-                            </div>
-                            <div>
-                                <span class="bold">Адам денесі</span> {{addInfo.how_spread.man}}
-                            </div>
-                        </div>
-                    </div>
                     <div class="how-spread-item">
-                        <ng-container *ngIf="addInfo.how_spread.description">
-                            <mat-icon svgIcon="picker" class="svg-icon"></mat-icon>
-                        </ng-container>
-                        <div class="description" [innerHtml]="addInfo.how_spread.description"></div>
+                        <div class="how-spread-desc-speed popup-panel-60-40">
+                            <div class="float-right">
+                                <div>
+                                    <span class="bold">Ғарыш</span>
+                                    {{addInfo.how_spread.space}}
+                                </div>
+                                <div>
+                                    <span class="bold">Күн</span> {{addInfo.how_spread.sun}}
+                                </div>
+                                <div>
+                                    <span class="bold">Жер қыртысы</span> {{addInfo.how_spread.earth}}
+                                </div>
+                                <div>
+                                    <span class="bold">Cу</span> {{addInfo.how_spread.water}}
+                                </div>
+                                <div>
+                                    <span class="bold">Адам денесі</span> {{addInfo.how_spread.man}}
+                                </div>
+                            </div>
+
+                            <div *ngIf="addInfo.how_spread.icon" class="float-left">
+                                <mat-icon [svgIcon]="addInfo.how_spread.icon" class="svg-icon"></mat-icon>
+                            </div>
+                        </div>
+
+                        <div class="how-spread-desc-panel popup-panel-40-60">
+                            <div class="float-left">
+                                <ng-container *ngIf="addInfo.how_spread.description">
+                                    <mat-icon svgIcon="picker" class="svg-icon"></mat-icon>
+                                </ng-container>
+                            </div>
+                            <div class="float-right description" [innerHtml]="addInfo.how_spread.description"></div>
+                        </div>
                     </div>
 
                 </div>
@@ -92,21 +103,24 @@
             <mat-expansion-panel>
                 <mat-expansion-panel-header>
                     <mat-panel-title>
-                        
+
                         <span class="bold">Алынуы</span>
                     </mat-panel-title>
                 </mat-expansion-panel-header>
 
                 <ng-container *ngIf="addInfo && addInfo.how_taken">
-                    <div class="popup-panel">
-                        <div class="float-left" *ngIf="addInfo.how_taken.icon">
-                            <mat-icon [svgIcon]="addInfo.how_taken.icon" class="svg-icon"></mat-icon>
+                    <div class="popup-panel-50-50">
+                        <div class="float-left" >
+                        <div class="popup-panel-50-50">
+                            <div class="float-left" *ngIf="addInfo.how_taken.icon">
+                                <mat-icon [svgIcon]="addInfo.how_taken.icon" class="svg-icon"></mat-icon>
+                            </div>
+                            <div class="float-right formula" [innerHtml]="addInfo.how_taken.formula">
+                            </div>
                         </div>
-                        <div class="float-right formula" [innerHtml]="addInfo.how_taken.formula">
+                    </div>   
+                        <div class="description float-right" [innerHtml]="addInfo.how_taken.description">
                         </div>
-
-                    </div>
-                    <div class="description" [innerHtml]="addInfo.how_taken.description">
                     </div>
                 </ng-container>
 
@@ -137,7 +151,7 @@
             <mat-expansion-panel>
                 <mat-expansion-panel-header>
                     <mat-panel-title>
-                        
+
                         <span class="bold">Қолданыс орындары</span>
                     </mat-panel-title>
                 </mat-expansion-panel-header>
@@ -168,14 +182,15 @@
     </div> -->
     </div>
     <div class="symbol">
-        <div class="popup-element-body" *ngIf="element"  [ngStyle]="{'background': color, 'border': '1.5px solid ' + borderColor }">
+        <div class="popup-element-body" *ngIf="element"
+            [ngStyle]="{'background': color, 'border': '1.5px solid ' + borderColor }">
             <div class="element-id-value">{{element.number}}</div>
             <div class="popup-element-symbol">{{element.symbol}}</div>
             <div class="element-name-mass">
-              <div class="ename">{{addInfo.name}}</div>
-              <div class="emass">{{element.atomic_mass}}</div>
+                <div class="ename">{{addInfo.name}}</div>
+                <div class="emass">{{element.atomic_mass}}</div>
             </div>
-          </div>
+        </div>
     </div>
 
 </div>

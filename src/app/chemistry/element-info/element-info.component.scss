@@ -103,3 +103,21 @@ mat-icon{
     line-height: 24px;
     text-align: center;
 }
+.how-spread-item {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.popup-panel-50-50 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.popup-panel-40-60 {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+.popup-panel-60-40 {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
