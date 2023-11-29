@@ -41,6 +41,8 @@ export class AppComponent implements OnInit {
   footerArray: Map<number, Map<number, ChemicalElement>> = new Map;
   stateC = false;
   stateHg = false;
+  currentState = '';
+  currentType = '';
 
   constructor(
     public highlightStateService: HighlightStateService,
@@ -131,19 +133,31 @@ export class AppComponent implements OnInit {
   }
 
   updateState(state: string): void {
-    // setTimeout(() => {
+    this.currentType = '';
+    this.highlightTypeService.setNext('removeAllType');
+
+    if(state === this.currentState) {
+      this.currentState = '';
+      this.highlightStateService.setNext('removeAllState');
+    } else {
+      this.currentState = state;
+      this.highlightStateService.setNext('removeAllState');
       this.highlightStateService.setNext(state);
-    // }, 400);
-  }
-  removeState(): void {
-    this.highlightStateService.setNext('removeAllState');
+    }
   }
 
   highlightType(type: string): void {
-    this.highlightTypeService.setNext(type);
-  }
-  removeType(): void {
-    this.highlightTypeService.setNext('removeAllType');
+    this.currentState = '';
+    this.highlightStateService.setNext('removeAllState');
+
+    if(type === this.currentType) {
+      this.currentType = '';
+      this.highlightTypeService.setNext('removeAllType');
+    } else {
+      this.currentType = type;
+      this.highlightTypeService.setNext('removeAllType');
+      this.highlightTypeService.setNext(type);
+    }
   }
 
   temperatureUpdated(temperature: number): void {

@@ -8,21 +8,21 @@
       
       <div class="temperature-and-state-panel">
 
-        <div class="state-row solid-button" (mouseover)="updateState('C')" (mouseout)="removeState()">
+        <div class="state-row solid-button" (click)="updateState('C')" [ngClass]="{ 'active-state': currentState === 'C'}">
           <div class="solid symbol">C</div>
           <div class="name">Қатты</div>
         </div>
 
-        <div class="state-row liquid-button" (mouseover)="updateState('Hg')" (mouseout)="removeState()">
+        <div class="state-row liquid-button" (click)="updateState('Hg')" [ngClass]="{ 'active-state': currentState === 'Hg'}">
           <div class="liquid symbol">Hg</div>
           <div class="name">Сұйық </div>
         </div>
-        <div class="state-row gas-button" (mouseover)="updateState('H')" (mouseout)="removeState()">
+        <div class="state-row gas-button" (click)="updateState('H')" [ngClass]="{ 'active-state': currentState === 'H'}">
           <div class="gas symbol">H</div>
           <div class="name">Газ</div>
         </div>
 
-        <div class="state-row unknown-button" (mouseover)="updateState('Rf')" (mouseout)="removeState()">
+        <div class="state-row unknown-button" (click)="updateState('Rf')" [ngClass]="{ 'active-state': currentState === 'Rf'}">
           <div class="unknown symbol">Rf</div>
           <div class="name">Беймәлім </div>
         </div>
@@ -38,36 +38,31 @@
           <div class="temperature-button plus" (click)="plusTemp()">+</div>
           <div class="temperature celcius">{{temparature|number:'1.0-0' }} C</div>
         </div>
-        <!-- <span class="temperature">{{temparature*9/5 + 32|number:'1.0-0'}} F</span>&nbsp;
-        <span class="temperature">{{temparature + 273|number:'1.0-0'}} K</span> -->
-  
-        <!-- <div class="state-table">
-        </div> -->
-  
+
       </div>
       
-      <div class="config-panel" (mouseout)="removeType()">
+      <div class="config-panel">
         <div class="filter">Сүзгі &nbsp;&nbsp;<mat-icon>tune</mat-icon></div>
 
-        <div class="type-button metal" (mouseover)="highlightType('metal')">Металдар</div>
-        <div class="type-button metalloid" (mouseover)="highlightType('metalloid')">Жартылай металдар</div>
-        <div class="type-button non_metal" (mouseover)="highlightType('non-metal')">Бейметалдар</div>
+        <div class="type-button metal" (click)="highlightType('metal')" [ngClass]="{ 'active-type': currentType === 'metal'}">Металдар</div>
+        <div class="type-button metalloid" (click)="highlightType('metalloid')" [ngClass]="{ 'active-type': currentType === 'metalloid'}">Жартылай металдар</div>
+        <div class="type-button non_metal" (click)="highlightType('non-metal')" [ngClass]="{ 'active-type': currentType === 'non-metal'}">Бейметалдар</div>
 
 
-        <div class="type-button alkali_metal" (mouseover)="highlightType('alkali metal')">
+        <div class="type-button alkali_metal" (click)="highlightType('alkali metal')"  [ngClass]="{ 'active-type': currentType === 'alkali metal'}">
           Сілтілік <br>металдар</div>
-        <div class="type-button alkaline_earth_metal" (mouseover)="highlightType('alkaline earth metal')">
+        <div class="type-button alkaline_earth_metal" (click)="highlightType('alkaline earth metal')"  [ngClass]="{ 'active-type': currentType === 'alkaline earth metal'}">
           Сілтілік<br> жер металдары</div>
-        <div class="type-button lanthanide" (mouseover)="highlightType('lanthanide')">Лантанидтер</div>
-        <div class="type-button actinide" (mouseover)="highlightType('actinide')">Актиноидтар</div>
-        <div class="type-button transition_metal" (mouseover)="highlightType('transition metal')">Өтпелі<br>
+        <div class="type-button lanthanide" (click)="highlightType('lanthanide')"  [ngClass]="{ 'active-type': currentType === 'lanthanide'}">Лантанидтер</div>
+        <div class="type-button actinide" (click)="highlightType('actinide')"  [ngClass]="{ 'active-type': currentType === 'actinide'}">Актиноидтар</div>
+        <div class="type-button transition_metal" (click)="highlightType('transition metal')"  [ngClass]="{ 'active-type': currentType === 'transition metal'}">Өтпелі<br>
           металдар</div>
-        <div class="type-button post_transition_metal" (mouseover)="highlightType('post-transition metal')">
+        <div class="type-button post_transition_metal" (click)="highlightType('post-transition metal')"  [ngClass]="{ 'active-type': currentType === 'post-transition metal'}">
           Пост-Өтпелі<br> металдар</div>
-        <div class="type-button reactive_non_metal" (mouseover)="highlightType('reactive non-metal')">Реактивті
+        <div class="type-button reactive_non_metal" (click)="highlightType('reactive non-metal')"  [ngClass]="{ 'active-type': currentType === 'reactive non-metal'}">Реактивті
           <br>бейметалдар
         </div>
-        <div class="type-button noble_gas" (mouseover)="highlightType('noble gas')">Асыл <br>газдар</div>
+        <div class="type-button noble_gas" (click)="highlightType('noble gas')"  [ngClass]="{ 'active-type': currentType === 'noble gas'}">Асыл <br>газдар</div>
       </div>
     </mat-card>
 
@@ -90,21 +85,25 @@
               Химиялық элементтердің периодтық жүйесі — Элементтердің әртүрлі қасиеттерінің атом ядросы зарядына тәуелділігін белгілейтін химиялық элементтердің жіктелу реті.
             </div>
             <div class="centertop_info">
-                <div class="element-id">Атомдық сан</div>
-                <div class="element-title">Аты</div>
+                <div class="element-id">
+                  <span>Атомдық сан</span>
+                </div>
+                <div class="element-title">
+                  <span>Аты</span>
+                </div>
 
                 <div class="element-body">
                   <div class="element-id-value">1</div>
                   <div class="element-symbol">H</div>
                   <div class="element-name-mass">
-                    Hydrogen<br>
-                    1.008
+                    <div class="ename">Hydrogen</div>
+                    <div class="emass">1.008</div>
                   </div>
                   
                 </div>
 
-                <div class="element-symbol-title">Символ</div>
-                <div class="element-atomic-mass">Атомдық масса</div>
+                <div class="element-symbol-title"> <span>Символ</span> </div>
+                <div class="element-atomic-mass"><span>Атомдық масса</span></div>
                 
             </div>
           </div>

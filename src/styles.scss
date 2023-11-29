@@ -8,18 +8,18 @@
     line-height: 13px;
     font-family: Arimo;
     letter-spacing: 0em;
-    width: 1097px;
+    width: 1116px;
     margin: auto;
 }
 
 .lefttop {
-    width: 123px;
+    width: 126px;
     float: left;
 }
 .righttop {
     // width: 350px;
     float: left;
-    // margin-left: 64px;
+    margin-left: 1px;
 }
 
 .body-elements {
@@ -31,7 +31,7 @@
 }
 
 .footer-elements-body{
-    margin-left:137px;
+    margin-left:140px;
 }
 .footer-head {
     margin-left:128px;
@@ -56,12 +56,17 @@
     height: 65px;
     width: 56px;
     margin: 1px;
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .column {
     float: left;
     cursor: pointer;
-    margin-left: 2px;
+    margin-left: 3px;
 }
 
 .row {
@@ -69,7 +74,7 @@
 }
 
 .cell .id {
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 400;
     line-height: 10px;
 }
@@ -82,7 +87,7 @@
 }
 
 .cell .atomic_mass {
-    font-size: 5px;
+    font-size: 8px;
     text-align: center;
     font-weight: 400;
 }
@@ -113,7 +118,6 @@
     line-height: 12px; 
 
     display: flex;
-    // flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -131,6 +135,10 @@
 .column-cell {
     width: 15px;
     height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 .row-cell {
     width:  57.8px;
@@ -145,7 +153,7 @@
 
 .centertop {
     // margin-left: 141px;
-    width: 597px;
+    width: 605px;
     float:left;
 }
 .centertop_title {
@@ -161,22 +169,23 @@
 .centertop_body {
     margin-top: 5px;
     padding: 20px 30px;
-    height: 95px;
+    height: 94px;
     border: 1.5px solid #DCDADA;
     border-radius: 5px;
     display: grid;
     grid-template-columns: 50% 50%;
 }
 .centertop_desc {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
     width: 242px;
+    line-height: 20px;
 }
 
 .centertop_info {
-    height: 100%;
+    height: 96%;
     display: grid;
-    grid-template-columns: 30% 27% 35%;
+    grid-template-columns: 35% 30% 35%;
     grid-template-rows: repeat(3, 33%);
     gap: 3px;
 }
@@ -184,19 +193,36 @@
     grid-column: 1;
     grid-row: 1;
     text-align: right;
+    margin-top: 5px;    
+}
+.element-id > span {
+    border-bottom: $elementBorderBottom;
 }
 .element-title{
     grid-column: 1;
     grid-row: 3;
     text-align: right;
 }
+
+.element-title > span {
+    border-bottom: $elementBorderBottom;
+}
+
 .element-symbol-title{
     grid-column: 3;
     grid-row: 2;
 }
+.element-symbol-title > span {
+    border-bottom: $elementBorderBottom;
+}
+
 .element-atomic-mass{
     grid-column: 3;
     grid-row: 3;
+    margin-top: 11px;
+}
+.element-atomic-mass > span {
+    border-bottom: $elementBorderBottom;
 }
 
 .element-body{
@@ -212,6 +238,7 @@
     grid-column: 1;
     grid-row: 1;
     text-align: center;
+    margin-top: 5px;
 }
 .element-symbol{
     grid-column: 2;
@@ -219,10 +246,19 @@
     font-size:30px;
     font-weight: bold;
     line-height: 24px;
+    text-align: center;
 }
 
 .element-name-mass {
     grid-column: 1/4;
     grid-row: 3;
     text-align: center;
+    margin-top: 4px;
+}
+
+.element-name-mass > .ename {
+    font-weight: bold;
+}
+.element-name-mass > .emass {
+    font-size: 10px;
 }

@@ -41,11 +41,24 @@
 
             </div>
         </ng-container>
-        <ng-container *ngIf="(elements.get(y) && elements.get(y)?.get(x) && !elements.get(y)?.get(x)?.number)">
+        <ng-container *ngIf="(elements.get(y) 
+                    && elements.get(y)?.get(x) 
+                    && !elements.get(y)?.get(x)?.number)">
             <div class="column">
-                <div class="address-cell">
-                    <div class="address">{{ elements.get(y)?.get(x)?.symbol }}</div>
-                </div>
+
+                <ng-container
+                    *ngIf="elements.get(y)?.get(x)?.symbol === '6' || elements.get(y)?.get(x)?.symbol === '7'">
+                    <div class="empty-cell">
+                        <div class="address">{{ elements.get(y)?.get(x)?.symbol }}</div>
+                    </div>
+                </ng-container>
+
+                <ng-container
+                    *ngIf="elements.get(y)?.get(x)?.symbol === '57-71' || elements.get(y)?.get(x)?.symbol === '89-103'">
+                    <div class="address-cell">
+                        <div class="address">{{ elements.get(y)?.get(x)?.symbol }}</div>
+                    </div>
+                </ng-container>
             </div>
         </ng-container>
         <ng-container *ngIf="hasEmptyCell">

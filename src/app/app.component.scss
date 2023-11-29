@@ -20,9 +20,11 @@
     align-items: center;
 }
 
-.symbol:hover {
+.active-state > .symbol{
     border: 2px solid rgb(90, 200, 200);
 }
+
+
 
 .name {
     display: inline-block;
@@ -62,10 +64,14 @@
     border: 2px solid #ddd;
     padding: 2px;
 }
-.type-button:hover {
-    padding: 2px;
-    border: 2px solid #5fa5e3;
+// .type-button:hover {
+//     padding: 2px;
+//     border: 2px solid #5fa5e3;
+// }
+.active-type {
+    border: 2px solid rgb(90, 200, 200) !important;
 }
+
 .metal {
     grid-area: metal;
     background-color: $metalBgColor;
@@ -285,4 +291,6 @@ mat-slider {
     font-weight: bold;
 }
 
-
+.active-state {
+    
+}
