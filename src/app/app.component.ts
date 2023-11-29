@@ -166,7 +166,6 @@ export class AppComponent implements OnInit {
   }
 
   minusTemp(): void {
-    // this.min = 
     if(this.min < this.temparature) {
       this.temparature = this.temparature - 25;
       this.temperatureUpdated(this.temparature);
@@ -181,22 +180,3 @@ export class AppComponent implements OnInit {
   }
 
 }
-
-
-// diatomic nonmetal
-// noble gas
-// alkali metal
-// alkaline earth metal
-// metalloid
-// polyatomic nonmetal
-// post-transition metal
-// transition metal
-// lanthanide
-// actinide
-// unknown, probably transition metal
-// unknown, probably post-transition metal
-// unknown, probably metalloid
-// unknown, predicted to be noble gas
-// unknown, but predicted to be an alkali metal
-
-

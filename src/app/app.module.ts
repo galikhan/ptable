@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule} from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { CoreComponent } from './core/core.component';
@@ -13,7 +14,9 @@ import { MatCardModule } from '@angular/material/card';
 import { AddIconModule } from './icon/add-icon/add-icon.module';
 import { HttpClientModule } from '@angular/common/http';
 import { IdElementComponent } from './chemistry/common-components/id-element/id-element.component';
-
+import { DiPopupElementComponent } from './chemistry/di-popup-element/di-popup-element.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,7 @@ import { IdElementComponent } from './chemistry/common-components/id-element/id-
     LightswitchComponent,
     ElementInfoComponent,
     IdElementComponent,
+    DiPopupElementComponent,
     // AddIconComponent
   ],
   imports: [
@@ -32,7 +36,11 @@ import { IdElementComponent } from './chemistry/common-components/id-element/id-
     MatIconModule,
     AddIconModule,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
+    MatExpansionModule,
+    BrowserAnimationsModule,
+    MatDialogModule
+    
   ],
   exports: [
     ElementComponent,

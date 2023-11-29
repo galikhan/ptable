@@ -47,12 +47,12 @@ $opacityAnimate: 0.5s;
 
 .transition_metal {
     background-color: $transitionMetalEarthMetalBgColor;
-    border: $elementBorder $transitionMetalEarthMetalBorderBgColor;
+    border: $elementBorder $transitionMetalEarthMetalBorderBgColor !important;
     border-radius: $elementBorderRadius;
 }
 .post-transition_metal {
     background-color: $postTansitionMtalBgColor;
-    border: $elementBorder $postTansitionMtalBorderBgColor;
+    border: $elementBorder $postTansitionMtalBorderBgColor !important;
     border-radius: $elementBorderRadius;
 }
 .metalloid {

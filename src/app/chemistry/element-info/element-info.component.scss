@@ -1,6 +1,7 @@
 $grid-border:  2px solid #DDD;
 $grid-border-radius: 10px;
 
+
 .element-info {
     margin-top: 50px;
     height: 200px;
@@ -60,56 +61,24 @@ $grid-border-radius: 10px;
 }
 
 .physical-properties {
-    display: grid;
-    grid-template-areas: 
-    "phys-title phys-title phys-title"
+    // display: grid;
+    // gap: 5px;
+}
 
-    "state-temperature phys-image-1 phys-image-info-1"
-    "phys-image-2 phys-image-info-2 phys-description";
 
-    /* "phys-image-1 state phys-image-2"
-    "phys-image-info-1 melt phys-image-info-2"
-    "phys-image-info-1 boil phys-description"; */
-    gap: 5px;
-}
-.physical-properties div {
-    // border: $grid-border;
-    // border-radius: $grid-border-radius;
-}
-.phys-image-1 {
-    grid-area: phys-image-1;
-}
+
 div > img{
     height: 60px;
 }
-.phys-image-info-1 {
-    grid-area: phys-image-info-1;
-}
+
 .state-temperature {
     grid-area: state-temperature;
-}
-.phys-image-2 {
-    grid-area: phys-image-2;
-}
-.phys-image-info-1 {
-    grid-area: phys-image-info-1;
-}
-.phys-description {
-    grid-area: phys-description;
-}
-.phys-title {
-    grid-area: phys-title;
 }
 
 .title {
     font-size: 16px;
     font-weight: 400;
     padding-bottom: 10px;
-}
-
-.how-spread-container {
-    display: grid;
-    grid-template-columns: auto auto; 
 }
 
 mat-icon{
@@ -126,4 +95,9 @@ mat-icon{
 .how-used {
     display: grid;
     grid-template-columns: auto auto auto;
+}
+
+.popup-panel {
+    display: grid;
+    grid-template-columns: 20% 80%;
 }

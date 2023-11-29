@@ -1,8 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ChemicalElement } from 'src/app/interface/chemical-element';
 import { ShowElementService } from 'src/app/service/show-element.service';
 import * as json from '../../../assets/ElementsAdditionalInfo.json';
 
+export interface DiData {
+  element:ChemicalElement | undefined;
+}
 @Component({
   selector: 'app-element-info',
   templateUrl: './element-info.component.html',
@@ -14,27 +18,32 @@ export class ElementInfoComponent implements OnInit {
   addInfo: any;
   importedJson: any;
 
-  constructor(public elementService: ShowElementService) {
+  constructor(
+    public elementService: ShowElementService,
+    @Inject(MAT_DIALOG_DATA) public data: DiData) {
     console.log('constructor');
     
   }
 
   ngOnInit(): void {
-    console.log('ngOnInit');
-    this.importedJson = json;
-    const be = this.importedJson["1"];
-    console.log(be);
-    this.addInfo = be;
+
+    
+    if(this.data.element) {
+      console.log('this.element?.number', this.data.element?.number);
+      this.importedJson = json;
+      const be = this.importedJson[this.data.element?.number];
+      this.addInfo = be;
+    }
     
 
-    this.elementService.element.subscribe(result => {
-      console.log('result', result);
-      if(result) {
-        this.element = result;
-        this.addInfo = this.importedJson[result.number];
-        console.log('addinfo', this.addInfo);
+    // this.elementService.element.subscribe(result => {
+
+    //   if(result) {
+    //     this.element = result;
+    //     this.addInfo = this.importedJson[result.number];
+    //     console.log('addinfo', this.addInfo);
         
-      }
-    });
+    //   }
+    // });
   }
 }
