@@ -233,14 +233,88 @@ export class ElementComponent implements OnInit {
   }
 
   showElement(element: ChemicalElement | undefined) {
-    console.log('elelemnt ', element);
-    // this.showElementService.setNext(element);
-    this.di.open(ElementInfoComponent, {width:"700px", height:"800px", data: {element}}).afterClosed().subscribe(result => {
+    if(element) {
+      const color = this.getColorOfElement(element);
+      const borderColor = this.getBorderColorOfElement(element);
+      this.di.open(ElementInfoComponent, {width:"700px", height:"800px", panelClass: "popup-element-info-panel", data: {element, color, borderColor}}).afterClosed().subscribe(result => {
 
-    });
+      });
+    }
   }
 
+  getColorOfElement(element: ChemicalElement): string {
+    let color=""; let borderColor="";
+    if(this.isMetal(element)) {
+      color= 'white';borderColor= '#ddd';
+    } else if(this.isAlkaliMetal(element)) {
+      color= '#eace5d';borderColor= '#CBB043';
+    }
+    else if(this.isAlkalineEarthMetal(element)) {
+      color= '#f1f165'; borderColor= '#D9D94C';
+    }
+    else if(this.isLanthanoid(element)) {
+      color= '#e8d19c'; borderColor= '#CBB071';
+    }
+    else if(this.isActinoid(element)) {
+      color= '#f5ccda'; borderColor= '#EAA5BD';
+    }
+    else if(this.isTransitionMetal(element)) {
+      color= '#fac5b7';borderColor= '#E8AD9D';
+    }
+    else if(this.isPostTransitionMetal(element)) {
+      color= '#acdfec';borderColor= '#79BACB';
+    }
+    else if(this.isMetalloid(element)) {
+      color= '#9ee5d4'; borderColor= '#6BC6B0';
+    }
+    else if(this.isNonmetal(element)) {
+      color= '#EDEDED'; borderColor= '#DCDADA';
+    }
+    else if(this.isNobleGas(element)) {
+      color= '#e5bde5';borderColor= '#CC96CC';
+    }
+    else if(this.isReactiveNonmetal(element)) {
+      color= '#8ced8c';borderColor= '#72D272';
+    }  
+    return color;
+  }
 
+  getBorderColorOfElement(element: ChemicalElement): string {
+    let color=""; let borderColor="";
+    if(this.isMetal(element)) {
+      color= 'white';borderColor= '#ddd';
+    } else if(this.isAlkaliMetal(element)) {
+      color= '#eace5d';borderColor= '#CBB043';
+    }
+    else if(this.isAlkalineEarthMetal(element)) {
+      color= '#f1f165'; borderColor= '#D9D94C';
+    }
+    else if(this.isLanthanoid(element)) {
+      color= '#e8d19c'; borderColor= '#CBB071';
+    }
+    else if(this.isActinoid(element)) {
+      color= '#f5ccda'; borderColor= '#EAA5BD';
+    }
+    else if(this.isTransitionMetal(element)) {
+      color= '#fac5b7';borderColor= '#E8AD9D';
+    }
+    else if(this.isPostTransitionMetal(element)) {
+      color= '#acdfec';borderColor= '#79BACB';
+    }
+    else if(this.isMetalloid(element)) {
+      color= '#9ee5d4'; borderColor= '#6BC6B0';
+    }
+    else if(this.isNonmetal(element)) {
+      color= '#EDEDED'; borderColor= '#DCDADA';
+    }
+    else if(this.isNobleGas(element)) {
+      color= '#e5bde5';borderColor= '#CC96CC';
+    }
+    else if(this.isReactiveNonmetal(element)) {
+      color= '#8ced8c';borderColor= '#72D272';
+    }  
+    return borderColor;
+  }
   // fireOnBoiled(element: ChemicalElement | undefined, temperature: number): boolean {
   //   // return this.isBoiled(element)
   //   ret

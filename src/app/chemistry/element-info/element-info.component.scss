@@ -3,42 +3,26 @@ $grid-border-radius: 10px;
 
 
 .element-info {
-    margin-top: 50px;
-    height: 200px;
-}
-
-.element-info-grid {
     display: grid;
-    grid-template-areas:
-        "symbol-properties atomic-properties how-taken"
-        "physical-properties chemical-properties chemical-properties"
-        "how-spread how-used how-used";
-    gap: 5px;
+    grid-template-columns: 87% 13%;
 }
 
-.element-info-grid > div {
-    /* background-color: rgb(18, 18, 66); */
-    border: $grid-border;
-    border-radius: $grid-border-radius;
-    line-height: 25px;
-    padding: 10px;
+.element-info .info {
+    margin: 5px 5px 0px 0px;
 }
 
-.symbol  {
-    font-size: 80px;
-    line-height: 80px;
-    color:#1ba47f;
+.info-title {
+    grid-column: 1/3;
+    height: 40px;
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+
+    line-height: 40px;
+    text-align: center;
 }
 
-.symbol-properties {
-    grid-area: symbol-properties;
-    column-span: 1;
-}
-
-.atomic-properties {
-    grid-area: atomic-properties;
-    column-span: 1;
-}
 .physical-properties {
 	grid-area: physical-properties;
 }
@@ -100,4 +84,22 @@ mat-icon{
 .popup-panel {
     display: grid;
     grid-template-columns: 20% 80%;
+}
+
+.popup-element-body {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-template-rows: repeat(3, 33%);
+    height: 122px;
+    // border-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.popup-element-symbol {
+    grid-column: 1/4;
+    grid-row: 2;
+    font-size:30px;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: center;
 }

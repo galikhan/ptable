@@ -1,166 +1,181 @@
 <div class="element-info">
+    <div class="info-title" [ngStyle]="{background: borderColor}">{{addInfo.name}}</div>    
+    <div class="info">
+        <mat-accordion multi>
+            <mat-expansion-panel [expanded]="true">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <span class="bold">Атомдық қасиеттер</span>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <span class="bold">Э/К</span>&nbsp;{{addInfo.atomic_properties.E_K}}
+                <span class="bold">A/Р</span>&nbsp;{{ addInfo.atomic_properties.A_P }}
+                <span class="bold">И/Р</span>&nbsp;{{ addInfo.atomic_properties.I_P }}
+                <span class="bold">ЭТ</span>&nbsp;{{ addInfo.atomic_properties.ET }}
+                <span class="bold">И/Э</span>&nbsp;{{ addInfo.atomic_properties.I_E }}
+                <span class="bold">Т/Д</span>&nbsp;{{ addInfo.atomic_properties.T_D }}
+                <span class="bold">Изотоптары</span>&nbsp;{{ addInfo.atomic_properties.isotop }}
+            </mat-expansion-panel>
+            <mat-expansion-panel [expanded]="true">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        
+                        <span class="bold">Физикалық қасиеттері</span>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
 
-    <mat-accordion multi >
-        <mat-expansion-panel [expanded]="true">
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Атомдық қасиеттер
-                </mat-panel-title>
-            </mat-expansion-panel-header>
-            <span class="bold">Э/К</span>&nbsp;{{addInfo.atomic_properties.E_K}}
-            <span class="bold">A/Р</span>&nbsp;{{ addInfo.atomic_properties.A_P }}
-            <span class="bold">И/Р</span>&nbsp;{{ addInfo.atomic_properties.I_P }}
-            <span class="bold">ЭТ</span>&nbsp;{{ addInfo.atomic_properties.ET }}
-            <span class="bold">И/Э</span>&nbsp;{{ addInfo.atomic_properties.I_E }}
-            <span class="bold">Т/Д</span>&nbsp;{{ addInfo.atomic_properties.T_D }}
-            <span class="bold">Изотоптары</span>&nbsp;{{ addInfo.atomic_properties.isotop }}
-        </mat-expansion-panel>
-
-        <mat-expansion-panel [expanded]="true">
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Физикалық қасиеттері
-                </mat-panel-title>
-            </mat-expansion-panel-header>
-
-            <ng-container *ngIf="addInfo && addInfo.physical_properties">
-                <div class="state-temperature">
-                    <span class="bold">Күйi:</span>{{ addInfo.physical_properties.phase }} &nbsp;&nbsp;
-                    <span class="bold">Еруі:</span>{{ addInfo.physical_properties.melt }} C
-                    <span class="bold">Қайнауы:</span>{{ addInfo.physical_properties.boil }} C
-                </div>
-
-                <div class="phys-image-1">
-                    <mat-icon [svgIcon]="addInfo.physical_properties.icon_1" class="svg-icon"></mat-icon>
-                    {{ addInfo.physical_properties.icon_info_1 }}
-                </div>
-                <!-- <div class="phys-image-info-1"></div> -->
-                <div class="phys-image-2">
-                    <mat-icon [svgIcon]="addInfo.physical_properties.icon_2" class="svg-icon"></mat-icon>
-                    {{ addInfo.physical_properties.icon_info_2 }}
-                </div>
-                <!-- <div class="phys-image-info-2"></div> -->
-                <div class="phys-description">{{ addInfo.physical_properties.description }}</div>
-            </ng-container>
-
-
-        </mat-expansion-panel>
-
-        <mat-expansion-panel [expanded]="true">
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Таралуы (элемент күйінде)
-                </mat-panel-title>
-            </mat-expansion-panel-header>
-
-            <div class="how-spread-container" *ngIf="addInfo && addInfo.how_spread">
-                <div class="how-spread-item popup-panel">
-                    <div class="popup-left" *ngIf="addInfo.how_spread.icon">
-                        <mat-icon [svgIcon]="addInfo.how_spread.icon" class="svg-icon"></mat-icon>
+                <ng-container *ngIf="addInfo && addInfo.physical_properties">
+                    <div class="state-temperature">
+                        <span class="bold">Күйi:</span>{{ addInfo.physical_properties.phase }} &nbsp;&nbsp;
+                        <span class="bold">Еруі:</span>{{ addInfo.physical_properties.melt }} C
+                        <span class="bold">Қайнауы:</span>{{ addInfo.physical_properties.boil }} C
                     </div>
-                    <div class="popup-right">
-                        <div>
-                            <span class="bold">Ғарыш</span>
-                            {{addInfo.how_spread.space}}
+
+                    <div class="phys-image-1">
+                        <mat-icon [svgIcon]="addInfo.physical_properties.icon_1" class="svg-icon"></mat-icon>
+                        {{ addInfo.physical_properties.icon_info_1 }}
+                    </div>
+                    <!-- <div class="phys-image-info-1"></div> -->
+                    <div class="phys-image-2">
+                        <mat-icon [svgIcon]="addInfo.physical_properties.icon_2" class="svg-icon"></mat-icon>
+                        {{ addInfo.physical_properties.icon_info_2 }}
+                    </div>
+                    <!-- <div class="phys-image-info-2"></div> -->
+                    <div class="phys-description">{{ addInfo.physical_properties.description }}</div>
+                </ng-container>
+
+
+            </mat-expansion-panel>
+
+            <mat-expansion-panel [expanded]="true">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        
+                        <span class="bold">Таралуы (элемент күйінде)</span>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+
+                <div class="how-spread-container" *ngIf="addInfo && addInfo.how_spread">
+                    <div class="how-spread-item popup-panel">
+                        <div class="popup-left" *ngIf="addInfo.how_spread.icon">
+                            <mat-icon [svgIcon]="addInfo.how_spread.icon" class="svg-icon"></mat-icon>
                         </div>
-                        <div>
-                            <span class="bold">Күн</span> {{addInfo.how_spread.sun}}
-                        </div>
-                        <div>
-                            <span class="bold">Жер қыртысы</span> {{addInfo.how_spread.earth}}
-                        </div>
-                        <div>
-                            <span class="bold">Cу</span> {{addInfo.how_spread.water}}
-                        </div>
-                        <div>
-                            <span class="bold">Адам денесі</span> {{addInfo.how_spread.man}}
+                        <div class="popup-right">
+                            <div>
+                                <span class="bold">Ғарыш</span>
+                                {{addInfo.how_spread.space}}
+                            </div>
+                            <div>
+                                <span class="bold">Күн</span> {{addInfo.how_spread.sun}}
+                            </div>
+                            <div>
+                                <span class="bold">Жер қыртысы</span> {{addInfo.how_spread.earth}}
+                            </div>
+                            <div>
+                                <span class="bold">Cу</span> {{addInfo.how_spread.water}}
+                            </div>
+                            <div>
+                                <span class="bold">Адам денесі</span> {{addInfo.how_spread.man}}
+                            </div>
                         </div>
                     </div>
+                    <div class="how-spread-item">
+                        <ng-container *ngIf="addInfo.how_spread.description">
+                            <mat-icon svgIcon="picker" class="svg-icon"></mat-icon>
+                        </ng-container>
+                        <div class="description" [innerHtml]="addInfo.how_spread.description"></div>
+                    </div>
+
                 </div>
-                <div class="how-spread-item">
-                    <ng-container *ngIf="addInfo.how_spread.description">
-                        <mat-icon svgIcon="picker" class="svg-icon"></mat-icon>
-                    </ng-container>
-                    <div class="description" [innerHtml]="addInfo.how_spread.description"></div>
-                </div>
+            </mat-expansion-panel>
 
-            </div>
-        </mat-expansion-panel>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        
+                        <span class="bold">Алынуы</span>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
 
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Алынуы
-                </mat-panel-title>
-            </mat-expansion-panel-header>
+                <ng-container *ngIf="addInfo && addInfo.how_taken">
+                    <div class="popup-panel">
+                        <div class="float-left" *ngIf="addInfo.how_taken.icon">
+                            <mat-icon [svgIcon]="addInfo.how_taken.icon" class="svg-icon"></mat-icon>
+                        </div>
+                        <div class="float-right formula" [innerHtml]="addInfo.how_taken.formula">
+                        </div>
 
-            <ng-container *ngIf="addInfo && addInfo.how_taken">
+                    </div>
+                    <div class="description" [innerHtml]="addInfo.how_taken.description">
+                    </div>
+                </ng-container>
+
+            </mat-expansion-panel>
+
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <span class="bold">Химиялық қасиеттері</span>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+
                 <div class="popup-panel">
-                    <div class="float-left" *ngIf="addInfo.how_taken.icon">
-                        <mat-icon [svgIcon]="addInfo.how_taken.icon" class="svg-icon"></mat-icon>
+                    <div class="float-left">
+                        <div *ngIf="addInfo && addInfo.chemical_properties && addInfo.chemical_properties.icon">
+                            <mat-icon [svgIcon]="addInfo.chemical_properties.icon" class="svg-icon"></mat-icon>
+                        </div>
                     </div>
-                    <div class="float-right formula" [innerHtml]="addInfo.how_taken.formula">
-                    </div>
-
-                </div>
-                <div class="description" [innerHtml]="addInfo.how_taken.description">
-                </div>
-            </ng-container>
-
-        </mat-expansion-panel>
-
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Химиялық қасиеттері
-                </mat-panel-title>
-            </mat-expansion-panel-header>
-
-            <div class="popup-panel">
-                <div class="float-left">
-                    <div *ngIf="addInfo && addInfo.chemical_properties && addInfo.chemical_properties.icon">
-                        <mat-icon [svgIcon]="addInfo.chemical_properties.icon" class="svg-icon"></mat-icon>
+                    <div class="float-right">
+                        <div *ngIf="addInfo && addInfo.chemical_properties"
+                            [innerHtml]="addInfo.chemical_properties.description">
+                        </div>
                     </div>
                 </div>
-                <div class="float-right">
-                    <div *ngIf="addInfo && addInfo.chemical_properties"
-                        [innerHtml]="addInfo.chemical_properties.description">
+
+            </mat-expansion-panel>
+
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        
+                        <span class="bold">Қолданыс орындары</span>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="how-used" *ngIf="addInfo && addInfo.how_used">
+                    <div class="grid-item">
+                        <mat-icon class="svg-icon" [svgIcon]="addInfo.how_used.icon_1"></mat-icon>
+                        <div>{{addInfo.how_used.icon_info_1}}</div>
+                    </div>
+
+                    <div class="grid-item">
+                        <mat-icon class="svg-icon" [svgIcon]="addInfo.how_used.icon_2"></mat-icon>
+                        <div>{{addInfo.how_used.icon_info_2}}</div>
+                    </div>
+
+                    <div class="grid-item">
+                        <mat-icon class="svg-icon" [svgIcon]="addInfo.how_used.icon_3"></mat-icon>
+                        <div>{{addInfo.how_used.icon_info_3}}</div>
                     </div>
                 </div>
-            </div>
+            </mat-expansion-panel>
+        </mat-accordion>
 
-        </mat-expansion-panel>
-
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Қолданыс орындары
-                </mat-panel-title>
-            </mat-expansion-panel-header>
-            <div class="how-used" *ngIf="addInfo && addInfo.how_used">
-                <div class="grid-item">
-                    <mat-icon class="svg-icon" [svgIcon]="addInfo.how_used.icon_1"></mat-icon>
-                    <div>{{addInfo.how_used.icon_info_1}}</div>
-                </div>
-
-                <div class="grid-item">
-                    <mat-icon class="svg-icon" [svgIcon]="addInfo.how_used.icon_2"></mat-icon>
-                    <div>{{addInfo.how_used.icon_info_2}}</div>
-                </div>
-
-                <div class="grid-item">
-                    <mat-icon class="svg-icon" [svgIcon]="addInfo.how_used.icon_3"></mat-icon>
-                    <div>{{addInfo.how_used.icon_info_3}}</div>
-                </div>
-            </div>
-        </mat-expansion-panel>
-    </mat-accordion>
-
-    <!-- <div class="symbol-properties">
+        <!-- <div class="symbol-properties">
         <div>{{element.number}}</div>
         <div class="symbol">{{element.symbol}}</div>
         <div>{{addInfo.name}}</div>
         <div>{{element.atomic_mass}}</div>
     </div> -->
+    </div>
+    <div class="symbol">
+        <div class="popup-element-body" *ngIf="element"  [ngStyle]="{'background': color, 'border': '1.5px solid ' + borderColor }">
+            <div class="element-id-value">{{element.number}}</div>
+            <div class="popup-element-symbol">{{element.symbol}}</div>
+            <div class="element-name-mass">
+              <div class="ename">{{addInfo.name}}</div>
+              <div class="emass">{{element.atomic_mass}}</div>
+            </div>
+          </div>
+    </div>
 
 </div>

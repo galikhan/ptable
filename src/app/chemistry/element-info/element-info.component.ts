@@ -6,6 +6,8 @@ import * as json from '../../../assets/ElementsAdditionalInfo.json';
 
 export interface DiData {
   element:ChemicalElement | undefined;
+  color:string;
+  borderColor:string;
 }
 @Component({
   selector: 'app-element-info',
@@ -17,22 +19,26 @@ export class ElementInfoComponent implements OnInit {
   element: ChemicalElement | undefined;
   addInfo: any;
   importedJson: any;
+  color = '';
+  borderColor='';
 
   constructor(
     public elementService: ShowElementService,
     @Inject(MAT_DIALOG_DATA) public data: DiData) {
     console.log('constructor');
-    
   }
 
   ngOnInit(): void {
 
     
     if(this.data.element) {
+      this.element = this.data.element;
       console.log('this.element?.number', this.data.element?.number);
       this.importedJson = json;
       const be = this.importedJson[this.data.element?.number];
       this.addInfo = be;
+      this.color = this.data.color;
+      this.borderColor = this.data.borderColor;
     }
     
 
