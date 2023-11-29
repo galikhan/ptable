@@ -2,10 +2,49 @@
 
   
   <div class="chemical-table">
+    <h2 class="title">Химиялық таблица</h2>
 
     <mat-card>
       
+      <div class="temperature-and-state-panel">
 
+        <div class="state-row solid-button" (mouseover)="updateState('C')" (mouseout)="removeState()">
+          <div class="solid symbol">C</div>
+          <div class="name">Қатты</div>
+        </div>
+
+        <div class="state-row liquid-button" (mouseover)="updateState('Hg')" (mouseout)="removeState()">
+          <div class="liquid symbol">Hg</div>
+          <div class="name">Сұйық </div>
+        </div>
+        <div class="state-row gas-button" (mouseover)="updateState('H')" (mouseout)="removeState()">
+          <div class="gas symbol">H</div>
+          <div class="name">Газ</div>
+        </div>
+
+        <div class="state-row unknown-button" (mouseover)="updateState('Rf')" (mouseout)="removeState()">
+          <div class="unknown symbol">Rf</div>
+          <div class="name">Беймәлім </div>
+        </div>
+
+
+        
+        <div class="temperature-panel">
+          <div class="temperature-label">Температура</div>
+          <div class="temperature-button minus" (click)="minusTemp()">-</div>
+          <mat-slider class="temperature-slider" [max]="max" [min]="min" [step]="7">
+            <input matSliderThumb [(ngModel)]="temparature" (valueChange)="temperatureUpdated(temparature)" #slider>
+          </mat-slider>
+          <div class="temperature-button plus" (click)="plusTemp()">+</div>
+          <div class="temperature celcius">{{temparature|number:'1.0-0' }} C</div>
+        </div>
+        <!-- <span class="temperature">{{temparature*9/5 + 32|number:'1.0-0'}} F</span>&nbsp;
+        <span class="temperature">{{temparature + 273|number:'1.0-0'}} K</span> -->
+  
+        <!-- <div class="state-table">
+        </div> -->
+  
+      </div>
       
       <div class="config-panel" (mouseout)="removeType()">
         <div class="filter">Сүзгі &nbsp;&nbsp;<mat-icon>tune</mat-icon></div>
@@ -33,8 +72,6 @@
     </mat-card>
 
     <div class="table">
-      <h3>Химиялық таблица</h3>
-        Температура: [-]
 
       <div class="header-elements">
         <div class="id-row-element">
@@ -46,10 +83,33 @@
         <div class="lefttop">
           <app-element [xaxis]="lefttop_xaxis" [yaxis]="lefttop_yaxis" [elements]="leftTopArray"></app-element>
         </div>
+        <div class="centertop">
+          <div class="centertop_title">Химиялық элементтердің периодтық жүйесі</div>
+          <div class="centertop_body">
+            <div class="centertop_desc">
+              Химиялық элементтердің периодтық жүйесі — Элементтердің әртүрлі қасиеттерінің атом ядросы зарядына тәуелділігін белгілейтін химиялық элементтердің жіктелу реті.
+            </div>
+            <div class="centertop_info">
+                <div class="element-id">Атомдық сан</div>
+                <div class="element-title">Аты</div>
 
-       
+                <div class="element-body">
+                  <div class="element-id-value">1</div>
+                  <div class="element-symbol">H</div>
+                  <div class="element-name-mass">
+                    Hydrogen<br>
+                    1.008
+                  </div>
+                  
+                </div>
 
+                <div class="element-symbol-title">Символ</div>
+                <div class="element-atomic-mass">Атомдық масса</div>
+                
+            </div>
+          </div>
 
+        </div>
         <div class="righttop">
           <app-element [hasEmptyCell]="true" [xaxis]="righttop_xaxis" [yaxis]="righttop_yaxis"
             [elements]="rightTopArray">
@@ -65,7 +125,7 @@
 
       <div class="footer-elements">
         <div class="footer-head">
-          <div class="dummy-cell cell"></div>
+          <!-- <div class="dummy-cell cell"></div> -->
           <!-- <div class="footer-text">For elements with no stable isotopes, the mass number of the isotope with the longest
             half-life is in parentheses.</div> -->
         </div>

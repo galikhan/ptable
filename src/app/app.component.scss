@@ -1,18 +1,23 @@
-@import "../styles.scss";
+@import "../vars.scss";
 
 .state-row {
-    height: 20px;
     cursor: pointer;
-    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.symbol {
+.symbol{
     text-align: center;
     border: 2px solid #ddd;
-    /* height: 20px; */
+    height: 20px;
     width: 20px;
-    display: inline-block;
     padding: 1px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .symbol:hover {
@@ -21,11 +26,7 @@
 
 .name {
     display: inline-block;
-    width: 82.5px;
     padding-left: 5px;
-}
-.state-table {
-    float: left;
 }
 
 .solid {
@@ -46,58 +47,13 @@
     color: $unknownColor;
 }
 
-// .vertical-text {
-//     writing-mode: vertical-rl;
-// }
-
-// .vertical-text {
-//     writing-mode: vertical-rl;
-// }
 
 .footer-text {
     font-size: 12px;
-    /* float: left; */
 }
 
 .type-item-class {
     background-color: #ddd;
-}
-
-.item1 {
-    grid-area: header;
-}
-.item2 {
-    grid-area: menu;
-}
-.item3 {
-    grid-area: main;
-}
-.item4 {
-    grid-area: right;
-}
-.item5 {
-    grid-area: footer;
-}
-
-.types {
-    float: left;
-    width: 287.5px;
-    font-size: 10px;
-    margin-right: 5px;
-    margin-left: 1.5px;
-}
-
-.types-grid {
-    display: grid;
-    grid-template-areas:
-        "metal metal metal metal metal metalloid non_metal non_metal"
-        "alkali_metal alkaline_earth_metal lanthanide transition_metal post_transition_metal metalloid reactive_nonmetal noble_gas"
-        "alkali_metal alkaline_earth_metal actinide transition_metal post_transition_metal metalloid reactive_nonmetal noble_gas";
-    // gap: 2px;
-    /* background-color: #2196f3; */
-    /* padding: 5px; */
-    font-size: 14px;
-    // border: 0.5px solid rgb(0, 0, 0);
 }
 
 .type-button {
@@ -168,13 +124,6 @@
     border: 0.5px solid $nobleGasBorderBgColor;    
 }
 
-mat-slider {
-    width: 450px;
-}
-
-.temperature {
-    border-bottom: 1px solid white;
-}
 
 .chemical-element {
     color: black;
@@ -195,27 +144,22 @@ mat-card {
 }
 
 .config-panel .type-button {
-    // background-color: #5fa5e3;
     border-radius: 5px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    // font-size: 14px;
-    // font-style: normal;
-    // font-weight: 400;
-    // line-height: 14px;
     cursor: pointer;
 }
 
 .filter{
     grid-column: 1;
     grid-row: 1;
-    text-align: center;
+    font-weight: bold;
+    margin-right:35px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
 
 }
 .metal{
@@ -265,3 +209,80 @@ mat-card {
     grid-column: 3;
     grid-row: 3;
 }
+
+.temperature-and-state-panel {
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+}
+
+.solid-button {
+    grid-column:1;
+}
+.liquid-button {
+    grid-column:2;
+}
+.gas-button {
+    grid-column:3;
+}
+.unknown-button {
+    grid-column:4;
+}
+
+.temperature-panel {
+    grid-column:5/11;
+    grid-row:1;
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    justify-content: center;
+    align-items: center;
+}
+
+
+mat-slider {
+    width: 350px;
+}
+
+
+.temperature-label {
+    grid-column: 1;
+    font-weight: bold;;
+}
+
+.temperature {
+    grid-column: 10;
+    border-bottom: 1px solid white;
+}
+
+.temperature-slider {
+    grid-column: 3/8;
+    grid-row:1; 
+}
+
+.plus {
+    grid-column: 9;
+}
+.minus {
+    grid-column: 2;
+}
+.temperature-button {
+    margin:auto;
+    grid-row:1; 
+    color:white;
+    background-color: black;
+    text-align: center;
+    // border: 2px solid #ddd;
+
+    width: 20px;
+    padding: 7px 2px;
+    
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+}
+
+

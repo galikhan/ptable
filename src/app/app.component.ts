@@ -151,6 +151,21 @@ export class AppComponent implements OnInit {
     this.byTemperatureService.setNext(tempInKalvin);
   }
 
+  minusTemp(): void {
+    // this.min = 
+    if(this.min < this.temparature) {
+      this.temparature = this.temparature - 25;
+      this.temperatureUpdated(this.temparature);
+    }
+  }
+
+  plusTemp(): void {
+    if(this.max > this.temparature) {
+      this.temparature = this.temparature + 25;
+      this.temperatureUpdated(this.temparature);
+    }
+  }
+
 }
 
 

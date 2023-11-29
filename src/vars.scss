@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+
+$solidBgColor: rgb(0, 0, 0);
+$liquidBgColor: #00D;
+$gasBgColor: #900;
+$unknownBgColor: #676;
+
+$solidBgColorImportant: rgb(0, 0, 0) !important;
+$liquidBgColorImportant: #00D !important;
+$gasBgColorImportant: #900    !important;
+$unknownBgColorImportant: #676 !important;
+
+$solidColor: rgb(255, 255, 255) !important;
+$liquidColor: rgb(255, 255, 255) !important;
+$gasColor: rgb(255, 255, 255) !important;
+$unknownColor: rgb(255, 255, 255) !important;
+
+$metalBgColor: rgb(255, 255, 255);
+
+$nonMetalBgColor: #EDEDED;
+$nonMetalBorderBgColor:#DCDADA;
+
+$metalloidBgColor: #9ee5d4;
+$metalloidBorderBgColor: #6BC6B0;
+
+$alkaliMetalBgColor: #eace5d;
+$alkaliMetalBorderBgColor:#CBB043;
+
+$alkalineEarthMetalBgColor: #f1f165;
+$alkalineEarthMetalBorderBgColor: #D9D94C;
+
+$lanthanideEarthMetalBgColor: #e8d19c;
+$lanthanideEarthMetalBorderBgColor: #CBB071;
+
+$actinideEarthMetalBgColor: #f5ccda;
+$actinideEarthMetalBorderBgColor: #EAA5BD;
+
+$transitionMetalEarthMetalBgColor: #fac5b7;
+$transitionMetalEarthMetalBorderBgColor: #E8AD9D;
+
+$postTansitionMtalBgColor: #acdfec;
+$postTansitionMtalBorderBgColor: #79BACB;
+
+$reactiveNonMetalBgColor: #8ced8c;
+$reactiveNonMetalBorderBgColor: #72D272;
+
+$nobleGasBgColor: #e5bde5;
+$nobleGasBorderBgColor: #CC96CC;
+
+$elementBorderRadius: 5px;
+$elementBorder: 1.5px solid;
+
+$cellWidth: 47px;

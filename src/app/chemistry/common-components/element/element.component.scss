@@ -1,4 +1,4 @@
-@import "../../../../styles.scss";
+@import "../../../../vars.scss";
 $opacityAnimate: 0.5s;
 
 .solid {
@@ -94,6 +94,8 @@ $opacityAnimate: 0.5s;
 }
 .unknown-phase {
     color: $unknownBgColor;
+    border: 1.5px solid #ddd;
+    border-radius: 5px;
 }
 
 @keyframes melted-opacity {

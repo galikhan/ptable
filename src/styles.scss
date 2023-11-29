@@ -1,56 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
-$solidBgColor: rgb(0, 0, 0);
-$liquidBgColor: #00D;
-$gasBgColor: #900;
-$unknownBgColor: #676;
-
-$solidBgColorImportant: rgb(0, 0, 0) !important;
-$liquidBgColorImportant: #00D !important;
-$gasBgColorImportant: #900    !important;
-$unknownBgColorImportant: #676 !important;
-
-$solidColor: rgb(255, 255, 255) !important;
-$liquidColor: rgb(255, 255, 255) !important;
-$gasColor: rgb(255, 255, 255) !important;
-$unknownColor: rgb(255, 255, 255) !important;
-
-$metalBgColor: rgb(255, 255, 255);
-
-$nonMetalBgColor: #EDEDED;
-$nonMetalBorderBgColor:#DCDADA;
-
-$metalloidBgColor: #9ee5d4;
-$metalloidBorderBgColor: #6BC6B0;
-
-$alkaliMetalBgColor: #eace5d;
-$alkaliMetalBorderBgColor:#CBB043;
-
-$alkalineEarthMetalBgColor: #f1f165;
-$alkalineEarthMetalBorderBgColor: #D9D94C;
-
-$lanthanideEarthMetalBgColor: #e8d19c;
-$lanthanideEarthMetalBorderBgColor: #CBB071;
-
-$actinideEarthMetalBgColor: #f5ccda;
-$actinideEarthMetalBorderBgColor: #EAA5BD;
-
-$transitionMetalEarthMetalBgColor: #fac5b7;
-$transitionMetalEarthMetalBorderBgColor: #E8AD9D;
-
-$postTansitionMtalBgColor: #acdfec;
-$postTansitionMtalBorderBgColor: #79BACB;
-
-$reactiveNonMetalBgColor: #8ced8c;
-$reactiveNonMetalBorderBgColor: #72D272;
-
-$nobleGasBgColor: #e5bde5;
-$nobleGasBorderBgColor: #CC96CC;
-
-$elementBorderRadius: 5px;
-$elementBorder: 1.5px solid;
-
-$cellWidth: 47px;
+@import "vars.scss";
 
 .chemical-table {
     font-size: 12px;
@@ -59,30 +8,30 @@ $cellWidth: 47px;
     line-height: 13px;
     font-family: Arimo;
     letter-spacing: 0em;
-    width: 1090px;
+    width: 1097px;
     margin: auto;
 }
 
 .lefttop {
-    width: 126px;
+    width: 123px;
     float: left;
 }
 .righttop {
     // width: 350px;
     float: left;
-    // margin-left: 157px;
+    // margin-left: 64px;
 }
 
 .body-elements {
     // width: 900px;
-    height: 215px;
+    height: 280px;
 }
 .header-elements {
-    height: 180px;
+    height: 232px;
 }
 
 .footer-elements-body{
-    margin-left:129px;
+    margin-left:137px;
 }
 .footer-head {
     margin-left:128px;
@@ -98,6 +47,9 @@ $cellWidth: 47px;
     margin: 1px;
     padding: 3px 3px;
     font-family: 'Arimo' sans-serif;
+    // background-color: #fac5b7;
+    border: 1.5px solid #ddd;
+    border-radius: 5px;
 }
 
 .empty-cell {
@@ -149,31 +101,128 @@ $cellWidth: 47px;
     border-right:1px solid #000;
 }
 .address-cell {
-    width: $cellWidth;
+    width: $cellWidth+8;
     height: 64px;
-    // border-top:1px solid #000;
-    border-left:1px solid #000;
-    border-right:1px solid #000;
+    border: 1.5px solid #ddd;
+    border-radius: 5px;
+
+    font-family: Arimo;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 12px; 
+
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .id-row-element {
-    margin-left:15px;
+    margin-left:18px;
     height: 18px;
     text-align: center;
-    color: #0d0d8c;
+    color: black;
 }
 .id-column-element {
     float:left;
-    color: #0d0d8c;
+    color: black;
 }
 .column-cell {
     width: 15px;
     height: 54px;
 }
 .row-cell {
-    width: 52px;
+    width:  57.8px;
     height: 10px;
-    margin: 1px;
-    background-color: red;
+    // margin: 1px;
+    // background-color: red;
 }
 
+.table {
+    margin-top: 20px;
+}
+
+.centertop {
+    // margin-left: 141px;
+    width: 597px;
+    float:left;
+}
+.centertop_title {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    padding: 27px 30px;
+
+    background-color: #F4F5F6;
+    border-radius: 5px;
+    
+}
+.centertop_body {
+    margin-top: 5px;
+    padding: 20px 30px;
+    height: 95px;
+    border: 1.5px solid #DCDADA;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.centertop_desc {
+    font-size: 14px;
+    font-weight: 400;
+    width: 242px;
+}
+
+.centertop_info {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 30% 27% 35%;
+    grid-template-rows: repeat(3, 33%);
+    gap: 3px;
+}
+.element-id {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: right;
+}
+.element-title{
+    grid-column: 1;
+    grid-row: 3;
+    text-align: right;
+}
+.element-symbol-title{
+    grid-column: 3;
+    grid-row: 2;
+}
+.element-atomic-mass{
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.element-body{
+    grid-column: 2;
+    grid-row: 1/4;
+    display: grid;
+    grid-template-rows: repeat(3, 33%);
+    grid-template-columns: repeat(3, 33%);
+    border-radius: 5px;
+    border: 1.5px solid #DCDADA;
+}
+.element-id-value{
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center;
+}
+.element-symbol{
+    grid-column: 2;
+    grid-row: 2;
+    font-size:30px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.element-name-mass {
+    grid-column: 1/4;
+    grid-row: 3;
+    text-align: center;
+}
