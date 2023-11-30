@@ -25,6 +25,7 @@ export class ElementInfoComponent implements OnInit {
   @Input() number = 0;
   @Input() atomic_mass = 0;
   @Input() symbol = '';
+  @Input() isMobile = false;
 
 
   constructor(
@@ -38,7 +39,6 @@ export class ElementInfoComponent implements OnInit {
       this.importedJson = json;
       const be = this.importedJson[this.number];
       this.addInfo = be;
-
     }
   }
 }

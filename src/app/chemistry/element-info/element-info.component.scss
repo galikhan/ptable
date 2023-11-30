@@ -103,10 +103,6 @@ mat-icon{
     line-height: 24px;
     text-align: center;
 }
-.how-spread-item {
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
 
 .popup-panel-50-50 {
     display: grid;
@@ -124,4 +120,26 @@ mat-icon{
 .popup-panel-80-20 {
     display: grid;
     grid-template-columns: 80% 20%;
+}
+.popup-panel-45-15-40 {
+    display: grid;
+    grid-template-columns: 45% 15% 40%;
+}
+
+.element-name-mass {
+    grid-column: 1/4;
+    grid-row: 3;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.element-name-mass > .ename {
+    font-weight: bold;
+}
+.element-name-mass > .emass {
+    font-size: 10px;
+}
+
+.mobile-ename {
+    font-size:8px;
 }

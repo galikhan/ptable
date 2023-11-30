@@ -62,39 +62,34 @@
 
                 <div class="how-spread-container" *ngIf="addInfo && addInfo.how_spread">
                     <div class="how-spread-item">
-                        <div class="how-spread-desc-speed popup-panel-60-40">
-                            <div class="float-right">
-                                <div>
-                                    <span class="bold">Ғарыш</span>
-                                    {{addInfo.how_spread.space}}
-                                </div>
-                                <div>
-                                    <span class="bold">Күн</span> {{addInfo.how_spread.sun}}
-                                </div>
-                                <div>
-                                    <span class="bold">Жер қыртысы</span> {{addInfo.how_spread.earth}}
-                                </div>
-                                <div>
-                                    <span class="bold">Cу</span> {{addInfo.how_spread.water}}
-                                </div>
-                                <div>
-                                    <span class="bold">Адам денесі</span> {{addInfo.how_spread.man}}
-                                </div>
+                        <div class="popup-panel-50-50">
+                            <div>
+                                <span class="bold">Ғарыш</span>{{addInfo.how_spread.space}}<br>
+                                <span class="bold">Күн</span> {{addInfo.how_spread.sun}}<br>
+                                <span class="bold">Жер қыртысы</span> {{addInfo.how_spread.earth}}<br>
                             </div>
-
-                            <div *ngIf="addInfo.how_spread.icon" class="float-left">
-                                <mat-icon [svgIcon]="addInfo.how_spread.icon" class="svg-icon"></mat-icon>
+                            <div>
+                                <span class="bold">Cу</span> {{addInfo.how_spread.water}}<br>
+                                <span class="bold">Адам денесі</span> {{addInfo.how_spread.man}}<br>
                             </div>
                         </div>
 
-                        <div class="how-spread-desc-panel popup-panel-40-60">
-                            <div class="float-left">
+                        <br>
+
+                        <div class="how-spread-desc-speed popup-panel-60-40">
+                            <div class="description" [innerHtml]="addInfo.how_spread.description"></div>
+                            <div>
                                 <ng-container *ngIf="addInfo.how_spread.description">
                                     <mat-icon svgIcon="picker" class="svg-icon"></mat-icon>
                                 </ng-container>
                             </div>
-                            <div class="float-right description" [innerHtml]="addInfo.how_spread.description"></div>
+                            <!-- <div *ngIf="addInfo.how_spread.icon" class="float-left">
+                                <mat-icon [svgIcon]="addInfo.how_spread.icon" class="svg-icon"></mat-icon>
+                            </div> -->
                         </div>
+
+                        <!-- <div class="how-spread-desc-panel popup-panel-40-60">
+                        </div> -->
                     </div>
 
                 </div>
@@ -111,6 +106,8 @@
                 <ng-container *ngIf="addInfo && addInfo.how_taken">
                     <div class="description" [innerHtml]="addInfo.how_taken.description">
                     </div>
+                    <br>
+
                     <div class="popup-panel-80-20">
                         <div class="float-left formula" [innerHtml]="addInfo.how_taken.formula">
                         </div>
@@ -129,15 +126,15 @@
                     </mat-panel-title>
                 </mat-expansion-panel-header>
 
-                <div class="popup-panel">
+                <div class="popup-panel-80-20">
                     <div class="float-left">
-                        <div *ngIf="addInfo && addInfo.chemical_properties && addInfo.chemical_properties.icon">
-                            <mat-icon [svgIcon]="addInfo.chemical_properties.icon" class="svg-icon"></mat-icon>
+                        <div *ngIf="addInfo && addInfo.chemical_properties"
+                            [innerHtml]="addInfo.chemical_properties.description">
                         </div>
                     </div>
                     <div class="float-right">
-                        <div *ngIf="addInfo && addInfo.chemical_properties"
-                            [innerHtml]="addInfo.chemical_properties.description">
+                        <div *ngIf="addInfo && addInfo.chemical_properties && addInfo.chemical_properties.icon">
+                            <mat-icon [svgIcon]="addInfo.chemical_properties.icon" class="svg-icon"></mat-icon>
                         </div>
                     </div>
                 </div>
@@ -182,7 +179,7 @@
             <div class="element-id-value">{{number}}</div>
             <div class="popup-element-symbol">{{symbol}}</div>
             <div class="element-name-mass">
-                <div class="ename">{{addInfo.name}}</div>
+                <div class="ename" [ngClass]="{'mobile-ename':isMobile}">{{addInfo.name}}</div>
                 <div class="emass">{{atomic_mass}}</div>
             </div>
         </div>
