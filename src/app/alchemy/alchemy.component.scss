@@ -1,0 +1,296 @@
+@import "../../vars.scss";
+
+.state-row {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.symbol{
+    text-align: center;
+    border: 2px solid #ddd;
+    height: 20px;
+    width: 20px;
+    padding: 1px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active-state > .symbol{
+    border: 2px solid rgb(90, 200, 200);
+}
+
+
+
+.name {
+    display: inline-block;
+    padding-left: 5px;
+}
+
+.solid {
+    background-color: $solidBgColor;
+    color: $solidColor;
+}
+
+.liquid {
+    background-color: $liquidBgColor;
+    color: $liquidColor;
+}
+.gas {
+    background-color: $gasBgColor;
+    color: $gasColor;
+}
+.unknown {
+    background-color: $unknownBgColor;
+    color: $unknownColor;
+}
+
+
+.footer-text {
+    font-size: 12px;
+}
+
+.type-item-class {
+    background-color: #ddd;
+}
+
+.type-button {
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    padding: 2px;
+}
+// .type-button:hover {
+//     padding: 2px;
+//     border: 2px solid #5fa5e3;
+// }
+.active-type {
+    border: 2px solid rgb(90, 200, 200) !important;
+}
+
+.metal {
+    grid-area: metal;
+    background-color: $metalBgColor;
+    border: 0.5px solid #ddd;
+}
+.metalloid {
+    grid-area: metalloid;
+    background-color: $metalloidBgColor;
+    border: 0.5px solid $metalloidBorderBgColor;
+}
+.non_metal {
+    grid-area: non_metal;
+    background-color: $nonMetalBgColor;
+    border: 0.5px solid $nonMetalBorderBgColor;
+}
+
+.alkali_metal {
+    grid-area: alkali_metal;
+    background-color: $alkaliMetalBgColor;
+    border: 0.5px solid $alkaliMetalBorderBgColor;
+}
+
+.alkaline_earth_metal {
+    grid-area: alkaline_earth_metal;
+    background-color: $alkalineEarthMetalBgColor;
+    border: 0.5px solid $alkalineEarthMetalBorderBgColor;
+}
+.lanthanide {
+    grid-area: lanthanide;
+    background-color: $lanthanideEarthMetalBgColor;
+    border: 0.5px solid $lanthanideEarthMetalBorderBgColor;
+}
+.actinide {
+    grid-area: actinide;
+    background-color: $actinideEarthMetalBgColor;
+    border: 0.5px solid $actinideEarthMetalBorderBgColor;    
+}
+.transition_metal {
+    grid-area: transition_metal;
+    background-color: $transitionMetalEarthMetalBgColor;
+    border: 0.5px solid $transitionMetalEarthMetalBorderBgColor;    
+}
+.post_transition_metal {
+    grid-area: post_transition_metal;
+    background-color: $postTansitionMtalBgColor;
+    border: 0.5px solid $postTansitionMtalBorderBgColor;    
+}
+.reactive_non_metal {
+    grid-area: reactive_nonmetal;
+    background-color: $reactiveNonMetalBgColor;
+    border: 0.5px solid $reactiveNonMetalBorderBgColor;    
+}
+.noble_gas {
+    grid-area: noble_gas;
+    background-color: $nobleGasBgColor;
+    border: 0.5px solid $nobleGasBorderBgColor;    
+}
+
+
+.chemical-element {
+    color: black;
+}
+
+mat-card {
+    border-radius: 10px;
+    background: #f4f5f6;
+    padding: 20px;
+}
+
+.config-panel {
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(7, 14%);
+    grid-template-rows: repeat(3, 33%);
+    gap: 4px;
+}
+
+.config-panel .type-button {
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.filter{
+    grid-column: 1;
+    grid-row: 1;
+    font-weight: bold;
+    margin-right:35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.metal{
+    grid-column: 2;
+    grid-row: 1;
+}
+.metalloid{
+    grid-column: 3;
+    grid-row: 1;
+}
+.non_metal{
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.alkali_metal {
+    grid-column: 2;
+    grid-row: 2;
+}
+.alkaline_earth_metal {
+    grid-column: 3;
+    grid-row: 2;
+}
+.lanthanide{
+    grid-column: 4;
+    grid-row: 2;
+}
+.actinide {
+    grid-column: 5;
+    grid-row: 2;
+}
+.transition_metal {
+    grid-column: 6;
+    grid-row: 2;
+}
+.post_transition_metal {
+    grid-column: 7;
+    grid-row: 2;
+}
+
+.reactive_non_metal {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.noble_gas {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.temperature-and-state-panel {
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+}
+
+.solid-button {
+    grid-column:1;
+}
+.liquid-button {
+    grid-column:2;
+}
+.gas-button {
+    grid-column:3;
+}
+.unknown-button {
+    grid-column:4;
+}
+
+.temperature-panel {
+    grid-column:5/11;
+    grid-row:1;
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    justify-content: center;
+    align-items: center;
+}
+
+
+mat-slider {
+    width: 350px;
+}
+
+
+.temperature-label {
+    grid-column: 1;
+    font-weight: bold;;
+}
+
+.temperature {
+    grid-column: 10;
+    border-bottom: 1px solid white;
+}
+
+.temperature-slider {
+    grid-column: 3/8;
+    grid-row:1; 
+}
+
+.plus {
+    grid-column: 9;
+}
+.minus {
+    grid-column: 2;
+}
+.temperature-button {
+    margin:auto;
+    grid-row:1; 
+    color:white;
+    background-color: black;
+    text-align: center;
+    // border: 2px solid #ddd;
+
+    width: 20px;
+    padding: 7px 2px;
+    
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+}
+
+.active-state {
+    
+}

@@ -1,0 +1,145 @@
+<div class="main">
+
+    <!--   
+        <div class="chemical-element">
+          <app-element-info></app-element-info>
+        </div>
+    
+    
+       -->
+      <div class="chemical-table">
+        <h2 class="title">Химиялық таблица</h2>
+    
+        <mat-card>
+          
+          <div class="temperature-and-state-panel">
+    
+            <div class="state-row solid-button" (click)="updateState('C')" [ngClass]="{ 'active-state': currentState === 'C'}">
+              <div class="solid symbol">C</div>
+              <div class="name">Қатты</div>
+            </div>
+    
+            <div class="state-row liquid-button" (click)="updateState('Hg')" [ngClass]="{ 'active-state': currentState === 'Hg'}">
+              <div class="liquid symbol">Hg</div>
+              <div class="name">Сұйық </div>
+            </div>
+            <div class="state-row gas-button" (click)="updateState('H')" [ngClass]="{ 'active-state': currentState === 'H'}">
+              <div class="gas symbol">H</div>
+              <div class="name">Газ</div>
+            </div>
+    
+            <div class="state-row unknown-button" (click)="updateState('Rf')" [ngClass]="{ 'active-state': currentState === 'Rf'}">
+              <div class="unknown symbol">Rf</div>
+              <div class="name">Беймәлім </div>
+            </div>
+    
+    
+            
+            <div class="temperature-panel">
+              <div class="temperature-label">Температура</div>
+              <div class="temperature-button minus" (click)="minusTemp()">-</div>
+              <mat-slider class="temperature-slider" [max]="max" [min]="min" [step]="7">
+                <input matSliderThumb [(ngModel)]="temparature" (valueChange)="temperatureUpdated(temparature)" #slider>
+              </mat-slider>
+              <div class="temperature-button plus" (click)="plusTemp()">+</div>
+              <div class="temperature celcius">{{temparature|number:'1.0-0' }} C</div>
+            </div>
+    
+          </div>
+          
+          <div class="config-panel">
+            <div class="filter">Сүзгі &nbsp;&nbsp;<mat-icon>tune</mat-icon></div>
+    
+            <div class="type-button metal" (click)="highlightType('metal')" [ngClass]="{ 'active-type': currentType === 'metal'}">Металдар</div>
+            <div class="type-button metalloid" (click)="highlightType('metalloid')" [ngClass]="{ 'active-type': currentType === 'metalloid'}">Жартылай металдар</div>
+            <div class="type-button non_metal" (click)="highlightType('non-metal')" [ngClass]="{ 'active-type': currentType === 'non-metal'}">Бейметалдар</div>
+    
+    
+            <div class="type-button alkali_metal" (click)="highlightType('alkali metal')"  [ngClass]="{ 'active-type': currentType === 'alkali metal'}">
+              Сілтілік <br>металдар</div>
+            <div class="type-button alkaline_earth_metal" (click)="highlightType('alkaline earth metal')"  [ngClass]="{ 'active-type': currentType === 'alkaline earth metal'}">
+              Сілтілік<br> жер металдары</div>
+            <div class="type-button lanthanide" (click)="highlightType('lanthanide')"  [ngClass]="{ 'active-type': currentType === 'lanthanide'}">Лантанидтер</div>
+            <div class="type-button actinide" (click)="highlightType('actinide')"  [ngClass]="{ 'active-type': currentType === 'actinide'}">Актиноидтар</div>
+            <div class="type-button transition_metal" (click)="highlightType('transition metal')"  [ngClass]="{ 'active-type': currentType === 'transition metal'}">Өтпелі<br>
+              металдар</div>
+            <div class="type-button post_transition_metal" (click)="highlightType('post-transition metal')"  [ngClass]="{ 'active-type': currentType === 'post-transition metal'}">
+              Пост-Өтпелі<br> металдар</div>
+            <div class="type-button reactive_non_metal" (click)="highlightType('reactive non-metal')"  [ngClass]="{ 'active-type': currentType === 'reactive non-metal'}">Реактивті
+              <br>бейметалдар
+            </div>
+            <div class="type-button noble_gas" (click)="highlightType('noble gas')"  [ngClass]="{ 'active-type': currentType === 'noble gas'}">Асыл <br>газдар</div>
+          </div>
+        </mat-card>
+    
+        <div class="table">
+    
+          <div class="header-elements">
+            <div class="id-row-element">
+              <app-id-element [items]="rows"></app-id-element>
+            </div>
+              <div class="id-column-element">
+              <app-id-element [items]="columns"></app-id-element>
+            </div>
+            <div class="lefttop">
+              <app-element [xaxis]="lefttop_xaxis" [yaxis]="lefttop_yaxis" [elements]="leftTopArray"></app-element>
+            </div>
+            <div class="centertop">
+              <div class="centertop_title">Химиялық элементтердің периодтық жүйесі</div>
+              <div class="centertop_body">
+                <div class="centertop_desc">
+                  Химиялық элементтердің периодтық жүйесі — Элементтердің әртүрлі қасиеттерінің атом ядросы зарядына тәуелділігін белгілейтін химиялық элементтердің жіктелу реті.
+                </div>
+                <div class="centertop_info">
+                    <div class="element-id">
+                      <span>Атомдық сан</span>
+                    </div>
+                    <div class="element-title">
+                      <span>Аты</span>
+                    </div>
+    
+                    <div class="element-body">
+                      <div class="element-id-value">1</div>
+                      <div class="element-symbol">H</div>
+                      <div class="element-name-mass">
+                        <div class="ename">Hydrogen</div>
+                        <div class="emass">1.008</div>
+                      </div>
+                      
+                    </div>
+    
+                    <div class="element-symbol-title"> <span>Символ</span> </div>
+                    <div class="element-atomic-mass"><span>Атомдық масса</span></div>
+                    
+                </div>
+              </div>
+    
+            </div>
+            <div class="righttop">
+              <app-element [hasEmptyCell]="true" [xaxis]="righttop_xaxis" [yaxis]="righttop_yaxis"
+                [elements]="rightTopArray">
+              </app-element>
+            </div>
+          </div>
+    
+          <!-- <div style="clear: both;"></div> -->
+    
+          <div class="body-elements">
+            <app-element [xaxis]="body_xaxis" [yaxis]="body_yaxis" [elements]="bodyArray"></app-element>
+          </div>
+    
+          <div class="footer-elements">
+            <div class="footer-head">
+              <!-- <div class="dummy-cell cell"></div> -->
+              <!-- <div class="footer-text">For elements with no stable isotopes, the mass number of the isotope with the longest
+                half-life is in parentheses.</div> -->
+            </div>
+    
+            <div class="footer-elements-body">
+              <app-element [xaxis]="footer_xaxis" [yaxis]="footer_yaxis" [elements]="footerArray"></app-element>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
