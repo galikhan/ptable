@@ -71,7 +71,6 @@ export class AlchemyComponent {
         //   }
         // }
       });
-      console.log('cts.size', arr.length);
       
   
       const leftTopTemp = this.filterBySymbol(['H', 'Li', 'Be', 'Na', 'Mg']);

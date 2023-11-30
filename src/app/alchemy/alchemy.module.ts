@@ -18,6 +18,7 @@ import { LightswitchComponent } from '../tests/lightswitch/lightswitch.component
 import { ElementInfoComponent } from '../chemistry/element-info/element-info.component';
 import { IdElementComponent } from '../chemistry/common-components/id-element/id-element.component';
 import { DiPopupElementComponent } from '../chemistry/di-popup-element/di-popup-element.component';
+import { ElementInfoMobileWrapperComponent } from './components/element-info-mobile-wrapper/element-info-mobile-wrapper.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { DiPopupElementComponent } from '../chemistry/di-popup-element/di-popup-
     IdElementComponent,
     DiPopupElementComponent,
     ElementComponent,
+    ElementInfoMobileWrapperComponent,
 
   ],
   imports: [

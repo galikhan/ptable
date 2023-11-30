@@ -1,13 +1,15 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { ActivatedRoute } from '@angular/router';
+import { iif } from 'rxjs';
 import { ChemicalElement } from 'src/app/interface/chemical-element';
 import { ShowElementService } from 'src/app/service/show-element.service';
 import * as json from '../../../assets/ElementsAdditionalInfo.json';
 
 export interface DiData {
-  element:ChemicalElement | undefined;
-  color:string;
-  borderColor:string;
+  element: ChemicalElement | undefined;
+  color: string;
+  borderColor: string;
 }
 @Component({
   selector: 'app-element-info',
@@ -16,40 +18,27 @@ export interface DiData {
 })
 export class ElementInfoComponent implements OnInit {
 
-  element: ChemicalElement | undefined;
   addInfo: any;
   importedJson: any;
-  color = '';
-  borderColor='';
+  @Input() color = '';
+  @Input() borderColor = '';
+  @Input() number = 0;
+  @Input() atomic_mass = 0;
+  @Input() symbol = '';
+
 
   constructor(
     public elementService: ShowElementService,
-    @Inject(MAT_DIALOG_DATA) public data: DiData) {
-    console.log('constructor');
+    private route: ActivatedRoute,
+  ) {
   }
 
   ngOnInit(): void {
-
-    
-    if(this.data.element) {
-      this.element = this.data.element;
-      console.log('this.element?.number', this.data.element?.number);
+    if (this.number) {
       this.importedJson = json;
-      const be = this.importedJson[this.data.element?.number];
+      const be = this.importedJson[this.number];
       this.addInfo = be;
-      this.color = this.data.color;
-      this.borderColor = this.data.borderColor;
+
     }
-    
-
-    // this.elementService.element.subscribe(result => {
-
-    //   if(result) {
-    //     this.element = result;
-    //     this.addInfo = this.importedJson[result.number];
-    //     console.log('addinfo', this.addInfo);
-        
-    //   }
-    // });
   }
 }

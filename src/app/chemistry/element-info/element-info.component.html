@@ -182,13 +182,13 @@
     </div> -->
     </div>
     <div class="symbol">
-        <div class="popup-element-body" *ngIf="element"
+        <div class="popup-element-body"
             [ngStyle]="{'background': color, 'border': '1.5px solid ' + borderColor }">
-            <div class="element-id-value">{{element.number}}</div>
-            <div class="popup-element-symbol">{{element.symbol}}</div>
+            <div class="element-id-value">{{number}}</div>
+            <div class="popup-element-symbol">{{symbol}}</div>
             <div class="element-name-mass">
                 <div class="ename">{{addInfo.name}}</div>
-                <div class="emass">{{element.atomic_mass}}</div>
+                <div class="emass">{{atomic_mass}}</div>
             </div>
         </div>
     </div>

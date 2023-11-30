@@ -1,10 +1,14 @@
 import { Component, Inject, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
+import { DeviceDetectorService } from 'ngx-device-detector';
+import { iif } from 'rxjs';
 import { ChemicalElement } from 'src/app/interface/chemical-element';
 import { HighlightByTemperatureService } from 'src/app/service/highlight-by-temperature.service';
 import { HighlightStateService } from 'src/app/service/highlight-state.service';
 import { HighlightTypeService } from 'src/app/service/highlight-type.service';
 import { ShowElementService } from 'src/app/service/show-element.service';
+import { DiPopupElementComponent } from '../../di-popup-element/di-popup-element.component';
 import { ElementInfoComponent } from '../../element-info/element-info.component';
 
 @Component({
@@ -46,7 +50,9 @@ export class ElementComponent implements OnInit {
     public hightlightService: HighlightTypeService,
     public temperatureService: HighlightByTemperatureService,
     public showElementService: ShowElementService,
-    public di: MatDialog
+    public di: MatDialog,
+    private deviceService: DeviceDetectorService,
+    private router: Router
   ) {
 
   }
@@ -233,97 +239,105 @@ export class ElementComponent implements OnInit {
   }
 
   showElement(element: ChemicalElement | undefined) {
-    if(element) {
+    if (element) {
       const color = this.getColorOfElement(element);
       const borderColor = this.getBorderColorOfElement(element);
-      this.di.open(ElementInfoComponent, {width:"700px", height:"800px", panelClass: "popup-element-info-panel", data: {element, color, borderColor}}).afterClosed().subscribe(result => {
-
-      });
+      if (this.deviceService.isDesktop()) {
+        this.di.open(DiPopupElementComponent, 
+          { width: "700px", 
+            height: "800px",
+            panelClass: "popup-element-info-panel",
+            data: { 
+              symbol: element.symbol, number: element.number, atomic_mass: element.atomic_mass,
+              color, 
+              borderColor } 
+          });
+      } else {
+        this.router.navigate(['/chemistry/element-mobile'], 
+        {queryParams: 
+          { symbol: element.symbol, number: element.number, atomic_mass: element.atomic_mass,
+            color, 
+            borderColor}
+        })
+      }
     }
   }
 
   getColorOfElement(element: ChemicalElement): string {
-    let color=""; let borderColor="";
-    if(this.isMetal(element)) {
-      color= 'white';borderColor= '#ddd';
-    } else if(this.isAlkaliMetal(element)) {
-      color= '#eace5d';borderColor= '#CBB043';
+    let color = ""; let borderColor = "";
+    if (this.isMetal(element)) {
+      color = 'white'; borderColor = '#ddd';
+    } else if (this.isAlkaliMetal(element)) {
+      color = '#eace5d'; borderColor = '#CBB043';
     }
-    else if(this.isAlkalineEarthMetal(element)) {
-      color= '#f1f165'; borderColor= '#D9D94C';
+    else if (this.isAlkalineEarthMetal(element)) {
+      color = '#f1f165'; borderColor = '#D9D94C';
     }
-    else if(this.isLanthanoid(element)) {
-      color= '#e8d19c'; borderColor= '#CBB071';
+    else if (this.isLanthanoid(element)) {
+      color = '#e8d19c'; borderColor = '#CBB071';
     }
-    else if(this.isActinoid(element)) {
-      color= '#f5ccda'; borderColor= '#EAA5BD';
+    else if (this.isActinoid(element)) {
+      color = '#f5ccda'; borderColor = '#EAA5BD';
     }
-    else if(this.isTransitionMetal(element)) {
-      color= '#fac5b7';borderColor= '#E8AD9D';
+    else if (this.isTransitionMetal(element)) {
+      color = '#fac5b7'; borderColor = '#E8AD9D';
     }
-    else if(this.isPostTransitionMetal(element)) {
-      color= '#acdfec';borderColor= '#79BACB';
+    else if (this.isPostTransitionMetal(element)) {
+      color = '#acdfec'; borderColor = '#79BACB';
     }
-    else if(this.isMetalloid(element)) {
-      color= '#9ee5d4'; borderColor= '#6BC6B0';
+    else if (this.isMetalloid(element)) {
+      color = '#9ee5d4'; borderColor = '#6BC6B0';
     }
-    else if(this.isNonmetal(element)) {
-      color= '#EDEDED'; borderColor= '#DCDADA';
+    else if (this.isNonmetal(element)) {
+      color = '#EDEDED'; borderColor = '#DCDADA';
     }
-    else if(this.isNobleGas(element)) {
-      color= '#e5bde5';borderColor= '#CC96CC';
+    else if (this.isNobleGas(element)) {
+      color = '#e5bde5'; borderColor = '#CC96CC';
     }
-    else if(this.isReactiveNonmetal(element)) {
-      color= '#8ced8c';borderColor= '#72D272';
-    }  
+    else if (this.isReactiveNonmetal(element)) {
+      color = '#8ced8c'; borderColor = '#72D272';
+    }
     return color;
   }
 
   getBorderColorOfElement(element: ChemicalElement): string {
-    let color=""; let borderColor="";
-    if(this.isMetal(element)) {
-      color= 'white';borderColor= '#ddd';
-    } else if(this.isAlkaliMetal(element)) {
-      color= '#eace5d';borderColor= '#CBB043';
+    let color = ""; let borderColor = "";
+    if (this.isMetal(element)) {
+      color = 'white'; borderColor = '#ddd';
+    } else if (this.isAlkaliMetal(element)) {
+      color = '#eace5d'; borderColor = '#CBB043';
     }
-    else if(this.isAlkalineEarthMetal(element)) {
-      color= '#f1f165'; borderColor= '#D9D94C';
+    else if (this.isAlkalineEarthMetal(element)) {
+      color = '#f1f165'; borderColor = '#D9D94C';
     }
-    else if(this.isLanthanoid(element)) {
-      color= '#e8d19c'; borderColor= '#CBB071';
+    else if (this.isLanthanoid(element)) {
+      color = '#e8d19c'; borderColor = '#CBB071';
     }
-    else if(this.isActinoid(element)) {
-      color= '#f5ccda'; borderColor= '#EAA5BD';
+    else if (this.isActinoid(element)) {
+      color = '#f5ccda'; borderColor = '#EAA5BD';
     }
-    else if(this.isTransitionMetal(element)) {
-      color= '#fac5b7';borderColor= '#E8AD9D';
+    else if (this.isTransitionMetal(element)) {
+      color = '#fac5b7'; borderColor = '#E8AD9D';
     }
-    else if(this.isPostTransitionMetal(element)) {
-      color= '#acdfec';borderColor= '#79BACB';
+    else if (this.isPostTransitionMetal(element)) {
+      color = '#acdfec'; borderColor = '#79BACB';
     }
-    else if(this.isMetalloid(element)) {
-      color= '#9ee5d4'; borderColor= '#6BC6B0';
+    else if (this.isMetalloid(element)) {
+      color = '#9ee5d4'; borderColor = '#6BC6B0';
     }
-    else if(this.isNonmetal(element)) {
-      color= '#EDEDED'; borderColor= '#DCDADA';
+    else if (this.isNonmetal(element)) {
+      color = '#EDEDED'; borderColor = '#DCDADA';
     }
-    else if(this.isNobleGas(element)) {
-      color= '#e5bde5';borderColor= '#CC96CC';
+    else if (this.isNobleGas(element)) {
+      color = '#e5bde5'; borderColor = '#CC96CC';
     }
-    else if(this.isReactiveNonmetal(element)) {
-      color= '#8ced8c';borderColor= '#72D272';
-    }  
+    else if (this.isReactiveNonmetal(element)) {
+      color = '#8ced8c'; borderColor = '#72D272';
+    }
     return borderColor;
   }
-  // fireOnBoiled(element: ChemicalElement | undefined, temperature: number): boolean {
-  //   // return this.isBoiled(element)
-  //   ret
-  // }
-
-  // this.fireBoiled = true;
-  // this.disableFire();
 
   disableFire(): void {
     this.fireBoiled = false;
   }
- }
+}
