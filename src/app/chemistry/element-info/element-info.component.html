@@ -109,17 +109,13 @@
                 </mat-expansion-panel-header>
 
                 <ng-container *ngIf="addInfo && addInfo.how_taken">
-                    <div class="popup-panel-50-50">
-                        <div class="float-left" >
-                        <div class="popup-panel-50-50">
-                            <div class="float-left" *ngIf="addInfo.how_taken.icon">
-                                <mat-icon [svgIcon]="addInfo.how_taken.icon" class="svg-icon"></mat-icon>
-                            </div>
-                            <div class="float-right formula" [innerHtml]="addInfo.how_taken.formula">
-                            </div>
+                    <div class="description" [innerHtml]="addInfo.how_taken.description">
+                    </div>
+                    <div class="popup-panel-80-20">
+                        <div class="float-left formula" [innerHtml]="addInfo.how_taken.formula">
                         </div>
-                    </div>   
-                        <div class="description float-right" [innerHtml]="addInfo.how_taken.description">
+                        <div class="float-right" *ngIf="addInfo.how_taken.icon">
+                            <mat-icon [svgIcon]="addInfo.how_taken.icon" class="svg-icon"></mat-icon>
                         </div>
                     </div>
                 </ng-container>
@@ -182,8 +178,7 @@
     </div> -->
     </div>
     <div class="symbol">
-        <div class="popup-element-body"
-            [ngStyle]="{'background': color, 'border': '1.5px solid ' + borderColor }">
+        <div class="popup-element-body" [ngStyle]="{'background': color, 'border': '1.5px solid ' + borderColor }">
             <div class="element-id-value">{{number}}</div>
             <div class="popup-element-symbol">{{symbol}}</div>
             <div class="element-name-mass">
