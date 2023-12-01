@@ -126,20 +126,3 @@ mat-icon{
     grid-template-columns: 45% 15% 40%;
 }
 
-.element-name-mass {
-    grid-column: 1/4;
-    grid-row: 3;
-    text-align: center;
-    margin-top: 4px;
-}
-
-.element-name-mass > .ename {
-    font-weight: bold;
-}
-.element-name-mass > .emass {
-    font-size: 10px;
-}
-
-.mobile-ename {
-    font-size:8px;
-}
