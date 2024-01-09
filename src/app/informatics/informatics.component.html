@@ -1,0 +1,132 @@
+<p>
+	<mat-toolbar class="d-flex justify-content-between">
+		<span>Python</span>
+		<span>
+			<button [routerLink]="['/login']" mat-icon-button class="example-icon favorite-icon"
+				aria-label="Example icon-button with heart icon">
+				<mat-icon>login</mat-icon>
+			</button>
+		</span>
+	</mat-toolbar>
+</p>
+
+
+<div class="container-fluid">
+	<div class="row mt-4">
+		<div class="col-lg-3">
+			<mat-card>
+				<!-- <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+
+					<mat-tree-node *matTreeNodeDef="let node" [class.selected]="isSelected(node)">
+						<button mat-icon-button disabled>
+							<mat-icon class="custom-icon">folder</mat-icon>
+						</button>
+						<span class="custom-node-label" (click)="onNodeClick(node)">
+							{{node.name}}
+						</span>
+					</mat-tree-node>
+
+
+
+					<mat-tree-node *matTreeNodeDef="let node;when: hasChild">
+						<button mat-icon-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.name">
+							{{node.name}}
+							<mat-icon class="mat-icon-rtl-mirror">
+								{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+							</mat-icon>
+						</button>
+					</mat-tree-node>
+				</mat-tree> -->
+
+				<mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="example-tree">
+
+					<mat-tree-node *matTreeNodeDef="let node" [class.selected]="isSelected(node)">
+						<button mat-icon-button disabled>
+							<mat-icon class="custom-icon">folder</mat-icon>
+						</button>
+						<span class="custom-node-label-child" (click)="onNodeClick(node)">
+							{{node.name}}
+						</span>
+					</mat-tree-node>
+					<mat-tree-node *matTreeNodeDef="let node; when: hasChild">
+						<div class="mat-tree-node">
+							<button mat-icon-button matTreeNodeToggle [attr.aria-label]="'Toggle ' + node.name">
+								<mat-icon class="mat-icon-rtl-mirror">
+									{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+								</mat-icon>
+							</button>
+							<div style="display: grid;">
+								<small>Занятие {{node.index}}</small>
+								<span class="custom-node-label">
+									{{node.name}}
+								</span>
+							</div>
+						</div>
+
+						<div [class.example-tree-invisible]="!treeControl.isExpanded(node)" role="group">
+							<ng-container matTreeNodeOutlet></ng-container>
+						</div>
+					</mat-tree-node>
+				</mat-tree>
+
+
+
+
+			</mat-card>
+		</div>
+		<div class="col-lg-9">
+			<mat-card *ngIf="selectedNode" class="p-4">
+				<span class="mb-2">Занятие 1. {{selectedNode && selectedNode.name}}</span>
+
+				<hr>
+				<span>
+					Python 3 — это современный язык, на котором просто и приятно писать программы.
+					Для печати значений в Питоне есть функция print(). Внутри круглых скобок через запятую мы пишем то, что хотим
+					вывести. Вот программа, которая делает несколько вычислений:
+				</span>
+
+				<div class="editor mt-4">
+					<mat-card class="mb-4">
+						<div class="d-flex justify-content-between align-items-center p-2">
+							<span>Example 1.cpp</span>
+							<span>
+								<section class="example-section">
+									<mat-checkbox class="checkbox" [(ngModel)]="checked">Выполнить пошагово</mat-checkbox>
+									<button class="btn btn-primary btn-sm">Запустить</button>
+								</section>
+
+							</span>
+						</div>
+
+
+						<div class="mt-4">
+							<mat-grid-list cols="3" rowHeight="200px">
+								<mat-grid-tile [colspan]="2" [rowspan]="2" [style.background]="'white'">
+									<mat-form-field appearance="fill">
+
+										<textarea rows="21" matInput></textarea>
+									</mat-form-field>
+								</mat-grid-tile>
+								<mat-grid-tile [colspan]="1" [rowspan]="1" [style.background]="'white'">
+									<mat-form-field appearance="fill">
+										<mat-label>Input</mat-label>
+										<textarea rows="10" matInput placeholder="Input for the program"></textarea>
+									</mat-form-field>
+								</mat-grid-tile>
+								<mat-grid-tile [colspan]="1" [rowspan]="1" [style.background]="'white'">
+									<mat-form-field appearance="fill">
+										<mat-label>Output</mat-label>
+										<textarea readonly="true" rows="10" matInput placeholder="Click run for the result"
+											[value]="'Click run for the result'"></textarea>
+									</mat-form-field>
+								</mat-grid-tile>
+							</mat-grid-list>
+						</div>
+
+					</mat-card>
+
+				</div>
+			</mat-card>
+		</div>
+	</div>
+</div>

@@ -1,281 +1,279 @@
 /* You can add global styles to this file, and also import other style files */
 @import "vars.scss";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 .chemical-table {
-    font-size: 12px;
-    color: #000000;
-    padding: 10px;
-    line-height: 13px;
-    font-family: Arimo;
-    letter-spacing: 0em;
-    width: 1116px;
-    margin: auto;
+  font-size: 12px;
+  color: #000000;
+  padding: 10px;
+  line-height: 13px;
+  font-family: Arimo;
+  letter-spacing: 0em;
+  width: 1116px;
+  margin: auto;
 }
 
 .lefttop {
-    width: 126px;
-    float: left;
+  width: 126px;
+  float: left;
 }
 .righttop {
-    // width: 350px;
-    float: left;
-    margin-left: 1px;
+  // width: 350px;
+  float: left;
+  margin-left: 1px;
 }
 
 .body-elements {
-    // width: 900px;
-    height: 280px;
+  // width: 900px;
+  height: 280px;
 }
 .header-elements {
-    height: 232px;
+  height: 232px;
 }
 
-.footer-elements-body{
-    margin-left:140px;
+.footer-elements-body {
+  margin-left: 140px;
 }
 .footer-head {
-    margin-left:128px;
+  margin-left: 128px;
 }
 .footer-head {
-    height: 32px;
+  height: 32px;
 }
 
 .cell {
-
-    height: 57px;
-    width: $cellWidth;
-    background-color: white;
-    margin: 1px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    font-family: 'Arimo' sans-serif;
-    // background-color: #fac5b7;
-    border: 1.5px solid #ddd;
-    border-radius: 5px;
+  height: 57px;
+  width: $cellWidth;
+  background-color: white;
+  margin: 1px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-family: "Arimo" sans-serif;
+  // background-color: #fac5b7;
+  border: 1.5px solid #ddd;
+  border-radius: 5px;
 }
 
 .empty-cell {
-    height: 65px;
-    width: 56px;
-    margin: 1px;
-    display: flex;
-    // flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+  height: 65px;
+  width: 56px;
+  margin: 1px;
+  display: flex;
+  // flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .column {
-    float: left;
-    cursor: pointer;
-    margin-left: 3px;
+  float: left;
+  cursor: pointer;
+  margin-left: 3px;
 }
 
 .row {
-    height: 71px;
+  height: 71px;
 }
 
 .cell .id {
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 10px;
-    padding-left: 3px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 10px;
+  padding-left: 3px;
 }
 .cell .name {
-    font-size: 8px;
-    font-weight: 400;
-    line-height: 9px;
-    text-align: center;
-    letter-spacing: 0.03em;
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 9px;
+  text-align: center;
+  letter-spacing: 0.03em;
 }
 
 .cell .atomic_mass {
-    font-size: 8px;
-    text-align: center;
-    font-weight: 400;
+  font-size: 8px;
+  text-align: center;
+  font-weight: 400;
 }
 
 .cell .symbol-name {
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-    line-height: 25px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 25px;
 }
 
 .dummy-cell {
-    width: $cellWidth;
-    height: 42px;
-    border-left:1px solid #000;
-    border-right:1px solid #000;
+  width: $cellWidth;
+  height: 42px;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
 }
 .address-cell {
-    width: $cellWidth;
-    height: 64px;
-    border: 1.5px solid #ddd;
-    border-radius: 5px;
+  width: $cellWidth;
+  height: 64px;
+  border: 1.5px solid #ddd;
+  border-radius: 5px;
 
-    font-family: Arimo;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 12px; 
+  font-family: Arimo;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 12px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .id-row-element {
-    margin-left:18px;
-    height: 18px;
-    text-align: center;
-    color: black;
+  margin-left: 18px;
+  height: 18px;
+  text-align: center;
+  color: black;
 }
 .id-column-element {
-    float:left;
-    color: black;
+  float: left;
+  color: black;
 }
 .column-cell {
-    width: 15px;
-    height: 54px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+  width: 15px;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .row-cell {
-    width:  57.8px;
-    height: 10px;
-    // margin: 1px;
-    // background-color: red;
+  width: 57.8px;
+  height: 10px;
+  // margin: 1px;
+  // background-color: red;
 }
 
 .table {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .centertop {
-    // margin-left: 141px;
-    width: 605px;
-    float:left;
+  // margin-left: 141px;
+  width: 605px;
+  float: left;
 }
 .centertop_title {
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 600;
-    padding: 27px 30px;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  padding: 27px 30px;
 
-    background-color: #F4F5F6;
-    border-radius: 5px;
-    
+  background-color: #f4f5f6;
+  border-radius: 5px;
 }
 .centertop_body {
-    margin-top: 5px;
-    padding: 20px 30px;
-    height: 94px;
-    border: 1.5px solid #DCDADA;
-    border-radius: 5px;
-    display: grid;
-    grid-template-columns: 50% 50%;
+  margin-top: 5px;
+  padding: 20px 30px;
+  height: 94px;
+  border: 1.5px solid #dcdada;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 .centertop_desc {
-    font-size: 12px;
-    font-weight: 400;
-    width: 242px;
-    line-height: 20px;
+  font-size: 12px;
+  font-weight: 400;
+  width: 242px;
+  line-height: 20px;
 }
 
 .centertop_info {
-    height: 96%;
-    display: grid;
-    grid-template-columns: 35% 30% 35%;
-    grid-template-rows: repeat(3, 33%);
-    gap: 3px;
+  height: 96%;
+  display: grid;
+  grid-template-columns: 35% 30% 35%;
+  grid-template-rows: repeat(3, 33%);
+  gap: 3px;
 }
 .element-id {
-    grid-column: 1;
-    grid-row: 1;
-    text-align: right;
-    margin-top: 5px;    
+  grid-column: 1;
+  grid-row: 1;
+  text-align: right;
+  margin-top: 5px;
 }
 .element-id > span {
-    border-bottom: $elementBorderBottom;
+  border-bottom: $elementBorderBottom;
 }
-.element-title{
-    grid-column: 1;
-    grid-row: 3;
-    text-align: right;
+.element-title {
+  grid-column: 1;
+  grid-row: 3;
+  text-align: right;
 }
 
 .element-title > span {
-    border-bottom: $elementBorderBottom;
+  border-bottom: $elementBorderBottom;
 }
 
-.element-symbol-title{
-    grid-column: 3;
-    grid-row: 2;
+.element-symbol-title {
+  grid-column: 3;
+  grid-row: 2;
 }
 .element-symbol-title > span {
-    border-bottom: $elementBorderBottom;
+  border-bottom: $elementBorderBottom;
 }
 
-.element-atomic-mass{
-    grid-column: 3;
-    grid-row: 3;
-    margin-top: 11px;
+.element-atomic-mass {
+  grid-column: 3;
+  grid-row: 3;
+  margin-top: 11px;
 }
 .element-atomic-mass > span {
-    border-bottom: $elementBorderBottom;
+  border-bottom: $elementBorderBottom;
 }
 
-.element-body{
-    grid-column: 2;
-    grid-row: 1/4;
-    display: grid;
-    grid-template-rows: repeat(3, 33%);
-    grid-template-columns: repeat(3, 33%);
-    border-radius: 5px;
-    border: 1.5px solid #DCDADA;
+.element-body {
+  grid-column: 2;
+  grid-row: 1/4;
+  display: grid;
+  grid-template-rows: repeat(3, 33%);
+  grid-template-columns: repeat(3, 33%);
+  border-radius: 5px;
+  border: 1.5px solid #dcdada;
 }
-.element-id-value{
-    grid-column: 1;
-    grid-row: 1;
-    text-align: center;
-    margin-top: 5px;
+.element-id-value {
+  grid-column: 1;
+  grid-row: 1;
+  text-align: center;
+  margin-top: 5px;
 }
-.element-symbol{
-    grid-column: 2;
-    grid-row: 2;
-    font-size:30px;
-    font-weight: bold;
-    line-height: 24px;
-    text-align: center;
+.element-symbol {
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 24px;
+  text-align: center;
 }
-
 
 .mat-mdc-dialog-container .mdc-dialog__surface {
-    background: transparent !important;
+  background: transparent !important;
 }
 
-
 .element-name-mass {
-    grid-column: 1/4;
-    grid-row: 3;
-    text-align: center;
-    margin-top: 4px;
+  grid-column: 1/4;
+  grid-row: 3;
+  text-align: center;
+  margin-top: 4px;
 }
 
 .element-name-mass > .ename {
-    font-weight: bold;
+  font-weight: bold;
 }
 .element-name-mass > .emass {
-    font-size: 10px;
+  font-size: 10px;
 }
 
 .mobile-ename {
-    font-size:8px;
+  font-size: 8px;
 }
 
 .cdk-overlay-dark-backdrop {
-    background: rgb(0 0 0 / 62%);
+  background: rgb(0 0 0 / 62%);
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,76 @@
+body {
+  overflow-y: scroll;
+}
+
+::ng-deep .mat-tree-node {
+  padding-left: 0 !important;
+}
+
+/* Add this CSS in your component's styles or in your global styles file */
+
+.custom-icon {
+  color: grey; /* Set the default color */
+}
+
+.custom-node-label {
+  // margin-left: 8px; /* Adjust the left margin for spacing between icon and label */
+  color: #838383; /* Set the default color */
+}
+
+.mat-tree-node:focus .custom-icon,
+.mat-tree-node:focus .custom-node-label {
+  /* Apply styles when a tree node has focus */
+  outline: 2px solid blue; /* Add a focus outline, customize as needed */
+  color: blue; /* Set the color for focused state, customize as needed */
+}
+
+/* Add this CSS in your component's styles or in your global styles file */
+
+.custom-node-label {
+  cursor: pointer; /* Add a pointer cursor to indicate clickable */
+  font-size: medium;
+  color: #000;
+}
+
+/* Add this CSS in your component's styles or in your global styles file */
+
+/* Customize the background color for selected nodes */
+/* .mat-tree-node.selected {
+  background-color: #e0e0e0; 
+} */
+
+/* Add this CSS in your component's styles or in your global styles file */
+
+mat-divider {
+  margin-top: 10px; /* Adjust the top margin as needed */
+  margin-bottom: 10px; /* Adjust the bottom margin as needed */
+}
+
+.editor mat-card {
+  background-color: #83838330;
+}
+
+.checkbox {
+  margin-right: 1em;
+}
+
+/* Add this CSS in your component's styles or in your global styles file */
+
+.custom-toolbar {
+  background-color: #fff; /* Change to the desired background color */
+  color: black; /* Change to the desired text color */
+  text-align: center;
+  height: 64px; /* Adjust the height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add box shadow with desired values */
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-tree-node small {
+  color: #838383;
+}
