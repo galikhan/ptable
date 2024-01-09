@@ -19,11 +19,10 @@ import { LoginComponent } from './login/login.component';
 		BrowserModule,
 		AppRoutingModule,
 		BrowserAnimationsModule,
-		HttpClientModule
-
+		HttpClientModule,
 	],
 	exports: [
-		AddIconModule
+		AddIconModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],

@@ -1,5 +1,61 @@
-/* styles.css or your component's style file */
-.mat-dialog-container {
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust the last value for opacity */
-  z-index: 1000; /* Adjust the value based on your needs */
+.list-group {
+  margin-left: 1em;
+}
+
+.parent-btn:focus {
+  box-shadow: none !important;
+}
+
+.parent-btn {
+  text-decoration: none;
+  color: #000;
+}
+
+aside small {
+  margin-left: 2em;
+  color: grey;
+}
+
+.list-group-item {
+  border: none;
+}
+
+.nav-link {
+  width: 100%; /* Make the buttons full width */
+  text-align: left; /* Align the text to the left */
+  background-color: transparent; /* Set your custom background color */
+  color: #838383; /* Set text color */
+  border: none; /* Remove button border if needed */
+  margin-bottom: 5px; /* Add margin between buttons */
+  padding: 10px; /* Add padding for better spacing */
+}
+
+.nav-link:hover {
+  background-color: #2980b9; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+.nav-pills .nav-link.active {
+  background-color: #e6f1ff; /* Change background color on hover */
+  color: #0e6b9c; /* Change text color on hover */
+}
+
+.accordion-item {
+  border: none;
+}
+
+.accordion-button {
+  box-shadow: none;
+  margin: 0;
+}
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+}
+
+.accordion-body {
+  padding: 0 15px;
 }

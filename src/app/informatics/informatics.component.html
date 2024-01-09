@@ -15,28 +15,6 @@
 	<div class="row mt-4">
 		<div class="col-lg-3">
 			<mat-card>
-				<!-- <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
-
-					<mat-tree-node *matTreeNodeDef="let node" [class.selected]="isSelected(node)">
-						<button mat-icon-button disabled>
-							<mat-icon class="custom-icon">folder</mat-icon>
-						</button>
-						<span class="custom-node-label" (click)="onNodeClick(node)">
-							{{node.name}}
-						</span>
-					</mat-tree-node>
-
-
-
-					<mat-tree-node *matTreeNodeDef="let node;when: hasChild">
-						<button mat-icon-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.name">
-							{{node.name}}
-							<mat-icon class="mat-icon-rtl-mirror">
-								{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
-							</mat-icon>
-						</button>
-					</mat-tree-node>
-				</mat-tree> -->
 
 				<mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="example-tree">
 

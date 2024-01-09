@@ -1,28 +1,38 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { TopicComponent } from './dialogs/topic/topic.component';
+
+
 
 @Component({
 	selector: 'app-admin',
 	templateUrl: './admin.component.html',
-	styleUrls: ['./admin.component.scss']
+	styleUrls: ['./admin.component.scss'],
 })
 export class AdminComponent {
-	constructor(
-		public dialog: MatDialog
-	) { }
+	addTopicName: string = "";
+	data = [
+		{
+			topicName: "Ввод и вывод данных",
+			children: [
+				{ id: 1, name: "Ввод и вывод данных" },
+				{ id: 2, name: "Сумма трех чисел", },
+				{ id: 3, name: "Площадь прямоугольного треугольника", },
+				{ id: 4, name: "Дележ яблок" },
+			]
+		}
+	]
+	body: any;
 
-	openModal() {
-		const dialogRef = this.dialog.open(TopicComponent, {
-			width: '40%',
-			data: {
-				title: 'My Modal',
-				content: 'This is the content of my modal.',
-			},
-		});
 
-		dialogRef.afterClosed().subscribe((result) => {
-			console.log(`Dialog result: ${result}`);
-		});
+	onClickChild(children: any) {
+		console.log(children)
+		this.body = children;
 	}
+
+	addTopic() {
+		this.data.push({ topicName: this.addTopicName, children: [] })
+		this.addTopicName = "";
+	}
+
+	addSubtopic() { }
+
 }

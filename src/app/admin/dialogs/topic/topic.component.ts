@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormArray, Validators, FormControl } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
@@ -8,20 +8,8 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 	styleUrls: ['./topic.component.scss']
 })
 export class TopicComponent implements OnInit {
-	step = 0;
-	myForm!: FormGroup;
+	topicForm!: FormGroup;
 
-	setStep(index: number) {
-		this.step = index;
-	}
-
-	nextStep() {
-		this.step++;
-	}
-
-	prevStep() {
-		this.step--;
-	}
 
 	constructor(
 		public dialogRef: MatDialogRef<TopicComponent>,
@@ -30,19 +18,8 @@ export class TopicComponent implements OnInit {
 	) { }
 
 	ngOnInit(): void {
-		this.myForm = this.fb.group({
-			topic: ['', Validators.required],
-			subtopic: ['', Validators.required],
-			descriptions: this.fb.array([
-				this.initDescription()
-			])
-		});
-	}
-
-	initDescription(): FormGroup {
-		return this.fb.group({
-			description: ['', Validators.required],
-			example: ['', Validators.required]
+		this.topicForm = this.fb.group({
+			topic: ['', [Validators.required]],
 		});
 	}
 
@@ -50,18 +27,8 @@ export class TopicComponent implements OnInit {
 		this.dialogRef.close();
 	}
 
-	addDescription(): void {
-		const control = this.myForm.get('descriptions') as FormArray;
-		control.push(this.initDescription());
-	}
-
-	removeDescription(index: number): void {
-		const control = this.myForm.get('descriptions') as FormArray;
-		control.removeAt(index);
-	}
-
 	submitForm(): void {
-		// Handle form submission
-		console.log(this.myForm.value);
+		console.log(this.topicForm.value)
+		this.dialogRef.close(this.topicForm.value);
 	}
 }

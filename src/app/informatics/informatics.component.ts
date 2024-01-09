@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { FlatTreeControl } from '@angular/cdk/tree';
 import { MatTreeFlatDataSource, MatTreeFlattener } from '@angular/material/tree';
 import { SelectionModel } from '@angular/cdk/collections';
@@ -67,13 +66,6 @@ interface TreeNode {
 	children?: TreeNode[];
 }
 
-export interface Tile {
-	color: string;
-	cols: number;
-	rows: number;
-	text: string;
-}
-
 @Component({
 	selector: 'app-informatics',
 	templateUrl: './informatics.component.html',
@@ -81,10 +73,6 @@ export interface Tile {
 })
 export class InformaticsComponent {
 	selection = new SelectionModel<TreeNode>(true, [], true); // Setting the third argument to true enables single selection
-	tiles: Tile[] = [
-		{ text: 'One', cols: 4, rows: 2, color: 'lightblue' },
-		{ text: 'Two', cols: 2, rows: 2, color: 'lightgreen' },
-	];
 	private _transformer = (node: FoodNode, level: number) => {
 		return {
 			expandable: !!node.children && node.children.length > 0,

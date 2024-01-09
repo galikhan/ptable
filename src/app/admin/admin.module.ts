@@ -12,7 +12,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { MatCardModule } from '@angular/material/card';
+import { MatTreeModule } from '@angular/material/tree';
+import { FormsModule } from '@angular/forms';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
 	declarations: [
@@ -29,7 +32,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 		MatFormFieldModule,
 		MatInputModule,
 		MatExpansionModule,
-		ReactiveFormsModule
+		ReactiveFormsModule,
+		MatCardModule,
+		MatTreeModule,
+		FormsModule,
+		MatCheckboxModule
 	]
 })
 export class AdminModule { }
