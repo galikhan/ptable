@@ -18,8 +18,8 @@
 
 			<form class="row g-3">
 				<div class="col-lg-8">
-					<label for="staticEmail2" class="visually-hidden">Topic</label>
-					<input type="text" class="form-control" id="staticEmail2" [(ngModel)]="addTopicName"
+
+					<input placeholder="Введите тему" type="text" class="form-control" [(ngModel)]="addTopicName"
 						[ngModelOptions]="{standalone: true}">
 				</div>
 				<div class="col-lg-auto">
@@ -45,9 +45,9 @@
 										type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">{{children.name}}</span>
 
 									<form class="row g-3">
-										<div class="col-lg-8">
-											<label for="staticEmail2" class="visually-hidden">Темы</label>
-											<input type="text" class="form-control" id="staticEmail2" [(ngModel)]="addTopicName"
+										<div class="col-lg-7">
+
+											<input placeholder="Введите подтему" type="text" class="form-control" [(ngModel)]="addTopicName"
 												[ngModelOptions]="{standalone: true}">
 										</div>
 										<div class="col-lg-auto">
@@ -69,12 +69,28 @@
 		</aside>
 
 		<!-- Main content area -->
-		<main role="main" class="col-md-8 ml-sm-auto col-lg-9 px-md-4">
+		<main role="main" class="col-md-8 ml-sm-auto col-lg-9 px-md-4" *ngIf="body">
 			<!-- Your main content goes here -->
-			<h1>Занятие</h1>
+
 			<div class="tab-content" id="v-pills-tabContent">
 				<div class="tab-pane fade show active" [id]="'v-pills' + body?.id" role="tabpanel">
-					{{body?.name}}
+					<h1 class="body-title"><span>Занятие {{body?.id}}.</span> {{body?.name}}</h1>
+					<hr>
+					<span>
+						Python 3 — это современный язык, на котором просто и приятно писать программы.
+						Для печати значений в Питоне есть функция print(). Внутри круглых скобок через запятую мы пишем то, что
+						хотим вывести. Вот программа, которая делает несколько вычислений:
+					</span>
+
+					<div class="row mt-4">
+						<div class="col-auto">
+							<div class="body-actions">
+								<button type="button" class="btn btn-primary">Добавить описание</button>
+								<button type="button" class="btn btn-secondary">Добавить код</button>
+								<button type="button" class="btn btn-success">Добавить картинку</button>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</main>
