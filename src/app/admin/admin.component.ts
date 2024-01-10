@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AdminComponent {
 	addTopicName: string = "";
+	addSubTopicName: string = "";
 	data = [
 		{
 			topicName: "Ввод и вывод данных",
