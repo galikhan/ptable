@@ -19,7 +19,7 @@
 				<mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="example-tree">
 
 					<mat-tree-node *matTreeNodeDef="let node" [class.selected]="isSelected(node)">
-						<button mat-icon-button disabled>
+						<button mat-icon-button [disabled]="true">
 							<mat-icon class="custom-icon">folder</mat-icon>
 						</button>
 						<span class="custom-node-label-child" (click)="onNodeClick(node)">
