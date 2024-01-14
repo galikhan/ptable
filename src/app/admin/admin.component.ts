@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Observable} from "rxjs";
+import {ApiService} from "./services/api.service";
+import {ParentDatum} from "./constants/interface";
 
 
 
@@ -7,7 +10,7 @@ import { Component } from '@angular/core';
 	templateUrl: './admin.component.html',
 	styleUrls: ['./admin.component.scss'],
 })
-export class AdminComponent {
+export class AdminComponent implements OnInit{
 	addTopicName: string = "";
 	addSubTopicName: string = "";
 	data = [
@@ -20,9 +23,14 @@ export class AdminComponent {
 				{ id: 4, name: "Дележ яблок" },
 			]
 		}
-	]
+	];
+  parentData!: ParentDatum[];
 	body: any;
 
+  constructor(
+    private apiService: ApiService
+  ) {
+  }
 
 	onClickChild(children: any) {
 		console.log(children)
@@ -30,10 +38,41 @@ export class AdminComponent {
 	}
 
 	addTopic() {
-		this.data.push({ topicName: this.addTopicName, children: [] })
-		this.addTopicName = "";
+    const parentDto = {
+      name: this.addTopicName,
+      parent: 1
+    };
+    this.apiService.createTopic(parentDto).subscribe(response => {
+      console.log(response)
+    })
 	}
 
-	addSubtopic() { }
+	addSubtopic(parent: ParentDatum) {
+    console.log(parent)
+    const childDto = {
+      name: this.addSubTopicName,
+      parent: parent.id
+    }
+    this.apiService.createTopic(childDto).subscribe(response => {
+      console.log(response)
+    })
+  }
+
+  ngOnInit(): void {
+    this.getParentTopics();
+  }
+
+  private getParentTopics() {
+    this.apiService.getParentTopics().subscribe(response => {
+      console.log(response);
+      this.parentData = response;
+    })
+  }
+
+  getTopicByParentId(parentId: number) {
+    this.apiService.getTopicByParentId(parentId).subscribe(response => {
+      console.log(response)
+    })
+  }
 
 }
