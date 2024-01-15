@@ -1,7 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {Observable} from "rxjs";
 import {ApiService} from "./services/api.service";
-import {ParentDatum} from "./constants/interface";
+import {ParentDatum, TopicDto} from "./constants/interface";
+import {MatDialog} from "@angular/material/dialog";
+import {TopicComponent} from "./dialogs/topic/topic.component";
 
 
 
@@ -25,16 +27,18 @@ export class AdminComponent implements OnInit{
 		}
 	];
   parentData!: ParentDatum[];
-	body: any;
+  childData!: ParentDatum[];
+	selectedSubTopic: any;
 
   constructor(
-    private apiService: ApiService
+    private apiService: ApiService,
+    public dialog: MatDialog
   ) {
   }
 
 	onClickChild(children: any) {
 		console.log(children)
-		this.body = children;
+    this.selectedSubTopic = children;
 	}
 
 	addTopic() {
@@ -48,14 +52,27 @@ export class AdminComponent implements OnInit{
 	}
 
 	addSubtopic(parent: ParentDatum) {
-    console.log(parent)
-    const childDto = {
-      name: this.addSubTopicName,
-      parent: parent.id
-    }
-    this.apiService.createTopic(childDto).subscribe(response => {
-      console.log(response)
+    const dialog = this.dialog.open(TopicComponent, {
+      data: {
+        type: 'child'
+      },
+      width: '20%'
     })
+
+    dialog.afterClosed().subscribe((subTopicName => {
+      console.log(subTopicName)
+      if (subTopicName) {
+        const childDto = {
+          name: subTopicName,
+          parent: parent.id,
+          is_removed_: false
+        }
+        this.apiService.createTopic(childDto).subscribe((response:any) => {
+          console.log(response);
+          this.getTopicByParentId(response.parent)
+        })
+      }
+    }))
   }
 
   ngOnInit(): void {
