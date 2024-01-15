@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Observable} from "rxjs";
 import {ApiService} from "./services/api.service";
-import {ParentDatum, TopicDto} from "./constants/interface";
+import {ParentDatum} from "./constants/interface";
 import {MatDialog} from "@angular/material/dialog";
 import {TopicComponent} from "./dialogs/topic/topic.component";
 
