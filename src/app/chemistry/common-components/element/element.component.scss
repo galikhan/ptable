@@ -133,3 +133,6 @@ $opacityAnimate: 0.5s;
 .id, .name, .atomic_mass {color: black;}
 .symbol-name {font-weight: bold;}
 
+.shrink-text {
+    letter-spacing: 0.01em !important;
+}

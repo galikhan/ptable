@@ -34,7 +34,7 @@
                         <div class="id">{{ elements.get(y)?.get(x)?.number }}</div>
                         <div class="symbol-name">{{ elements.get(y)?.get(x)?.symbol }}</div>
 
-                        <div class="name">{{ elements.get(y)?.get(x)?.name }}</div>
+                        <div class="name" [ngClass]="{ 'shrink-text': elements.get(y)?.get(x)?.number == 59 }">{{ elements.get(y)?.get(x)?.name }}</div>
                         <div class="atomic_mass">{{ elements.get(y)?.get(x)?.atomic_mass | number:'1.0-3' }}</div>
                     </div>
                 </div>
