@@ -13,17 +13,6 @@ import {TopicComponent} from "./dialogs/topic/topic.component";
 })
 export class AdminComponent implements OnInit{
 	addTopicName: string = "";
-	data = [
-		{
-			topicName: "Ввод и вывод данных",
-			children: [
-				{ id: 1, name: "Ввод и вывод данных" },
-				{ id: 2, name: "Сумма трех чисел", },
-				{ id: 3, name: "Площадь прямоугольного треугольника", },
-				{ id: 4, name: "Дележ яблок" },
-			]
-		}
-	];
   parentData!: ParentDatum[];
   childData!: ParentDatum[];
 	selectedSubTopic: any;
