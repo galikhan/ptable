@@ -13,7 +13,6 @@ import {TopicComponent} from "./dialogs/topic/topic.component";
 })
 export class AdminComponent implements OnInit{
 	addTopicName: string = "";
-	addSubTopicName: string = "";
 	data = [
 		{
 			topicName: "Ввод и вывод данных",
@@ -64,7 +63,7 @@ export class AdminComponent implements OnInit{
         const childDto = {
           name: subTopicName,
           parent: parent.id,
-          is_removed_: false
+          isRemoved: false
         }
         this.apiService.createTopic(childDto).subscribe((response:any) => {
           console.log(response);
@@ -87,7 +86,8 @@ export class AdminComponent implements OnInit{
 
   getTopicByParentId(parentId: number) {
     this.apiService.getTopicByParentId(parentId).subscribe(response => {
-      console.log(response)
+      console.log(response);
+      this.childData = response;
     })
   }
 
