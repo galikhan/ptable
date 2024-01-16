@@ -1,79 +1,16 @@
 <div class="modal-content">
-	<h2 mat-dialog-title>Add topic</h2>
+	<h2 mat-dialog-title>{{data.type === 'child' ? 'Добавить подтему' : 'Добавить тему'}}</h2>
 	<mat-dialog-content class="mat-typography">
 
 		<div class="container">
 			<div class="row mt-4 mb-4">
 				<div class="col-lg-12">
-					<!-- <mat-accordion class="example-headers-align">
-						<mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
-							<mat-expansion-panel-header>
-								<mat-panel-title>
-									Topic
-								</mat-panel-title>
-								<mat-panel-description>
-									Add your topic and subtopic
-									<mat-icon>topic</mat-icon>
-								</mat-panel-description>
-							</mat-expansion-panel-header>
 
-							<form [formGroup]="topicForm">
-								<mat-form-field appearance="outline">
-									<mat-label>Topic</mat-label>
-									<input matInput formControlName="topic" />
-								</mat-form-field>
-
-								<mat-form-field appearance="outline">
-									<mat-label>Subtopic</mat-label>
-									<input matInput formControlName="subtopic" />
-								</mat-form-field>
-							</form>
-
-							<mat-action-row>
-								<button mat-button color="primary" (click)="nextStep()">Continue</button>
-							</mat-action-row>
-						</mat-expansion-panel>
-
-
-						<mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
-							<mat-expansion-panel-header>
-								<mat-panel-title>
-									Description
-								</mat-panel-title>
-								<mat-panel-description>
-									Type your example code and description
-									<mat-icon>description</mat-icon>
-								</mat-panel-description>
-							</mat-expansion-panel-header>
-
-
-							<form [formGroup]="descriptionForm">
-								<div formArrayName="items">
-									<div *ngFor="let item of items.controls; let i = index">
-										<div [formGroupName]="i">
-											<mat-form-field appearance="outline">
-												<mat-label>Description</mat-label>
-												<textarea formControlName="description" matInput placeholder="Ex. Python is"></textarea>
-											</mat-form-field>
-
-											<mat-form-field appearance="outline">
-												<mat-label>Example</mat-label>
-												<textarea formControlName="example" matInput placeholder="Ex. print(5 + 10)"></textarea>
-											</mat-form-field>
-
-											<button mat-button color="primary" (click)="removeItem(i)">Удалить</button>
-										</div>
-									</div>
-								</div>
-								<button mat-button color="primary" (click)="addItem()">Добавить</button>
-							</form>
-						</mat-expansion-panel>
-					</mat-accordion> -->
 
 					<form [formGroup]="topicForm">
 						<mat-form-field appearance="outline">
-							<mat-label>Topic</mat-label>
-							<input matInput formControlName="topic" />
+							<mat-label>{{data.type === 'child' ? 'Подтема' : 'Тема'}}</mat-label>
+							<input matInput formControlName="name" />
 						</mat-form-field>
 					</form>
 				</div>
@@ -82,6 +19,6 @@
 	</mat-dialog-content>
 	<mat-dialog-actions align="end">
 		<button mat-button mat-dialog-close>Отмена</button>
-		<button mat-button (click)="submitForm()">Сохранить</button>
+		<button [disabled]="!topicForm.valid" mat-button (click)="submitForm()">Сохранить</button>
 	</mat-dialog-actions>
 </div>

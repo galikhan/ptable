@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormArray, Validators, FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
@@ -19,7 +19,7 @@ export class TopicComponent implements OnInit {
 
 	ngOnInit(): void {
 		this.topicForm = this.fb.group({
-			topic: ['', [Validators.required]],
+			name: ['', [Validators.required]],
 		});
 	}
 
@@ -28,7 +28,8 @@ export class TopicComponent implements OnInit {
 	}
 
 	submitForm(): void {
-		console.log(this.topicForm.value)
-		this.dialogRef.close(this.topicForm.value);
+		console.log(this.topicForm.value);
+    const topicName = this.topicForm.get('name')?.value;
+    if (topicName) this.dialogRef.close(topicName);
 	}
 }

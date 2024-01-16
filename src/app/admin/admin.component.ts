@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ApiService} from "./services/api.service";
+import {ParentDatum} from "./constants/interface";
+import {MatDialog} from "@angular/material/dialog";
+import {TopicComponent} from "./dialogs/topic/topic.component";
 
 
 
@@ -7,9 +11,8 @@ import { Component } from '@angular/core';
 	templateUrl: './admin.component.html',
 	styleUrls: ['./admin.component.scss'],
 })
-export class AdminComponent {
+export class AdminComponent implements OnInit{
 	addTopicName: string = "";
-	addSubTopicName: string = "";
 	data = [
 		{
 			topicName: "Ввод и вывод данных",
@@ -20,20 +23,72 @@ export class AdminComponent {
 				{ id: 4, name: "Дележ яблок" },
 			]
 		}
-	]
-	body: any;
+	];
+  parentData!: ParentDatum[];
+  childData!: ParentDatum[];
+	selectedSubTopic: any;
 
+  constructor(
+    private apiService: ApiService,
+    public dialog: MatDialog
+  ) {
+  }
 
 	onClickChild(children: any) {
 		console.log(children)
-		this.body = children;
+    this.selectedSubTopic = children;
 	}
 
 	addTopic() {
-		this.data.push({ topicName: this.addTopicName, children: [] })
-		this.addTopicName = "";
+    const parentDto = {
+      name: this.addTopicName,
+      parent: 1
+    };
+    this.apiService.createTopic(parentDto).subscribe(response => {
+      console.log(response)
+    })
 	}
 
-	addSubtopic() { }
+	addSubtopic(parent: ParentDatum) {
+    const dialog = this.dialog.open(TopicComponent, {
+      data: {
+        type: 'child'
+      },
+      width: '20%'
+    })
+
+    dialog.afterClosed().subscribe((subTopicName => {
+      console.log(subTopicName)
+      if (subTopicName) {
+        const childDto = {
+          name: subTopicName,
+          parent: parent.id,
+          isRemoved: false
+        }
+        this.apiService.createTopic(childDto).subscribe((response:any) => {
+          console.log(response);
+          this.getTopicByParentId(response.parent)
+        })
+      }
+    }))
+  }
+
+  ngOnInit(): void {
+    this.getParentTopics();
+  }
+
+  private getParentTopics() {
+    this.apiService.getParentTopics().subscribe(response => {
+      console.log(response);
+      this.parentData = response;
+    })
+  }
+
+  getTopicByParentId(parentId: number) {
+    this.apiService.getTopicByParentId(parentId).subscribe(response => {
+      console.log(response);
+      this.childData = response;
+    })
+  }
 
 }
