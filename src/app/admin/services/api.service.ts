@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {ParentDTO} from "../constants/interface";
+import {ParentDatum, ParentDTO} from "../constants/interface";
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +15,10 @@ export class ApiService {
 
   createTopic(body: ParentDTO) {
     return this.http.post(this.apiUrl, body)
+  }
+
+  deleteTopic(parentItem: ParentDatum) {
+    return this.http.delete(this.apiUrl + "/" + parentItem?.id)
   }
 
   getTopicByParentId(parentId: number) {

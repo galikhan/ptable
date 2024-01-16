@@ -8,6 +8,7 @@ export interface ParentDatum {
   name: string;
   parent: number;
   isRemoved: boolean;
+  children: SubTopics[]
 }
 
 export interface SubTopics {
