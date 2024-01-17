@@ -83,10 +83,20 @@ export class AdminComponent implements OnInit{
     })
   }
 
+  onClickAccordion(parentId: number) {
+    const accordionButton = document.querySelector('.accordion-button.collapsed');
+
+    if (accordionButton) {
+      // Call your function when the accordion button has the 'show' class
+      this.getTopicByParentId(parentId);
+    }
+  }
+
   deleteTopic(parentItem: ParentDatum) {
     this.isDisabledBtn = true;
     console.log(parentItem)
     this.apiService.deleteTopic(parentItem).subscribe(response => {
+      console.log(response)
       this.isDisabledBtn = false;
       this.getParentTopics();
     })
