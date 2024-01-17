@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import "node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import "vars.scss";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 
 .chemical-table {
   font-size: 12px;
@@ -70,7 +72,7 @@
   margin-left: 3px;
 }
 
-.row {
+.table-row {
   height: 71px;
 }
 
@@ -148,7 +150,7 @@
   // background-color: red;
 }
 
-.table {
+.element-table {
   margin-top: 20px;
 }
 
