@@ -12,11 +12,13 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
+import { BrythonEditorComponent } from './views/brython-editor/brython-editor.component';
 
 
 @NgModule({
 	declarations: [
-		InformaticsComponent
+		InformaticsComponent,
+  		BrythonEditorComponent
 	],
 	imports: [
 		CommonModule,

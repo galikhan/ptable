@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as json from '../../assets/PeriodicTableJSON.json'
 import { ChemicalElement } from '../interface/chemical-element';
+import { BrythonStateService } from '../service/brython.service';
 import { HighlightByTemperatureService } from '../service/highlight-by-temperature.service';
 import { HighlightStateService } from '../service/highlight-state.service';
 import { HighlightTypeService } from '../service/highlight-type.service';
@@ -48,9 +49,13 @@ export class AlchemyComponent {
       public highlightStateService: HighlightStateService,
       public highlightTypeService: HighlightTypeService,
       public byTemperatureService: HighlightByTemperatureService,
-      public elementService: ShowElementService
+      public elementService: ShowElementService,
+      public brython: BrythonStateService
     ) {
   
+    }
+    hello(vv: string): void {
+      this.brython.setNext(vv);
     }
   
     ngOnInit(): void {

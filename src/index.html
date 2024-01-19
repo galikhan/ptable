@@ -14,11 +14,25 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&display=swap" rel="stylesheet">
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.11.2/brython.min.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.11.2/brython_stdlib.min.js">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@2.28.2/dist/editorjs.umd.min.js"></script>
 </head>
 
-<body class="mat-typography">
+
+<body class="mat-typography" onload="brython()">
 	<app-root></app-root>
+	<script type="text/python" src="/assets/sample.py"></script>
+
+
+	<!-- <script type="text/python">
+		from browser import document
+		def echo(e):
+			print("echo ech")
+		document['mybutton'].bind('click', echo) -->
+	<!-- </script> -->
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
 		integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
 		crossorigin="anonymous"></script>
@@ -27,5 +41,4 @@
 		crossorigin="anonymous"></script>
 
 </body>
-
 </html>
