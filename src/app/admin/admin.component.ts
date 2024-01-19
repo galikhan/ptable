@@ -13,33 +13,29 @@ import {TopicComponent} from "./dialogs/topic/topic.component";
 })
 export class AdminComponent implements OnInit{
 	addTopicName: string = "";
-	data = [
-		{
-			topicName: "Ввод и вывод данных",
-			children: [
-				{ id: 1, name: "Ввод и вывод данных" },
-				{ id: 2, name: "Сумма трех чисел", },
-				{ id: 3, name: "Площадь прямоугольного треугольника", },
-				{ id: 4, name: "Дележ яблок" },
-			]
-		}
-	];
   parentData!: ParentDatum[];
   childData!: ParentDatum[];
 	selectedSubTopic: any;
+  selectedParentIndex!: number;
+  isDisabledBtn!: boolean;
 
   constructor(
     private apiService: ApiService,
     public dialog: MatDialog
   ) {
   }
+  ngOnInit(): void {
+    this.getParentTopics();
+  }
 
-	onClickChild(children: any) {
-		console.log(children)
+
+  onClickChild(children: any, parentIndex: number) {
+    console.log(children);
+    this.selectedParentIndex = parentIndex;
     this.selectedSubTopic = children;
-	}
+  }
 
-	addTopic() {
+  addTopic() {
     const parentDto = {
       name: this.addTopicName,
       parent: 1
@@ -47,9 +43,9 @@ export class AdminComponent implements OnInit{
     this.apiService.createTopic(parentDto).subscribe(response => {
       console.log(response)
     })
-	}
+  }
 
-	addSubtopic(parent: ParentDatum) {
+  addSubtopic(parent: ParentDatum) {
     const dialog = this.dialog.open(TopicComponent, {
       data: {
         type: 'child'
@@ -73,11 +69,7 @@ export class AdminComponent implements OnInit{
     }))
   }
 
-  ngOnInit(): void {
-    this.getParentTopics();
-  }
-
-  private getParentTopics() {
+  getParentTopics() {
     this.apiService.getParentTopics().subscribe(response => {
       console.log(response);
       this.parentData = response;
@@ -85,9 +77,18 @@ export class AdminComponent implements OnInit{
   }
 
   getTopicByParentId(parentId: number) {
-    this.apiService.getTopicByParentId(parentId).subscribe(response => {
-      console.log(response);
-      this.childData = response;
+    this.apiService.getTopicByParentId(parentId).subscribe(children => {
+      console.log(children);
+      this.childData = children;
+    })
+  }
+
+  deleteTopic(parentItem: ParentDatum) {
+    this.isDisabledBtn = true;
+    console.log(parentItem)
+    this.apiService.deleteTopic(parentItem).subscribe(response => {
+      this.isDisabledBtn = false;
+      this.getParentTopics();
     })
   }
 
