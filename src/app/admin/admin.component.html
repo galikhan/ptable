@@ -2,11 +2,11 @@
     <mat-toolbar class="d-flex justify-content-between">
         <span [routerLink]="['/admin']">Admin panel</span>
         <span>
-			<button [routerLink]="['/informatics']" mat-icon-button class="example-icon favorite-icon"
-                    aria-label="Example icon-button with heart icon">
-				<mat-icon>logout</mat-icon>
-			</button>
-		</span>
+            <button [routerLink]="['/informatics']" mat-icon-button class="example-icon favorite-icon"
+                aria-label="Example icon-button with heart icon">
+                <mat-icon>logout</mat-icon>
+            </button>
+        </span>
     </mat-toolbar>
 </p>
 
@@ -17,11 +17,11 @@
             <form class="row g-3">
                 <div class="col-lg-9">
                     <input placeholder="Введите тему" type="text" class="form-control" [(ngModel)]="addTopicName"
-                           [ngModelOptions]="{standalone: true}">
+                        [ngModelOptions]="{standalone: true}">
                 </div>
                 <div class="col-lg-3">
                     <button [disabled]="addTopicName.length < 3" type="submit" class="btn btn-primary mb-3 w-100"
-                            (click)="addTopic()">Добавить
+                        (click)="addTopic()">Добавить
                     </button>
                 </div>
             </form>
@@ -30,16 +30,15 @@
             <div class="accordion" id="accordionFlushExample">
                 <div class="accordion-item" *ngFor="let item of parentData; let i = index">
                     <small class="p-0">Занятие {{ i + 1 }}</small>
-                    <button (click)="onClickAccordion(item.id);" class="accordion-button" [ngClass]="{'collapsed' :!ifRouteHasTopic(i) }" type="button"
-                            data-bs-toggle="collapse"
-                            [attr.data-bs-target]="'#collapse' + i"
-                            aria-expanded="true">
+                    <button (click)="onClickAccordion(item.id);" class="accordion-button"
+                        [ngClass]="{'collapsed' :!ifRouteHasTopic(i) }" type="button" data-bs-toggle="collapse"
+                        [attr.data-bs-target]="'#collapse' + i" aria-expanded="true">
                         {{ item.name }}
                     </button>
 
 
                     <div [id]="'collapse' + i" class="accordion-collapse collapse"
-                         [ngClass]="{'show': ifRouteHasTopic(i)}" data-bs-parent="#accordionFlushExample">
+                        [ngClass]="{'show': ifRouteHasTopic(i)}" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <!-- Your content here -->
                             <div *ngIf="!childData" class="spinner-border" role="status">
@@ -47,13 +46,13 @@
                             </div>
                             <!-- Example subtopics -->
                             <div *ngIf="childData" class="nav w-100 nav-pills" id="v-pills-tab" role="tablist"
-                                 aria-orientation="vertical">
+                                aria-orientation="vertical">
                                 <button (click)="onClickChild(children, i)"
-                                        *ngFor="let children of childData; let j = index"
-                                        class="nav-link" [id]="'v-pills' + j" data-bs-toggle="pill" [ngClass]="{'active': isRouteHasSubtopic(children)}"
-                                        data-bs-target="#v-pills-home"
-                                        type="button"
-                                        role="tab" aria-controls="v-pills-home" aria-selected="true">{{ children.name }}
+                                    *ngFor="let children of childData; let j = index" class="nav-link"
+                                    [id]="'v-pills' + j" data-bs-toggle="pill"
+                                    [ngClass]="{'active': isRouteHasSubtopic(children)}" data-bs-target="#v-pills-home"
+                                    type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">{{
+                                    children.name }}
                                 </button>
 
 
@@ -61,14 +60,14 @@
 
                                     <div class="col-lg-auto">
                                         <button [disabled]="isDisabledBtn" type="submit"
-                                                class="btn btn-sm btn-primary mb-3 w-100"
-                                                (click)="addSubtopic(item)">Добавить подтему
+                                            class="btn btn-sm btn-primary mb-3 w-100"
+                                            (click)="addSubtopic(item)">Добавить подтему
                                         </button>
                                     </div>
                                     <div class="col-lg-auto">
                                         <button [disabled]="isDisabledBtn" type="submit"
-                                                class="btn btn-sm btn-danger mb-3 w-100"
-                                                (click)="deleteTopic(item)">Удалить тему
+                                            class="btn btn-sm btn-danger mb-3 w-100" (click)="deleteTopic(item)">Удалить
+                                            тему
                                         </button>
                                     </div>
                                 </form>
@@ -86,13 +85,15 @@
             <div class="tab-content" id="v-pills-tabContent">
                 <div class="tab-pane fade show active" [id]="'v-pills' + selectedSubTopic?.id" role="tabpanel">
                     <h1 class="body-title"><span>Занятие {{ selectedParentIndex + 1 }}
-                        .</span> {{ selectedSubTopic?.name }}</h1>
+                            .</span> {{ selectedSubTopic?.name }}</h1>
                     <hr>
                     <span>
-						Python 3 — это современный язык, на котором просто и приятно писать программы.
-						Для печати значений в Питоне есть функция print(). Внутри круглых скобок через запятую мы пишем то, что
-						хотим вывести. Вот программа, которая делает несколько вычислений:
-					</span>
+                        Python 3 — это современный язык, на котором просто и приятно писать программы.
+                        Для печати значений в Питоне есть функция print(). Внутри круглых скобок через запятую мы пишем
+                        то, что
+                        хотим вывести. Вот программа, которая делает несколько вычислений:
+                    </span>
+
 
 
                     <div class="row mt-4">
@@ -106,6 +107,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </main>
     </div>
