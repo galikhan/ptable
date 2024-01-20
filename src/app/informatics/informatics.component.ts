@@ -43,7 +43,7 @@ export class InformaticsComponent implements OnInit {
     })
   }
 
-  onClickAccordion(parentId: number, index: number) {
+  onClickAccordion(parentId: number) {
     this.getTopicByParentId(parentId);
   }
 

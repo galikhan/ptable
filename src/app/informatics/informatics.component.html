@@ -20,7 +20,7 @@
       <div class="accordion" id="accordionFlushExample">
         <div class="accordion-item" *ngFor="let item of parentData; let i = index">
           <small class="p-0">Занятие {{ i + 1 }}</small>
-          <button (click)="onClickAccordion(item.id, i);" class="accordion-button" [ngClass]="{'collapsed' :!ifRouteHasTopic(i) }" type="button"
+          <button (click)="onClickAccordion(item.id);" class="accordion-button" [ngClass]="{'collapsed' :!ifRouteHasTopic(i) }" type="button"
                   data-bs-toggle="collapse"
                   [attr.data-bs-target]="'#collapse' + i"
                   aria-expanded="true">

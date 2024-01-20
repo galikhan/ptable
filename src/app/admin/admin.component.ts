@@ -7,135 +7,134 @@ import {ContentComponent} from "./dialogs/content/content.component";
 import {CodeComponent} from "./dialogs/code/code.component";
 import {ActivatedRoute, Params, Router} from "@angular/router";
 
-// declare const $: any; // Import Bootstrap's JavaScript functions
-
 @Component({
-    selector: 'app-admin',
-    templateUrl: './admin.component.html',
-    styleUrls: ['./admin.component.scss'],
+  selector: 'app-admin',
+  templateUrl: './admin.component.html',
+  styleUrls: ['./admin.component.scss'],
 })
 export class AdminComponent implements OnInit, AfterViewInit {
-    addTopicName: string = "";
-    parentData!: ParentDatum[];
-    childData!: ParentDatum[];
-    selectedSubTopic: any;
-    selectedParentIndex!: number;
-    isDisabledBtn!: boolean;
-    selectedRouteTopicId!: number;
+  addTopicName: string = "";
+  parentData!: ParentDatum[];
+  childData!: ParentDatum[];
+  selectedSubTopic: any;
+  selectedParentIndex!: number;
+  isDisabledBtn!: boolean;
+  routeTopicIndex!: number;
+  routeSubtopicId!: number;
 
-    constructor(
-        private apiService: ApiService,
-        public dialog: MatDialog,
-        private router: Router,
-        private route: ActivatedRoute
-    ) {
-    }
+  constructor(
+    private apiService: ApiService,
+    public dialog: MatDialog,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {
+  }
 
-    ifRouteHasTopic(parentIndex: number) {
-        const topicId = this.selectedRouteTopicId;
-        return !!(topicId && (topicId - 1) == parentIndex);
-    }
+  ngAfterViewInit(): void {
+  }
 
-    ngAfterViewInit(): void {
-    }
+  ngOnInit(): void {
+    this.route.params.subscribe((params: Params) => {
+      this.routeTopicIndex = +params['topicId'];
+      this.routeSubtopicId = +params['subtopicId'];
+    });
 
-    ngOnInit(): void {
-        this.route.params.subscribe((params: Params) => {
-            this.selectedRouteTopicId = +params['topicId'];
-        });
+    this.getParentTopics();
+  }
 
-        this.getParentTopics();
-    }
+  getParentTopics() {
+    this.apiService.getParentTopics().subscribe(response => {
+      this.parentData = response;
+      if (this.routeTopicIndex) {
+        this.selectedParentIndex = this.routeTopicIndex - 1;
+        const childId = response[this.selectedParentIndex]?.id;
+        console.log(childId)
+        this.getTopicByParentId(childId);
+      }
+    })
+  }
 
-    addContent() {
-        const dialog = this.dialog.open(ContentComponent, {
-            width: '50%'
-        })
-    }
+  onClickAccordion(parentId: number) {
+    this.getTopicByParentId(parentId);
+  }
 
-    addCode() {
-        const dialog = this.dialog.open(CodeComponent, {
-            width: '50%'
-        })
-    }
+  getTopicByParentId(parentId: number) {
+    this.apiService.getTopicByParentId(parentId).subscribe(children => {
+      this.childData = children;
+      if (this.routeSubtopicId) {
+        const filteredChild = this.childData.filter(child => child?.id == this.routeSubtopicId);
+        this.selectedSubTopic = filteredChild[0];
+        console.log(this.selectedSubTopic)
+      }
+    })
+  }
 
-    onClickChild(children: any, parentIndex: number) {
-        const parentTopic = parentIndex + 1;
-        this.router.navigate(['/admin/topic/' + parentTopic + '/subtopic/', children.id])
-        this.selectedParentIndex = parentIndex;
-        this.selectedSubTopic = children;
-    }
+  ifRouteHasTopic(parentIndex: number) {
+    const topicId = this.routeTopicIndex; // 1
+    return !!(topicId && (topicId - 1) == parentIndex);
+  }
 
-    addTopic() {
-        const parentDto = {
-            name: this.addTopicName,
-            parent: 1
-        };
-        this.apiService.createTopic(parentDto).subscribe(response => {
-            console.log(response)
-        })
-    }
+  isRouteHasSubtopic(children: ParentDatum) {
+    return this.selectedSubTopic?.id === children.id;
+  }
 
-    addSubtopic(parent: ParentDatum) {
-        const dialog = this.dialog.open(TopicComponent, {
-            data: {
-                type: 'child'
-            },
-            width: '20%'
-        })
+  onClickChild(children: any, parentIndex: number) {
+    const parentTopic = parentIndex + 1;
+    this.router.navigate(['/admin/topic/' + parentTopic + '/subtopic/', children.id])
+    this.selectedParentIndex = parentIndex;
+    this.selectedSubTopic = children;
+  }
 
-        dialog.afterClosed().subscribe((subTopicName => {
-            if (subTopicName) {
-                const childDto = {
-                    name: subTopicName,
-                    parent: parent.id,
-                    isRemoved: false
-                }
-                this.apiService.createTopic(childDto).subscribe((response: any) => {
-                    this.getTopicByParentId(response.parent)
-                })
-            }
-        }))
-    }
+  // Admin side functions
+  addContent() {
+    const dialog = this.dialog.open(ContentComponent, {
+      width: '50%'
+    })
+  }
 
-    getParentTopics() {
-        this.apiService.getParentTopics().subscribe(response => {
-            this.parentData = response;
-            if (this.selectedRouteTopicId) {
-                this.selectedParentIndex = this.selectedRouteTopicId - 1;
-                const childId = response[this.selectedParentIndex]?.id;
-                console.log(childId)
-                this.getTopicByParentId(childId);
-            }
-        })
-    }
+  addCode() {
+    const dialog = this.dialog.open(CodeComponent, {
+      width: '50%'
+    })
+  }
 
-    getTopicByParentId(parentId: number) {
-        this.apiService.getTopicByParentId(parentId).subscribe(children => {
-            this.childData = children;
-            this.selectedSubTopic = children[this.selectedParentIndex];
-        })
-    }
+  addTopic() {
+    const parentDto = {
+      name: this.addTopicName,
+      parent: 1
+    };
+    this.apiService.createTopic(parentDto).subscribe(response => {
+      console.log(response)
+    })
+  }
 
-    onClickAccordion(parentId: number, index: number) {
-        this.getTopicByParentId(parentId);
-    }
+  addSubtopic(parent: ParentDatum) {
+    const dialog = this.dialog.open(TopicComponent, {
+      data: {
+        type: 'child'
+      },
+      width: '20%'
+    })
 
-    deleteTopic(parentItem: ParentDatum) {
-        this.isDisabledBtn = true;
-        this.apiService.deleteTopic(parentItem).subscribe(response => {
-            this.isDisabledBtn = false;
-            this.getParentTopics();
-        })
-    }
-
-
-    private toggleCollapse(index: number) {
-        const itemId = `collapse${index}`;
-        const element = document.getElementById(itemId);
-
-        if (element) {
-            element.classList.toggle('show');
+    dialog.afterClosed().subscribe((subTopicName => {
+      if (subTopicName) {
+        const childDto = {
+          name: subTopicName,
+          parent: parent.id,
+          isRemoved: false
         }
-    }
+        this.apiService.createTopic(childDto).subscribe((response: any) => {
+          this.getTopicByParentId(response.parent)
+        })
+      }
+    }))
+  }
+
+  deleteTopic(parentItem: ParentDatum) {
+    this.isDisabledBtn = true;
+    this.apiService.deleteTopic(parentItem).subscribe(response => {
+      this.isDisabledBtn = false;
+      this.getParentTopics();
+    })
+  }
 }
