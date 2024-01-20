@@ -1,11 +1,11 @@
-import {AfterViewInit, Component, ElementRef, OnInit} from "@angular/core";
+import {AfterViewInit, Component, OnInit} from "@angular/core";
 import {ApiService} from "./services/api.service";
 import {ParentDatum} from "./constants/interface";
 import {MatDialog} from "@angular/material/dialog";
 import {TopicComponent} from "./dialogs/topic/topic.component";
-import EditorJS from '@editorjs/editorjs';
 import {ContentComponent} from "./dialogs/content/content.component";
 import {CodeComponent} from "./dialogs/code/code.component";
+import {ActivatedRoute, Params, Router} from "@angular/router";
 
 @Component({
   selector: 'app-admin',
@@ -19,29 +19,73 @@ export class AdminComponent implements OnInit, AfterViewInit {
   selectedSubTopic: any;
   selectedParentIndex!: number;
   isDisabledBtn!: boolean;
-
-
-  /*Code editor*/
-  // editor!: EditorJS;
-  /*Code editor*/
+  routeTopicIndex!: number;
+  routeSubtopicId!: number;
 
   constructor(
     private apiService: ApiService,
     public dialog: MatDialog,
-    private elementRef: ElementRef
+    private router: Router,
+    private route: ActivatedRoute
   ) {
   }
 
   ngAfterViewInit(): void {
-    // this.editor = new EditorJS({
-    //   holder: 'editorJs',
-    // });
   }
 
   ngOnInit(): void {
+    this.route.params.subscribe((params: Params) => {
+      this.routeTopicIndex = +params['topicId'];
+      this.routeSubtopicId = +params['subtopicId'];
+    });
+
     this.getParentTopics();
   }
 
+  getParentTopics() {
+    this.apiService.getParentTopics().subscribe(response => {
+      this.parentData = response;
+      if (this.routeTopicIndex) {
+        this.selectedParentIndex = this.routeTopicIndex - 1;
+        const childId = response[this.selectedParentIndex]?.id;
+        console.log(childId)
+        this.getTopicByParentId(childId);
+      }
+    })
+  }
+
+  onClickAccordion(parentId: number) {
+    this.getTopicByParentId(parentId);
+  }
+
+  getTopicByParentId(parentId: number) {
+    this.apiService.getTopicByParentId(parentId).subscribe(children => {
+      this.childData = children;
+      if (this.routeSubtopicId) {
+        const filteredChild = this.childData.filter(child => child?.id == this.routeSubtopicId);
+        this.selectedSubTopic = filteredChild[0];
+        console.log(this.selectedSubTopic)
+      }
+    })
+  }
+
+  ifRouteHasTopic(parentIndex: number) {
+    const topicId = this.routeTopicIndex; // 1
+    return !!(topicId && (topicId - 1) == parentIndex);
+  }
+
+  isRouteHasSubtopic(children: ParentDatum) {
+    return this.selectedSubTopic?.id === children.id;
+  }
+
+  onClickChild(children: any, parentIndex: number) {
+    const parentTopic = parentIndex + 1;
+    this.router.navigate(['/admin/topic/' + parentTopic + '/subtopic/', children.id])
+    this.selectedParentIndex = parentIndex;
+    this.selectedSubTopic = children;
+  }
+
+  // Admin side functions
   addContent() {
     const dialog = this.dialog.open(ContentComponent, {
       width: '50%'
@@ -52,11 +96,6 @@ export class AdminComponent implements OnInit, AfterViewInit {
     const dialog = this.dialog.open(CodeComponent, {
       width: '50%'
     })
-  }
-
-  onClickChild(children: any, parentIndex: number) {
-    this.selectedParentIndex = parentIndex;
-    this.selectedSubTopic = children;
   }
 
   addTopic() {
@@ -91,25 +130,6 @@ export class AdminComponent implements OnInit, AfterViewInit {
     }))
   }
 
-  getParentTopics() {
-    this.apiService.getParentTopics().subscribe(response => {
-      this.parentData = response;
-    })
-  }
-
-  getTopicByParentId(parentId: number) {
-    this.apiService.getTopicByParentId(parentId).subscribe(children => {
-      this.childData = children;
-    })
-  }
-
-  onClickAccordion(parentId: number, index: number) {
-    // TODO call function on expand accordion, or collapse return;
-    const accordionButton = document.querySelector('.accordion-button.collapsed');
-
-    this.getTopicByParentId(parentId);
-  }
-
   deleteTopic(parentItem: ParentDatum) {
     this.isDisabledBtn = true;
     this.apiService.deleteTopic(parentItem).subscribe(response => {
@@ -117,6 +137,4 @@ export class AdminComponent implements OnInit, AfterViewInit {
       this.getParentTopics();
     })
   }
-
-
 }

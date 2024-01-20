@@ -4,6 +4,7 @@ import { AdminComponent } from './admin.component';
 
 const routes: Routes = [
 	{ path: '', component: AdminComponent },
+	{ path: 'topic/:topicId/subtopic/:subtopicId', component: AdminComponent },
 ];
 
 @NgModule({
