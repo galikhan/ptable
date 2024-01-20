@@ -1,8 +1,8 @@
 <p>
     <mat-toolbar class="d-flex justify-content-between">
-        <span>Admin panel</span>
+        <span [routerLink]="['/admin']">Admin panel</span>
         <span>
-			<button [routerLink]="['/login']" mat-icon-button class="example-icon favorite-icon"
+			<button [routerLink]="['/informatics']" mat-icon-button class="example-icon favorite-icon"
                     aria-label="Example icon-button with heart icon">
 				<mat-icon>logout</mat-icon>
 			</button>

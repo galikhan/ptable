@@ -1,76 +1,79 @@
-body {
-  overflow-y: scroll;
+.list-group {
+  margin-left: 1em;
 }
 
-::ng-deep .mat-tree-node {
-  padding-left: 0 !important;
+.parent-btn:focus {
+  box-shadow: none !important;
 }
 
-/* Add this CSS in your component's styles or in your global styles file */
-
-.custom-icon {
-  color: grey; /* Set the default color */
-}
-
-.custom-node-label {
-  // margin-left: 8px; /* Adjust the left margin for spacing between icon and label */
-  color: #838383; /* Set the default color */
-}
-
-.mat-tree-node:focus .custom-icon,
-.mat-tree-node:focus .custom-node-label {
-  /* Apply styles when a tree node has focus */
-  outline: 2px solid blue; /* Add a focus outline, customize as needed */
-  color: blue; /* Set the color for focused state, customize as needed */
-}
-
-/* Add this CSS in your component's styles or in your global styles file */
-
-.custom-node-label {
-  cursor: pointer; /* Add a pointer cursor to indicate clickable */
-  font-size: medium;
+.parent-btn {
+  text-decoration: none;
   color: #000;
 }
 
-/* Add this CSS in your component's styles or in your global styles file */
-
-/* Customize the background color for selected nodes */
-/* .mat-tree-node.selected {
-  background-color: #e0e0e0; 
-} */
-
-/* Add this CSS in your component's styles or in your global styles file */
-
-mat-divider {
-  margin-top: 10px; /* Adjust the top margin as needed */
-  margin-bottom: 10px; /* Adjust the bottom margin as needed */
+aside small {
+  margin-left: 2em;
+  color: grey;
 }
 
-.editor mat-card {
-  background-color: #83838330;
+.list-group-item {
+  border: none;
 }
 
-.checkbox {
+.nav-link {
+  width: 100%; /* Make the buttons full width */
+  text-align: left; /* Align the text to the left */
+  background-color: transparent; /* Set your custom background color */
+  color: #838383; /* Set text color */
+  border: none; /* Remove button border if needed */
+  margin-bottom: 5px; /* Add margin between buttons */
+  padding: 10px; /* Add padding for better spacing */
+}
+
+.nav-link:hover {
+  background-color: #2980b9; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+.nav-pills .nav-link.active {
+  background-color: #e6f1ff; /* Change background color on hover */
+  color: #0e6b9c; /* Change text color on hover */
+}
+
+.accordion {
+  border: 1px solid #80808038;
+  padding: 1em 0;
+}
+
+.accordion-item {
+  border: none;
+}
+
+.accordion-button {
+  box-shadow: none;
+  margin: 0;
+}
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+}
+
+.accordion-body {
+  padding: 0 15px;
+}
+
+.body-title span {
+  color: #0e6b9c;
+}
+
+.body-actions button {
   margin-right: 1em;
 }
 
-/* Add this CSS in your component's styles or in your global styles file */
-
-.custom-toolbar {
-  background-color: #fff; /* Change to the desired background color */
-  color: black; /* Change to the desired text color */
-  text-align: center;
-  height: 64px; /* Adjust the height as needed */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add box shadow with desired values */
-}
-
-.example-spacer {
-  flex: 1 1 auto;
-}
-
-.mat-tree-node small {
-  color: #838383;
+.app-ace-editor {
+  border: 2px solid #f8f9fa;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }

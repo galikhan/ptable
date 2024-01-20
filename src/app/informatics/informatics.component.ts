@@ -1,114 +1,82 @@
-import { Component } from '@angular/core';
-import { FlatTreeControl } from '@angular/cdk/tree';
-import { MatTreeFlatDataSource, MatTreeFlattener } from '@angular/material/tree';
-import { SelectionModel } from '@angular/cdk/collections';
+import {Component, OnInit} from '@angular/core';
+import {ParentDatum} from "../admin/constants/interface";
+import {ApiService} from "../admin/services/api.service";
+import {ActivatedRoute, Params, Router} from "@angular/router";
 
-
-interface FoodNode {
-	name: string;
-	children?: FoodNode[];
-}
-
-const TREE_DATA: FoodNode[] = [
-	{
-		name: 'Ввод и вывод данных',
-		children: [
-			{ name: 'Ввод и вывод данных' },
-			{ name: 'Сумма трех чисел' },
-			{ name: 'Площать прямоугольного треугольника' },
-		]
-	},
-	{
-		name: 'Условия',
-		children: [
-			{
-				name: 'Green',
-			}, {
-				name: 'Orange',
-
-			},
-		]
-	},
-	{
-		name: 'Вычесления',
-		children: [
-			{
-				name: 'Green',
-			}, {
-				name: 'Orange',
-
-			},
-		]
-	},
-	{
-		name: 'Цикл for',
-		children: [
-			{
-				name: 'Green',
-			}, {
-				name: 'Orange',
-
-			},
-		]
-	},
-];
-
-/** Flat node with expandable and level information */
-interface ExampleFlatNode {
-	expandable: boolean;
-	name: string;
-	level: number;
-}
-
-interface TreeNode {
-	id: number;
-	name: string;
-	children?: TreeNode[];
-}
 
 @Component({
-	selector: 'app-informatics',
-	templateUrl: './informatics.component.html',
-	styleUrls: ['./informatics.component.scss']
+  selector: 'app-informatics',
+  templateUrl: './informatics.component.html',
+  styleUrls: ['./informatics.component.scss']
 })
-export class InformaticsComponent {
-	selection = new SelectionModel<TreeNode>(true, [], true); // Setting the third argument to true enables single selection
-	private _transformer = (node: FoodNode, level: number) => {
-		return {
-			expandable: !!node.children && node.children.length > 0,
-			name: node.name,
-			level: level,
-		};
-	}
+export class InformaticsComponent implements OnInit{
+  parentData!: ParentDatum[];
+  childData!: ParentDatum[];
+  selectedSubTopic: any;
+  selectedParentIndex!: number;
+  routeSubtopicId!: number;
 
-	treeControl = new FlatTreeControl<ExampleFlatNode>(
-		node => node.level, node => node.expandable);
+  constructor(
+    private apiService: ApiService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {
+  }
 
-	treeFlattener = new MatTreeFlattener(
-		this._transformer, node => node.level, node => node.expandable, node => node.children);
+  ngOnInit(): void {
+    this.route.params.subscribe((params: Params) => {
+      this.selectedParentIndex = +params['topicId']; // 2
+      console.log(this.selectedParentIndex);
+      this.routeSubtopicId = +params['subtopicId'];
+    });
 
-	dataSource = new MatTreeFlatDataSource(this.treeControl, this.treeFlattener);
-	selectedNode!: TreeNode;
-	checked = false;
+    this.getParentTopics();
+  }
 
-	constructor() {
-		this.dataSource.data = TREE_DATA;
-	}
+  getParentTopics() {
+    this.apiService.getParentTopics().subscribe(response => {
+      this.parentData = response;
+      if (this.selectedParentIndex) { // 2
+        const parentId = response[this.selectedParentIndex - 1]?.id;
+        console.log(parentId) // 8
+        this.getTopicByParentId(parentId);
+      }
+    })
+  }
 
-	ngOnInit(): void {
+  onClickAccordion(parentId: number, index: number) {
+    this.getTopicByParentId(parentId);
+  }
 
-	}
+  getTopicByParentId(parentId: number) {
+    this.apiService.getTopicByParentId(parentId).subscribe(children => {
+      this.childData = children;
+      if (this.routeSubtopicId) {
+        const filteredChild = this.childData.filter(child=> child?.id == this.routeSubtopicId);
+        this.selectedSubTopic = filteredChild[0];
+        console.log(this.selectedSubTopic)
+      }
+      // this.selectedSubTopic = children[this.selectedParentIndex];
+    })
+  }
 
-	hasChild = (_: number, node: ExampleFlatNode) => node.expandable;
+  ifRouteHasTopic(parentIndex: number) {
+    const topicId = this.selectedParentIndex; // 1
+    return !!(topicId && (topicId - 1) == parentIndex);
+  }
 
+  isRouteHasSubtopic(index: number, children: ParentDatum) {
+    // console.log(this.selectedSubTopic) // element, object;
+    // const filtered = this.childData.filter(child => child.id == this.selectedSubTopic?.id);
+    // console.log(filtered)
+  return false;
+  }
 
-	isSelected(node: TreeNode): boolean {
-		return this.selection.isSelected(node);
-	}
-
-	onNodeClick(node: TreeNode): void {
-		this.selection.toggle(node);
-		this.selectedNode = node;
-	}
+  onClickChild(children: any, parentIndex: number) {
+    const parentTopic = parentIndex + 1;
+    this.router.navigate(['/informatics/topic/' + parentTopic + '/subtopic/', children.id])
+    this.selectedParentIndex = parentIndex;
+    this.selectedSubTopic = children;
+  }
 
 }
