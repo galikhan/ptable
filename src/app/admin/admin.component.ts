@@ -1,36 +1,60 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnInit} from "@angular/core";
 import {ApiService} from "./services/api.service";
 import {ParentDatum} from "./constants/interface";
 import {MatDialog} from "@angular/material/dialog";
 import {TopicComponent} from "./dialogs/topic/topic.component";
-
-
+import EditorJS from '@editorjs/editorjs';
+import {ContentComponent} from "./dialogs/content/content.component";
+import {CodeComponent} from "./dialogs/code/code.component";
 
 @Component({
-	selector: 'app-admin',
-	templateUrl: './admin.component.html',
-	styleUrls: ['./admin.component.scss'],
+  selector: 'app-admin',
+  templateUrl: './admin.component.html',
+  styleUrls: ['./admin.component.scss'],
 })
-export class AdminComponent implements OnInit{
-	addTopicName: string = "";
+export class AdminComponent implements OnInit, AfterViewInit {
+  addTopicName: string = "";
   parentData!: ParentDatum[];
   childData!: ParentDatum[];
-	selectedSubTopic: any;
+  selectedSubTopic: any;
   selectedParentIndex!: number;
   isDisabledBtn!: boolean;
 
+
+  /*Code editor*/
+  // editor!: EditorJS;
+  /*Code editor*/
+
   constructor(
     private apiService: ApiService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private elementRef: ElementRef
   ) {
   }
+
+  ngAfterViewInit(): void {
+    // this.editor = new EditorJS({
+    //   holder: 'editorJs',
+    // });
+  }
+
   ngOnInit(): void {
     this.getParentTopics();
   }
 
+  addContent() {
+    const dialog = this.dialog.open(ContentComponent, {
+      width: '50%'
+    })
+  }
+
+  addCode() {
+    const dialog = this.dialog.open(CodeComponent, {
+      width: '50%'
+    })
+  }
 
   onClickChild(children: any, parentIndex: number) {
-    console.log(children);
     this.selectedParentIndex = parentIndex;
     this.selectedSubTopic = children;
   }
@@ -54,15 +78,13 @@ export class AdminComponent implements OnInit{
     })
 
     dialog.afterClosed().subscribe((subTopicName => {
-      console.log(subTopicName)
       if (subTopicName) {
         const childDto = {
           name: subTopicName,
           parent: parent.id,
           isRemoved: false
         }
-        this.apiService.createTopic(childDto).subscribe((response:any) => {
-          console.log(response);
+        this.apiService.createTopic(childDto).subscribe((response: any) => {
           this.getTopicByParentId(response.parent)
         })
       }
@@ -71,35 +93,30 @@ export class AdminComponent implements OnInit{
 
   getParentTopics() {
     this.apiService.getParentTopics().subscribe(response => {
-      console.log(response);
       this.parentData = response;
     })
   }
 
   getTopicByParentId(parentId: number) {
     this.apiService.getTopicByParentId(parentId).subscribe(children => {
-      console.log(children);
       this.childData = children;
     })
   }
 
-  onClickAccordion(parentId: number) {
+  onClickAccordion(parentId: number, index: number) {
+    // TODO call function on expand accordion, or collapse return;
     const accordionButton = document.querySelector('.accordion-button.collapsed');
 
-    if (accordionButton) {
-      // Call your function when the accordion button has the 'show' class
-      this.getTopicByParentId(parentId);
-    }
+    this.getTopicByParentId(parentId);
   }
 
   deleteTopic(parentItem: ParentDatum) {
     this.isDisabledBtn = true;
-    console.log(parentItem)
     this.apiService.deleteTopic(parentItem).subscribe(response => {
-      console.log(response)
       this.isDisabledBtn = false;
       this.getParentTopics();
     })
   }
+
 
 }

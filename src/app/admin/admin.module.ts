@@ -16,11 +16,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTreeModule } from '@angular/material/tree';
 import { FormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import {ContentComponent} from './dialogs/content/content.component';
+import {CodeComponent} from './dialogs/code/code.component';
 
 @NgModule({
 	declarations: [
 		AdminComponent,
-		TopicComponent
+    TopicComponent,
+    ContentComponent,
+    CodeComponent
 	],
 	imports: [
 		CommonModule,
@@ -36,7 +40,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 		MatCardModule,
 		MatTreeModule,
 		FormsModule,
-		MatCheckboxModule
-	]
+    MatCheckboxModule,
+  ],
+  providers: []
 })
 export class AdminModule { }
