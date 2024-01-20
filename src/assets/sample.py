@@ -51,11 +51,11 @@ sys.stdout = MyOutput()
 """
 
 
-def run(ev):
+def run(id):
     #document["input-letter"].clear()
     print("ev ")
     print(ev)
-    document["output"].clear()
+    #document["output"].clear()
     code = document["textarea-editor"].value    
     code = imports + utils + stdout_to_textarea + code
     code = replaceInput(code)
@@ -98,7 +98,8 @@ def replaceInput(code):
 @bind(document["mybutton1"], "click")
 def runCode(ev):
     # print("hellow rodl")
-    print(document["mybuttonparam"].value)
-    run(ev)
+    #print()
+    currentid = document["mybuttonparam"].value
+    run(currentid)
 
 # document['mybutton'].bind('click', runCode('paramofRuncode'))

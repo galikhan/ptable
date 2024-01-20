@@ -1,3 +1,11 @@
+<div class="row">
+	<div class="col-md-12">
+		<h2 #hh2>hellow</h2>
+		<div #editorjs id="editorjs" style="margin:auto; width:400px; height: 400px; border: 1px solid grey"></div>
+	</div>
+</div>
+
+
 <p>
 	<mat-toolbar class="d-flex justify-content-between">
 		<span>Python</span>
@@ -71,6 +79,7 @@
 		<main role="main" class="col-md-8 ml-sm-auto col-lg-9 px-md-4" *ngIf="selectedSubTopic">
 			<!-- Your main content goes here -->
 
+
 			<div class="tab-content" id="v-pills-tabContent">
 				<div class="tab-pane fade show active" [id]="'v-pills' + selectedSubTopic?.id" role="tabpanel">
 					<h1 class="body-title"><span>Занятие {{ routeTopicIndex + 1 }}
@@ -83,6 +92,7 @@
 						хотим вывести. Вот программа, которая делает несколько вычислений:
 					</span>
 				</div>
+
 			</div>
 		</main>
 	</div>

@@ -1,7 +1,8 @@
-import {Component, OnInit} from '@angular/core';
-import {ParentDatum} from "../admin/constants/interface";
-import {ApiService} from "../admin/services/api.service";
-import {ActivatedRoute, Params, Router} from "@angular/router";
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ParentDatum } from "../admin/constants/interface";
+import { ApiService } from "../admin/services/api.service";
+import { ActivatedRoute, Params, Router } from "@angular/router";
+import EditorJS from '@editorjs/editorjs';
 
 
 @Component({
@@ -9,13 +10,15 @@ import {ActivatedRoute, Params, Router} from "@angular/router";
   templateUrl: './informatics.component.html',
   styleUrls: ['./informatics.component.scss']
 })
-export class InformaticsComponent implements OnInit {
+
+export class InformaticsComponent implements OnInit, AfterViewInit {
+  @ViewChild('editorjs', { static: false }) public el!: ElementRef<HTMLElement>;
   parentData!: ParentDatum[];
   childData!: ParentDatum[];
   selectedSubTopic: any;
   routeTopicIndex!: number;
   routeSubtopicId!: number;
-
+  
   constructor(
     private apiService: ApiService,
     private router: Router,
@@ -23,6 +26,7 @@ export class InformaticsComponent implements OnInit {
   ) {
   }
 
+  
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
       this.routeTopicIndex = +params['topicId']; // 2
@@ -47,6 +51,7 @@ export class InformaticsComponent implements OnInit {
     this.getTopicByParentId(parentId);
   }
 
+
   getTopicByParentId(parentId: number) {
     this.apiService.getTopicByParentId(parentId).subscribe(children => {
       this.childData = children;
@@ -57,6 +62,20 @@ export class InformaticsComponent implements OnInit {
       }
     })
   }
+
+  ngAfterViewInit() {
+    // const native = document.getElementById('editorjs');
+    // if (native) {
+    const editor = new EditorJS({
+      holder: this.el.nativeElement,
+      tools: {
+        // header: Header,
+        // list: List
+      },
+    });
+    // }
+  }
+
 
   ifRouteHasTopic(parentIndex: number) {
     const topicId = this.routeTopicIndex; // 1
