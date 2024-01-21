@@ -12,13 +12,12 @@ import EditorJS from '@editorjs/editorjs';
 })
 
 export class InformaticsComponent implements OnInit, AfterViewInit {
-  @ViewChild('editorjs', { static: false }) public el!: ElementRef<HTMLElement>;
   parentData!: ParentDatum[];
   childData!: ParentDatum[];
   selectedSubTopic: any;
   routeTopicIndex!: number;
   routeSubtopicId!: number;
-  
+
   constructor(
     private apiService: ApiService,
     private router: Router,
@@ -26,7 +25,7 @@ export class InformaticsComponent implements OnInit, AfterViewInit {
   ) {
   }
 
-  
+
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
       this.routeTopicIndex = +params['topicId']; // 2
@@ -64,16 +63,6 @@ export class InformaticsComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    // const native = document.getElementById('editorjs');
-    // if (native) {
-    const editor = new EditorJS({
-      holder: this.el.nativeElement,
-      tools: {
-        // header: Header,
-        // list: List
-      },
-    });
-    // }
   }
 
 
