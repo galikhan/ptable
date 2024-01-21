@@ -1,0 +1,11 @@
+<div class="modal-content">
+  <h1 mat-dialog-title>Удаление {{ injectedData.type == 'child' ? 'подтемы' : 'темы' }}</h1>
+  <div mat-dialog-content>
+    Вы уверены что хотите удалить?
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Закрыть</button>
+    <button (click)="confirmDeletion(true)" mat-button>Подтвердить</button>
+  </div>
+</div>
+

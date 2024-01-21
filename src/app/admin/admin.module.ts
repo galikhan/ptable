@@ -19,13 +19,15 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ContentComponent } from './dialogs/content/content.component';
 import { CodeComponent } from './dialogs/code/code.component';
 import { InformaticsModule } from '../informatics/informatics.module';
+import {DeleteConfirmationComponent} from './dialogs/delete-confirmation/delete-confirmation.component';
 
 @NgModule({
 	declarations: [
 		AdminComponent,
 		TopicComponent,
 		ContentComponent,
-		CodeComponent
+    CodeComponent,
+    DeleteConfirmationComponent
 	],
 	imports: [
 		CommonModule,

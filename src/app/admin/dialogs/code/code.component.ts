@@ -1,12 +1,11 @@
 import { AfterViewInit, Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import { Content } from 'src/app/interface/content';
 import { BrythonStateService } from 'src/app/service/brython.service';
 import { ContentService } from 'src/app/service/content.service';
+import {DiCodeData} from "../../constants/interface";
 
-export interface DiCodeData {
-  topic: number;
-}
+
 
 @Component({
   selector: 'app-code',
@@ -21,7 +20,8 @@ export class CodeComponent implements OnInit, AfterViewInit {
   constructor(
     public brython: BrythonStateService,
     public contentService: ContentService,
-    @Inject(MAT_DIALOG_DATA) public data: DiCodeData
+    @Inject(MAT_DIALOG_DATA) public data: DiCodeData,
+    public dialogRef: MatDialogRef<CodeComponent>,
   ) { }
 
   ngOnInit(): void {
@@ -42,19 +42,20 @@ export class CodeComponent implements OnInit, AfterViewInit {
 
   saveCode() {
     console.log('this.content', this.content);
-    
+
     if(this.content && this.content.id) {
       this.contentService.update(this.content).subscribe(result => {
-        console.log('jpdated');
+        console.log('updated');
+        this.dialogRef.close('updated')
       });
     } else {
-      
       this.contentService.create(this.content).subscribe(result => {
         this.content = result;
         console.log('created');
-        
+        this.dialogRef.close('created')
       });
     }
-   }
+
+  }
 
 }

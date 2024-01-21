@@ -40,4 +40,8 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit {
       this.brython.setNext(id);
     }
   }
+
+  editCode(id: number | undefined) {
+
+  }
 }

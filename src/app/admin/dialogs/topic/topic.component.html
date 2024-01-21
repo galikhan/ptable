@@ -1,5 +1,5 @@
 <div class="modal-content">
-	<h2 mat-dialog-title>{{data.type === 'child' ? 'Добавить подтему' : 'Добавить тему'}}</h2>
+  <h2 mat-dialog-title>{{ injectedData.type === 'child' ? 'Добавить подтему' : 'Добавить тему' }}</h2>
 	<mat-dialog-content class="mat-typography">
 
 		<div class="container">
@@ -9,7 +9,7 @@
 
 					<form [formGroup]="topicForm">
 						<mat-form-field appearance="outline">
-							<mat-label>{{data.type === 'child' ? 'Подтема' : 'Тема'}}</mat-label>
+              <mat-label>{{ injectedData.type === 'child' ? 'Подтема' : 'Тема' }}</mat-label>
 							<input matInput formControlName="name" />
 						</mat-form-field>
 					</form>

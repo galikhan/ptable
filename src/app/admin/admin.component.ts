@@ -1,14 +1,16 @@
 import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from "@angular/core";
 import {ApiService} from "./services/api.service";
-import {ParentDatum} from "./constants/interface";
+import {ChildContent, Topic, CreateParentDto} from "./constants/interface";
 import {MatDialog} from "@angular/material/dialog";
 import {TopicComponent} from "./dialogs/topic/topic.component";
 import {ContentComponent} from "./dialogs/content/content.component";
 import {CodeComponent} from "./dialogs/code/code.component";
 import {ActivatedRoute, Params, Router} from "@angular/router";
-import { ContentService } from "../service/content.service";
-import { Content } from "../interface/content";
+import {ContentService} from "../service/content.service";
+import {Content} from "../interface/content";
 import * as ace from 'ace-builds';
+import {DeleteConfirmationComponent} from "./dialogs/delete-confirmation/delete-confirmation.component";
+
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -16,8 +18,9 @@ import * as ace from 'ace-builds';
 })
 export class AdminComponent implements OnInit, AfterViewInit {
   addTopicName: string = "";
-  parentData!: ParentDatum[];
-  childData!: ParentDatum[];
+  parentData!: Topic[];
+  childData!: Topic[];
+  childContent!: ChildContent[];
   selectedSubTopic: any;
   selectedParentIndex!: number;
   isDisabledBtn!: boolean;
@@ -31,27 +34,27 @@ export class AdminComponent implements OnInit, AfterViewInit {
     public dialog: MatDialog,
     private router: Router,
     private route: ActivatedRoute,
-    private service: ContentService
+    private service: ContentService,
+    private contentService: ContentService,
   ) {
   }
 
   ngAfterViewInit(): void {
     console.log('this.supedit', this.supedit);
-    if(this.supedit) {
-      const el=this.supedit.nativeElement;
+    if (this.supedit) {
+      const el = this.supedit.nativeElement;
       let aceEditor = ace.edit(el);
       aceEditor.session.setValue("<h1>Ace Editor works great in Angular!</h1>");
-
     }
-
   }
-
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
       this.routeTopicIndex = +params['topicId'];
       this.routeSubtopicId = +params['subtopicId'];
 
-      if (this.routeSubtopicId) this.findByTopic();
+      if (this.routeSubtopicId) {
+        this.findByTopic();
+      }
     });
     this.getParentTopics();
   }
@@ -94,7 +97,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
     return !!(topicId && (topicId - 1) == parentIndex);
   }
 
-  isRouteHasSubtopic(children: ParentDatum) {
+  isRouteHasSubtopic(children: Topic) {
     return this.selectedSubTopic?.id === children.id;
   }
 
@@ -108,7 +111,46 @@ export class AdminComponent implements OnInit, AfterViewInit {
   // Admin side functions
   addContent() {
     const dialog = this.dialog.open(ContentComponent, {
+      data: {
+        topic: this.routeSubtopicId,
+        childContent: null
+      },
       width: '50%'
+    })
+    dialog.afterClosed().subscribe(result => {
+      console.log(result)
+      this.findByTopic();
+    })
+  }
+
+  editContent(childContent: any) {
+    console.log(childContent);
+    const dialog = this.dialog.open(ContentComponent, {
+      data: {
+        topic: this.routeSubtopicId,
+        childContent: childContent
+      }
+    })
+
+    dialog.afterClosed().subscribe(result => {
+      if (result) {
+        this.findByTopic();
+      }
+    })
+  }
+
+  deleteContent(childContent: any) {
+    const dialog = this.dialog.open(DeleteConfirmationComponent, {
+      data: {
+        type: 'content'
+      }
+    })
+    dialog.afterClosed().subscribe(result => {
+      if (result) {
+        this.contentService.remove(childContent.id).subscribe(response => {
+          this.findByTopic()
+        })
+      }
     })
   }
 
@@ -117,31 +159,39 @@ export class AdminComponent implements OnInit, AfterViewInit {
       data: {topic: this.routeSubtopicId},
       width: '50%'
     })
-  }
-
-  addTopic() {
-    const parentDto = {
-      name: this.addTopicName,
-      parent: 1
-    };
-    this.apiService.createTopic(parentDto).subscribe(response => {
-      console.log(response)
+    dialog.afterClosed().subscribe(result => {
+      console.log(result)
+      this.findByTopic();
     })
   }
 
-  addSubtopic(parent: ParentDatum) {
+  addTopic() {
+    const parentDto: CreateParentDto = {
+      name: this.addTopicName,
+      parent: 1,
+      isRemoved: false
+    };
+    this.apiService.createTopic(parentDto).subscribe(response => {
+      console.log(response);
+      this.getParentTopics();
+      this.addTopicName = "";
+    })
+  }
+
+  addSubtopic(childTopic: Topic) {
     const dialog = this.dialog.open(TopicComponent, {
       data: {
-        type: 'child'
+        type: 'child',
+        data: null,
       },
       width: '20%'
     })
 
-    dialog.afterClosed().subscribe((subTopicName => {
-      if (subTopicName) {
+    dialog.afterClosed().subscribe((childTopicName => {
+      if (childTopicName) {
         const childDto = {
-          name: subTopicName,
-          parent: parent.id,
+          name: childTopicName,
+          parent: childTopic.id,
           isRemoved: false
         }
         this.apiService.createTopic(childDto).subscribe((response: any) => {
@@ -151,11 +201,93 @@ export class AdminComponent implements OnInit, AfterViewInit {
     }))
   }
 
-  deleteTopic(parentItem: ParentDatum) {
+  deleteTopic(parentItem: Topic) {
     this.isDisabledBtn = true;
-    this.apiService.deleteTopic(parentItem).subscribe(response => {
-      this.isDisabledBtn = false;
-      this.getParentTopics();
+    const dialog = this.dialog.open(DeleteConfirmationComponent, {
+      data: {
+        type: 'parent'
+      }
+    })
+    dialog.afterClosed().subscribe(result => {
+      if (result) {
+        this.apiService.deleteTopic(parentItem).subscribe(response => {
+          this.isDisabledBtn = false;
+          this.getParentTopics();
+        })
+      }
     })
   }
+
+  deleteSubtopic(selectedSubtopic: Topic) {
+    const dialog = this.dialog.open(DeleteConfirmationComponent, {
+      data: {
+        type: 'child'
+      }
+    })
+
+    dialog.afterClosed().subscribe(result => {
+      if (result) {
+        this.apiService.deleteTopic(selectedSubtopic).subscribe(response => {
+          this.isDisabledBtn = false;
+          this.getParentTopics();
+        })
+      }
+    })
+  }
+
+  editTopicName(selectedTopic: Topic) {
+    console.log(selectedTopic)
+    const dialog = this.dialog.open(TopicComponent, {
+      data: {
+        type: 'parent',
+        data: selectedTopic,
+      },
+      width: '20%'
+    })
+
+    dialog.afterClosed().subscribe((topicName => {
+      if (topicName) {
+        const parentDto = {
+          id: selectedTopic.id,
+          name: topicName,
+          parent: selectedTopic.parent,
+          isRemoved: false
+        }
+        console.log(parentDto)
+        this.apiService.updateTopic(parentDto).subscribe((response: any) => {
+          this.router.navigate(['/admin']);
+          this.getParentTopics();
+        });
+      }
+    }))
+  }
+
+  editSubtopicName(selectedSubTopic: Topic) {
+    console.log(selectedSubTopic);
+    const dialog = this.dialog.open(TopicComponent, {
+      data: {
+        type: 'child',
+        data: selectedSubTopic,
+      },
+      width: '20%'
+    })
+
+    dialog.afterClosed().subscribe((childTopicName => {
+      if (childTopicName) {
+        const childDto = {
+          id: selectedSubTopic.id,
+          name: childTopicName,
+          parent: selectedSubTopic.parent,
+          isRemoved: false
+        }
+        this.apiService.updateTopic(childDto).subscribe((response: any) => {
+          this.getTopicByParentId(response.parent)
+        })
+      }
+    }))
+  }
+
+
+
+
 }
