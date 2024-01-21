@@ -34,14 +34,14 @@ export class AdminComponent implements OnInit, AfterViewInit {
     private service: ContentService
   ) {
   }
-  
+
   ngAfterViewInit(): void {
     console.log('this.supedit', this.supedit);
     if(this.supedit) {
       const el=this.supedit.nativeElement;
       let aceEditor = ace.edit(el);
       aceEditor.session.setValue("<h1>Ace Editor works great in Angular!</h1>");
-  
+
     }
 
   }
@@ -50,18 +50,16 @@ export class AdminComponent implements OnInit, AfterViewInit {
     this.route.params.subscribe((params: Params) => {
       this.routeTopicIndex = +params['topicId'];
       this.routeSubtopicId = +params['subtopicId'];
-      // this.openCodeDialog(this.routeSubtopicId);
 
-      this.service.findByTopic(this.routeSubtopicId).subscribe(contents => {
-        this.contents = contents;
-      });
-      // console.log(this.routeTopicIndex, params['topicId'])
+      if (this.routeSubtopicId) this.findByTopic();
     });
     this.getParentTopics();
   }
 
-  openCodeDialog(topic: number) {
-    this.dialog.open(CodeComponent, {data: {topic:topic}, width: '50%'});
+  findByTopic() {
+    this.service.findByTopic(this.routeSubtopicId).subscribe(contents => {
+      this.contents = contents;
+    });
   }
 
   getParentTopics() {
@@ -116,6 +114,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
 
   addCode() {
     const dialog = this.dialog.open(CodeComponent, {
+      data: {topic: this.routeSubtopicId},
       width: '50%'
     })
   }

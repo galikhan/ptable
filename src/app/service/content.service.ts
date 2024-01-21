@@ -8,8 +8,9 @@ import { Content } from '../interface/content';
 })
 export class ContentService {
 
-  // private apiUrl = 'http://161.97.144.45:8282/api/v1/content';
-  private apiUrl = 'http://localhost:8080/api/v1/content';
+  private apiUrl = 'http://161.97.144.45:8282/api/v1/content';
+
+  // private apiUrl = 'http://localhost:8080/api/v1/content';
   constructor(private http: HttpClient) { }
 
   create(content: Content): Observable<Content> {
