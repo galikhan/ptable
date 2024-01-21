@@ -1248,23 +1248,13 @@
 
 "@codexteam/icons@^0.0.5":
   version "0.0.5"
-  resolved "https://registry.yarnpkg.com/@codexteam/icons/-/icons-0.0.5.tgz#d17f39b6a0497c6439f57dd42711817a3dd3679c"
+  resolved "https://registry.npmjs.org/@codexteam/icons/-/icons-0.0.5.tgz"
   integrity sha512-s6H2KXhLz2rgbMZSkRm8dsMJvyUNZsEjxobBEg9ztdrb1B2H3pEzY6iTwI4XUPJWJ3c3qRKwV4TrO3J5jUdoQA==
 
 "@codexteam/icons@^0.0.6":
   version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@codexteam/icons/-/icons-0.0.6.tgz#5553ada48dddf5940851ccc142cfe17835c36ad3"
+  resolved "https://registry.npmjs.org/@codexteam/icons/-/icons-0.0.6.tgz"
   integrity sha512-L7Q5PET8PjKcBT5wp7VR+FCjwCi5PUp7rd/XjsgQ0CI5FJz0DphyHGRILMuDUdCW2MQT9NHbVr4QP31vwAkS/A==
-
-"@codexteam/icons@^0.0.5":
-  "integrity" "sha512-s6H2KXhLz2rgbMZSkRm8dsMJvyUNZsEjxobBEg9ztdrb1B2H3pEzY6iTwI4XUPJWJ3c3qRKwV4TrO3J5jUdoQA=="
-  "resolved" "https://registry.npmjs.org/@codexteam/icons/-/icons-0.0.5.tgz"
-  "version" "0.0.5"
-
-"@codexteam/icons@^0.0.6":
-  "integrity" "sha512-L7Q5PET8PjKcBT5wp7VR+FCjwCi5PUp7rd/XjsgQ0CI5FJz0DphyHGRILMuDUdCW2MQT9NHbVr4QP31vwAkS/A=="
-  "resolved" "https://registry.npmjs.org/@codexteam/icons/-/icons-0.0.6.tgz"
-  "version" "0.0.6"
 
 "@colors/colors@1.5.0":
   version "1.5.0"
@@ -1278,19 +1268,19 @@
 
 "@editorjs/editorjs@^2.28.2":
   version "2.28.2"
-  resolved "https://registry.yarnpkg.com/@editorjs/editorjs/-/editorjs-2.28.2.tgz#a265c7d10e83adef81813e4dc0f01fe3464dff50"
+  resolved "https://registry.npmjs.org/@editorjs/editorjs/-/editorjs-2.28.2.tgz"
   integrity sha512-g6V0Nd3W9IIWMpvxDNTssQ6e4kxBp1Y0W4GIf8cXRlmcBp3TUjrgCYJQmNy3l2a6ZzhyBAoVSe8krJEq4g7PQw==
 
 "@editorjs/header@^2.8.1":
   version "2.8.1"
-  resolved "https://registry.yarnpkg.com/@editorjs/header/-/header-2.8.1.tgz#ba16f43aaf461aa920c3594bdf0d854c4b5119b9"
+  resolved "https://registry.npmjs.org/@editorjs/header/-/header-2.8.1.tgz"
   integrity sha512-y0HVXRP7m2W617CWo3fsb5HhXmSLaRpb9GzFx0Vkp/HEm9Dz5YO1s8tC7R8JD3MskwoYh7V0hRFQt39io/r6hA==
   dependencies:
     "@codexteam/icons" "^0.0.5"
 
 "@editorjs/image@^2.9.0":
   version "2.9.0"
-  resolved "https://registry.yarnpkg.com/@editorjs/image/-/image-2.9.0.tgz#0c83252d569a0dc3af14c3f7d16b6df033b9c37b"
+  resolved "https://registry.npmjs.org/@editorjs/image/-/image-2.9.0.tgz"
   integrity sha512-xItihKJFiWJ06SMtLWQZvzHv4LRPNAFZYaHAXesBFzXvWwUrtVaVMcNSf0eNnw3InrPO3Po1vZRRgpsT+Ya3Bg==
   dependencies:
     "@codexteam/icons" "^0.0.6"
@@ -1402,24 +1392,6 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-arm64/-/win32-arm64-0.17.8.tgz#7c6ecfd097ca23b82119753bf7072bbaefe51e3a"
   integrity sha512-G0JQwUI5WdEFEnYNKzklxtBheCPkuDdu1YrtRrjuQv30WsYbkkoixKxLLv8qhJmNI+ATEWquZe/N0d0rpr55Mg==
 
-"@editorjs/editorjs@^2.28.2":
-  "integrity" "sha512-g6V0Nd3W9IIWMpvxDNTssQ6e4kxBp1Y0W4GIf8cXRlmcBp3TUjrgCYJQmNy3l2a6ZzhyBAoVSe8krJEq4g7PQw=="
-  "resolved" "https://registry.npmjs.org/@editorjs/editorjs/-/editorjs-2.28.2.tgz"
-  "version" "2.28.2"
-
-"@editorjs/header@^2.8.1":
-  "integrity" "sha512-y0HVXRP7m2W617CWo3fsb5HhXmSLaRpb9GzFx0Vkp/HEm9Dz5YO1s8tC7R8JD3MskwoYh7V0hRFQt39io/r6hA=="
-  "resolved" "https://registry.npmjs.org/@editorjs/header/-/header-2.8.1.tgz"
-  "version" "2.8.1"
-  dependencies:
-    "@codexteam/icons" "^0.0.5"
-
-"@editorjs/image@^2.9.0":
-  "integrity" "sha512-xItihKJFiWJ06SMtLWQZvzHv4LRPNAFZYaHAXesBFzXvWwUrtVaVMcNSf0eNnw3InrPO3Po1vZRRgpsT+Ya3Bg=="
-  "resolved" "https://registry.npmjs.org/@editorjs/image/-/image-2.9.0.tgz"
-  "version" "2.9.0"
-  dependencies:
-    "@codexteam/icons" "^0.0.6"
 "@esbuild/win32-ia32@0.17.8":
   version "0.17.8"
   resolved "https://registry.npmjs.org/@esbuild/win32-ia32/-/win32-ia32-0.17.8.tgz"
@@ -2683,6 +2655,11 @@ accepts@~1.3.4, accepts@~1.3.5, accepts@~1.3.8:
     mime-types "~2.1.34"
     negotiator "0.6.3"
 
+ace-builds@^1.32.3:
+  version "1.32.3"
+  resolved "https://registry.yarnpkg.com/ace-builds/-/ace-builds-1.32.3.tgz#13ea72e27339ffd56077149e8b00a31e6f685d38"
+  integrity sha512-ptSTUmDEU+LuwGiPY3/qQPmmAWE27vuv5sASL8swLRyLGJb7Ye7a8MrJ4NnAkFh1sJgVUqKTEGWRRFDmqYPw2Q==
+
 acorn-import-assertions@^1.7.6:
   version "1.9.0"
   resolved "https://registry.npmjs.org/acorn-import-assertions/-/acorn-import-assertions-1.9.0.tgz"
@@ -3211,22 +3188,6 @@ clone@^1.0.2:
   resolved "https://registry.npmjs.org/clone/-/clone-1.0.4.tgz"
   integrity sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==
 
-<<<<<<< HEAD
-"codex-notifier@^1.1.2":
-  "integrity" "sha512-DCp6xe/LGueJ1N5sXEwcBc3r3PyVkEEDNWCVigfvywAkeXcZMk9K41a31tkEFBW0Ptlwji6/JlAb49E3Yrxbtg=="
-  "resolved" "https://registry.npmjs.org/codex-notifier/-/codex-notifier-1.1.2.tgz"
-  "version" "1.1.2"
-
-"codex-tooltip@^1.0.5":
-  "integrity" "sha512-IuA8LeyLU5p1B+HyhOsqR6oxyFQ11k3i9e9aXw40CrHFTRO2Y1npNBVU3W1SvhKAbUU7R/YikUBdcYFP0RcJag=="
-  "resolved" "https://registry.npmjs.org/codex-tooltip/-/codex-tooltip-1.0.5.tgz"
-  "version" "1.0.5"
-
-"color-convert@^1.9.0":
-  "integrity" "sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg=="
-  "resolved" "https://registry.npmjs.org/color-convert/-/color-convert-1.9.3.tgz"
-  "version" "1.9.3"
-=======
 codex-notifier@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/codex-notifier/-/codex-notifier-1.1.2.tgz#a733079185f4c927fa296f1d71eb8753fe080895"
@@ -3241,7 +3202,6 @@ color-convert@^1.9.0:
   version "1.9.3"
   resolved "https://registry.npmjs.org/color-convert/-/color-convert-1.9.3.tgz"
   integrity sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==
->>>>>>> 5b7071b (editor js add)
   dependencies:
     color-name "1.1.3"
 

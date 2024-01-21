@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnInit} from "@angular/core";
+import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from "@angular/core";
 import {ApiService} from "./services/api.service";
 import {ParentDatum} from "./constants/interface";
 import {MatDialog} from "@angular/material/dialog";
@@ -8,7 +8,7 @@ import {CodeComponent} from "./dialogs/code/code.component";
 import {ActivatedRoute, Params, Router} from "@angular/router";
 import { ContentService } from "../service/content.service";
 import { Content } from "../interface/content";
-
+import * as ace from 'ace-builds';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -24,6 +24,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
   routeTopicIndex!: number;
   routeSubtopicId!: number;
   contents: Content[] = [];
+  @ViewChild('supEdit') public supedit!: ElementRef<HTMLElement>;
 
   constructor(
     private apiService: ApiService,
@@ -33,8 +34,16 @@ export class AdminComponent implements OnInit, AfterViewInit {
     private service: ContentService
   ) {
   }
-
+  
   ngAfterViewInit(): void {
+    console.log('this.supedit', this.supedit);
+    if(this.supedit) {
+      const el=this.supedit.nativeElement;
+      let aceEditor = ace.edit(el);
+      aceEditor.session.setValue("<h1>Ace Editor works great in Angular!</h1>");
+  
+    }
+
   }
 
   ngOnInit(): void {

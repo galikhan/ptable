@@ -5,9 +5,9 @@
             <button (click)="runCode(content.id)" id="run-code" style="margin-right:5px">запустить</button> <span
                 id="test-result"></span>
             <div class="editor-panel">
-                <textarea [(ngModel)]="content.body" #textareaEditor name="description" style="display: normal;"
+                <textarea [(ngModel)]="content.body" name="description" style="display: none;"
                     id="textarea-editor{{content.id}}"></textarea>
-                <!-- <div id="editor"></div> -->
+                <div id="editor{{content.id}}" class="ace-editor" #aceEditor></div>
                 <div id="error"></div>
             </div>
             <div id="input-output">
