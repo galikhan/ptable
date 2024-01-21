@@ -48,6 +48,12 @@
 									"maximumError": "4kb"
 								}
 							],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
 							"outputHashing": "all"
 						},
 						"development": {
@@ -56,8 +62,30 @@
 							"vendorChunk": true,
 							"extractLicenses": false,
 							"sourceMap": true,
-							"namedChunks": true
-						}
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
+            },
+            "staging": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.staging.ts"
+                }
+              ]
+            },
+            "local": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.local.ts"
+                }
+              ]
+            }
 					},
 					"defaultConfiguration": "production"
 				},
@@ -66,10 +94,16 @@
 					"configurations": {
 						"production": {
 							"browserTarget": "ptable:build:production"
-						},
+            },
 						"development": {
 							"browserTarget": "ptable:build:development"
-						}
+            },
+            "staging": {
+              "browserTarget": "ptable:build:staging"
+            },
+            "local": {
+              "browserTarget": "ptable:build:local"
+            }
 					},
 					"defaultConfiguration": "development"
 				},

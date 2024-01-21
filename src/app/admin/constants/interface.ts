@@ -3,12 +3,25 @@ export interface ParentDTO {
   parent: number;
 }
 
-export interface ParentDatum {
+export interface Topic {
   id: number;
   name: string;
   parent: number;
   isRemoved: boolean;
-  children: SubTopics[]
+}
+
+export interface ChildContent {
+  id: number;
+  topic: number;
+  type: string;
+  body: string;
+  isRemoved: boolean;
+}
+
+export interface CreateParentDto {
+  isRemoved: boolean;
+  name: string;
+  parent: number
 }
 
 export interface SubTopics {
@@ -20,4 +33,9 @@ export interface TopicDto {
   id: number;
   name: string;
   parent: number
+}
+
+export interface DiCodeData {
+  topic: number;
+  childContent: ChildContent
 }

@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { ParentDatum } from "../admin/constants/interface";
+import {Topic} from "../admin/constants/interface";
 import { ApiService } from "../admin/services/api.service";
 import { ActivatedRoute, Params, Router } from "@angular/router";
 import EditorJS from '@editorjs/editorjs';
@@ -12,8 +12,8 @@ import EditorJS from '@editorjs/editorjs';
 })
 
 export class InformaticsComponent implements OnInit, AfterViewInit {
-  parentData!: ParentDatum[];
-  childData!: ParentDatum[];
+  parentData!: Topic[];
+  childData!: Topic[];
   selectedSubTopic: any;
   routeTopicIndex!: number;
   routeSubtopicId!: number;
@@ -71,7 +71,7 @@ export class InformaticsComponent implements OnInit, AfterViewInit {
     return !!(topicId && (topicId - 1) == parentIndex);
   }
 
-  isRouteHasSubtopic(index: number, children: ParentDatum) {
+  isRouteHasSubtopic(index: number, children: Topic) {
     return this.selectedSubTopic?.id === children.id;
   }
 

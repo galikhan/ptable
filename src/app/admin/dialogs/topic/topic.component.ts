@@ -13,15 +13,24 @@ export class TopicComponent implements OnInit {
 
 	constructor(
 		public dialogRef: MatDialogRef<TopicComponent>,
-		@Inject(MAT_DIALOG_DATA) public data: any,
+    @Inject(MAT_DIALOG_DATA) public injectedData: any,
 		private fb: FormBuilder
 	) { }
 
 	ngOnInit(): void {
-		this.topicForm = this.fb.group({
-			name: ['', [Validators.required]],
-		});
-	}
+    console.log(this.injectedData);
+    this.initForm();
+  }
+
+  initForm() {
+    this.topicForm = this.fb.group({
+      name: ['', [Validators.required]],
+    });
+
+    if (this.injectedData) {
+      this.topicForm.get('name')?.setValue(this.injectedData?.data?.name);
+    }
+  }
 
 	closeModal(): void {
 		this.dialogRef.close();
