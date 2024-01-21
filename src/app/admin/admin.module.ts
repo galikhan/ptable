@@ -16,15 +16,16 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTreeModule } from '@angular/material/tree';
 import { FormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import {ContentComponent} from './dialogs/content/content.component';
-import {CodeComponent} from './dialogs/code/code.component';
+import { ContentComponent } from './dialogs/content/content.component';
+import { CodeComponent } from './dialogs/code/code.component';
+import { InformaticsModule } from '../informatics/informatics.module';
 
 @NgModule({
 	declarations: [
 		AdminComponent,
-    TopicComponent,
-    ContentComponent,
-    CodeComponent
+		TopicComponent,
+		ContentComponent,
+		CodeComponent
 	],
 	imports: [
 		CommonModule,
@@ -40,8 +41,9 @@ import {CodeComponent} from './dialogs/code/code.component';
 		MatCardModule,
 		MatTreeModule,
 		FormsModule,
-    MatCheckboxModule,
-  ],
-  providers: []
+		MatCheckboxModule,
+		InformaticsModule
+	],
+	providers: []
 })
 export class AdminModule { }

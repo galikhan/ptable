@@ -94,6 +94,17 @@
                         хотим вывести. Вот программа, которая делает несколько вычислений:
                     </span>
 
+                    <ng-container *ngFor="let content of contents">
+
+                        <ng-container *ngIf="content.type === 'task'">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    {{ content.body }}
+                                    <app-brython-editor [content]="content"></app-brython-editor>
+                                </div>
+                            </div>
+                        </ng-container>
+                    </ng-container>
 
 
                     <div class="row mt-4">

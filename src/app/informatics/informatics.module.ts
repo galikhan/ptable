@@ -32,6 +32,9 @@ import { BrythonEditorComponent } from './views/brython-editor/brython-editor.co
 		MatFormFieldModule,
 		FormsModule,
 		MatButtonModule
+	],
+	exports:[
+		BrythonEditorComponent
 	]
 })
 export class InformaticsModule { }

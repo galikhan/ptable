@@ -7,14 +7,14 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export class BrythonStateService {
 
 
-  private tokenSubject: BehaviorSubject<string> = new BehaviorSubject<string>('');
-  public stateObservable: Observable<string>;
+  private tokenSubject: BehaviorSubject<number> = new BehaviorSubject<number>(0);
+  public stateObservable: Observable<number>;
 
   constructor() {
     this.stateObservable = this.tokenSubject.asObservable();
   }
 
-  public setNext(next: string) {
+  public setNext(next: number) {
     return this.tokenSubject.next(next);
   }
 

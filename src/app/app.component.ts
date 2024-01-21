@@ -16,12 +16,16 @@ export class AppComponent implements OnInit {
   ) { }
 
   ngAfterViewInit() {
+    const button = document.getElementById('mybutton1');
     this.brythonState.stateObservable.subscribe(result => {
+      console.log('message from observable', result);
       if (result) {
+        // console.log('result', result);
         const input  = document.getElementById('mybuttonparam');
         if(input) {
-          input.setAttribute('value', result);          
-          document.getElementById('mybutton1')?.click();
+          input.setAttribute('value', result+'');          
+          button?.click();
+          // console.log('button clicked', button);
         }
         
       }

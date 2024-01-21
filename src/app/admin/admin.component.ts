@@ -6,6 +6,8 @@ import {TopicComponent} from "./dialogs/topic/topic.component";
 import {ContentComponent} from "./dialogs/content/content.component";
 import {CodeComponent} from "./dialogs/code/code.component";
 import {ActivatedRoute, Params, Router} from "@angular/router";
+import { ContentService } from "../service/content.service";
+import { Content } from "../interface/content";
 
 @Component({
   selector: 'app-admin',
@@ -21,12 +23,14 @@ export class AdminComponent implements OnInit, AfterViewInit {
   isDisabledBtn!: boolean;
   routeTopicIndex!: number;
   routeSubtopicId!: number;
+  contents: Content[] = [];
 
   constructor(
     private apiService: ApiService,
     public dialog: MatDialog,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private service: ContentService
   ) {
   }
 
@@ -37,9 +41,18 @@ export class AdminComponent implements OnInit, AfterViewInit {
     this.route.params.subscribe((params: Params) => {
       this.routeTopicIndex = +params['topicId'];
       this.routeSubtopicId = +params['subtopicId'];
-    });
+      // this.openCodeDialog(this.routeSubtopicId);
 
+      this.service.findByTopic(this.routeSubtopicId).subscribe(contents => {
+        this.contents = contents;
+      });
+      // console.log(this.routeTopicIndex, params['topicId'])
+    });
     this.getParentTopics();
+  }
+
+  openCodeDialog(topic: number) {
+    this.dialog.open(CodeComponent, {data: {topic:topic}, width: '50%'});
   }
 
   getParentTopics() {

@@ -6,6 +6,7 @@ from browser.local_storage import storage
 
 question_id = -1
 # Transform markdown to html and insert in the document
+output = "output_html_id"
 
 imports = """
 import sys
@@ -17,17 +18,17 @@ utils = """
 question_id = int(question_id)
 class MyOutput:
     def __init__(self):
-        self.console = document["output"]
+        self.console = document["output_html_id"]
     def write(self, text):
         self.console.text += text
 
 def readInput():
-    # inputText = document["input"].value.strip()
-    inputText = document["input"].value
-    print(inputText)
+
+    inputText = document["input_html_id"].value
+    inputTextLines = inputText.splitlines()
 
     inputArray = []
-    for i in inputText.split():
+    for i in inputTextLines:
         value = i
         try:
             value = int(value)
@@ -53,12 +54,17 @@ sys.stdout = MyOutput()
 
 def run(id):
     #document["input-letter"].clear()
-    print("ev ")
-    print(ev)
-    #document["output"].clear()
-    code = document["textarea-editor"].value    
+    output_html_id = "output"+ id
+    input_html_id = "input"+ id
+    editor_html_id = "textarea-editor" + id
+
+    clearOutput(output_html_id)
+
+    code = document[editor_html_id].value    
     code = imports + utils + stdout_to_textarea + code
     code = replaceInput(code)
+    code = setInputHtmlId(code, input_html_id)
+    code = setOutputHtmlId(code, output_html_id)
     code = code.strip()
     loc = {}
 
@@ -66,7 +72,7 @@ def run(id):
         exec(code, {"test_id": 0, "question_id": question_id}, loc)
         document["error"].clear()
     except Exception as e:
-        document["output"].clear()
+        document[id].clear()
         document["error"].clear()
         document["error"] <= "Exception: " + str(e)
         #exception_handler(e)
@@ -94,11 +100,18 @@ def exception_handler(e):
 def replaceInput(code):
     return code.replace("input()", "inputArray.pop(0)")
 
+def setInputHtmlId(code, input_html_id):
+    return code.replace("input_html_id", input_html_id)
+
+def setOutputHtmlId(code, output_html_id):
+    return code.replace("output_html_id", output_html_id)
+
+def clearOutput(output_html_id):
+    document[output_html_id].clear()
+
 
 @bind(document["mybutton1"], "click")
 def runCode(ev):
-    # print("hellow rodl")
-    #print()
     currentid = document["mybuttonparam"].value
     run(currentid)
 

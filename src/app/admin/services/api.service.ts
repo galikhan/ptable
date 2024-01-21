@@ -6,7 +6,8 @@ import {ParentDatum, ParentDTO} from "../constants/interface";
   providedIn: 'root'
 })
 export class ApiService {
-  private apiUrl = 'http://161.97.144.45:8282/api/v1/topic'; // Replace with your API endpoint
+  private apiUrl = 'http://localhost:8080/api/v1/topic'; // Replace with your API endpoint
+  // private apiUrl = 'http://161.97.144.45:8282/api/v1/topic'; // Replace with your API endpoint
   constructor(private http: HttpClient) { }
 
   getParentTopics() {

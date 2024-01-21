@@ -54,10 +54,7 @@ export class AlchemyComponent {
     ) {
   
     }
-    hello(vv: string): void {
-      this.brython.setNext(vv);
-    }
-  
+
     ngOnInit(): void {
   
       const importedJson = json;
