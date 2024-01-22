@@ -1,9 +1,9 @@
 <div class="row">
   <div class="col-lg-12">
     <div *ngIf="content">
-      <hr>
+      <!--      <hr>-->
       <button (click)="runCode(content.id)" id="run-code" style="margin-right:5px">запустить</button>
-      <button (click)="editCode(content.id)" id="edit-code" style="margin-right:5px">редактировать код</button>
+      <button (click)="editCode(content)" id="edit-code" style="margin-right:5px">редактировать код</button>
       <span
         id="test-result"></span>
       <div class="editor-panel">

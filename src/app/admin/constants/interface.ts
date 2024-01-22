@@ -37,5 +37,5 @@ export interface TopicDto {
 
 export interface DiCodeData {
   topic: number;
-  childContent: ChildContent
+  data: ChildContent
 }

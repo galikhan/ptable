@@ -1,7 +1,20 @@
-import { AfterViewInit, Component, ElementRef, Input, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  QueryList,
+  ViewChild,
+  ViewChildren
+} from '@angular/core';
 import { Content } from 'src/app/interface/content';
 import { BrythonStateService } from 'src/app/service/brython.service';
 import * as ace from 'ace-builds';
+import {MatDialog} from "@angular/material/dialog";
+import {Ace} from "ace-builds";
 
 @Component({
   selector: 'app-brython-editor',
@@ -12,10 +25,14 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit {
 
   @Input() public content!: Content;
 
-  constructor(public brython: BrythonStateService) { }
+  constructor(
+    public brython: BrythonStateService,
+    public dialog: MatDialog,
+  ) {
+  }
 
   @ViewChild('aceEditor') private editor!: ElementRef<HTMLElement>;
-
+  @Output() editCodeOutput: EventEmitter<any> = new EventEmitter<any>();
   ngAfterViewInit(): void {
     ace.config.set("fontSize", "14px");
     console.log('editors', this.editor);
@@ -41,7 +58,7 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit {
     }
   }
 
-  editCode(id: number | undefined) {
-
+  editCode(content: Content) {
+    this.editCodeOutput.emit(content);
   }
 }

@@ -42,8 +42,8 @@ export class ContentComponent implements OnInit {
   saveDescription() {
     console.log(this.content);
     this.content = {type: 'text', body: '', topic: this.data.topic};
-    if (this.data?.childContent) {
-      this.content.id = this.data.childContent.id;
+    if (this.data?.data) {
+      this.content.id = this.data.data.id;
       this.content.isRemoved = false;
       this.content.body = this.description;
       this.contentService.update(this.content).subscribe(result => {
@@ -66,8 +66,8 @@ export class ContentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (this.data?.childContent) {
-      this.description = this.data?.childContent.body;
+    if (this.data?.data) {
+      this.description = this.data?.data.body;
     }
   }
 }

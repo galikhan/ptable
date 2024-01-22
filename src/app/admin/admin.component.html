@@ -31,7 +31,7 @@
 
       <div class="accordion" id="accordionFlushExample">
         <div class="accordion-item" *ngFor="let item of parentData; let i = index">
-          <small class="p-0">Занятие {{ i + 1 }}</small>
+          <!--          <small class="p-0">Занятие {{ i + 1 }}</small>-->
           <button (click)="onClickAccordion(item.id);" class="accordion-button"
                   [ngClass]="{'collapsed' :!ifRouteHasTopic(i) }" type="button" data-bs-toggle="collapse"
                   [attr.data-bs-target]="'#collapse' + i" aria-expanded="true">
@@ -66,7 +66,8 @@
                     <!--                            class="btn btn-sm btn-primary mb-3 w-100"-->
                     <!--                            (click)="addSubtopic(item)">Добавить подтему-->
                     <!--                    </button>-->
-                    <button type="button" class="btn btn-primary" (click)="addSubtopic(item)" data-bs-toggle="tooltip"
+                    <button type="button" class="btn btn-outline-primary btn-sm" (click)="addSubtopic(item)"
+                            data-bs-toggle="tooltip"
                             data-bs-placement="top" title="Добавить подтему">
                       <i class="bi bi-plus"></i>
                     </button>
@@ -76,13 +77,14 @@
                     <!--                            class="btn btn-sm btn-danger mb-3 w-100" (click)="deleteTopic(item)">Удалить-->
                     <!--                      тему-->
                     <!--                    </button>-->
-                    <button type="button" class="btn btn-danger" (click)="deleteTopic(item)" data-bs-toggle="tooltip"
+                    <button type="button" class="btn btn-outline-danger btn-sm" (click)="deleteTopic(item)"
+                            data-bs-toggle="tooltip"
                             data-bs-placement="top" title="Удалить тему">
                       <i class="bi bi-trash-fill"></i>
                     </button>
                   </div>
                   <div class="col-lg-auto">
-                    <button type="button" class="btn btn-secondary" (click)="editTopicName(item)"
+                    <button type="button" class="btn btn-outline-secondary btn-sm" (click)="editTopicName(item)"
                             data-bs-toggle="tooltip" data-bs-placement="top" title="Изменить тему">
                       <i class="bi bi-pencil-fill"></i>
                     </button>
@@ -111,35 +113,25 @@
             </span>
           </h1>
 
-          <hr>
 
           <ng-container *ngFor="let content of contents">
-            <ng-container *ngIf="content.type === 'text'">
+            <ng-container>
               <div class="row">
                 <div class="col-md-12">
-                  <p>{{ content.body }}
+                  <p *ngIf="content.type == 'text'">{{ content.body }}
                     <mat-icon (click)="editContent(content)" aria-hidden="false" aria-label="Example home icon"
                               fontIcon="edit"></mat-icon>
                     <mat-icon (click)="deleteContent(content)" aria-hidden="false" aria-label="Example home icon"
                               fontIcon="delete"></mat-icon>
                   </p>
+                  <p *ngIf="content.type == 'task'">
+                    <app-brython-editor (editCodeOutput)="openEditCodeDialog($event)"
+                                        [content]="content"></app-brython-editor>
+                  </p>
                 </div>
               </div>
             </ng-container>
           </ng-container>
-
-
-          <ng-container *ngFor="let content of contents">
-
-            <ng-container *ngIf="content.type === 'task'">
-              <div class="row">
-                <div class="col-md-12">
-                  <app-brython-editor [content]="content"></app-brython-editor>
-                </div>
-              </div>
-            </ng-container>
-          </ng-container>
-
 
           <div class="row mt-4">
             <div class="col-auto">
