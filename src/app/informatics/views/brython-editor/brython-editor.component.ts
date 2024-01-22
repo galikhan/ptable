@@ -14,19 +14,41 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit {
 
   constructor(public brython: BrythonStateService) { }
 
-  @ViewChild('aceEditor') private editor!: ElementRef<HTMLElement>;
+  // @ViewChild('aceEditor') private aceEditor!: ElementRef<HTMLElement>;
+  // @ViewChild('hiddentTextarea') private hiddenTextarea!: ElementRef<HTMLElement>;
 
   ngAfterViewInit(): void {
-    ace.config.set("fontSize", "14px");
-    console.log('editors', this.editor);
+    if (this.content) {
+      const id = this.content.id;
+      const aceEditorElement = document.getElementById('editor' + id)
+      const hiddenTextarea = document.getElementById('hidden-textarea' + id)
+      ace.config.set("fontSize", "14px");
 
-    if (this.editor) {
-      let aceEditor = ace.edit(this.editor.nativeElement);
-      aceEditor.session.setValue(this.content.body);
-      aceEditor.session.setMode("ace/mode/python");
-      aceEditor.renderer.setShowGutter(false);
+      if (aceEditorElement) {
+        let aceEditor = ace.edit(aceEditorElement);
+        aceEditor.session.setValue(this.content.body);
+        // aceEditor.session.setMode("ace/mode/python");
+        aceEditor.renderer.setShowGutter(false);
+
+        if (hiddenTextarea) {
+          // this.setHiddenTextareaValue(this.content.body);
+          hiddenTextarea.setAttribute('value', this.content.body);
+          const content = this.content;
+          aceEditor.getSession().on('change', function () {
+            const aceValue = aceEditor.getSession().getValue();
+            content.body = aceValue;
+            // this.updateBody(aceValue); 
+            // console.log('getSession', aceValue, hiddenTextarea);
+            // hiddenTextarea.setAttribute('value', aceValue);
+          });
+        }
+
+      }
     }
+  }
 
+  public updateBody(value: string): void {
+    this.content.body = value;
   }
 
   ngOnInit(): void {
@@ -35,8 +57,9 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit {
     }
   }
 
-  runCode(id: number | undefined): void {
-    if (id) {
+  runCode(id: number): void {
+    if (this.content.body) {
+      console.log(' runCode id', id)
       this.brython.setNext(id);
     }
   }

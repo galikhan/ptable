@@ -56,7 +56,8 @@ def run(id):
     #document["input-letter"].clear()
     output_html_id = "output"+ id
     input_html_id = "input"+ id
-    editor_html_id = "textarea-editor" + id
+    editor_html_id = "hidden-textarea" + id
+    error_html_id = "error" + id
 
     clearOutput(output_html_id)
 
@@ -70,11 +71,11 @@ def run(id):
 
     try:
         exec(code, {"test_id": 0, "question_id": question_id}, loc)
-        document["error"].clear()
+        document[error_html_id].clear()
     except Exception as e:
-        document[id].clear()
-        document["error"].clear()
-        document["error"] <= "Exception: " + str(e)
+        # document[id].clear()
+        document[error_html_id].clear()
+        document[error_html_id] <= "Exception: " + str(e)
         #exception_handler(e)
 
 
