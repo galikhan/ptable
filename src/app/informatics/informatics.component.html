@@ -81,6 +81,10 @@
               </div>
             </ng-container>
           </ng-container>
+
+          <ng-container *ngIf="contents.length == 0">
+            <h2>Контент отсутствует</h2>
+          </ng-container>
 				</div>
 			</div>
 		</main>

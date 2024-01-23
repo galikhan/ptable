@@ -182,6 +182,23 @@ export class AdminComponent implements OnInit, AfterViewInit {
     })
   }
 
+  openDeleteCodeDialog(content: Content) {
+    const dialog = this.dialog.open(DeleteConfirmationComponent, {
+      data: {
+        type: 'content'
+      },
+      width: '30%'
+    })
+
+    dialog.afterClosed().subscribe(result => {
+      if (result) {
+        this.service.remove(content.id).subscribe(response => {
+          this.findByTopic()
+        })
+      }
+    })
+  }
+
   addTopic() {
     const parentDto: CreateParentDto = {
       name: this.addTopicName,

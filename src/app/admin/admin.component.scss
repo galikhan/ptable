@@ -78,11 +78,8 @@ aside small {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
-////////////////////
-
-
-
-#edit-code {
+//////
+.edit-code {
   height: 35px !important;
   width: 200px !important;
   border: none;
@@ -93,7 +90,7 @@ aside small {
   color: #1d3e7d;
 }
 
-#edit-code:hover {
+.edit-code:hover {
   height: 35px !important;
   width: 200px !important;
   border: none;
