@@ -1,7 +1,20 @@
-import { AfterViewInit, Component, ElementRef, Input, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  QueryList,
+  ViewChild,
+  ViewChildren
+} from '@angular/core';
 import { Content } from 'src/app/interface/content';
 import { BrythonStateService } from 'src/app/service/brython.service';
 import * as ace from 'ace-builds';
+import {MatDialog} from "@angular/material/dialog";
+import {Ace} from "ace-builds";
 
 @Component({
   selector: 'app-brython-editor',
@@ -9,13 +22,14 @@ import * as ace from 'ace-builds';
   styleUrls: ['./brython-editor.component.scss']
 })
 export class BrythonEditorComponent implements OnInit, AfterViewInit {
-
   @Input() public content!: Content;
+  @Output() editCodeOutput: EventEmitter<any> = new EventEmitter<any>();
 
-  constructor(public brython: BrythonStateService) { }
-
-  // @ViewChild('aceEditor') private aceEditor!: ElementRef<HTMLElement>;
-  // @ViewChild('hiddentTextarea') private hiddenTextarea!: ElementRef<HTMLElement>;
+  constructor(
+    public brython: BrythonStateService,
+    public dialog: MatDialog,
+  ) {
+  }
 
   ngAfterViewInit(): void {
     if (this.content) {
@@ -42,7 +56,6 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit {
             // hiddenTextarea.setAttribute('value', aceValue);
           });
         }
-
       }
     }
   }
@@ -64,7 +77,7 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit {
     }
   }
 
-  editCode(id: number | undefined) {
-
+  editCode(content: Content) {
+    this.editCodeOutput.emit(content);
   }
 }

@@ -1,3 +1,9 @@
+import {AfterViewInit, Component, ElementRef, Inject, OnInit, ViewChild} from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
+import {Content} from 'src/app/interface/content';
+import {BrythonStateService} from 'src/app/service/brython.service';
+import {ContentService} from 'src/app/service/content.service';
+import {DiCodeData} from "../../constants/interface";
 import { AfterViewInit, Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Content } from 'src/app/interface/content';
@@ -5,7 +11,6 @@ import { BrythonStateService } from 'src/app/service/brython.service';
 import { ContentService } from 'src/app/service/content.service';
 import { DiCodeData } from "../../constants/interface";
 import * as ace from 'ace-builds';
-
 
 @Component({
   selector: 'app-code',
@@ -22,12 +27,20 @@ export class CodeComponent implements OnInit, AfterViewInit {
     public contentService: ContentService,
     @Inject(MAT_DIALOG_DATA) public data: DiCodeData,
     public dialogRef: MatDialogRef<CodeComponent>,
-  ) { }
+  ) {
+  }
 
   ngOnInit(): void {
-    if (this.data) {
-      this.content = {id:-1, type: 'task', body: '', topic: this.data.topic };
-    }
+    if (this.data.data) {
+      this.content = {
+        type: 'task',
+        body: this.data.data.body,
+        topic: this.data.topic,
+        id: this.data.data.id,
+        isRemoved: this.data.data.isRemoved,
+      };
+    } else {
+      this.content = {type: 'task', body: '', topic: this.data.topic};
   }
 
   ngAfterViewInit(): void {
@@ -54,7 +67,6 @@ export class CodeComponent implements OnInit, AfterViewInit {
   }
 
   saveCode() {
-
     if (this.content && this.content.id > 0) {
       this.contentService.update(this.content).subscribe(result => {
         // console.log('updated');

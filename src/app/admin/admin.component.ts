@@ -115,7 +115,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
         topic: this.routeSubtopicId,
         childContent: null
       },
-      width: '50%'
+      width: '30%'
     })
     dialog.afterClosed().subscribe(result => {
       console.log(result)
@@ -129,7 +129,8 @@ export class AdminComponent implements OnInit, AfterViewInit {
       data: {
         topic: this.routeSubtopicId,
         childContent: childContent
-      }
+      },
+      width: '30%'
     })
 
     dialog.afterClosed().subscribe(result => {
@@ -143,7 +144,8 @@ export class AdminComponent implements OnInit, AfterViewInit {
     const dialog = this.dialog.open(DeleteConfirmationComponent, {
       data: {
         type: 'content'
-      }
+      },
+      width: '30%'
     })
     dialog.afterClosed().subscribe(result => {
       if (result) {
@@ -156,7 +158,25 @@ export class AdminComponent implements OnInit, AfterViewInit {
 
   addCode() {
     const dialog = this.dialog.open(CodeComponent, {
-      data: {topic: this.routeSubtopicId},
+      data: {
+        topic: this.routeSubtopicId,
+        data: null
+      },
+      width: '50%'
+    })
+    dialog.afterClosed().subscribe(result => {
+      console.log(result)
+      this.findByTopic();
+    })
+  }
+
+  openEditCodeDialog(content: Content) {
+    console.log(content)
+    const dialog = this.dialog.open(CodeComponent, {
+      data: {
+        topic: this.routeSubtopicId,
+        data: content
+      },
       width: '50%'
     })
     dialog.afterClosed().subscribe(result => {
@@ -184,7 +204,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
         type: 'child',
         data: null,
       },
-      width: '20%'
+      width: '30%'
     })
 
     dialog.afterClosed().subscribe((childTopicName => {
@@ -206,7 +226,8 @@ export class AdminComponent implements OnInit, AfterViewInit {
     const dialog = this.dialog.open(DeleteConfirmationComponent, {
       data: {
         type: 'parent'
-      }
+      },
+      width: '30%'
     })
     dialog.afterClosed().subscribe(result => {
       if (result) {
@@ -222,7 +243,8 @@ export class AdminComponent implements OnInit, AfterViewInit {
     const dialog = this.dialog.open(DeleteConfirmationComponent, {
       data: {
         type: 'child'
-      }
+      },
+      width: '30%'
     })
 
     dialog.afterClosed().subscribe(result => {
@@ -242,7 +264,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
         type: 'parent',
         data: selectedTopic,
       },
-      width: '20%'
+      width: '30%'
     })
 
     dialog.afterClosed().subscribe((topicName => {
@@ -269,7 +291,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
         type: 'child',
         data: selectedSubTopic,
       },
-      width: '20%'
+      width: '30%'
     })
 
     dialog.afterClosed().subscribe((childTopicName => {
