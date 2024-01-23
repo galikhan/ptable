@@ -2,26 +2,6 @@
   <h2 mat-dialog-title>Добавить код
   </h2>
   <mat-dialog-content *ngIf="content" class="mat-typography">
-    <!-- <div class="row">
-      <div class="col-lg-12">
-        <div>
-          <button (click)="runCode(0)" id="run-code" style="margin-right:5px">запустить</button>
-        </div>
-        <div>
-          <span id="test-result"></span>
-          <div class="editor-panel">
-            <textarea class="form-control" [(ngModel)]="content.body" name="description"
-                      style="display: block;" id="textarea-editor"></textarea>
-            <div id="editor" #textareaEditor></div>
-            <div class="w-100" id="error"></div>
-          </div>
-          <div id="input-output">
-            <textarea [(ngModel)]="content.input" id="input" placeholder="входные данные...." rows="6" cols="39"></textarea>
-            <textarea id="output" placeholder="выходные данные...." rows="6" cols="40"></textarea>
-          </div>
-        </div>
-      </div>
-    </div> -->
     <ng-container *ngIf="content">
       <app-brython-editor [content]="content"></app-brython-editor>
     </ng-container>

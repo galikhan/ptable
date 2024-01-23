@@ -1,9 +1,3 @@
-import {AfterViewInit, Component, ElementRef, Inject, OnInit, ViewChild} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
-import {Content} from 'src/app/interface/content';
-import {BrythonStateService} from 'src/app/service/brython.service';
-import {ContentService} from 'src/app/service/content.service';
-import {DiCodeData} from "../../constants/interface";
 import { AfterViewInit, Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Content } from 'src/app/interface/content';
@@ -40,26 +34,25 @@ export class CodeComponent implements OnInit, AfterViewInit {
         isRemoved: this.data.data.isRemoved,
       };
     } else {
-      this.content = {type: 'task', body: '', topic: this.data.topic};
+      this.content = { id: -1, type: 'task', body: '', topic: this.data.topic };
+    }
   }
 
-  ngAfterViewInit(): void {
-    // if (this.content) {
-    //   this.content.body = 'print(1)';
-    //   let aceEditor = ace.edit(this.te.nativeElement);
-    //   ace.config.set("fontSize", "14px");
-    //   if (aceEditor) {
-    //     aceEditor.session.setValue(this.content.body);
-    //     aceEditor.renderer.setShowGutter(false);
-    //     const content = this.content;
-    //     aceEditor.getSession().on('change', function () {
-    //       const aceValue = aceEditor.getSession().getValue();
-    //       content.body = aceValue;
-    //     });
-
-    //   }
-
-    // }
+  ngAfterViewInit() {
+    if (this.content) {
+      this.content.body = 'print(1)';
+      let aceEditor = ace.edit(this.te.nativeElement);
+      ace.config.set("fontSize", "14px");
+      if (aceEditor) {
+        aceEditor.session.setValue(this.content.body);
+        aceEditor.renderer.setShowGutter(false);
+        const content = this.content;
+        aceEditor.getSession().on('change', function () {
+          const aceValue = aceEditor.getSession().getValue();
+          content.body = aceValue;
+        });
+      }
+    }
   }
 
   runCode(outputHtmlId: number): void {
