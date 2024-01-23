@@ -1,14 +1,11 @@
 import {
   AfterViewInit,
   Component,
-  ElementRef,
   EventEmitter,
   Input,
+  OnDestroy,
   OnInit,
   Output,
-  QueryList,
-  ViewChild,
-  ViewChildren
 } from '@angular/core';
 import { Content } from 'src/app/interface/content';
 import { BrythonStateService } from 'src/app/service/brython.service';
@@ -21,39 +18,40 @@ import {Ace} from "ace-builds";
   templateUrl: './brython-editor.component.html',
   styleUrls: ['./brython-editor.component.scss']
 })
-export class BrythonEditorComponent implements OnInit, AfterViewInit {
+export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() public content!: Content;
+  @Input() public isEditor = false;
   @Output() editCodeOutput: EventEmitter<any> = new EventEmitter<any>();
+  id!: number;
+  public editorContent!: Content;
+  aceEditor: any;
 
   constructor(
     public brython: BrythonStateService,
     public dialog: MatDialog,
   ) {
   }
+  ngOnDestroy(): void {
+    this.aceEditor.container.remove();
+  }
 
   ngAfterViewInit(): void {
     if (this.content) {
-      const id = this.content.id;
-      const aceEditorElement = document.getElementById('editor' + id)
-      const hiddenTextarea = document.getElementById('hidden-textarea' + id)
+      const aceEditorElement = document.getElementById('editor' + this.id)
+      const hiddenTextarea = document.getElementById('hidden-textarea' + this.id)
       ace.config.set("fontSize", "14px");
-
       if (aceEditorElement) {
-        let aceEditor = ace.edit(aceEditorElement);
-        aceEditor.session.setValue(this.content.body);
+        this.aceEditor = ace.edit(aceEditorElement);
+        this.aceEditor.session.setValue(this.content.body);
         // aceEditor.session.setMode("ace/mode/python");
-        aceEditor.renderer.setShowGutter(false);
+        this.aceEditor.renderer.setShowGutter(false);
 
         if (hiddenTextarea) {
-          // this.setHiddenTextareaValue(this.content.body);
-          hiddenTextarea.setAttribute('value', this.content.body);
           const content = this.content;
-          aceEditor.getSession().on('change', function () {
-            const aceValue = aceEditor.getSession().getValue();
+          const aceEditorConst = this.aceEditor;
+          this.aceEditor.getSession().on('change', function () {
+            const aceValue = aceEditorConst.getSession().getValue();
             content.body = aceValue;
-            // this.updateBody(aceValue); 
-            // console.log('getSession', aceValue, hiddenTextarea);
-            // hiddenTextarea.setAttribute('value', aceValue);
           });
         }
       }
@@ -65,14 +63,19 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    if (this.content) {
 
+    if(this.content) {
+      this.editorContent = Object.create(this.content);
+      this.id = this.editorContent.id;
+      if(this.isEditor) {
+        this.id = -777;
+      }
     }
   }
 
   runCode(id: number): void {
     if (this.content.body) {
-      console.log(' runCode id', id)
+      // console.log(' runCode id', id)
       this.brython.setNext(id);
     }
   }

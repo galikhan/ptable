@@ -1,19 +1,18 @@
-import { AfterViewInit, Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Content } from 'src/app/interface/content';
 import { BrythonStateService } from 'src/app/service/brython.service';
 import { ContentService } from 'src/app/service/content.service';
-import { DiCodeData } from "../../constants/interface";
 import * as ace from 'ace-builds';
+import { DiCodeData } from '../../constants/di-code-data';
 
 @Component({
   selector: 'app-code',
   templateUrl: './code.component.html',
   styleUrls: ['./code.component.scss']
 })
-export class CodeComponent implements OnInit, AfterViewInit {
+export class CodeComponent implements OnInit {
 
-  @ViewChild("textareaEditor") public te!: ElementRef<HTMLElement>;
   content!: Content;
 
   constructor(
@@ -25,38 +24,21 @@ export class CodeComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    if (this.data.data) {
+    console.log('this.data', this.data);
+    if (this.data.content) {
       this.content = {
         type: 'task',
-        body: this.data.data.body,
+        
+        body: this.data.content.body,
         topic: this.data.topic,
-        id: this.data.data.id,
-        isRemoved: this.data.data.isRemoved,
+        id: this.data.content.id,
+        isRemoved: this.data.content.isRemoved,
+        input: this.data.content.input
       };
     } else {
       this.content = { id: -1, type: 'task', body: '', topic: this.data.topic };
     }
-  }
-
-  ngAfterViewInit() {
-    if (this.content) {
-      this.content.body = 'print(1)';
-      let aceEditor = ace.edit(this.te.nativeElement);
-      ace.config.set("fontSize", "14px");
-      if (aceEditor) {
-        aceEditor.session.setValue(this.content.body);
-        aceEditor.renderer.setShowGutter(false);
-        const content = this.content;
-        aceEditor.getSession().on('change', function () {
-          const aceValue = aceEditor.getSession().getValue();
-          content.body = aceValue;
-        });
-      }
-    }
-  }
-
-  runCode(outputHtmlId: number): void {
-    this.brython.setNext(outputHtmlId);
+    console.log('this.content', this.content);
   }
 
   saveCode() {

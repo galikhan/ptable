@@ -165,22 +165,20 @@ export class AdminComponent implements OnInit, AfterViewInit {
       width: '50%'
     })
     dialog.afterClosed().subscribe(result => {
-      console.log(result)
       this.findByTopic();
     })
   }
 
   openEditCodeDialog(content: Content) {
-    console.log(content)
     const dialog = this.dialog.open(CodeComponent, {
       data: {
         topic: this.routeSubtopicId,
-        data: content
+        content
       },
       width: '50%'
     })
-    dialog.afterClosed().subscribe(result => {
-      console.log(result)
+
+    dialog.afterClosed().subscribe(() => {
       this.findByTopic();
     })
   }

@@ -1,3 +1,5 @@
+import { Content } from "src/app/interface/content";
+
 export interface ParentDTO {
   name: string;
   parent: number;
@@ -35,7 +37,3 @@ export interface TopicDto {
   parent: number
 }
 
-export interface DiCodeData {
-  topic: number;
-  data: ChildContent
-}

@@ -1,8 +1,8 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
-import {DiCodeData} from "../../constants/interface";
 import {Content} from "../../../interface/content";
 import {ContentService} from "../../../service/content.service";
+import { DiCodeData } from '../../constants/di-code-data';
 
 @Component({
   selector: 'app-content',
@@ -42,8 +42,8 @@ export class ContentComponent implements OnInit {
   saveDescription() {
     console.log(this.content);
     this.content = {id: 0, type: 'text', body: '', topic: this.data.topic};
-    if (this.data?.data) {
-      this.content.id = this.data.data.id;
+    if (this.data?.content) {
+      this.content.id = this.data.content.id;
       this.content.isRemoved = false;
       this.content.body = this.description;
       this.contentService.update(this.content).subscribe(result => {
@@ -66,8 +66,8 @@ export class ContentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (this.data?.data) {
-      this.description = this.data?.data.body;
+    if (this.data?.content) {
+      this.description = this.data?.content.body;
     }
   }
 }
