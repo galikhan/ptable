@@ -21,7 +21,8 @@ import {Ace} from "ace-builds";
 export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() public content!: Content;
   @Input() public isEditor = false;
-  @Output() editCodeOutput: EventEmitter<any> = new EventEmitter<any>();
+  // @Output() editCodeOutput: EventEmitter<any> = new EventEmitter<any>();
+  // @Output() deleteCodeOutput: EventEmitter<any> = new EventEmitter<any>();
   id!: number;
   public editorContent!: Content;
   aceEditor: any;
@@ -81,6 +82,12 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy 
   }
 
   editCode(content: Content) {
-    this.editCodeOutput.emit(content);
+    // this.editCodeOutput.emit(content);
   }
+
+  deleteCode(content: Content) {
+    // this.deleteCodeOutput.emit(content);
+  }
+
+
 }

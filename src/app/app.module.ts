@@ -7,6 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
+import {AdminModule} from "./admin/admin.module";
+import {InformaticsModule} from "./informatics/informatics.module";
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
 	declarations: [
@@ -20,6 +23,9 @@ import { LoginComponent } from './login/login.component';
 		AppRoutingModule,
 		BrowserAnimationsModule,
 		HttpClientModule,
+    AdminModule,
+    InformaticsModule,
+    SharedModule
 	],
 	exports: [
 		AddIconModule,

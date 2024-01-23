@@ -2,6 +2,12 @@
   <div class="col-lg-12">
     <div *ngIf="content">
 
+      <!--      <button (click)="editCode(content)" class="edit-code" style="margin-right:5px">-->
+      <!--        редактировать код-->
+      <!--      </button>-->
+      <!--      <button (click)="deleteCode(content)" class="edit-code" style="margin-right:5px">-->
+      <!--        Удалить код-->
+      <!--      </button>-->
       <button (click)="runCode(id)" id="run-code" style="margin-right:5px">запустить</button>
 
       <ng-container *ngIf="!isEditor">
@@ -12,7 +18,7 @@
           <div id="editor{{id}}" class="ace-editor"></div>
           <div id="error{{id}}" class="editor-error"></div>
         </div>
-        <div id="input-output">
+        <div class="input-output">
           <textarea class="python-input" value="{{content.input}}" id="input{{id}}"
             placeholder="входные данные...." rows="6" cols="39"></textarea>
           <textarea [readOnly]="true" class="python-output" id="output{{id}}" placeholder="выходные данные...." rows="6"
@@ -28,7 +34,7 @@
           <div id="editor{{id}}" class="ace-editor"></div>
           <div id="error{{id}}" class="editor-error"></div>
         </div>
-        <div id="input-output">
+        <div class="input-output">
           <textarea class="python-input" [(ngModel)]="editorContent.input" id="input{{id}}"
             placeholder="входные данные...." rows="6" cols="39"></textarea>
           <textarea [readOnly]="true" class="python-output" id="output{{id}}" placeholder="выходные данные...." rows="6"

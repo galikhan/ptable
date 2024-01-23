@@ -35,7 +35,6 @@ export class AdminComponent implements OnInit, AfterViewInit {
     private router: Router,
     private route: ActivatedRoute,
     private service: ContentService,
-    private contentService: ContentService,
   ) {
   }
 
@@ -149,7 +148,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
     })
     dialog.afterClosed().subscribe(result => {
       if (result) {
-        this.contentService.remove(childContent.id).subscribe(response => {
+        this.service.remove(childContent.id).subscribe(response => {
           this.findByTopic()
         })
       }
@@ -180,6 +179,23 @@ export class AdminComponent implements OnInit, AfterViewInit {
 
     dialog.afterClosed().subscribe(() => {
       this.findByTopic();
+    })
+  }
+
+  openDeleteCodeDialog(content: Content) {
+    const dialog = this.dialog.open(DeleteConfirmationComponent, {
+      data: {
+        type: 'content'
+      },
+      width: '30%'
+    })
+
+    dialog.afterClosed().subscribe(result => {
+      if (result) {
+        this.service.remove(content.id).subscribe(response => {
+          this.findByTopic()
+        })
+      }
     })
   }
 

@@ -20,6 +20,8 @@ import { ContentComponent } from './dialogs/content/content.component';
 import { CodeComponent } from './dialogs/code/code.component';
 import { InformaticsModule } from '../informatics/informatics.module';
 import {DeleteConfirmationComponent} from './dialogs/delete-confirmation/delete-confirmation.component';
+import {SharedModule} from "../shared/shared.module";
+import {BrythonEditorComponent} from "../informatics/views/brython-editor/brython-editor.component";
 
 @NgModule({
 	declarations: [
@@ -27,7 +29,7 @@ import {DeleteConfirmationComponent} from './dialogs/delete-confirmation/delete-
 		TopicComponent,
 		ContentComponent,
     CodeComponent,
-    DeleteConfirmationComponent
+    DeleteConfirmationComponent,
 	],
 	imports: [
 		CommonModule,
@@ -44,7 +46,7 @@ import {DeleteConfirmationComponent} from './dialogs/delete-confirmation/delete-
 		MatTreeModule,
 		FormsModule,
 		MatCheckboxModule,
-		InformaticsModule
+    SharedModule
 	],
 	providers: []
 })
