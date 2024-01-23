@@ -20,7 +20,7 @@
 
 			<div class="accordion" id="accordionFlushExample">
 				<div class="accordion-item" *ngFor="let item of parentData; let i = index">
-					<small class="p-0">Занятие {{ i + 1 }}</small>
+
 					<button (click)="onClickAccordion(item.id);" class="accordion-button"
 						[ngClass]="{'collapsed' :!ifRouteHasTopic(i) }" type="button" data-bs-toggle="collapse"
 						[attr.data-bs-target]="'#collapse' + i" aria-expanded="true">
@@ -64,15 +64,24 @@
 				<div class="tab-pane fade show active" [id]="'v-pills' + selectedSubTopic?.id" role="tabpanel">
 					<h1 class="body-title"><span>Занятие {{ routeTopicIndex + 1 }}
 							.</span> {{ selectedSubTopic?.name }}</h1>
-					<hr>
-					<span>
-						Python 3 — это современный язык, на котором просто и приятно писать программы.
-						Для печати значений в Питоне есть функция print(). Внутри круглых скобок через запятую мы пишем
-						то, что
-						хотим вывести. Вот программа, которая делает несколько вычислений:
-					</span>
-				</div>
 
+
+          <ng-container *ngFor="let content of contents">
+            <ng-container>
+              <div class="row">
+                <div class="col-md-12">
+                  <p *ngIf="content.type == 'text'">
+                    {{ content.body }}
+                  </p>
+                  <p *ngIf="content.type == 'task'">
+                    <app-brython-editor [content]="content">
+                    </app-brython-editor>
+                  </p>
+                </div>
+              </div>
+            </ng-container>
+          </ng-container>
+				</div>
 			</div>
 		</main>
 	</div>

@@ -12,7 +12,7 @@
           <div id="editor{{id}}" class="ace-editor"></div>
           <div id="error{{id}}" class="editor-error"></div>
         </div>
-        <div id="input-output">
+        <div class="input-output">
           <textarea class="python-input" value="{{content.input}}" id="input{{id}}"
             placeholder="входные данные...." rows="6" cols="39"></textarea>
           <textarea [readOnly]="true" class="python-output" id="output{{id}}" placeholder="выходные данные...." rows="6"
@@ -28,7 +28,7 @@
           <div id="editor{{id}}" class="ace-editor"></div>
           <div id="error{{id}}" class="editor-error"></div>
         </div>
-        <div id="input-output">
+        <div class="input-output">
           <textarea class="python-input" [(ngModel)]="editorContent.input" id="input{{id}}"
             placeholder="входные данные...." rows="6" cols="39"></textarea>
           <textarea [readOnly]="true" class="python-output" id="output{{id}}" placeholder="выходные данные...." rows="6"
