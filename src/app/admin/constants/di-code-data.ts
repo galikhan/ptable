@@ -1,8 +1,7 @@
-import { Content } from "src/app/interface/content";
+import {Content} from "src/app/interface/content";
 
 export interface DiCodeData {
-
-    topic: number;
-    content: Content;
+  topic: number;
+  content: Content;
 
 }

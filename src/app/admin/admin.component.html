@@ -17,11 +17,11 @@
   <div class="row">
     <aside class="col-md-4 col-lg-3 d-md-block sidebar">
       <form class="row g-3">
-        <div class="col-lg-9">
+        <div class="col-lg-8">
           <input placeholder="Введите тему" type="text" class="form-control" [(ngModel)]="addTopicName"
                  [ngModelOptions]="{standalone: true}">
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-4">
           <button [disabled]="addTopicName.length < 3" type="submit" class="btn btn-primary mb-3 w-100"
                   (click)="addTopic()">Добавить
           </button>
@@ -31,7 +31,6 @@
 
       <div class="accordion" id="accordionFlushExample">
         <div class="accordion-item" *ngFor="let item of parentData; let i = index">
-          <!--          <small class="p-0">Занятие {{ i + 1 }}</small>-->
           <button (click)="onClickAccordion(item.id);" class="accordion-button"
                   [ngClass]="{'collapsed' :!ifRouteHasTopic(i) }" type="button" data-bs-toggle="collapse"
                   [attr.data-bs-target]="'#collapse' + i" aria-expanded="true">
@@ -60,31 +59,27 @@
 
 
                 <form class="row g-3">
+                  <div class="col-lg-auto">
+                    <!--                    <button type="button" class="btn btn-outline-primary btn-sm" (click)="addSubtopic(item)"-->
+                    <!--                            data-bs-toggle="tooltip" data-bs-placement="top" title="Добавить подтему">-->
+                    <!--                      <i class="bi bi-plus"></i>-->
+                    <!--                    </button>-->
+                    <button [matTooltip]="'Добавить подтему'" (click)="addSubtopic(item)" mat-icon-button
+                            class="example-icon favorite-icon"
+                            aria-label="Example icon-button with heart icon">
+                      <mat-icon>add</mat-icon>
+                    </button>
 
-                  <div class="col-lg-auto">
-                    <!--                    <button [disabled]="isDisabledBtn" type="submit"-->
-                    <!--                            class="btn btn-sm btn-primary mb-3 w-100"-->
-                    <!--                            (click)="addSubtopic(item)">Добавить подтему-->
-                    <!--                    </button>-->
-                    <button type="button" class="btn btn-outline-primary btn-sm" (click)="addSubtopic(item)"
-                            data-bs-toggle="tooltip" data-bs-placement="top" title="Добавить подтему">
-                      <i class="bi bi-plus"></i>
+                    <button [matTooltip]="'Удалить тему'" (click)="deleteTopic(item)" mat-icon-button
+                            class="example-icon favorite-icon"
+                            aria-label="Example icon-button with heart icon">
+                      <mat-icon>delete</mat-icon>
                     </button>
-                  </div>
-                  <div class="col-lg-auto">
-                    <!--                    <button [disabled]="isDisabledBtn" type="submit"-->
-                    <!--                            class="btn btn-sm btn-danger mb-3 w-100" (click)="deleteTopic(item)">Удалить-->
-                    <!--                      тему-->
-                    <!--                    </button>-->
-                    <button type="button" class="btn btn-outline-danger btn-sm" (click)="deleteTopic(item)"
-                            data-bs-toggle="tooltip" data-bs-placement="top" title="Удалить тему">
-                      <i class="bi bi-trash-fill"></i>
-                    </button>
-                  </div>
-                  <div class="col-lg-auto">
-                    <button type="button" class="btn btn-outline-secondary btn-sm" (click)="editTopicName(item)"
-                            data-bs-toggle="tooltip" data-bs-placement="top" title="Изменить тему">
-                      <i class="bi bi-pencil-fill"></i>
+
+                    <button [matTooltip]="'Изменить тему'" (click)="editTopicName(item)" mat-icon-button
+                            class="example-icon favorite-icon"
+                            aria-label="Example icon-button with heart icon">
+                      <mat-icon>edit</mat-icon>
                     </button>
                   </div>
                 </form>
@@ -104,10 +99,18 @@
             <span>Занятие {{ selectedParentIndex + 1 }}.</span>
             {{ selectedSubTopic?.name }}
             <span>
-              <mat-icon (click)="editSubtopicName(selectedSubTopic)" aria-hidden="false" aria-label="Example home icon"
-                        fontIcon="edit"></mat-icon>
-              <mat-icon (click)="deleteSubtopic(selectedSubTopic)" aria-hidden="false" aria-label="Example home icon"
-                        fontIcon="delete"></mat-icon>
+              <button [matTooltip]="'Удалить подтему'" (click)="deleteSubtopic(selectedSubTopic)" mat-icon-button
+                      class="example-icon favorite-icon"
+                      aria-label="Example icon-button with heart icon">
+                      <mat-icon>delete</mat-icon>
+                    </button>
+
+                    <button [matTooltip]="'Изменить подтему'" (click)="editSubtopicName(selectedSubTopic)"
+                            mat-icon-button
+                            class="example-icon favorite-icon"
+                            aria-label="Example icon-button with heart icon">
+                      <mat-icon>edit</mat-icon>
+                    </button>
             </span>
           </h1>
 
@@ -116,11 +119,23 @@
             <ng-container>
               <div class="row">
                 <div class="col-md-12">
-                  <p *ngIf="content.type == 'text'">{{ content.body }}
-                    <mat-icon (click)="editContent(content)" aria-hidden="false" aria-label="Example home icon"
-                              fontIcon="edit"></mat-icon>
-                    <mat-icon (click)="deleteContent(content)" aria-hidden="false" aria-label="Example home icon"
-                              fontIcon="delete"></mat-icon>
+                  <p *ngIf="content.type == 'text'">
+                    {{ content.body }}
+                    <!--                    <mat-icon (click)="editContent(content)" aria-hidden="false" aria-label="Example home icon"-->
+                    <!--                              fontIcon="edit"></mat-icon>-->
+                    <!--                    <mat-icon (click)="deleteContent(content)" aria-hidden="false" aria-label="Example home icon"-->
+                    <!--                              fontIcon="delete"></mat-icon>-->
+                    <button [matTooltip]="'Удалить контент'" (click)="deleteContent(content)" mat-icon-button
+                            class="example-icon favorite-icon"
+                            aria-label="Example icon-button with heart icon">
+                      <mat-icon>delete</mat-icon>
+                    </button>
+
+                    <button [matTooltip]="'Изменить контент'" (click)="editContent(content)" mat-icon-button
+                            class="example-icon favorite-icon"
+                            aria-label="Example icon-button with heart icon">
+                      <mat-icon>edit</mat-icon>
+                    </button>
                   </p>
                   <p *ngIf="content.type == 'task'">
                     <span class="code-actions mb-2">
@@ -128,10 +143,10 @@
                       редактировать код
                     </button>
                     <button (click)="openDeleteCodeDialog(content)" class="edit-code" style="margin-right:5px">
-                      Удалить код
+                      удалить код
                     </button>
                     </span>
-                    <app-brython-editor class="mt-4" [content]="content">
+                    <app-brython-editor class="mt-4" [content]="content" [isEditor]="false">
                     </app-brython-editor>
                   </p>
                 </div>
@@ -140,7 +155,7 @@
           </ng-container>
 
 
-          <div class="row mt-4">
+          <div class="row mb-4">
             <div class="col-auto">
               <div class="body-actions">
                 <button type="button" class="btn btn-primary" (click)="addContent()">Добавить контент
@@ -151,7 +166,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </main>
   </div>

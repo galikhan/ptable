@@ -12,7 +12,6 @@ import { DiCodeData } from '../../constants/di-code-data';
   styleUrls: ['./code.component.scss']
 })
 export class CodeComponent implements OnInit {
-
   content!: Content;
 
   constructor(
@@ -25,10 +24,10 @@ export class CodeComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('this.data', this.data);
-    if (this.data.content) {
+    if (this.data?.content) {
       this.content = {
         type: 'task',
-        
+
         body: this.data.content.body,
         topic: this.data.topic,
         id: this.data.content.id,
