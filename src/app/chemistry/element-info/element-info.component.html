@@ -36,13 +36,13 @@
 
                     <div class="phys-image-1">
                         <mat-icon *ngIf="addInfo.physical_properties.icon_1"
-                            [svgIcon]="addInfo.physical_properties.icon_1" class="svg-icon"></mat-icon>
+                            [svgIcon]="toLower(addInfo.how_taken?.iconaddInfo?.physical_properties?.icon_1)" class="svg-icon"></mat-icon>
                         {{ addInfo.physical_properties.icon_info_1 }}
                     </div>
                     <!-- <div class="phys-image-info-1"></div> -->
                     <div class="phys-image-2">
                         <mat-icon *ngIf="addInfo.physical_properties.icon_2"
-                            [svgIcon]="addInfo.physical_properties.icon_2" class="svg-icon"></mat-icon>
+                            [svgIcon]="toLower(addInfo.physical_properties.icon_2)" class="svg-icon"></mat-icon>
                         {{ addInfo.physical_properties.icon_info_2 }}
                     </div>
                     <!-- <div class="phys-image-info-2"></div> -->
@@ -83,13 +83,7 @@
                                     <mat-icon svgIcon="picker" class="svg-icon"></mat-icon>
                                 </ng-container>
                             </div>
-                            <!-- <div *ngIf="addInfo.how_spread.icon" class="float-left">
-                                <mat-icon [svgIcon]="addInfo.how_spread.icon" class="svg-icon"></mat-icon>
-                            </div> -->
                         </div>
-
-                        <!-- <div class="how-spread-desc-panel popup-panel-40-60">
-                        </div> -->
                     </div>
 
                 </div>
@@ -112,7 +106,7 @@
                         <div class="float-left formula" [innerHtml]="addInfo.how_taken.formula">
                         </div>
                         <div class="float-right" *ngIf="addInfo.how_taken.icon">
-                            <mat-icon [svgIcon]="addInfo.how_taken.icon" class="svg-icon"></mat-icon>
+                            <mat-icon [svgIcon]="toLower(addInfo.how_taken.icon)" class="svg-icon"></mat-icon>
                         </div>
                     </div>
                 </ng-container>
@@ -134,7 +128,7 @@
                     </div>
                     <div class="float-right">
                         <div *ngIf="addInfo && addInfo.chemical_properties && addInfo.chemical_properties.icon">
-                            <mat-icon [svgIcon]="addInfo.chemical_properties.icon" class="svg-icon"></mat-icon>
+                            <mat-icon [svgIcon]="toLower(addInfo.chemical_properties.icon)" class="svg-icon"></mat-icon>
                         </div>
                     </div>
                 </div>
@@ -150,17 +144,17 @@
                 </mat-expansion-panel-header>
                 <div class="how-used" *ngIf="addInfo && addInfo.how_used">
                     <div class="grid-item">
-                        <mat-icon class="svg-icon" [svgIcon]="addInfo.how_used.icon_1"></mat-icon>
+                        <mat-icon class="svg-icon" [svgIcon]="toLower(addInfo.how_used.icon_1)"></mat-icon>
                         <div>{{addInfo.how_used.icon_info_1}}</div>
                     </div>
 
                     <div class="grid-item">
-                        <mat-icon class="svg-icon" [svgIcon]="addInfo.how_used.icon_2"></mat-icon>
+                        <mat-icon class="svg-icon" [svgIcon]="toLower(addInfo.how_used.icon_2)"></mat-icon>
                         <div>{{addInfo.how_used.icon_info_2}}</div>
                     </div>
 
                     <div class="grid-item">
-                        <mat-icon class="svg-icon" [svgIcon]="addInfo.how_used.icon_3"></mat-icon>
+                        <mat-icon class="svg-icon" [svgIcon]="toLower(addInfo.how_used.icon_3)"></mat-icon>
                         <div>{{addInfo.how_used.icon_info_3}}</div>
                     </div>
                 </div>

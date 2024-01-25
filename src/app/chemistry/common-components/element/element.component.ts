@@ -1,9 +1,12 @@
 import { Component, Inject, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { DeviceDetectorService } from 'ngx-device-detector';
 import { iif } from 'rxjs';
 import { ChemicalElement } from 'src/app/interface/chemical-element';
+import { ChemistryIconService } from 'src/app/service/chemistry-icon.service';
 import { HighlightByTemperatureService } from 'src/app/service/highlight-by-temperature.service';
 import { HighlightStateService } from 'src/app/service/highlight-state.service';
 import { HighlightTypeService } from 'src/app/service/highlight-type.service';
@@ -52,7 +55,10 @@ export class ElementComponent implements OnInit {
     public showElementService: ShowElementService,
     public di: MatDialog,
     private deviceService: DeviceDetectorService,
-    private router: Router
+    private router: Router,
+    public chemistryIconService: ChemistryIconService,
+    public iconRegistry: MatIconRegistry, 
+    public sanitizer: DomSanitizer
   ) {
 
   }
@@ -239,27 +245,41 @@ export class ElementComponent implements OnInit {
   }
 
   showElement(element: ChemicalElement | undefined) {
+    
     if (element) {
-      const color = this.getColorOfElement(element);
-      const borderColor = this.getBorderColorOfElement(element);
-      if (this.deviceService.isDesktop()) {
-        this.di.open(DiPopupElementComponent, 
-          { width: "700px", 
-            height: "800px",
-            panelClass: "popup-element-info-panel",
-            data: { 
-              symbol: element.symbol, number: element.number, atomic_mass: element.atomic_mass,
-              color, 
-              borderColor } 
+      // this.loadIcons(element.symbol);  // ChemistryIconService
+      
+      this.chemistryIconService.findByElement(element.symbol).subscribe(result => {
+        if(result) {
+          result.forEach(item => {
+            this.iconRegistry.addSvgIcon(item.name, this.sanitizer.bypassSecurityTrustResourceUrl(item.path));
           });
-      } else {
-        this.router.navigate(['/chemistry/element-mobile'], 
-        {queryParams: 
-          { symbol: element.symbol, number: element.number, atomic_mass: element.atomic_mass,
-            color, 
-            borderColor}
-        })
-      }
+
+          const color = this.getColorOfElement(element);
+          const borderColor = this.getBorderColorOfElement(element);
+          if (this.deviceService.isDesktop()) {
+            this.di.open(DiPopupElementComponent, 
+              { width: "700px", 
+                height: "800px",
+                panelClass: "popup-element-info-panel",
+                data: { 
+                  symbol: element.symbol, number: element.number, atomic_mass: element.atomic_mass,
+                  color, 
+                  borderColor } 
+              });
+          } else {
+            this.router.navigate(['/chemistry/element-mobile'], 
+            {queryParams: 
+              { symbol: element.symbol, number: element.number, atomic_mass: element.atomic_mass,
+                color, 
+                borderColor}
+            })
+          }
+          console.log('icon pack is loaded')
+        }
+      })
+      console.log('after icons loaded element', element);
+
     }
   }
 
@@ -340,4 +360,16 @@ export class ElementComponent implements OnInit {
   disableFire(): void {
     this.fireBoiled = false;
   }
+
+  async loadIcons(element: string) {
+    await this.chemistryIconService.findByElement(element).subscribe(result => {
+      if(result) {
+        result.forEach(item => {
+          this.iconRegistry.addSvgIcon(item.name, this.sanitizer.bypassSecurityTrustResourceUrl(item.path));
+        });
+        console.log('icon pack is loaded')
+      }
+    })
+  }
+
 }

@@ -38,7 +38,12 @@ export class ElementInfoComponent implements OnInit {
     if (this.number) {
       this.importedJson = json;
       const be = this.importedJson[this.number];
+      console.log('be', be);
       this.addInfo = be;
     }
+  }
+  
+  toLower(name: string): string {
+    return name ? name.toLowerCase() : '';
   }
 }
