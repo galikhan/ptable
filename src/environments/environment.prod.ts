@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://161.97.144.45:8282/api/v1'
+  apiUrl: 'http://s-art.kz/api/v1'
 };

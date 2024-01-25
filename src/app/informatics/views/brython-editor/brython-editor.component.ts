@@ -30,11 +30,16 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy 
       const aceEditorElement = document.getElementById('editor' + this.id)
       const hiddenTextarea = document.getElementById('hidden-textarea' + this.id)
       ace.config.set("fontSize", "14px");
+      ace.config.set(
+        "basePath",
+        "assets/js/ace"
+      );
+
       if (aceEditorElement) {
         this.aceEditor = ace.edit(aceEditorElement);
         this.aceEditor.session.setValue(this.content.body);
-        // aceEditor.session.setMode("ace/mode/python");
-        this.aceEditor.renderer.setShowGutter(false);
+        this.aceEditor.session.setMode("ace/mode/python");
+        this.aceEditor.renderer.setShowGutter(true);
 
         if (hiddenTextarea) {
           const content = this.content;

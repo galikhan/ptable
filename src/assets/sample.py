@@ -1,8 +1,6 @@
-from browser import bind, window, document, html, highlight, markdown
-import os
+from browser import bind, document
 import sys
 import traceback
-from browser.local_storage import storage
 
 question_id = -1
 # Transform markdown to html and insert in the document
@@ -12,7 +10,6 @@ imports = """
 import sys
 from browser import document
 from io import StringIO
-from browser.local_storage import storage
 """
 utils = """
 question_id = int(question_id)
