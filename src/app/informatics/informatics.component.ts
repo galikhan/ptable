@@ -5,7 +5,7 @@ import { ActivatedRoute, Params, Router } from "@angular/router";
 import EditorJS from '@editorjs/editorjs';
 import {ContentService} from "../service/content.service";
 import {Content} from "../interface/content";
-
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-informatics',
@@ -25,6 +25,7 @@ export class InformaticsComponent implements OnInit, AfterViewInit {
     private router: Router,
     private route: ActivatedRoute,
     private service: ContentService,
+    private location: Location
   ) {
   }
 
@@ -59,6 +60,7 @@ export class InformaticsComponent implements OnInit, AfterViewInit {
   }
 
   onClickAccordion(parentId: number) {
+    this.location.go('/informatics');
     this.getTopicByParentId(parentId);
   }
 

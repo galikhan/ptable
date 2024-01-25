@@ -1,17 +1,8 @@
-import {
-  AfterViewInit,
-  Component,
-  EventEmitter,
-  Input,
-  OnDestroy,
-  OnInit,
-  Output,
-} from '@angular/core';
-import { Content } from 'src/app/interface/content';
-import { BrythonStateService } from 'src/app/service/brython.service';
+import {AfterViewInit, Component, Input, OnDestroy, OnInit,} from '@angular/core';
+import {Content} from 'src/app/interface/content';
+import {BrythonStateService} from 'src/app/service/brython.service';
 import * as ace from 'ace-builds';
 import {MatDialog} from "@angular/material/dialog";
-import {Ace} from "ace-builds";
 
 @Component({
   selector: 'app-brython-editor',
@@ -21,8 +12,6 @@ import {Ace} from "ace-builds";
 export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() public content!: Content;
   @Input() public isEditor = false;
-  // @Output() editCodeOutput: EventEmitter<any> = new EventEmitter<any>();
-  // @Output() deleteCodeOutput: EventEmitter<any> = new EventEmitter<any>();
   id!: number;
   public editorContent!: Content;
   aceEditor: any;
@@ -51,8 +40,7 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy 
           const content = this.content;
           const aceEditorConst = this.aceEditor;
           this.aceEditor.getSession().on('change', function () {
-            const aceValue = aceEditorConst.getSession().getValue();
-            content.body = aceValue;
+            content.body = aceEditorConst.getSession().getValue();
           });
         }
       }
@@ -80,14 +68,4 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy 
       this.brython.setNext(id);
     }
   }
-
-  editCode(content: Content) {
-    // this.editCodeOutput.emit(content);
-  }
-
-  deleteCode(content: Content) {
-    // this.deleteCodeOutput.emit(content);
-  }
-
-
 }

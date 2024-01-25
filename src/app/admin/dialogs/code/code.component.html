@@ -1,11 +1,11 @@
 <div class="modal-content">
-  <h2 mat-dialog-title>Добавить код
+  <h2 mat-dialog-title>{{ data.content?.id ? 'Редактировать код' : 'Добавить код' }}
   </h2>
   <mat-dialog-content *ngIf="content" class="mat-typography">
     <ng-container *ngIf="content">
       <app-brython-editor [content]="content" [isEditor]="true"></app-brython-editor>
     </ng-container>
-  
+
   </mat-dialog-content>
   <mat-dialog-actions align="end">
     <button mat-button mat-dialog-close color="warn">Отмена</button>

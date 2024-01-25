@@ -21,6 +21,13 @@ export class ContentComponent implements OnInit {
   ) {
   }
 
+  ngOnInit(): void {
+    console.log(this.data);
+    if (this.data.content) {
+      this.description = this.data.content.body;
+    }
+  }
+
   onSaveContent() {
     // Save the description if available
     if (this.description) {
@@ -65,9 +72,5 @@ export class ContentComponent implements OnInit {
     this.selectedFile = event.target.files[0];
   }
 
-  ngOnInit(): void {
-    if (this.data?.content) {
-      this.description = this.data?.content.body;
-    }
-  }
+
 }

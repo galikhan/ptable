@@ -3,9 +3,9 @@
 		<span>Python</span>
 		<span>
 			<button [routerLink]="['/login']" mat-icon-button class="example-icon favorite-icon"
-				aria-label="Example icon-button with heart icon">
-				<mat-icon>login</mat-icon>
-			</button>
+              aria-label="Example icon-button with heart icon">
+        <mat-icon>starts</mat-icon>
+      </button>
 		</span>
 	</mat-toolbar>
 </p>
@@ -14,16 +14,13 @@
 <div class="container-fluid">
 	<div class="row">
 		<aside class="col-md-4 col-lg-3 d-md-block sidebar">
-
-
-
-
 			<div class="accordion" id="accordionFlushExample">
 				<div class="accordion-item" *ngFor="let item of parentData; let i = index">
-
+          <small>Занятие {{ i + 1 }}</small>
 					<button (click)="onClickAccordion(item.id);" class="accordion-button"
 						[ngClass]="{'collapsed' :!ifRouteHasTopic(i) }" type="button" data-bs-toggle="collapse"
 						[attr.data-bs-target]="'#collapse' + i" aria-expanded="true">
+
 						{{ item.name }}
 					</button>
 
@@ -37,6 +34,7 @@
                 <span class="visually-hidden">Loading...</span>
               </div>
               <!-- Example subtopics -->
+
               <div *ngIf="childData" class="nav w-100 nav-pills" id="v-pills-tab"
                    role="tablist" aria-orientation="vertical">
                 <button (click)="onClickChild(children, i)"
@@ -44,7 +42,9 @@
                         [id]="'v-pills' + j" data-bs-toggle="pill"
                         [ngClass]="{'active': isRouteHasSubtopic(j, children)}"
                         data-bs-target="#v-pills-home" type="button" role="tab"
-                        aria-controls="v-pills-home" aria-selected="true">{{
+                        aria-controls="v-pills-home" aria-selected="true">
+                  <i class="bi bi-book fs-6" style="margin-right: 10px"></i>
+                  {{
                     children.name
                   }}
                 </button>
@@ -58,13 +58,11 @@
 		<!-- Main content area -->
 		<main role="main" class="col-md-8 ml-sm-auto col-lg-9 px-md-4" *ngIf="selectedSubTopic">
 			<!-- Your main content goes here -->
-
-
 			<div class="tab-content" id="v-pills-tabContent">
 				<div class="tab-pane fade show active" [id]="'v-pills' + selectedSubTopic?.id" role="tabpanel">
 					<h1 class="body-title"><span>Занятие {{ routeTopicIndex + 1 }}
 							.</span> {{ selectedSubTopic?.name }}</h1>
-
+          <hr>
 
           <ng-container *ngFor="let content of contents">
             <ng-container>
@@ -73,10 +71,11 @@
                   <p *ngIf="content.type == 'text'">
                     {{ content.body }}
                   </p>
-                  <p *ngIf="content.type == 'task'">
+                  <div *ngIf="content.type == 'task'">
                     <app-brython-editor [content]="content">
                     </app-brython-editor>
-                  </p>
+                  </div>
+
                 </div>
               </div>
             </ng-container>

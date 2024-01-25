@@ -112,7 +112,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
     const dialog = this.dialog.open(ContentComponent, {
       data: {
         topic: this.routeSubtopicId,
-        childContent: null
+        content: null
       },
       width: '30%'
     })
@@ -127,7 +127,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
     const dialog = this.dialog.open(ContentComponent, {
       data: {
         topic: this.routeSubtopicId,
-        childContent: childContent
+        content: childContent
       },
       width: '30%'
     })
@@ -159,7 +159,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
     const dialog = this.dialog.open(CodeComponent, {
       data: {
         topic: this.routeSubtopicId,
-        data: null
+        content: null
       },
       width: '50%'
     })
@@ -172,7 +172,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
     const dialog = this.dialog.open(CodeComponent, {
       data: {
         topic: this.routeSubtopicId,
-        content
+        content: content
       },
       width: '50%'
     })
@@ -185,7 +185,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
   openDeleteCodeDialog(content: Content) {
     const dialog = this.dialog.open(DeleteConfirmationComponent, {
       data: {
-        type: 'content'
+        type: 'code'
       },
       width: '30%'
     })
