@@ -1,47 +1,7 @@
-<!--<div class="row">-->
-<!--  <div class="col-lg-12">-->
-<!--    <div *ngIf="content">-->
-<!--      <button (click)="runCode(id)" id="run-code" style="margin-right:5px">запустить</button>-->
-
-<!--      <ng-container *ngIf="!isEditor">-->
-<!--        &lt;!&ndash; <strong>not editor</strong> &ndash;&gt;-->
-<!--        <div class="editor-panel">-->
-<!--          <textarea name="description" style="display: none;"-->
-<!--            id="hidden-textarea{{id}}">{{content.body}}</textarea>-->
-<!--          <div id="editor{{id}}" class="ace-editor"></div>-->
-<!--          <div id="error{{id}}" class="editor-error"></div>-->
-<!--        </div>-->
-<!--        <div class="input-output">-->
-<!--          <textarea class="python-input" value="{{content.input}}" id="input{{id}}"-->
-<!--            placeholder="входные данные...." rows="6" cols="39"></textarea>-->
-<!--          <textarea [readOnly]="true" class="python-output" id="output{{id}}" placeholder="выходные данные...." rows="6"-->
-<!--            cols="40"></textarea>-->
-<!--        </div>-->
-<!--      </ng-container>-->
-
-<!--      <ng-container *ngIf="isEditor">-->
-<!--        &lt;!&ndash; <strong>Editor</strong> &ndash;&gt;-->
-<!--        <div class="editor-panel">-->
-<!--          <textarea [(ngModel)]="editorContent.body" name="description" style="display: none;"-->
-<!--            id="hidden-textarea{{id}}"></textarea>-->
-<!--          <div id="editor{{id}}" class="ace-editor"></div>-->
-<!--          <div id="error{{id}}" class="editor-error"></div>-->
-<!--        </div>-->
-<!--        <div class="input-output">-->
-<!--          <textarea class="python-input" [(ngModel)]="editorContent.input" id="input{{id}}"-->
-<!--            placeholder="входные данные...." rows="6" cols="39"></textarea>-->
-<!--          <textarea [readOnly]="true" class="python-output" id="output{{id}}" placeholder="выходные данные...." rows="6"-->
-<!--            cols="40"></textarea>-->
-<!--        </div>-->
-<!--      </ng-container>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-
 <div class="card mb-2" *ngIf="content" [ngClass]="{'mt-2': !isEditor}">
   <div class="card-header d-flex justify-content-between align-items-center">
     <span>
-      Example1.py
+      Задача
     </span>
 
     <div class="header-actions">

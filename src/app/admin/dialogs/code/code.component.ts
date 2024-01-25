@@ -27,7 +27,6 @@ export class CodeComponent implements OnInit {
     if (this.data?.content) {
       this.content = {
         type: 'task',
-
         body: this.data.content.body,
         topic: this.data.topic,
         id: this.data.content.id,
