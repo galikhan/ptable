@@ -113,7 +113,7 @@
                     </button>
             </span>
           </h1>
-
+          <hr>
 
           <ng-container *ngFor="let content of contents">
             <ng-container>
@@ -154,9 +154,9 @@
           <div class="row mb-4">
             <div class="col-auto">
               <div class="body-actions">
-                <button type="button" class="btn btn-primary" (click)="addContent()">Добавить контент
+                <button class="edit-code" style="margin-right:5px" (click)="addContent()">добавить контент
                 </button>
-                <button type="button" class="btn btn-secondary" (click)="addCode()">Добавить код
+                <button class="edit-code" style="margin-right:5px" (click)="addCode()">добавить код
                 </button>
               </div>
             </div>

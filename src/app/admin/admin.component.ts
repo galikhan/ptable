@@ -20,7 +20,6 @@ export class AdminComponent implements OnInit, AfterViewInit {
   addTopicName: string = "";
   parentData!: Topic[];
   childData!: Topic[];
-  childContent!: ChildContent[];
   selectedSubTopic: any;
   selectedParentIndex!: number;
   isDisabledBtn!: boolean;
@@ -323,8 +322,5 @@ export class AdminComponent implements OnInit, AfterViewInit {
       }
     }))
   }
-
-
-
 
 }
