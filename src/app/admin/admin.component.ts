@@ -46,6 +46,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
       aceEditor.session.setValue("<h1>Ace Editor works great in Angular!</h1>");
     }
   }
+
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
       this.routeTopicIndex = +params['topicId'];

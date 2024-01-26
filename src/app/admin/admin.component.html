@@ -121,10 +121,6 @@
                 <div class="col-md-12">
                   <p *ngIf="content.type == 'text'">
                     {{ content.body }}
-                    <!--                    <mat-icon (click)="editContent(content)" aria-hidden="false" aria-label="Example home icon"-->
-                    <!--                              fontIcon="edit"></mat-icon>-->
-                    <!--                    <mat-icon (click)="deleteContent(content)" aria-hidden="false" aria-label="Example home icon"-->
-                    <!--                              fontIcon="delete"></mat-icon>-->
                     <button [matTooltip]="'Удалить контент'" (click)="deleteContent(content)" mat-icon-button
                             class="example-icon favorite-icon"
                             aria-label="Example icon-button with heart icon">
@@ -140,10 +136,10 @@
                   <p *ngIf="content.type == 'task'">
                     <span class="code-actions mb-2">
                       <button (click)="openEditCodeDialog(content)" class="edit-code" style="margin-right:5px">
-                      редактировать код
+                      редактировать задачу
                     </button>
                     <button (click)="openDeleteCodeDialog(content)" class="edit-code" style="margin-right:5px">
-                      удалить код
+                      удалить задачу
                     </button>
                     </span>
                     <app-brython-editor class="mt-4" [content]="content" [isEditor]="false">
