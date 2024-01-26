@@ -57,7 +57,6 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy 
   }
 
   ngOnInit(): void {
-
     if(this.content) {
       this.editorContent = Object.create(this.content);
       this.id = this.editorContent.id;
@@ -69,7 +68,6 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy 
 
   runCode(id: number): void {
     if (this.content.body) {
-      // console.log(' runCode id', id)
       this.brython.setNext(id);
     }
   }

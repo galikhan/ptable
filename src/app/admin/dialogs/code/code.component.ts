@@ -34,7 +34,7 @@ export class CodeComponent implements OnInit {
         input: this.data.content.input
       };
     } else {
-      this.content = { id: -1, type: 'task', body: '', topic: this.data.topic };
+      this.content = {id: -1, type: 'task', body: '', topic: this.data.topic, input: ''};
     }
     console.log('this.content', this.content);
   }
@@ -47,6 +47,7 @@ export class CodeComponent implements OnInit {
         this.dialogRef.close('updated')
       });
     } else {
+      console.log(this.content)
       this.contentService.create(this.content).subscribe(result => {
         this.content = result;
         // console.log('created');
