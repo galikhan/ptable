@@ -42,16 +42,9 @@
       <div class="col-md-3 col" style="height: 400px">
         <div class="row h-50" style="border-bottom: 6px solid #00000008;">
           <div class="col-md-12 bg-white text-white">
-            <div class="input-output" *ngIf="!isEditor">
-                      <textarea class="python-input" value="{{content.input}}" id="input{{id}}"
+            <div class="input-output">
+                      <textarea class="python-input" [(ngModel)]="content.input" id="input{{id}}"
                                 placeholder="входные данные...." rows="6" cols="39"></textarea>
-
-            </div>
-
-            <div class="input-output" *ngIf="isEditor">
-                      <textarea class="python-input" [(ngModel)]="editorContent.input" id="input{{id}}"
-                                placeholder="входные данные...." rows="6" cols="39"></textarea>
-
             </div>
           </div>
         </div>
