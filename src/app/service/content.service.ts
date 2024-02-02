@@ -9,20 +9,21 @@ import {environment} from "../../environments/environment";
 })
 export class ContentService {
   private apiUrl = environment.apiUrl + '/content';
+  private apiPrivateUrl = environment.apiPrivateUrl + '/content';
 
   constructor(private http: HttpClient) {
   }
 
   create(content: Content): Observable<Content> {
-    return this.http.post<Content>(this.apiUrl, content);
+    return this.http.post<Content>(this.apiPrivateUrl, content);
   }
 
   update(content: Content) {
-    return this.http.put<Content>(this.apiUrl, content);
+    return this.http.put<Content>(this.apiPrivateUrl, content);
   }
 
   remove(id: number) {
-    return this.http.delete(this.apiUrl + "/" + id);
+    return this.http.delete(this.apiPrivateUrl + "/" + id);
   }
 
   findByTopic(topicId: number) {
