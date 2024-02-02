@@ -18,15 +18,13 @@ import { FormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ContentComponent } from './dialogs/content/content.component';
 import { CodeComponent } from './dialogs/code/code.component';
-import { InformaticsModule } from '../informatics/informatics.module';
-import {DeleteConfirmationComponent} from './dialogs/delete-confirmation/delete-confirmation.component';
-import {SharedModule} from "../shared/shared.module";
-import {BrythonEditorComponent} from "../informatics/views/brython-editor/brython-editor.component";
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {HTTP_INTERCEPTORS} from "@angular/common/http";
-import {AuthInterceptor} from "../helper/auth.interceptor";
-import {MatSelectModule} from "@angular/material/select";
-import {MatMenuModule} from '@angular/material/menu';
+import { DeleteConfirmationComponent } from './dialogs/delete-confirmation/delete-confirmation.component';
+import { SharedModule } from "../shared/shared.module";
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { HTTP_INTERCEPTORS } from "@angular/common/http";
+import { AuthInterceptor } from "../helper/auth.interceptor";
+import { MatSelectModule } from "@angular/material/select";
+import { MatMenuModule } from '@angular/material/menu';
 
 
 @NgModule({
@@ -34,10 +32,11 @@ import {MatMenuModule} from '@angular/material/menu';
 		AdminComponent,
 		TopicComponent,
 		ContentComponent,
-    CodeComponent,
-    DeleteConfirmationComponent,
+		CodeComponent,
+		DeleteConfirmationComponent,
 	],
 	imports: [
+
 		CommonModule,
 		AdminRoutingModule,
 		MatToolbarModule,
@@ -47,23 +46,23 @@ import {MatMenuModule} from '@angular/material/menu';
 		MatFormFieldModule,
 		MatInputModule,
 		MatExpansionModule,
-		ReactiveFormsModule,
 		MatCardModule,
 		MatTreeModule,
-		FormsModule,
 		MatCheckboxModule,
-    SharedModule,
-    MatTooltipModule,
-    MatSelectModule,
-    MatMenuModule,
-    MatButtonModule
+		SharedModule,
+		MatTooltipModule,
+		MatSelectModule,
+		MatMenuModule,
+		MatButtonModule,
+		FormsModule,
+		ReactiveFormsModule,
 	],
-  providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: AuthInterceptor,
-      multi: true,
-    },
-  ]
+	providers: [
+		{
+			provide: HTTP_INTERCEPTORS,
+			useClass: AuthInterceptor,
+			multi: true,
+		},
+	]
 })
 export class AdminModule { }

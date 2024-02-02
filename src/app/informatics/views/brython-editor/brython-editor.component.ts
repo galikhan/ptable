@@ -12,10 +12,17 @@ import {MatDialog} from "@angular/material/dialog";
 export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() public content!: Content;
   @Input() public isEditor = false;
+
   id!: number;
   public editorContent!: Content;
   aceEditor: any;
   isFullScreen: boolean = false;
+  minLines = 6;
+  maxLines = 6;
+  editorHeight = 240; 
+  editorHeightPx = this.editorHeight + 'px';
+  inputOutputHeightPx = (this.editorHeight/2 - 20) + 'px';
+
   constructor(
     public brython: BrythonStateService,
     public dialog: MatDialog,
@@ -29,16 +36,22 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy 
     if (this.content) {
       const aceEditorElement = document.getElementById('editor' + this.id)
       const hiddenTextarea = document.getElementById('hidden-textarea' + this.id)
-      ace.config.set("fontSize", "14px");
+      this.minLines = this.calcMinLines(this.content.editorLen); 
+      this.editorHeightPx = this.calcEditorHeight(this.minLines) + 'px';
+      this.inputOutputHeightPx = this.calcIOHeight(this.minLines) + 'px';
+
+      ace.config.set('fontSize', '14px');
       ace.config.set(
-        "basePath",
-        "assets/js/ace"
+        'basePath',
+        'assets/js/ace'
       );
+      ace.config.set('maxLines', this.minLines);
+      ace.config.set('minLines', this.minLines);
 
       if (aceEditorElement) {
         this.aceEditor = ace.edit(aceEditorElement);
         this.aceEditor.session.setValue(this.content.body);
-        this.aceEditor.session.setMode("ace/mode/python");
+        this.aceEditor.session.setMode('ace/mode/python');
         this.aceEditor.renderer.setShowGutter(true);
 
         if (hiddenTextarea) {
@@ -46,6 +59,7 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy 
           const aceEditorConst = this.aceEditor;
           this.aceEditor.getSession().on('change', function () {
             content.body = aceEditorConst.getSession().getValue();
+            content.editorLen = aceEditorConst.getSession().getLength();
           });
         }
       }
@@ -75,4 +89,24 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy 
       this.brython.setNext(id);
     }
   }
+  
+  calcEditorHeight(minLines: number): number {
+    return minLines * 24;
+  }
+
+  calcIOHeight(minLines: number): number {
+    return (minLines * 24)/2 - 20;
+  }
+
+  calcMinLines(minLines: number): number {
+    if(minLines) {
+      if(minLines >= 5) {
+        return minLines > 10 ? 10 : minLines;
+      } else {
+        return 5;
+      }
+    }
+    return 10;
+  }
+
 }

@@ -48,7 +48,7 @@ export class ContentComponent implements OnInit {
 
   saveDescription() {
     console.log(this.content);
-    this.content = {id: 0, type: 'text', body: '', topic: this.data.topic};
+    this.content = {id: 0, type: 'text', body: '', topic: this.data.topic, editorLen: 5};
     if (this.data?.content) {
       this.content.id = this.data.content.id;
       this.content.isRemoved = false;

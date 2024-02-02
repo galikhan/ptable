@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
       console.log(result)
       localStorage.setItem('access_info', JSON.stringify(result));
       if(result) {
+        localStorage.setItem('jwt_sart', JSON.stringify(result));
         this.router.navigate(['/admin']);
       }
     });

@@ -4,6 +4,8 @@
       Задача
     </span>
 
+    <div id="error{{id}}" class="editor-error"></div>
+
     <div class="header-actions">
       <span>
         <button (click)="runCode(id)" id="run-code" style="margin-right:5px">Запустить</button>
@@ -31,25 +33,17 @@
     </div>
 
   </div>
-  <div class="card-body">
-    <div class="row">
+  <div class="editor gx-0">
+    <div class="row gx-0">
       <!-- Code section -->
-      <div class="col-md-9 col" style="height: 400px">
-        <div class="row h-100">
-          <div class="col-md-12 bg-white text-white">
-            <div class="editor-panel" *ngIf="!isEditor">
-                      <textarea name="description" style="display: none;"
-                                id="hidden-textarea{{id}}">{{ content.body }}</textarea>
+      <div class="col-md-9 gx-0" [ngStyle]="{'height':editorHeightPx}">
+        <div class="row gx-0 h-100">
+          <div class="col-md-12 gx-0">
+            <div class="editor-panel">
+              <textarea name="description" style="display: none;"
+                id="hidden-textarea{{id}}">{{ content.body }}</textarea>
 
               <div id="editor{{id}}" class="ace-editor"></div>
-              <div id="error{{id}}" class="editor-error"></div>
-            </div>
-
-            <div class="editor-panel" *ngIf="isEditor">
-                      <textarea [(ngModel)]="editorContent.body" name="description" style="display: none;"
-                                id="hidden-textarea{{id}}"></textarea>
-              <div id="editor{{id}}" class="ace-editor"></div>
-              <div id="error{{id}}" class="editor-error"></div>
             </div>
           </div>
         </div>
@@ -57,21 +51,19 @@
 
 
       <!-- Input Output section -->
-      <div class="col-md-3 col" style="height: 400px">
-        <div class="row h-50" style="border-bottom: 6px solid #00000008;">
-          <div class="col-md-12 bg-white text-white">
-            <div class="input-output">
-                      <textarea class="python-input" [(ngModel)]="content.input" id="input{{id}}"
-                                placeholder="входные данные...." rows="6" cols="39"></textarea>
+      <div class="col-md-3 io-panel gx-0" [ngStyle]="{'height':editorHeightPx}">
+        <div class="row h-50 gx-0">
+          <div class="col-md-12 gx-0 h-100">
+            <div class="input-output h-100">
+              <textarea class="python-input"  [(ngModel)]="content.input" id="input{{id}}"
+                placeholder="входные данные...." ></textarea>
             </div>
           </div>
         </div>
-        <div class="row h-50">
-          <div class="col-md-12 bg-white text-white">
+        <div class="row h-50 pt-6px">
+          <div class="col-md-12 h-100">
             <textarea [readOnly]="true" class="python-output" id="output{{id}}"
-                      placeholder="Нажмите на кнопку ЗАПУСТИТЬ, чтобы увидеть результат"
-                      rows="6"
-                      cols="40"></textarea>
+              placeholder="Нажмите на кнопку запустить, чтобы увидеть результат"></textarea>
           </div>
         </div>
       </div>

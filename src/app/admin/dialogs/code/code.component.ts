@@ -23,7 +23,6 @@ export class CodeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('this.data', this.data);
     if (this.data?.content) {
       this.content = {
         type: 'task',
@@ -31,26 +30,23 @@ export class CodeComponent implements OnInit {
         topic: this.data.topic,
         id: this.data.content.id,
         isRemoved: this.data.content.isRemoved,
-        input: this.data.content.input
+        input: this.data.content.input,
+        editorLen: this.data.content.editorLen
       };
     } else {
-      this.content = {id: -1, type: 'task', body: '', topic: this.data.topic, input: ''};
+      this.content = {id: -1, type: 'task', body: '', topic: this.data.topic, input: '', editorLen: 5};
     }
-    console.log('this.content', this.content);
   }
 
   saveCode() {
     if (this.content && this.content.id > 0) {
       this.contentService.update(this.content).subscribe(result => {
-        // console.log('updated');
         this.content = result;
         this.dialogRef.close('updated')
       });
     } else {
-      console.log(this.content)
       this.contentService.create(this.content).subscribe(result => {
         this.content = result;
-        // console.log('created');
         this.dialogRef.close('created')
       });
     }

@@ -5,4 +5,5 @@ export interface Content {
   type: string;
   isRemoved?: boolean;
   topic: number;
+  editorLen: number;
 }

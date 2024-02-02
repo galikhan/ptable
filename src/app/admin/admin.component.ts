@@ -184,7 +184,8 @@ export class AdminComponent implements OnInit, AfterViewInit {
         topic: this.routeSubtopicId,
         content: content
       },
-      width: '50%'
+      // width: '50%'
+      width: '800px'
     })
 
     dialog.afterClosed().subscribe(() => {

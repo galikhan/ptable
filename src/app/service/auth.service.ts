@@ -1,7 +1,7 @@
-import {HttpClient} from '@angular/common/http';
-import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs';
-import {environment} from "../../environments/environment";
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { environment } from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class AuthService {
   }
 
   login(username: string, password: string): Observable<any> {
-    return this.http.post<any>(this.apiUrl + '/login', {username, password});
+    return this.http.post<any>(this.apiUrl + '/login', { username, password });
   }
 
   isAuthenticated() {
@@ -30,7 +30,7 @@ export class AuthService {
 
       // Optionally, you can provide a default value or take other actions
       // For example, setting default value:
-      const defaultValue = {key: 'default'};
+      const defaultValue = { key: 'default' };
       console.log('Using default value:', defaultValue);
       return false;
     }
@@ -45,4 +45,12 @@ export class AuthService {
     }
   }
 
+  token(): string {
+    const jwt = localStorage.getItem('jwt_sart');
+    if (jwt) {
+      const parsed = JSON.parse(jwt)
+      return parsed.access_token;
+    }
+    return '';
+  }
 }
