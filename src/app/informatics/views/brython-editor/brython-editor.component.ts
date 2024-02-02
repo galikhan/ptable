@@ -15,7 +15,7 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy 
   id!: number;
   public editorContent!: Content;
   aceEditor: any;
-
+  isFullScreen: boolean = false;
   constructor(
     public brython: BrythonStateService,
     public dialog: MatDialog,
@@ -50,6 +50,10 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy 
         }
       }
     }
+  }
+
+  toggleFullScreen() {
+    this.isFullScreen = !this.isFullScreen;
   }
 
   public updateBody(value: string): void {

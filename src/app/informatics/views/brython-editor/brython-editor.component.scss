@@ -58,14 +58,10 @@
 }
 
 .python-output {
-  //width: 210px;
-  //padding: 0 0 0 5px;
-  //background-color: #f2f7fc;
   border: 1px solid transparent;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   line-height: 18px;
-
   width: 100%;
   height: 170px;
   margin: 10px 0;
@@ -73,24 +69,37 @@
 
 #run-code {
   height: 35px !important;
-  //width: 200px !important;
   border: none;
   border-radius: 8px;
   -webkit-border-radius: 8px;
   font-size: 16px;
-  //background-color: #6999ff;
   background-color: #0E6B9C;
   color: #fff;
 }
 
-.card-body {
-  background: #00000008;
-  padding: 0 15px;
+.card {
+  transition: width 0.3s ease, height 0.3s ease; /* Add a smooth transition effect for resizing */
+  position: relative;
 
-  .col {
-    padding: 15px;
+  .card-body {
+    background: #00000008;
+    padding: 0 15px;
+
+    .col {
+      padding: 15px;
+    }
   }
 }
+
+.header-actions {
+  display: flex;
+  align-items: center;
+
+  span {
+    cursor: pointer;
+  }
+}
+
 
 #edit-code {
   height: 35px !important;
@@ -127,7 +136,7 @@
 
 #run-code:active {
   height: 35px !important;
-  width: 200px !important;
+  //width: 200px !important;
   border: none;
   border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -141,3 +150,11 @@
 }
 
 
+.full-screen {
+  width: 100vw; /* Set the full-screen width */
+  height: 100vh; /* Set the full-screen height */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Set a higher z-index to bring it to the front */
+}

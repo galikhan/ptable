@@ -18,6 +18,7 @@ export interface ChildContent {
   type: string;
   body: string;
   isRemoved: boolean;
+  iconType: string;
 }
 
 export interface CreateParentDto {

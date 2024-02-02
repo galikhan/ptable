@@ -26,6 +26,9 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {HTTP_INTERCEPTORS} from "@angular/common/http";
 import {AuthInterceptor} from "../helper/auth.interceptor";
 import {MatSelectModule} from "@angular/material/select";
+import {MatMenuModule} from '@angular/material/menu';
+
+
 @NgModule({
 	declarations: [
 		AdminComponent,
@@ -51,7 +54,9 @@ import {MatSelectModule} from "@angular/material/select";
 		MatCheckboxModule,
     SharedModule,
     MatTooltipModule,
-    MatSelectModule
+    MatSelectModule,
+    MatMenuModule,
+    MatButtonModule
 	],
   providers: [
     {

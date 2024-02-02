@@ -53,7 +53,6 @@ export class InformaticsComponent implements OnInit, AfterViewInit {
       this.parentData = response;
       if (this.routeTopicIndex) { // 2
         const parentId = response[this.routeTopicIndex - 1]?.id;
-        console.log(parentId) // 8
         this.getTopicByParentId(parentId);
       }
     })
@@ -71,7 +70,6 @@ export class InformaticsComponent implements OnInit, AfterViewInit {
       if (this.routeSubtopicId) {
         const filteredChild = this.childData.filter(child => child?.id == this.routeSubtopicId);
         this.selectedSubTopic = filteredChild[0];
-        console.log(this.selectedSubTopic)
       }
     })
   }
@@ -94,6 +92,15 @@ export class InformaticsComponent implements OnInit, AfterViewInit {
     this.router.navigate(['/informatics/topic/' + parentTopic + '/subtopic/', children.id])
     this.routeTopicIndex = parentIndex;
     this.selectedSubTopic = children;
+  }
+
+  returnIconBy(children: any) {
+    if (children.iconType === 'video') {
+      return 'assets/ptable/video.png';
+    } else if (children.iconType === 'image') {
+      return 'assets/ptable/image.png';
+    }
+    return 'assets/ptable/info.png';
   }
 
 }

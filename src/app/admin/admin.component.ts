@@ -107,9 +107,14 @@ export class AdminComponent implements OnInit, AfterViewInit {
     this.selectedSubTopic = children;
   }
 
-  returnIconBy(children: Topic) {
+  returnIconBy(children: any) {
     console.log(children);
-    return null;
+    if (children.iconType === 'video') {
+      return 'assets/ptable/video.png';
+    } else if (children.iconType === 'image') {
+      return 'assets/ptable/image.png';
+    }
+    return 'assets/ptable/info.png';
   }
 
   // Admin side functions
