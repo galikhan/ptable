@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { CoreComponent } from './core/core.component';
 import { LoginComponent } from './login/login.component';
+import {AuthGuard} from "./helper/auth.guard";
 
 
 const routes: Routes = [
@@ -16,7 +16,12 @@ const routes: Routes = [
 	},
 	{ path: 'chemistry', loadChildren: () => import('./alchemy/alchemy.module').then(m => m.AlchemyModule) },
 	{ path: 'informatics', loadChildren: () => import('./informatics/informatics.module').then(m => m.InformaticsModule) },
-	{ path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) }
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),
+    canActivate: [AuthGuard]
+  },
+  {path: '', redirectTo: '/informatics', pathMatch: 'full'}
 ];
 
 @NgModule({
