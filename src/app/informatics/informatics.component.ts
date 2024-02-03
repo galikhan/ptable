@@ -97,8 +97,8 @@ export class InformaticsComponent implements OnInit, AfterViewInit {
   returnIconBy(children: any) {
     if (children.iconType === 'video') {
       return 'assets/ptable/video.png';
-    } else if (children.iconType === 'image') {
-      return 'assets/ptable/image.png';
+    } else if (children.iconType === 'code') {
+      return 'assets/ptable/task.png';
     }
     return 'assets/ptable/info.png';
   }
