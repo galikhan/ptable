@@ -25,6 +25,7 @@ import { HTTP_INTERCEPTORS } from "@angular/common/http";
 import { AuthInterceptor } from "../helper/auth.interceptor";
 import { MatSelectModule } from "@angular/material/select";
 import { MatMenuModule } from '@angular/material/menu';
+import {MatTabsModule} from "@angular/material/tabs";
 
 
 @NgModule({
@@ -56,6 +57,7 @@ import { MatMenuModule } from '@angular/material/menu';
 		MatButtonModule,
 		FormsModule,
 		ReactiveFormsModule,
+    MatTabsModule
 	],
 	providers: [
 		{

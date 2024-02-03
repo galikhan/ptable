@@ -38,7 +38,6 @@ export class AdminComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    console.log('this.supedit', this.supedit);
     if (this.supedit) {
       const el = this.supedit.nativeElement;
       let aceEditor = ace.edit(el);
@@ -70,7 +69,6 @@ export class AdminComponent implements OnInit, AfterViewInit {
       if (this.routeTopicIndex) {
         this.selectedParentIndex = this.routeTopicIndex - 1;
         const childId = response[this.selectedParentIndex]?.id;
-        console.log(childId)
         this.getTopicByParentId(childId);
       }
     })
@@ -86,7 +84,6 @@ export class AdminComponent implements OnInit, AfterViewInit {
       if (this.routeSubtopicId) {
         const filteredChild = this.childData.filter(child => child?.id == this.routeSubtopicId);
         this.selectedSubTopic = filteredChild[0];
-        console.log(this.selectedSubTopic)
       }
     })
   }
@@ -108,11 +105,10 @@ export class AdminComponent implements OnInit, AfterViewInit {
   }
 
   returnIconBy(children: any) {
-    console.log(children);
     if (children.iconType === 'video') {
       return 'assets/ptable/video.png';
-    } else if (children.iconType === 'image') {
-      return 'assets/ptable/image.png';
+    } else if (children.iconType === 'code') {
+      return 'assets/ptable/task.png';
     }
     return 'assets/ptable/info.png';
   }
@@ -127,13 +123,11 @@ export class AdminComponent implements OnInit, AfterViewInit {
       width: '30%'
     })
     dialog.afterClosed().subscribe(result => {
-      console.log(result)
       this.findByTopic();
     })
   }
 
   editContent(childContent: any) {
-    console.log(childContent);
     const dialog = this.dialog.open(ContentComponent, {
       data: {
         topic: this.routeSubtopicId,
@@ -217,7 +211,6 @@ export class AdminComponent implements OnInit, AfterViewInit {
       isRemoved: false
     };
     this.apiService.createTopic(parentDto).subscribe(response => {
-      console.log(response);
       this.getParentTopics();
       this.addTopicName = "";
     })
@@ -284,7 +277,6 @@ export class AdminComponent implements OnInit, AfterViewInit {
   }
 
   editTopicName(selectedTopic: Topic) {
-    console.log(selectedTopic)
     const dialog = this.dialog.open(TopicComponent, {
       data: {
         type: 'parent',
@@ -293,15 +285,14 @@ export class AdminComponent implements OnInit, AfterViewInit {
       width: '30%'
     })
 
-    dialog.afterClosed().subscribe((topicName => {
-      if (topicName) {
+    dialog.afterClosed().subscribe((topicDto => {
+      if (topicDto) {
         const parentDto = {
           id: selectedTopic.id,
-          name: topicName,
+          name: topicDto.name,
           parent: selectedTopic.parent,
-          isRemoved: false
+          isRemoved: false,
         }
-        console.log(parentDto)
         this.apiService.updateTopic(parentDto).subscribe((response: any) => {
           this.router.navigate(['/admin']);
           this.getParentTopics();
@@ -320,13 +311,14 @@ export class AdminComponent implements OnInit, AfterViewInit {
       width: '30%'
     })
 
-    dialog.afterClosed().subscribe((childTopicName => {
-      if (childTopicName) {
+    dialog.afterClosed().subscribe((topicDto => {
+      if (topicDto) {
         const childDto = {
           id: selectedSubTopic.id,
-          name: childTopicName,
+          name: topicDto.name,
           parent: selectedSubTopic.parent,
-          isRemoved: false
+          isRemoved: false,
+          iconType: topicDto.iconType
         }
         this.apiService.updateTopic(childDto).subscribe((response: any) => {
           this.getTopicByParentId(response.parent)
