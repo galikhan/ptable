@@ -7,9 +7,8 @@ import {environment} from "../../../environments/environment";
   providedIn: 'root'
 })
 export class ApiService {
-  // private apiUrl = 'http://localhost:8080/api/v1/topic'; // Replace with your API endpoint
-  // private apiUrl = 'http://161.97.144.45:8282/api/v1/topic'; // Replace with your API endpoint
   private apiUrl = environment.apiUrl + '/topic';
+  private apiPrivateUrl = environment.apiPrivateUrl + '/topic';
   constructor(private http: HttpClient) { }
 
   getParentTopics() {
@@ -17,15 +16,15 @@ export class ApiService {
   }
 
   createTopic(body: ParentDTO) {
-    return this.http.post(this.apiUrl, body)
+    return this.http.post(this.apiPrivateUrl, body)
   }
 
   updateTopic(body: Topic) {
-    return this.http.put(this.apiUrl, body)
+    return this.http.put(this.apiPrivateUrl, body)
   }
 
   deleteTopic(topic: Topic) {
-    return this.http.delete(this.apiUrl + "/" + topic?.id)
+    return this.http.delete(this.apiPrivateUrl + "/" + topic?.id)
   }
 
   getTopicByParentId(parentId: number) {

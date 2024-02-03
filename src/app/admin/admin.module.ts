@@ -23,6 +23,12 @@ import {DeleteConfirmationComponent} from './dialogs/delete-confirmation/delete-
 import {SharedModule} from "../shared/shared.module";
 import {BrythonEditorComponent} from "../informatics/views/brython-editor/brython-editor.component";
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {HTTP_INTERCEPTORS} from "@angular/common/http";
+import {AuthInterceptor} from "../helper/auth.interceptor";
+import {MatSelectModule} from "@angular/material/select";
+import {MatMenuModule} from '@angular/material/menu';
+
+
 @NgModule({
 	declarations: [
 		AdminComponent,
@@ -47,8 +53,17 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 		FormsModule,
 		MatCheckboxModule,
     SharedModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatSelectModule,
+    MatMenuModule,
+    MatButtonModule
 	],
-	providers: []
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    },
+  ]
 })
 export class AdminModule { }

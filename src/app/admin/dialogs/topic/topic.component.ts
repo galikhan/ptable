@@ -9,7 +9,11 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 })
 export class TopicComponent implements OnInit {
 	topicForm!: FormGroup;
-
+  iconTypes!: [{ name: string; id: number; value: string }, { name: string; id: number; value: string }, {
+    name: string;
+    id: number;
+    value: string
+  }]
 
 	constructor(
 		public dialogRef: MatDialogRef<TopicComponent>,
@@ -19,16 +23,23 @@ export class TopicComponent implements OnInit {
 
 	ngOnInit(): void {
     console.log(this.injectedData);
+    this.iconTypes = [{id: 1, value: 'image', name: 'картинка'}, {id: 2, value: 'video', name: 'видео'}, {
+      id: 3,
+      value: 'code',
+      name: 'задача'
+    }];
     this.initForm();
   }
 
   initForm() {
     this.topicForm = this.fb.group({
       name: ['', [Validators.required]],
+      iconType: ['', [Validators.required]],
     });
 
     if (this.injectedData) {
       this.topicForm.get('name')?.setValue(this.injectedData?.data?.name);
+      this.topicForm.get('iconType')?.setValue(this.injectedData?.data?.iconType);
     }
   }
 
@@ -38,7 +49,8 @@ export class TopicComponent implements OnInit {
 
 	submitForm(): void {
 		console.log(this.topicForm.value);
-    const topicName = this.topicForm.get('name')?.value;
-    if (topicName) this.dialogRef.close(topicName);
+    // const topicName = this.topicForm.get('name')?.value;
+    const topicDto = this.topicForm.value;
+    if (topicDto) this.dialogRef.close(topicDto);
 	}
 }

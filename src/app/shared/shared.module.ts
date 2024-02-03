@@ -4,6 +4,8 @@ import {BrythonEditorComponent} from "../informatics/views/brython-editor/brytho
 import {FormsModule} from "@angular/forms";
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from "@angular/material/button";
+import {MatMenuModule} from "@angular/material/menu";
 @NgModule({
   declarations: [
     BrythonEditorComponent
@@ -12,7 +14,9 @@ import {MatIconModule} from '@angular/material/icon';
     CommonModule,
     FormsModule,
     MatGridListModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule,
+    MatMenuModule
   ],
   exports: [
     BrythonEditorComponent

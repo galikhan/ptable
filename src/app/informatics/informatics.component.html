@@ -2,10 +2,6 @@
 	<mat-toolbar class="d-flex justify-content-between">
 		<span>Python</span>
     <span class="login" [routerLink]="['/login']">
-<!--			<button [routerLink]="['/login']" mat-icon-button class="example-icon favorite-icon"-->
-      <!--              aria-label="Example icon-button with heart icon">-->
-      <!--        <mat-icon>logout</mat-icon>-->
-      <!--      </button>-->
        <i class="bi bi-box-arrow-in-right"></i>
 		</span>
 	</mat-toolbar>
@@ -44,7 +40,7 @@
                         [ngClass]="{'active': isRouteHasSubtopic(j, children)}"
                         data-bs-target="#v-pills-home" type="button" role="tab"
                         aria-controls="v-pills-home" aria-selected="true">
-                  <i class="bi bi-book fs-6" style="margin-right: 10px"></i>
+                  <img [src]="returnIconBy(children)" alt="Image Alt Text" class="icon-image">
                   {{
                     children.name
                   }}

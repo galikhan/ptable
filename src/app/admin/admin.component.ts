@@ -107,6 +107,16 @@ export class AdminComponent implements OnInit, AfterViewInit {
     this.selectedSubTopic = children;
   }
 
+  returnIconBy(children: any) {
+    console.log(children);
+    if (children.iconType === 'video') {
+      return 'assets/ptable/video.png';
+    } else if (children.iconType === 'image') {
+      return 'assets/ptable/image.png';
+    }
+    return 'assets/ptable/info.png';
+  }
+
   // Admin side functions
   addContent() {
     const dialog = this.dialog.open(ContentComponent, {
@@ -221,12 +231,13 @@ export class AdminComponent implements OnInit, AfterViewInit {
       width: '30%'
     })
 
-    dialog.afterClosed().subscribe((childTopicName => {
-      if (childTopicName) {
+    dialog.afterClosed().subscribe((topicDto => {
+      if (topicDto) {
         const childDto = {
-          name: childTopicName,
+          name: topicDto.name,
           parent: childTopic.id,
-          isRemoved: false
+          isRemoved: false,
+          iconType: topicDto.iconType
         }
         this.apiService.createTopic(childDto).subscribe((response: any) => {
           this.getTopicByParentId(response.parent)
@@ -321,6 +332,11 @@ export class AdminComponent implements OnInit, AfterViewInit {
         })
       }
     }))
+  }
+
+  logOut() {
+    localStorage.clear();
+    this.router.navigate(['/informatics'])
   }
 
 }

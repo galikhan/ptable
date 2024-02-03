@@ -14,12 +14,12 @@ export class LoginComponent implements OnInit {
   constructor(public authService: AuthService, public router: Router) { }
 
   ngOnInit(): void {
-
-
   }
 
   login(): void {
     this.authService.login(this.username, this.password).subscribe(result => {
+      console.log(result)
+      localStorage.setItem('access_info', JSON.stringify(result));
       if(result) {
         this.router.navigate(['/admin']);
       }

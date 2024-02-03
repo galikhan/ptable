@@ -12,6 +12,15 @@
               <mat-label>{{ injectedData.type === 'child' ? 'Подтема' : 'Тема' }}</mat-label>
 							<input matInput formControlName="name" />
 						</mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Выберите тип</mat-label>
+              <mat-select formControlName="iconType">
+                <mat-option *ngFor="let icon of iconTypes" [value]="icon.value">
+                  {{ icon.name }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
 					</form>
 				</div>
 			</div>

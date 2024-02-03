@@ -1,4 +1,4 @@
-<div class="card mb-2" *ngIf="content" [ngClass]="{'mt-2': !isEditor}">
+<div class="card mb-2" *ngIf="content" [ngClass]="{'mt-2': !isEditor, 'full-screen': isFullScreen}">
   <div class="card-header d-flex justify-content-between align-items-center">
     <span>
       Задача
@@ -8,8 +8,26 @@
       <span>
         <button (click)="runCode(id)" id="run-code" style="margin-right:5px">Запустить</button>
       </span>
-      <span><i class="bi bi-three-dots-vertical"></i></span>
-      <span><i class="bi bi-fullscreen"></i></span>
+      <span>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+  <mat-icon>more_vert</mat-icon>
+</button>
+        <mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <mat-icon>download</mat-icon>
+    <span>Выгузĸа в файл python.py</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>clear_all</mat-icon>
+    <span>Очистить редактор</span>
+  </button>
+</mat-menu>
+      </span>
+      <span>
+        <button mat-icon-button (click)="toggleFullScreen()">
+          <mat-icon>aspect_ratio</mat-icon>
+        </button>
+      </span>
     </div>
 
   </div>
