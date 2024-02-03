@@ -21,7 +21,6 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy 
   maxLines = 6;
   editorHeight = 240; 
   editorHeightPx = this.editorHeight + 'px';
-  inputOutputHeightPx = (this.editorHeight/2 - 20) + 'px';
 
   constructor(
     public brython: BrythonStateService,
@@ -38,7 +37,6 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy 
       const hiddenTextarea = document.getElementById('hidden-textarea' + this.id)
       this.minLines = this.calcMinLines(this.content.editorLen); 
       this.editorHeightPx = this.calcEditorHeight(this.minLines) + 'px';
-      this.inputOutputHeightPx = this.calcIOHeight(this.minLines) + 'px';
 
       ace.config.set('fontSize', '14px');
       ace.config.set(
@@ -68,6 +66,18 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy 
 
   toggleFullScreen() {
     this.isFullScreen = !this.isFullScreen;
+    if(this.isFullScreen) {
+      this.editorHeightPx = '100vh';
+      this.aceEditor.setOptions({
+        maxLines: 50
+      });
+    } else {
+      this.editorHeightPx = this.calcEditorHeight(this.minLines) + 'px';
+      this.aceEditor.setOptions({
+        maxLines: this.minLines,
+        minLines: this.minLines
+      });
+    }
   }
 
   public updateBody(value: string): void {
