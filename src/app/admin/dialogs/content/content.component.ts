@@ -1,5 +1,6 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
+import { environment } from 'src/environments/environment';
 import {Content} from "../../../interface/content";
 import {ContentService} from "../../../service/content.service";
 import {DiCodeData} from '../../constants/di-code-data';
@@ -14,6 +15,9 @@ export class ContentComponent implements OnInit {
   description!: string;
   videoUrl!: string;
   content!: Content;
+  imgUrl!: string;
+  disabled = false;
+  filename!:string;
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: DiCodeData,
@@ -47,13 +51,36 @@ export class ContentComponent implements OnInit {
 
 
   saveUploadedFile() {
+
+    this.content = {id: 0, type: 'image', body: '', topic: this.data.topic, editorLen: 5};
+    if (this.data?.content) {
+      this.content.id = this.data.content.id;
+      this.content.isRemoved = false;
+      this.content.body = this.filename;
+      this.contentService.update(this.content).subscribe(result => {
+        console.log('updated');
+        this.dialogRef.close(true);
+      });
+    } else {
+      this.content.body = this.filename;
+      this.contentService.create(this.content).subscribe(result => {
+        this.content = result;
+        console.log('created');
+        this.dialogRef.close(true);
+      });
+    }
+  }
+
+  uploadFile() {
     const childId = this.data.topic;
     const file = this.selectedFile;
     if (file) {
       this.contentService.uploadFile(file, childId).subscribe(response => {
-        console.log('File upload successful:', response);
-        // Handle success, if needed
+        this.imgUrl = environment.domain + '/images/' + response.filename;
+        this.disabled = false;
+        this.filename = response.filename;
       }, error => {
+        this.disabled = false;
         console.error('File upload failed:', error);
         // Handle error, if needed
       });
@@ -85,7 +112,8 @@ export class ContentComponent implements OnInit {
   }
 
   onFileChange(event: any) {
-    // Get the selected file from the input
+    this.disabled = true;
     this.selectedFile = event.target.files[0];
+    this.uploadFile();
   }
 }

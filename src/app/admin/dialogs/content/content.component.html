@@ -16,7 +16,11 @@
           <mat-tab label="Картинка">
             <div class="mb-3 mt-3">
               <label for="imageFile" class="form-label">Файл</label>
+              <ng-container *ngIf="imgUrl">
+                <img [src]="imgUrl" class="uploaded-image" />
+              </ng-container>
               <input (change)="onFileChange($event)" class="form-control" type="file" id="imageFile">
+              <!-- <button class="btn btn-primary" (click)="">Сохранить</button> -->
             </div>
           </mat-tab>
           <mat-tab label="Видео">
@@ -32,6 +36,6 @@
   </mat-dialog-content>
   <mat-dialog-actions align="end" class="actions">
     <button class="btn btn-outline-danger" mat-dialog-close>Отмена</button>
-    <button class="btn btn-primary" (click)="onSaveContent()">Сохранить</button>
+    <button class="btn btn-primary" (click)="onSaveContent()" [disabled]="disabled">Сохранить</button>
   </mat-dialog-actions>
 </div>

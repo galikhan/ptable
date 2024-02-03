@@ -141,6 +141,9 @@
                     <app-brython-editor class="mt-4" [content]="content" [isEditor]="false">
                     </app-brython-editor>
                   </p>
+                  <p *ngIf="content.type == 'image'">
+                    <img [src]="imageUrlPrefix +'/'+ content.body" class="uploaded-image" />
+                  </p>
                 </div>
               </div>
             </ng-container>

@@ -36,14 +36,14 @@ export class ContentService {
   uploadFile(file: File, childId: number): Observable<any> {
     const formParams = new FormData();
     formParams.append('file', file)
-    formParams.append('id', childId.toString())
+    formParams.append('container', childId.toString())
 
     const headers = new HttpHeaders({
       'Content-Type': 'multipart/form-data',
       // Add any additional headers if needed
     });
-
-    return this.http.post(this.apiPrivateUrl, formParams);
+    const fileUrl = environment.apiPrivateUrl + '/file';
+    return this.http.post(fileUrl, formParams);
   }
 
 }

@@ -10,6 +10,7 @@ import {ContentService} from "../service/content.service";
 import {Content} from "../interface/content";
 import * as ace from 'ace-builds';
 import {DeleteConfirmationComponent} from "./dialogs/delete-confirmation/delete-confirmation.component";
+import { environment } from "src/environments/environment";
 
 @Component({
   selector: 'app-admin',
@@ -27,6 +28,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
   routeSubtopicId!: number;
   contents: Content[] = [];
   @ViewChild('supEdit') public supedit!: ElementRef<HTMLElement>;
+  imageUrlPrefix = environment.domain + '/images';
 
   constructor(
     private apiService: ApiService,
