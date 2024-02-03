@@ -14,6 +14,8 @@ export class TopicComponent implements OnInit {
     id: number;
     value: string
   }]
+  isParentContent!: boolean;
+  isChildContent!: boolean;
 
 	constructor(
 		public dialogRef: MatDialogRef<TopicComponent>,
@@ -23,12 +25,14 @@ export class TopicComponent implements OnInit {
 
 	ngOnInit(): void {
     console.log(this.injectedData);
-    this.iconTypes = [{id: 1, value: 'image', name: 'картинка'}, {id: 2, value: 'video', name: 'видео'}, {
+    this.iconTypes = [{id: 1, value: 'info', name: 'описание'}, {id: 2, value: 'video', name: 'видео'}, {
       id: 3,
       value: 'code',
       name: 'задача'
     }];
     this.initForm();
+    this.isParentContent = this.injectedData.type === 'parent';
+    this.isChildContent = this.injectedData.type === 'child';
   }
 
   initForm() {
@@ -43,14 +47,10 @@ export class TopicComponent implements OnInit {
     }
   }
 
-	closeModal(): void {
-		this.dialogRef.close();
-	}
-
-	submitForm(): void {
-		console.log(this.topicForm.value);
-    // const topicName = this.topicForm.get('name')?.value;
+  submitForm(): void {
     const topicDto = this.topicForm.value;
-    if (topicDto) this.dialogRef.close(topicDto);
-	}
+    // Assuming this.isParentContent is a boolean
+    topicDto.iconType = this.isParentContent ? '0' : topicDto.iconType;
+    this.dialogRef.close(topicDto);
+  }
 }

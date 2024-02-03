@@ -13,25 +13,15 @@ export class ContentService {
   private apiPrivateUrl = environment.apiPrivateUrl + '/content';
 
   constructor(
-    private http: HttpClient
-    ,
-    private authService: AuthService
+    private http: HttpClient,
     ) {
   }
 
   create(content: Content): Observable<Content> {
-    // const headers = new HttpHeaders()
-    // .set('content-type', 'application/json')
-    // .set('Authorization', 'Bearer ' + this.authService.token());
-    // return this.http.post<Content>(this.apiPrivateUrl, content, { headers: headers });
     return this.http.post<Content>(this.apiPrivateUrl, content);
   }
 
   update(content: Content) {
-    // const headers = new HttpHeaders()
-    // .set('content-type', 'application/json')
-    // .set('Authorization', 'Bearer ' + this.authService.token());
-    // return this.http.put<Content>(this.apiPrivateUrl, content, { headers: headers });
     return this.http.put<Content>(this.apiPrivateUrl, content);
   }
 
@@ -43,8 +33,17 @@ export class ContentService {
     return this.http.get<Content []>(this.apiUrl + "/topic/" + topicId);
   }
 
-  findById(id: number) {
-    return this.http.get<Content>(this.apiUrl + "/" + id);
+  uploadFile(file: File, childId: number): Observable<any> {
+    const formParams = new FormData();
+    formParams.append('file', file)
+    formParams.append('id', childId.toString())
+
+    const headers = new HttpHeaders({
+      'Content-Type': 'multipart/form-data',
+      // Add any additional headers if needed
+    });
+
+    return this.http.post(this.apiPrivateUrl, formParams);
   }
 
 }

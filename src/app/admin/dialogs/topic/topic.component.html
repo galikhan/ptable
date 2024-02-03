@@ -13,7 +13,7 @@
 							<input matInput formControlName="name" />
 						</mat-form-field>
 
-            <mat-form-field appearance="outline">
+            <mat-form-field appearance="outline" *ngIf="injectedData.type === 'child'">
               <mat-label>Выберите тип</mat-label>
               <mat-select formControlName="iconType">
                 <mat-option *ngFor="let icon of iconTypes" [value]="icon.value">
@@ -28,6 +28,6 @@
 	</mat-dialog-content>
 	<mat-dialog-actions align="end">
 		<button mat-button mat-dialog-close>Отмена</button>
-		<button [disabled]="!topicForm.valid" mat-button (click)="submitForm()">Сохранить</button>
+    <button mat-button (click)="submitForm()">Сохранить</button>
 	</mat-dialog-actions>
 </div>

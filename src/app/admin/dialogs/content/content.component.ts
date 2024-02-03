@@ -2,7 +2,7 @@ import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 import {Content} from "../../../interface/content";
 import {ContentService} from "../../../service/content.service";
-import { DiCodeData } from '../../constants/di-code-data';
+import {DiCodeData} from '../../constants/di-code-data';
 
 @Component({
   selector: 'app-content',
@@ -12,6 +12,7 @@ import { DiCodeData } from '../../constants/di-code-data';
 export class ContentComponent implements OnInit {
   selectedFile: File | undefined;
   description!: string;
+  videoUrl!: string;
   content!: Content;
 
   constructor(
@@ -22,32 +23,44 @@ export class ContentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.data);
     if (this.data.content) {
       this.description = this.data.content.body;
     }
   }
 
-  onSaveContent() {
+  onSaveContent(): void {
     // Save the description if available
     if (this.description) {
       this.saveDescription();
     }
 
-    // Check if a file is selected
+    // Save the uploaded file if available
     if (this.selectedFile) {
-      // Handle the selected file
-      console.log('Selected File:', this.selectedFile);
-      // Add your logic to handle the file here
+      this.saveUploadedFile();
+    }
 
-    } else {
-      // Display a warning if no file is selected
-      console.warn('No file selected.');
+    // Save the video URL if available
+    if (this.videoUrl) {
+      this.saveVideoUrl();
+    }
+  }
+
+
+  saveUploadedFile() {
+    const childId = this.data.topic;
+    const file = this.selectedFile;
+    if (file) {
+      this.contentService.uploadFile(file, childId).subscribe(response => {
+        console.log('File upload successful:', response);
+        // Handle success, if needed
+      }, error => {
+        console.error('File upload failed:', error);
+        // Handle error, if needed
+      });
     }
   }
 
   saveDescription() {
-    console.log(this.content);
     this.content = {id: 0, type: 'text', body: '', topic: this.data.topic, editorLen: 5};
     if (this.data?.content) {
       this.content.id = this.data.content.id;
@@ -67,10 +80,12 @@ export class ContentComponent implements OnInit {
     }
   }
 
+  saveVideoUrl() {
+    console.log('videoUrl', this.videoUrl)
+  }
+
   onFileChange(event: any) {
     // Get the selected file from the input
     this.selectedFile = event.target.files[0];
   }
-
-
 }
