@@ -21,11 +21,12 @@ import { CodeComponent } from './dialogs/code/code.component';
 import { DeleteConfirmationComponent } from './dialogs/delete-confirmation/delete-confirmation.component';
 import { SharedModule } from "../shared/shared.module";
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { HTTP_INTERCEPTORS } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { AuthInterceptor } from "../helper/auth.interceptor";
 import { MatSelectModule } from "@angular/material/select";
 import { MatMenuModule } from '@angular/material/menu';
 import {MatTabsModule} from "@angular/material/tabs";
+import { AddIconModule } from '../icon/add-icon/add-icon.module';
 
 
 @NgModule({
@@ -37,7 +38,6 @@ import {MatTabsModule} from "@angular/material/tabs";
 		DeleteConfirmationComponent,
 	],
 	imports: [
-
 		CommonModule,
 		AdminRoutingModule,
 		MatToolbarModule,
@@ -57,14 +57,16 @@ import {MatTabsModule} from "@angular/material/tabs";
 		MatButtonModule,
 		FormsModule,
 		ReactiveFormsModule,
-    MatTabsModule
+    	MatTabsModule,
+		AddIconModule,
+		// HttpClientModule
 	],
 	providers: [
-		{
-			provide: HTTP_INTERCEPTORS,
-			useClass: AuthInterceptor,
-			multi: true,
-		},
+		// {
+		// 	provide: HTTP_INTERCEPTORS,
+		// 	useClass: AuthInterceptor,
+		// 	multi: true,
+		// },
 	]
 })
 export class AdminModule { }

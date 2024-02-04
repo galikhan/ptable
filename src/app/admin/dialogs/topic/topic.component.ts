@@ -24,12 +24,11 @@ export class TopicComponent implements OnInit {
 	) { }
 
 	ngOnInit(): void {
-    console.log(this.injectedData);
-    this.iconTypes = [{id: 1, value: 'info', name: 'описание'}, {id: 2, value: 'video', name: 'видео'}, {
-      id: 3,
-      value: 'code',
-      name: 'задача'
-    }];
+    this.iconTypes = [
+      {id: 1, value: 'subtopic_info', name: 'описание'}, 
+      {id: 2, value: 'subtopic_video', name: 'видео'}, 
+      {id: 3, value: 'subtopic_task', name: 'задача' }
+    ];
     this.initForm();
     this.isParentContent = this.injectedData.type === 'parent';
     this.isChildContent = this.injectedData.type === 'child';

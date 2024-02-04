@@ -106,15 +106,6 @@ export class AdminComponent implements OnInit, AfterViewInit {
     this.selectedSubTopic = children;
   }
 
-  returnIconBy(children: any) {
-    if (children.iconType === 'video') {
-      return 'assets/ptable/video.png';
-    } else if (children.iconType === 'code') {
-      return 'assets/ptable/task.png';
-    }
-    return 'assets/ptable/info.png';
-  }
-
   // Admin side functions
   addContent() {
     const dialog = this.dialog.open(ContentComponent, {
@@ -294,6 +285,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
           name: topicDto.name,
           parent: selectedTopic.parent,
           isRemoved: false,
+          iconType: 'topic'
         }
         this.apiService.updateTopic(parentDto).subscribe((response: any) => {
           this.router.navigate(['/admin']);

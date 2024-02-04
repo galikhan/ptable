@@ -10,6 +10,7 @@ export interface Topic {
   name: string;
   parent: number;
   isRemoved: boolean;
+  iconType: string;
 }
 
 export interface ChildContent {

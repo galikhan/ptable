@@ -3,7 +3,7 @@
     <span [routerLink]="['/admin']">Админская панель</span>
     <span>
       <button (click)="logOut()" mat-icon-button class="example-icon favorite-icon"
-              aria-label="Example icon-button with heart icon">
+        aria-label="Example icon-button with heart icon">
         <mat-icon>logout</mat-icon>
       </button>
     </span>
@@ -19,11 +19,11 @@
       <form class="row g-3">
         <div class="col-lg-8">
           <input placeholder="Введите тему" type="text" class="form-control" [(ngModel)]="addTopicName"
-                 [ngModelOptions]="{standalone: true}">
+            [ngModelOptions]="{standalone: true}">
         </div>
         <div class="col-lg-4">
           <button [disabled]="addTopicName.length < 3" type="submit" class="btn btn-primary mb-3 w-100"
-                  (click)="addTopic()">Добавить
+            (click)="addTopic()">Добавить
           </button>
         </div>
       </form>
@@ -32,14 +32,14 @@
       <div class="accordion" id="accordionFlushExample">
         <div class="accordion-item" *ngFor="let item of parentData; let i = index">
           <button (click)="onClickAccordion(item.id);" class="accordion-button"
-                  [ngClass]="{'collapsed' :!ifRouteHasTopic(i) }" type="button" data-bs-toggle="collapse"
-                  [attr.data-bs-target]="'#collapse' + i" aria-expanded="true">
+            [ngClass]="{'collapsed' :!ifRouteHasTopic(i) }" type="button" data-bs-toggle="collapse"
+            [attr.data-bs-target]="'#collapse' + i" aria-expanded="true">
             {{ item.name }}
           </button>
 
 
           <div [id]="'collapse' + i" class="accordion-collapse collapse" [ngClass]="{'show': ifRouteHasTopic(i)}"
-               data-bs-parent="#accordionFlushExample">
+            data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               <!-- Your content here -->
               <div *ngIf="!childData" class="spinner-border" role="status">
@@ -47,34 +47,34 @@
               </div>
               <!-- Example subtopics -->
               <div *ngIf="childData" class="nav w-100 nav-pills" id="v-pills-tab" role="tablist"
-                   aria-orientation="vertical">
-                <button (click)="onClickChild(children, i)" *ngFor="let children of childData; let j = index"
-                        class="nav-link" [id]="'v-pills' + j" data-bs-toggle="pill"
-                        [ngClass]="{'active': isRouteHasSubtopic(children)}" data-bs-target="#v-pills-home"
-                        type="button"
-                        role="tab" aria-controls="v-pills-home" aria-selected="true">
-                  <img [src]="returnIconBy(children)" alt="Image Alt Text" class="icon-image">
-                  {{ children.name }}
+                aria-orientation="vertical">
+                <button (click)="onClickChild(child, i)" *ngFor="let child of childData; let j = index"
+                  class="nav-link" [id]="'v-pills' + j" data-bs-toggle="pill"
+                  [ngClass]="{'active': isRouteHasSubtopic(child)}" data-bs-target="#v-pills-home" type="button"
+                  role="tab" aria-controls="v-pills-home" aria-selected="true">
+
+                  <!-- <img [src]="returnIconBy(child)" alt="Image Alt Text" class="icon-image"> -->
+                    <div class="with-icon">
+                      <mat-icon class="svg-icon" [svgIcon]="child.iconType"></mat-icon>
+                      &nbsp;&nbsp;{{ child.name }}
+                    </div>
                 </button>
 
 
                 <form class="row g-3">
                   <div class="col-lg-auto">
                     <button [matTooltip]="'Добавить подтему'" (click)="addSubtopic(item)" mat-icon-button
-                            class="example-icon favorite-icon"
-                            aria-label="Example icon-button with heart icon">
+                      class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
                       <mat-icon>add</mat-icon>
                     </button>
 
                     <button [matTooltip]="'Удалить тему'" (click)="deleteTopic(item)" mat-icon-button
-                            class="example-icon favorite-icon"
-                            aria-label="Example icon-button with heart icon">
+                      class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
                       <mat-icon>delete</mat-icon>
                     </button>
 
                     <button [matTooltip]="'Изменить тему'" (click)="editTopicName(item)" mat-icon-button
-                            class="example-icon favorite-icon"
-                            aria-label="Example icon-button with heart icon">
+                      class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
                       <mat-icon>edit</mat-icon>
                     </button>
                   </div>
@@ -96,17 +96,14 @@
             {{ selectedSubTopic?.name }}
             <span>
               <button [matTooltip]="'Удалить подтему'" (click)="deleteSubtopic(selectedSubTopic)" mat-icon-button
-                      class="example-icon favorite-icon"
-                      aria-label="Example icon-button with heart icon">
-                      <mat-icon>delete</mat-icon>
-                    </button>
+                class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+                <mat-icon>delete</mat-icon>
+              </button>
 
-                    <button [matTooltip]="'Изменить подтему'" (click)="editSubtopicName(selectedSubTopic)"
-                            mat-icon-button
-                            class="example-icon favorite-icon"
-                            aria-label="Example icon-button with heart icon">
-                      <mat-icon>edit</mat-icon>
-                    </button>
+              <button [matTooltip]="'Изменить подтему'" (click)="editSubtopicName(selectedSubTopic)" mat-icon-button
+                class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+                <mat-icon>edit</mat-icon>
+              </button>
             </span>
           </h1>
           <hr>
@@ -118,25 +115,23 @@
                   <p *ngIf="content.type == 'text'">
                     {{ content.body }}
                     <button [matTooltip]="'Удалить контент'" (click)="deleteContent(content)" mat-icon-button
-                            class="example-icon favorite-icon"
-                            aria-label="Example icon-button with heart icon">
+                      class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
                       <mat-icon>delete</mat-icon>
                     </button>
 
                     <button [matTooltip]="'Изменить контент'" (click)="editContent(content)" mat-icon-button
-                            class="example-icon favorite-icon"
-                            aria-label="Example icon-button with heart icon">
+                      class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
                       <mat-icon>edit</mat-icon>
                     </button>
                   </p>
                   <p *ngIf="content.type == 'task'">
                     <span class="code-actions mb-2">
                       <button (click)="openEditCodeDialog(content)" class="edit-code" style="margin-right:5px">
-                      редактировать задачу
-                    </button>
-                    <button (click)="openDeleteCodeDialog(content)" class="edit-code" style="margin-right:5px">
-                      удалить задачу
-                    </button>
+                        редактировать задачу
+                      </button>
+                      <button (click)="openDeleteCodeDialog(content)" class="edit-code" style="margin-right:5px">
+                        удалить задачу
+                      </button>
                     </span>
                     <app-brython-editor class="mt-4" [content]="content" [isEditor]="false">
                     </app-brython-editor>

@@ -2,7 +2,6 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
 import {Topic} from "../admin/constants/interface";
 import { ApiService } from "../admin/services/api.service";
 import { ActivatedRoute, Params, Router } from "@angular/router";
-import EditorJS from '@editorjs/editorjs';
 import {ContentService} from "../service/content.service";
 import {Content} from "../interface/content";
 import {Location} from '@angular/common';
@@ -92,15 +91,6 @@ export class InformaticsComponent implements OnInit, AfterViewInit {
     this.router.navigate(['/informatics/topic/' + parentTopic + '/subtopic/', children.id])
     this.routeTopicIndex = parentIndex;
     this.selectedSubTopic = children;
-  }
-
-  returnIconBy(children: any) {
-    if (children.iconType === 'video') {
-      return 'assets/ptable/video.png';
-    } else if (children.iconType === 'code') {
-      return 'assets/ptable/task.png';
-    }
-    return 'assets/ptable/info.png';
   }
 
 }

@@ -5,12 +5,13 @@ import { AppComponent } from './app.component';
 import { AddIconModule } from './icon/add-icon/add-icon.module';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { SharedModule } from "./shared/shared.module";
 import { FormsModule } from '@angular/forms';
 import { AdminModule } from './admin/admin.module';
 import { InformaticsModule } from './informatics/informatics.module';
+import { AuthInterceptor } from './helper/auth.interceptor';
 
 @NgModule({
 	declarations: [
@@ -22,14 +23,20 @@ import { InformaticsModule } from './informatics/informatics.module';
 		AppRoutingModule,
 		BrowserAnimationsModule,
 		HttpClientModule,
-		AdminModule,
+		// AdminModule,
 		SharedModule,
 		FormsModule
 	],
 	exports: [
 		AddIconModule,
 	],
-	providers: [],
+	providers: [
+		{
+			provide: HTTP_INTERCEPTORS,
+			useClass: AuthInterceptor,
+			multi: true,
+		},
+	],
 	bootstrap: [AppComponent],
 	schemas: [
 		CUSTOM_ELEMENTS_SCHEMA

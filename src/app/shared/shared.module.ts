@@ -19,7 +19,9 @@ import {MatMenuModule} from "@angular/material/menu";
     MatMenuModule
   ],
   exports: [
-    BrythonEditorComponent
+    BrythonEditorComponent,
+    CommonModule,
+    FormsModule,
   ]
 })
 export class SharedModule {

@@ -1,30 +1,29 @@
 <p>
-	<mat-toolbar class="d-flex justify-content-between">
-		<span>Python</span>
+  <mat-toolbar class="d-flex justify-content-between">
+    <span>Python</span>
     <span class="login" [routerLink]="['/login']">
-       <i class="bi bi-box-arrow-in-right"></i>
-		</span>
-	</mat-toolbar>
+      <i class="bi bi-box-arrow-in-right"></i>
+    </span>
+  </mat-toolbar>
 </p>
 
 
 <div class="container-fluid">
-	<div class="row">
-		<aside class="col-md-4 col-lg-3 d-md-block sidebar">
-			<div class="accordion" id="accordionFlushExample">
-				<div class="accordion-item" *ngFor="let item of parentData; let i = index">
+  <div class="row">
+    <aside class="col-md-4 col-lg-3 d-md-block sidebar">
+      <div class="accordion" id="accordionFlushExample">
+        <div class="accordion-item" *ngFor="let item of parentData; let i = index">
           <small>Занятие {{ i + 1 }}</small>
-					<button (click)="onClickAccordion(item.id);" class="accordion-button"
-						[ngClass]="{'collapsed' :!ifRouteHasTopic(i) }" type="button" data-bs-toggle="collapse"
-						[attr.data-bs-target]="'#collapse' + i" aria-expanded="true">
+          <button (click)="onClickAccordion(item.id);" class="accordion-button"
+            [ngClass]="{'collapsed' :!ifRouteHasTopic(i) }" type="button" data-bs-toggle="collapse"
+            [attr.data-bs-target]="'#collapse' + i" aria-expanded="true">
 
-						{{ item.name }}
-					</button>
+            {{ item.name }}
+          </button>
 
 
-          <div [id]="'collapse' + i" class="accordion-collapse collapse"
-               [ngClass]="{'show': ifRouteHasTopic(i)}"
-               data-bs-parent="#accordionFlushExample">
+          <div [id]="'collapse' + i" class="accordion-collapse collapse" [ngClass]="{'show': ifRouteHasTopic(i)}"
+            data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               <!-- Your content here -->
               <div *ngIf="!childData" class="spinner-border" role="status">
@@ -32,33 +31,31 @@
               </div>
               <!-- Example subtopics -->
 
-              <div *ngIf="childData" class="nav w-100 nav-pills" id="v-pills-tab"
-                   role="tablist" aria-orientation="vertical">
-                <button (click)="onClickChild(children, i)"
-                        *ngFor="let children of childData; let j = index" class="nav-link"
-                        [id]="'v-pills' + j" data-bs-toggle="pill"
-                        [ngClass]="{'active': isRouteHasSubtopic(j, children)}"
-                        data-bs-target="#v-pills-home" type="button" role="tab"
-                        aria-controls="v-pills-home" aria-selected="true">
-                  <img [src]="returnIconBy(children)" alt="Image Alt Text" class="icon-image">
-                  {{
-                    children.name
-                  }}
+              <div *ngIf="childData" class="nav w-100 nav-pills" id="v-pills-tab" role="tablist"
+                aria-orientation="vertical">
+                <button (click)="onClickChild(children, i)" *ngFor="let children of childData; let j = index"
+                  class="nav-link" [id]="'v-pills' + j" data-bs-toggle="pill"
+                  [ngClass]="{'active': isRouteHasSubtopic(j, children)}" data-bs-target="#v-pills-home" type="button"
+                  role="tab" aria-controls="v-pills-home" aria-selected="true">
+                  <div class="with-icon">
+                    <mat-icon class="svg-icon" [svgIcon]="children.iconType"></mat-icon>
+                    &nbsp;&nbsp;{{ children.name }}
+                  </div>
                 </button>
               </div>
             </div>
           </div>
-				</div>
-			</div>
-		</aside>
+        </div>
+      </div>
+    </aside>
 
-		<!-- Main content area -->
-		<main role="main" class="col-md-8 ml-sm-auto col-lg-9 px-md-4" *ngIf="selectedSubTopic">
-			<!-- Your main content goes here -->
-			<div class="tab-content" id="v-pills-tabContent">
-				<div class="tab-pane fade show active" [id]="'v-pills' + selectedSubTopic?.id" role="tabpanel">
-					<h1 class="body-title"><span>Занятие {{ routeTopicIndex + 1 }}
-							.</span> {{ selectedSubTopic?.name }}</h1>
+    <!-- Main content area -->
+    <main role="main" class="col-md-8 ml-sm-auto col-lg-9 px-md-4" *ngIf="selectedSubTopic">
+      <!-- Your main content goes here -->
+      <div class="tab-content" id="v-pills-tabContent">
+        <div class="tab-pane fade show active" [id]="'v-pills' + selectedSubTopic?.id" role="tabpanel">
+          <h1 class="body-title"><span>Занятие {{ routeTopicIndex + 1 }}
+              .</span> {{ selectedSubTopic?.name }}</h1>
           <hr>
 
           <ng-container *ngFor="let content of contents">
@@ -81,8 +78,8 @@
           <ng-container *ngIf="contents.length == 0">
             <h2>Контент отсутствует</h2>
           </ng-container>
-				</div>
-			</div>
-		</main>
-	</div>
+        </div>
+      </div>
+    </main>
+  </div>
 </div>

@@ -13,6 +13,8 @@ import {FormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import {SharedModule} from "../shared/shared.module";
+import { AddIconModule } from '../icon/add-icon/add-icon.module';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -29,9 +31,11 @@ import {SharedModule} from "../shared/shared.module";
     MatCheckboxModule,
     MatGridListModule,
     MatFormFieldModule,
+    MatDialogModule,
     FormsModule,
     MatButtonModule,
-    SharedModule
+    SharedModule,
+    AddIconModule
   ],
   exports: []
 })

@@ -293,3 +293,8 @@ body {
 .form-control:focus, .btn:focus {
   box-shadow: none !important;
 }
+
+.with-icon {
+  display: flex;
+  align-items: center;
+}

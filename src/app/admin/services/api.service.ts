@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, SkipSelf } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Topic, ParentDTO} from "../constants/interface";
 import {environment} from "../../../environments/environment";
