@@ -5,6 +5,7 @@ import { ActivatedRoute, Params, Router } from "@angular/router";
 import {ContentService} from "../service/content.service";
 import {Content} from "../interface/content";
 import {Location} from '@angular/common';
+import {environment} from "../../environments/environment";
 
 @Component({
   selector: 'app-informatics',
@@ -19,6 +20,8 @@ export class InformaticsComponent implements OnInit, AfterViewInit {
   routeTopicIndex!: number;
   routeSubtopicId!: number;
   contents: Content[] = [];
+  imageUrlPrefix = environment.domain + '/images';
+
   constructor(
     private apiService: ApiService,
     private router: Router,

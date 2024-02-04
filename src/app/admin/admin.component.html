@@ -137,7 +137,7 @@
                     </app-brython-editor>
                   </p>
                   <p *ngIf="content.type == 'image'">
-                    <img [src]="imageUrlPrefix +'/'+ content.body" class="uploaded-image" />
+                    <img [src]="imageUrlPrefix +'/'+ content.body" class="uploaded-image" alt="image"/>
                     <button [matTooltip]="'Удалить картинку'" (click)="deleteContent(content)" mat-icon-button
                             class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
                       <mat-icon>delete</mat-icon>
