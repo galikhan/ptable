@@ -65,10 +65,14 @@
                   <p *ngIf="content.type == 'text'">
                     {{ content.body }}
                   </p>
-                  <div *ngIf="content.type == 'task'">
+                  <p *ngIf="content.type == 'task'">
                     <app-brython-editor [content]="content">
                     </app-brython-editor>
-                  </div>
+                  </p>
+
+                  <p *ngIf="content.type == 'image'">
+                    <img [src]="imageUrlPrefix +'/'+ content.body" class="uploaded-image" alt="image"/>
+                  </p>
 
                 </div>
               </div>

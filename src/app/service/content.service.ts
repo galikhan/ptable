@@ -29,6 +29,11 @@ export class ContentService {
     return this.http.delete(this.apiPrivateUrl + "/" + id);
   }
 
+  removeFile(id: number) {
+    const fileUrl = environment.apiPrivateUrl + '/file';
+    return this.http.delete(fileUrl + "/" + id);
+  }
+
   findByTopic(topicId: number) {
     return this.http.get<Content []>(this.apiUrl + "/topic/" + topicId);
   }

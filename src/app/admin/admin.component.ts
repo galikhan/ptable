@@ -146,7 +146,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
     dialog.afterClosed().subscribe(result => {
       if (result) {
         this.service.remove(childContent.id).subscribe(response => {
-          this.findByTopic()
+          this.findByTopic();
         })
       }
     })
@@ -191,10 +191,11 @@ export class AdminComponent implements OnInit, AfterViewInit {
     dialog.afterClosed().subscribe(result => {
       if (result) {
         this.service.remove(content.id).subscribe(response => {
-          this.findByTopic()
-        })
+          this.findByTopic();
+        });
       }
-    })
+    });
+
   }
 
   addTopic() {
