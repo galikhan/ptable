@@ -7,17 +7,19 @@
         <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
           <mat-tab label="Описание">
             <div class="mb-3 mt-3">
-              <!--              <label for="exampleFormControlTextarea1" class="form-label">Описание</label>-->
-              <textarea placeholder="Описание" [(ngModel)]="description" class="form-control"
-                        id="exampleFormControlTextarea1"
-                        rows="3"></textarea>
+              <!--              <textarea placeholder="Описание" [(ngModel)]="description" class="form-control"-->
+              <!--                        id="exampleFormControlTextarea1"-->
+              <!--                        rows="3"></textarea>-->
+              <ckeditor [(ngModel)]="model.editorData" [editor]="Editor"></ckeditor>
+
+
             </div>
           </mat-tab>
           <mat-tab label="Картинка">
             <div class="mb-3 mt-3">
               <label for="imageFile" class="form-label">Файл</label>
               <ng-container *ngIf="imgUrl">
-                <img [src]="imgUrl" class="uploaded-image" />
+                <img [src]="imgUrl" class="uploaded-image" alt="imgUrl"/>
               </ng-container>
               <input (change)="onFileChange($event)" class="form-control" type="file" id="imageFile">
               <!-- <button class="btn btn-primary" (click)="">Сохранить</button> -->

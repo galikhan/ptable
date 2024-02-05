@@ -72,6 +72,10 @@ export class AdminComponent implements OnInit, AfterViewInit {
     return this.sanitizer.bypassSecurityTrustHtml(url);
   }
 
+  returnDescription(url: string) {
+    return this.sanitizer.bypassSecurityTrustHtml(url);
+  }
+
   getParentTopics() {
     this.apiService.getParentTopics().subscribe(response => {
       this.parentData = response;

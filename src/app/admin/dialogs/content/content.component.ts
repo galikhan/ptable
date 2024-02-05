@@ -4,7 +4,8 @@ import { environment } from 'src/environments/environment';
 import {Content, ContentVideo} from "../../../interface/content";
 import {ContentService} from "../../../service/content.service";
 import {DiCodeData} from '../../constants/di-code-data';
-
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import {ChangeEvent} from '@ckeditor/ckeditor5-angular/ckeditor.component';
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
@@ -20,6 +21,12 @@ export class ContentComponent implements OnInit {
   disabled = false;
   filename!:string;
 
+  public Editor = ClassicEditor;
+  public model = {
+    editorData: '<p>Hello, world!</p>'
+  };
+
+
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: DiCodeData,
     private contentService: ContentService,
@@ -30,12 +37,17 @@ export class ContentComponent implements OnInit {
   ngOnInit(): void {
     if (this.data && this.data.content?.type === 'text') {
       this.description = this.data.content.body;
-    } else if (this.data && this.data.content?.type === 'video') {
+      this.model.editorData = this.description;
+    }
+
+    if (this.data && this.data.content?.type === 'video') {
       this.videoUrl = this.data.content.body;
     }
   }
 
   onSaveContent(): void {
+    console.log(this.model.editorData);
+    this.description = this.model.editorData;
     // Save the description if available
     if (this.description) {
       this.saveDescription();

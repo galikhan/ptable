@@ -112,8 +112,9 @@
             <ng-container>
               <div class="row">
                 <div class="col-md-12">
-                  <p *ngIf="content.type == 'text'">
-                    {{ content.body }}
+                  <div *ngIf="content.type == 'text'">
+                    <!--                    {{ content.body }}-->
+                    <div [innerHTML]="returnDescription(content.body)"></div>
                     <button [matTooltip]="'Удалить контент'" (click)="deleteContent(content)" mat-icon-button
                       class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
                       <mat-icon>delete</mat-icon>
@@ -123,7 +124,7 @@
                       class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
                       <mat-icon>edit</mat-icon>
                     </button>
-                  </p>
+                  </div>
                   <p *ngIf="content.type == 'task'">
                     <span class="code-actions mb-2">
                       <button (click)="openEditCodeDialog(content)" class="edit-code" style="margin-right:5px">
