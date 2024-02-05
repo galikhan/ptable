@@ -1,8 +1,7 @@
-import {AfterViewInit, Component, Input, OnDestroy, OnInit,} from '@angular/core';
-import {Content} from 'src/app/interface/content';
-import {BrythonStateService} from 'src/app/service/brython.service';
+import { AfterViewInit, Component, Input, OnDestroy, OnInit, } from '@angular/core';
+import { Content } from 'src/app/interface/content';
+import { BrythonStateService } from 'src/app/service/brython.service';
 import * as ace from 'ace-builds';
-import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-brython-editor',
@@ -19,13 +18,11 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy 
   isFullScreen: boolean = false;
   minLines = 6;
   maxLines = 6;
-  editorHeight = 240; 
+  editorHeight = 240;
   editorHeightPx = this.editorHeight + 'px';
 
   constructor(
-    public brython: BrythonStateService,
-    public dialog: MatDialog,
-  ) {
+    public brython: BrythonStateService  ) {
   }
   ngOnDestroy(): void {
     this.aceEditor.container.remove();
@@ -35,7 +32,7 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy 
     if (this.content) {
       const aceEditorElement = document.getElementById('editor' + this.id)
       const hiddenTextarea = document.getElementById('hidden-textarea' + this.id)
-      this.minLines = this.calcMinLines(this.content.editorLen); 
+      this.minLines = this.calcMinLines(this.content.editorLen);
       this.editorHeightPx = this.calcEditorHeight(this.minLines) + 'px';
 
       ace.config.set('fontSize', '14px');
@@ -66,7 +63,7 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy 
 
   toggleFullScreen() {
     this.isFullScreen = !this.isFullScreen;
-    if(this.isFullScreen) {
+    if (this.isFullScreen) {
       this.editorHeightPx = '100vh';
       this.aceEditor.setOptions({
         maxLines: 50
@@ -85,32 +82,37 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy 
   }
 
   ngOnInit(): void {
-    if(this.content) {
+    if (this.content) {
       this.editorContent = Object.create(this.content);
       this.id = this.editorContent.id;
-      if(this.isEditor) {
+      if (this.isEditor) {
         this.id = -777;
       }
     }
   }
 
   runCode(id: number): void {
+    console.log('this.content.body', this.content.body);
     if (this.content.body) {
-      this.brython.setNext(id);
+      this.brython.setNext({ id, type: 'runCode' });
     }
   }
-  
+
+  runTestCode(id: number): void {
+    this.brython.setNext({ id, type: 'runTest' });
+  }
+
   calcEditorHeight(minLines: number): number {
     return minLines * 24;
   }
 
   calcIOHeight(minLines: number): number {
-    return (minLines * 24)/2 - 20;
+    return (minLines * 24) / 2 - 20;
   }
 
   calcMinLines(minLines: number): number {
-    if(minLines) {
-      if(minLines >= 5) {
+    if (minLines) {
+      if (minLines >= 5) {
         return minLines > 10 ? 10 : minLines;
       } else {
         return 5;

@@ -156,12 +156,12 @@ def clearOutput(output_html_id):
     document[output_html_id].clear()
 
 
-@bind(document["mybutton1"], "click")
+@bind(document["run-code-button"], "click")
 def runCode(ev):
     currentid = document["mybuttonparam"].value
     run(currentid)
 
-@bind(document["test-button"], "click")
+@bind(document["run-test-button"], "click")
 def runCode(ev):
     currentid = document["mybuttonparam"].value
     run_test(currentid)

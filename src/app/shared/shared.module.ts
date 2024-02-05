@@ -6,6 +6,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from "@angular/material/button";
 import {MatMenuModule} from "@angular/material/menu";
+import { MatTabsModule } from '@angular/material/tabs';
 @NgModule({
   declarations: [
     BrythonEditorComponent
@@ -16,7 +17,8 @@ import {MatMenuModule} from "@angular/material/menu";
     MatGridListModule,
     MatIconModule,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTabsModule
   ],
   exports: [
     BrythonEditorComponent,

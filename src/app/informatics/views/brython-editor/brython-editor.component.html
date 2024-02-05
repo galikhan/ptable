@@ -1,74 +1,100 @@
-<div class="card mb-2" *ngIf="content" [ngClass]="{'mt-2': !isEditor, 'full-screen': isFullScreen}">
-  <div class="card-header d-flex justify-content-between align-items-center">
-    <span>
-      Задача
-    </span>
+<textarea id="hidden-textarea{{id}}" name="description">{{ content.body }}</textarea>
 
-    <div id="error{{id}}" class="editor-error"></div>
+<mat-tab-group mat-stretch-tabs="false" mat-align-tabs="end">
 
-    <div class="header-actions">
-      <span>
-        <button (click)="runCode(id)" id="run-code" style="margin-right:5px">Запустить</button>
-      </span>
-      <span>
-        <button mat-icon-button [matMenuTriggerFor]="menu">
-  <mat-icon>more_vert</mat-icon>
-</button>
-        <mat-menu #menu="matMenu">
-  <button mat-menu-item>
-    <mat-icon>download</mat-icon>
-    <span>Выгузĸа в файл python.py</span>
-  </button>
-  <button mat-menu-item>
-    <mat-icon>clear_all</mat-icon>
-    <span>Очистить редактор</span>
-  </button>
-</mat-menu>
-      </span>
-      <span>
-        <button mat-icon-button (click)="toggleFullScreen()">
-          <mat-icon>aspect_ratio</mat-icon>
-        </button>
-      </span>
-    </div>
 
-  </div>
-  <div class="editor gx-0">
-    <div class="row gx-0">
-      <!-- Code section -->
-      <div class="col-md-9 gx-0" [ngStyle]="{'height':editorHeightPx}">
-        <div class="row gx-0 h-100">
-          <div class="col-md-12 gx-0">
-            <div class="editor-panel">
-              <textarea name="description" style="display: none;"
-                id="hidden-textarea{{id}}">{{ content.body }}</textarea>
 
-              <div id="editor{{id}}" class="ace-editor"></div>
+  <mat-tab label="Редактор">
+    <div class="card" *ngIf="content" [ngClass]="{'mt-2': !isEditor, 'full-screen': isFullScreen}">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <span>
+          Задача
+        </span>
+
+        <div id="error{{id}}" class="editor-error"></div>
+
+        <div class="header-actions">
+          <span>
+            <button (click)="runCode(id)" id="run-code" style="margin-right:5px">Запустить</button>
+          </span>
+          <span>
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>
+                <mat-icon>download</mat-icon>
+                <span>Выгузĸа в файл python.py</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>clear_all</mat-icon>
+                <span>Очистить редактор</span>
+              </button>
+            </mat-menu>
+          </span>
+          <span>
+            <button mat-icon-button (click)="toggleFullScreen()">
+              <mat-icon>aspect_ratio</mat-icon>
+            </button>
+          </span>
+        </div>
+
+      </div>
+      <div class="editor gx-0">
+        <div class="row gx-0">
+          <!-- Code section -->
+          <div class="col-md-9 gx-0" [ngStyle]="{'height':editorHeightPx}">
+            <div class="row gx-0 h-100">
+              <div class="col-md-12 gx-0">
+                <div class="editor-panel">
+
+                  <div id="editor{{id}}" class="ace-editor"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Input Output section -->
+          <div class="col-md-3 io-panel gx-0" [ngStyle]="{'height':editorHeightPx}">
+            <div class="row h-50 gx-0">
+              <div class="col-md-12 gx-0 h-100">
+                <div class="input-output h-100">
+                  <textarea class="python-input" [(ngModel)]="content.input" id="input{{id}}"
+                    placeholder="входные данные...."></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="row h-50 pt-6px">
+              <div class="col-md-12 h-100">
+                <textarea [readOnly]="true" class="python-output" id="output{{id}}"
+                  placeholder="Нажмите на кнопку запустить, чтобы увидеть результат"></textarea>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="Тесты">
 
-
-      <!-- Input Output section -->
-      <div class="col-md-3 io-panel gx-0" [ngStyle]="{'height':editorHeightPx}">
-        <div class="row h-50 gx-0">
-          <div class="col-md-12 gx-0 h-100">
-            <div class="input-output h-100">
-              <textarea class="python-input"  [(ngModel)]="content.input" id="input{{id}}"
-                placeholder="входные данные...." ></textarea>
-            </div>
-          </div>
-        </div>
-        <div class="row h-50 pt-6px">
-          <div class="col-md-12 h-100">
-            <textarea [readOnly]="true" class="python-output" id="output{{id}}"
-              placeholder="Нажмите на кнопку запустить, чтобы увидеть результат"></textarea>
-          </div>
+    <div class="row">
+      <div class="col-md-2">
+        <h1 id="test-result">Hello</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="input-output">
+          <textarea id="input-test{{id}}" placeholder="Тест данные...."></textarea>
         </div>
       </div>
-
-
+      <div class="col-md-4">
+        <textarea id="output-test{{id}}" placeholder="Тест результат"></textarea>
+      </div>
+      <div class="col-md-2">
+        <button class="btn-sm btn-primary" (click)="runTestCode(id)" id="run-test-code"
+          style="margin-right:5px">Запустить</button>
+      </div>
     </div>
-  </div>
-</div>
+
+  </mat-tab>
+</mat-tab-group>

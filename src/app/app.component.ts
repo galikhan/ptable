@@ -16,18 +16,20 @@ export class AppComponent implements OnInit {
   ) { }
 
   ngAfterViewInit() {
-    const button = document.getElementById('mybutton1');
     this.brythonState.stateObservable.subscribe(result => {
       console.log('message from observable', result);
-      if (result) {
-        // console.log('result', result);
-        const input  = document.getElementById('mybuttonparam');
-        if(input) {
-          input.setAttribute('value', result+'');          
+      if (result.id) {
+        const input = document.getElementById('mybuttonparam');
+        input?.setAttribute('value', result.id + '');
+
+        const id = result.id + '';
+        if (result.type === 'runTest') {
+          const button = document.getElementById('run-test-button');
           button?.click();
-          // console.log('button clicked', button);
+        } else {
+          const button = document.getElementById('run-code-button');
+          button?.click();
         }
-        
       }
     });
   }
@@ -35,7 +37,7 @@ export class AppComponent implements OnInit {
     // const button = this.runBrython.nativeElement.value;
   }
 
-  helloworld(){
+  helloworld() {
     console.log('btn111');
   }
 

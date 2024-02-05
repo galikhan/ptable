@@ -1,7 +1,9 @@
 <div class="modal-content">
-  <h2 mat-dialog-title>{{ data.content?.id ? 'Редактировать задачу' : 'Добавить задачу' }}
-  </h2>
+  <!-- <h2 mat-dialog-title> -->
+    
+  <!-- </h2> -->
   <mat-dialog-content *ngIf="content" class="mat-typography">
+    <h4>{{ data.content?.id ? 'Редактировать задачу' : 'Добавить задачу' }}</h4>
     <ng-container *ngIf="content">
       <app-brython-editor [content]="content" [isEditor]="true"></app-brython-editor>
     </ng-container>

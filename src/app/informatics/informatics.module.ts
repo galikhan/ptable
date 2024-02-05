@@ -31,7 +31,6 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatCheckboxModule,
     MatGridListModule,
     MatFormFieldModule,
-    MatDialogModule,
     FormsModule,
     MatButtonModule,
     SharedModule,
