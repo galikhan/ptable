@@ -10,7 +10,8 @@ import {ContentService} from "../service/content.service";
 import {Content} from "../interface/content";
 import * as ace from 'ace-builds';
 import {DeleteConfirmationComponent} from "./dialogs/delete-confirmation/delete-confirmation.component";
-import { environment } from "src/environments/environment";
+import {environment} from "src/environments/environment";
+import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-admin',
@@ -29,6 +30,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
   contents: Content[] = [];
   @ViewChild('supEdit') public supedit!: ElementRef<HTMLElement>;
   imageUrlPrefix = environment.domain + '/images';
+  iframeHtml: SafeHtml = '';
 
   constructor(
     private apiService: ApiService,
@@ -36,6 +38,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
     private router: Router,
     private route: ActivatedRoute,
     private service: ContentService,
+    private sanitizer: DomSanitizer
   ) {
   }
 
@@ -63,6 +66,10 @@ export class AdminComponent implements OnInit, AfterViewInit {
     this.service.findByTopic(this.routeSubtopicId).subscribe(contents => {
       this.contents = contents;
     });
+  }
+
+  returnVideo(url: string) {
+    return this.sanitizer.bypassSecurityTrustHtml(url);
   }
 
   getParentTopics() {

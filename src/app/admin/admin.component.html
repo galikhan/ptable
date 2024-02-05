@@ -143,6 +143,13 @@
                       <mat-icon>delete</mat-icon>
                     </button>
                   </p>
+                  <p *ngIf="content.type == 'video'">
+                    <span [innerHTML]="returnVideo(content.body)"></span>
+                    <button [matTooltip]="'Удалить видео'" (click)="deleteContent(content)" mat-icon-button
+                            class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+                      <mat-icon>delete</mat-icon>
+                    </button>
+                  </p>
                 </div>
               </div>
             </ng-container>

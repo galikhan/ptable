@@ -1,7 +1,7 @@
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
-import {Content} from '../interface/content';
+import {Content, ContentVideo} from '../interface/content';
 import {environment} from "../../environments/environment";
 import { AuthService } from './auth.service';
 
@@ -21,7 +21,15 @@ export class ContentService {
     return this.http.post<Content>(this.apiPrivateUrl, content);
   }
 
+  createVideo(content: ContentVideo): Observable<Content> {
+    return this.http.post<Content>(this.apiPrivateUrl, content);
+  }
+
   update(content: Content) {
+    return this.http.put<Content>(this.apiPrivateUrl, content);
+  }
+
+  updateVideo(content: ContentVideo) {
     return this.http.put<Content>(this.apiPrivateUrl, content);
   }
 
