@@ -1,4 +1,4 @@
-from browser import bind, document
+from browser import bind, document, html
 import sys
 import traceback
 
@@ -8,7 +8,7 @@ output = "output_html_id"
 
 imports = """
 import sys
-from browser import document
+from browser import document, html
 from io import StringIO
 """
 utils = """
@@ -49,8 +49,30 @@ sys.stdout = MyOutput()
 """
 
 
+
+def get_result_code():
+    return """
+document["test-result"].clear()
+result = new_stdout.getvalue().strip()
+equal = False
+
+output = document["output_html_id"].value
+    #outputLines = output.splitlines()
+
+#output = test_outputs[question_id][test_id]
+output = output.strip()
+sys.stdout = MyOutput()
+result = result.replace('\\n', ' ')
+output = output.replace('\\n', ' ')
+
+if result.__eq__(output):
+    equal = True
+    document["test-result"] <= html.SPAN("<span class='test-fail'>test run ok</span>")
+else:
+    document["test-result"] <= html.SPAN("<span class='test-fail'>" + result +" | " + output + " </span>")    
+"""
+
 def run(id):
-    #document["input-letter"].clear()
     output_html_id = "output"+ id
     input_html_id = "input"+ id
     editor_html_id = "hidden-textarea" + id
@@ -60,6 +82,32 @@ def run(id):
 
     code = document[editor_html_id].value    
     code = imports + utils + stdout_to_textarea + code
+    code = replaceInput(code)
+    code = setInputHtmlId(code, input_html_id)
+    code = setOutputHtmlId(code, output_html_id)
+    code = code.strip()
+    loc = {}
+
+    try:
+        exec(code, {"test_id": 0, "question_id": question_id}, loc)
+        document[error_html_id].clear()
+    except Exception as e:
+        # document[id].clear()
+        document[error_html_id].clear()
+        document[error_html_id] <= "Exception: " + str(e)
+        #exception_handler(e)
+
+def run_test(id):
+    output_html_id = "output-test"+ id
+    input_html_id = "input-test"+ id
+    editor_html_id = "hidden-textarea" + id
+    error_html_id = "error" + id
+
+    clearOutput(output_html_id)
+
+    code = document[editor_html_id].value
+    code = imports + stdout_to_variable + utils + code + get_result_code()
+
     code = replaceInput(code)
     code = setInputHtmlId(code, input_html_id)
     code = setOutputHtmlId(code, output_html_id)
@@ -112,5 +160,10 @@ def clearOutput(output_html_id):
 def runCode(ev):
     currentid = document["mybuttonparam"].value
     run(currentid)
+
+@bind(document["test-button"], "click")
+def runCode(ev):
+    currentid = document["mybuttonparam"].value
+    run_test(currentid)
 
 # document['mybutton'].bind('click', runCode('paramofRuncode'))
