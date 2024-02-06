@@ -62,9 +62,10 @@
             <ng-container>
               <div class="row">
                 <div class="col-md-12">
-                  <p *ngIf="content.type == 'text'">
-                    {{ content.body }}
-                  </p>
+                  <div *ngIf="content.type == 'text'">
+                    <!--                    {{ content.body }}-->
+                    <div [innerHTML]="returnDescription(content.body)"></div>
+                  </div>
                   <p *ngIf="content.type == 'task'">
                     <app-brython-editor [content]="content">
                     </app-brython-editor>

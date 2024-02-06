@@ -7,11 +7,8 @@
         <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
           <mat-tab label="Описание">
             <div class="mb-3 mt-3">
-              <!--              <textarea placeholder="Описание" [(ngModel)]="description" class="form-control"-->
-              <!--                        id="exampleFormControlTextarea1"-->
-              <!--                        rows="3"></textarea>-->
+              <button class="btn btn-sm btn-secondary mb-2" (click)="clearEditor()">Очистить</button>
               <ckeditor [(ngModel)]="model.editorData" [editor]="Editor"></ckeditor>
-
 
             </div>
           </mat-tab>
@@ -22,7 +19,7 @@
                 <img [src]="imgUrl" class="uploaded-image" alt="imgUrl"/>
               </ng-container>
               <input (change)="onFileChange($event)" class="form-control" type="file" id="imageFile">
-              <!-- <button class="btn btn-primary" (click)="">Сохранить</button> -->
+
             </div>
           </mat-tab>
           <mat-tab label="Видео">

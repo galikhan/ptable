@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { AdminModule } from './admin/admin.module';
 import { InformaticsModule } from './informatics/informatics.module';
 import { AuthInterceptor } from './helper/auth.interceptor';
+import {ErrorInterceptor} from "./helper/error.interceptor";
 
 @NgModule({
 	declarations: [
@@ -36,6 +37,7 @@ import { AuthInterceptor } from './helper/auth.interceptor';
 			useClass: AuthInterceptor,
 			multi: true,
 		},
+    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}
 	],
 	bootstrap: [AppComponent],
 	schemas: [

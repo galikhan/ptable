@@ -147,4 +147,8 @@ export class ContentComponent implements OnInit {
     this.selectedFile = event.target.files[0];
     this.uploadFile();
   }
+
+  clearEditor() {
+    this.model.editorData = '';
+  }
 }
