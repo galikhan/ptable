@@ -1,10 +1,11 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 import { environment } from 'src/environments/environment';
-import {Content} from "../../../interface/content";
+import {Content, ContentVideo} from "../../../interface/content";
 import {ContentService} from "../../../service/content.service";
 import {DiCodeData} from '../../constants/di-code-data';
-
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import {ChangeEvent} from '@ckeditor/ckeditor5-angular/ckeditor.component';
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
@@ -15,9 +16,16 @@ export class ContentComponent implements OnInit {
   description!: string;
   videoUrl!: string;
   content!: Content;
+  contentVideo!: ContentVideo;
   imgUrl!: string;
   disabled = false;
   filename!:string;
+
+  public Editor = ClassicEditor;
+  public model = {
+    editorData: '<p>Hello, world!</p>'
+  };
+
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: DiCodeData,
@@ -27,12 +35,19 @@ export class ContentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (this.data.content) {
+    if (this.data && this.data.content?.type === 'text') {
       this.description = this.data.content.body;
+      this.model.editorData = this.description;
+    }
+
+    if (this.data && this.data.content?.type === 'video') {
+      this.videoUrl = this.data.content.body;
     }
   }
 
   onSaveContent(): void {
+    console.log(this.model.editorData);
+    this.description = this.model.editorData;
     // Save the description if available
     if (this.description) {
       this.saveDescription();
@@ -108,7 +123,23 @@ export class ContentComponent implements OnInit {
   }
 
   saveVideoUrl() {
-    console.log('videoUrl', this.videoUrl)
+    console.log('videoUrl', this.videoUrl);
+    this.contentVideo = {id: 0, type: 'video', body: '', topic: this.data.topic, isRemoved: false};
+    if (this.data?.content) {
+      this.contentVideo.id = this.data.content.id;
+      this.contentVideo.body = this.videoUrl;
+      this.contentService.updateVideo(this.contentVideo).subscribe(result => {
+        console.log('updated');
+        this.dialogRef.close(true);
+      });
+    } else {
+      this.contentVideo.body = this.videoUrl;
+      this.contentService.createVideo(this.contentVideo).subscribe(result => {
+        this.content = result;
+        console.log('created');
+        this.dialogRef.close(true);
+      });
+    }
   }
 
   onFileChange(event: any) {

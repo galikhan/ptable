@@ -7,3 +7,11 @@ export interface Content {
   topic: number;
   editorLen: number;
 }
+
+export interface ContentVideo {
+  id: number;
+  body: string;
+  type: string;
+  isRemoved: boolean;
+  topic: number;
+}
