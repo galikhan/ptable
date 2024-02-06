@@ -6,6 +6,7 @@ import {ContentService} from "../service/content.service";
 import {Content} from "../interface/content";
 import {Location} from '@angular/common';
 import {environment} from "../../environments/environment";
+import {DomSanitizer} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-informatics',
@@ -27,7 +28,8 @@ export class InformaticsComponent implements OnInit, AfterViewInit {
     private router: Router,
     private route: ActivatedRoute,
     private service: ContentService,
-    private location: Location
+    private location: Location,
+    private sanitizer: DomSanitizer
   ) {
   }
 
@@ -94,6 +96,10 @@ export class InformaticsComponent implements OnInit, AfterViewInit {
     this.router.navigate(['/informatics/topic/' + parentTopic + '/subtopic/', children.id])
     this.routeTopicIndex = parentIndex;
     this.selectedSubTopic = children;
+  }
+
+  returnDescription(url: string) {
+    return this.sanitizer.bypassSecurityTrustHtml(url);
   }
 
 }
