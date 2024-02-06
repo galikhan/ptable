@@ -2,6 +2,9 @@ import { AfterViewInit, Component, Input, OnDestroy, OnInit, } from '@angular/co
 import { Content } from 'src/app/interface/content';
 import { BrythonStateService } from 'src/app/service/brython.service';
 import * as ace from 'ace-builds';
+import { ContentTestService } from 'src/app/service/content-test.service';
+import { ContentTest } from 'src/app/interface/content-test';
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-brython-editor',
@@ -13,16 +16,24 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy 
   @Input() public isEditor = false;
 
   id!: number;
+  defaultId = -777;
   public editorContent!: Content;
+  public contentTest!: ContentTest;
+  contentTests: ContentTest [] = [];
   aceEditor: any;
   isFullScreen: boolean = false;
   minLines = 6;
   maxLines = 6;
   editorHeight = 240;
   editorHeightPx = this.editorHeight + 'px';
+  contentTestInput!: string;
+  contentTestOutput!: string;
 
   constructor(
-    public brython: BrythonStateService  ) {
+    public brython: BrythonStateService,
+    public contentTestService: ContentTestService,
+    public cRef: ChangeDetectorRef
+  ) {
   }
   ngOnDestroy(): void {
     this.aceEditor.container.remove();
@@ -86,12 +97,19 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy 
       this.editorContent = Object.create(this.content);
       this.id = this.editorContent.id;
       if (this.isEditor) {
-        this.id = -777;
+        this.id = this.defaultId;
       }
+      this.contentTestService.findByContentId(this.content.id).subscribe(result => {
+        this.contentTests = result;
+      })
     }
   }
 
   runCode(id: number): void {
+    this.id = id;
+    // if(this.isEditor) {
+    //   this.id = this.defaultId;
+    // }
     console.log('this.content.body', this.content.body);
     if (this.content.body) {
       this.brython.setNext({ id, type: 'runCode' });
@@ -99,7 +117,9 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy 
   }
 
   runTestCode(id: number): void {
-    this.brython.setNext({ id, type: 'runTest' });
+    this.id = id;
+    this.cRef.detectChanges();
+    this.brython.setNext({ id: this.id, type: 'runTest' });
   }
 
   calcEditorHeight(minLines: number): number {
@@ -119,6 +139,43 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy 
       }
     }
     return 10;
+  }
+
+  saveContentTest() {
+    if(!this.contentTest) {
+      this.contentTest = { content: this.content.id, input: '', output: '', isRemoved: false};
+    }
+    if(this.contentTest.id) {
+      this.contentTest.input = this.contentTestInput;
+      this.contentTest.output = this.contentTestOutput;
+      this.contentTestService.update(this.contentTest).subscribe(result => {
+
+      });
+    } else {
+      this.contentTest.input = this.contentTestInput;
+      this.contentTest.output = this.contentTestOutput;
+      this.contentTestService.create(this.contentTest).subscribe(result => {
+        this.contentTests.push(result);
+      });
+    }
+  }
+
+  removeContentTest(item: ContentTest): void {
+    if(item && item.id) {
+      this.contentTestService.remove(item.id).subscribe(result => {
+        if(result) {
+          item.isRemoved = true;
+        } 
+      });
+    }
+  }
+
+  prepareId(contentTestId: number): number {
+    if(this.isEditor) {
+      return this.defaultId - contentTestId;
+    } else {
+      return contentTestId;
+    }
   }
 
 }

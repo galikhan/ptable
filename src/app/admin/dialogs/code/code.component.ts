@@ -42,6 +42,19 @@ export class CodeComponent implements OnInit {
     if (this.content && this.content.id > 0) {
       this.contentService.update(this.content).subscribe(result => {
         this.content = result;
+      });
+    } else {
+      this.contentService.create(this.content).subscribe(result => {
+        this.content = result;
+      });
+    }
+
+  }
+
+  saveCodeAndExit() {
+    if (this.content && this.content.id > 0) {
+      this.contentService.update(this.content).subscribe(result => {
+        this.content = result;
         this.dialogRef.close('updated')
       });
     } else {
@@ -52,5 +65,6 @@ export class CodeComponent implements OnInit {
     }
 
   }
+
 
 }

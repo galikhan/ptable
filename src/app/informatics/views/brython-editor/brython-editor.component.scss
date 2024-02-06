@@ -91,7 +91,7 @@
   height: 100%;
 }
 
-#run-code {
+.run-code {
   height: 35px !important;
   border: none;
   border-radius: 8px;
@@ -126,4 +126,12 @@
 }
 .pt-6px {
   padding-top: 6px;
+}
+
+.test-fail {
+  color: red;
+}
+
+.test-success {
+  color: green;
 }

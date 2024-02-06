@@ -44,13 +44,4 @@ export class AuthService {
       return parsedData.access_token;
     }
   }
-
-  token(): string {
-    const jwt = localStorage.getItem('jwt_sart');
-    if (jwt) {
-      const parsed = JSON.parse(jwt)
-      return parsed.access_token;
-    }
-    return '';
-  }
 }

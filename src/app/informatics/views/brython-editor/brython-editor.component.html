@@ -1,4 +1,5 @@
-<textarea id="hidden-textarea{{id}}" name="description">{{ content.body }}</textarea>
+<textarea id="{{'hidden-textarea'  +id}}" style="display: none;" name="description">{{ content.body }}</textarea>
+
 
 <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="end">
 
@@ -15,7 +16,7 @@
 
         <div class="header-actions">
           <span>
-            <button (click)="runCode(id)" id="run-code" style="margin-right:5px">Запустить</button>
+            <button (click)="runCode(id)" class="run-code" id="run-code" style="margin-right:5px">Запустить</button>
           </span>
           <span>
             <button mat-icon-button [matMenuTriggerFor]="menu">
@@ -76,25 +77,86 @@
       </div>
     </div>
   </mat-tab>
-  <mat-tab label="Тесты">
+  
+  <ng-container *ngIf="content.id > 0">
+    <mat-tab label="Тесты">
+      <div id="error{{id}}" class="editor-error"></div>
 
-    <div class="row">
-      <div class="col-md-2">
-        <h1 id="test-result">Hello</h1>
-      </div>
-      <div class="col-md-4">
-        <div class="input-output">
-          <textarea id="input-test{{id}}" placeholder="Тест данные...."></textarea>
+      <div class="row">
+        <div class="col-md-2">
+          <span class="float-right">Результат</span>
+        </div>
+        <div class="col-md-4">
+          <span>Входные данные</span>
+        </div>
+        <div class="col-md-4">
+          <span>Правильный ответ</span>
+        </div>
+        <div class="col-md-2">
         </div>
       </div>
-      <div class="col-md-4">
-        <textarea id="output-test{{id}}" placeholder="Тест результат"></textarea>
-      </div>
-      <div class="col-md-2">
-        <button class="btn-sm btn-primary" (click)="runTestCode(id)" id="run-test-code"
-          style="margin-right:5px">Запустить</button>
-      </div>
-    </div>
 
-  </mat-tab>
+      <ng-container *ngFor="let item of contentTests">
+        <hr>
+        <ng-container *ngIf="item && item.id">
+          <div class="row" *ngIf="!item.isRemoved">
+            <div class="col-md-1">
+              <ng-container *ngIf="isEditor">
+                <button mat-icon-button color="warn" (click)="removeContentTest(item)">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </ng-container>
+            </div>
+            <div class="col-md-1">
+              <div class="text-success" id="test-result-success{{ prepareId(item.id) }}"></div>
+              <div class="text-danger" id="test-result-danger{{ prepareId(item.id) }}"></div>
+            </div>
+            <div class="col-md-4">
+              <div class="input-output">
+                <textarea id="input-test{{ prepareId(item.id) }}" [disabled]="true">{{item.input}}</textarea>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="input-output">
+                <textarea id="output-test{{ prepareId(item.id) }}" [disabled]="true">{{item.output}}</textarea>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <ng-container *ngIf="item.id">
+                <button class="run-code" (click)="runTestCode(prepareId(item.id))"
+                  id="run-test-code">Запустить</button>
+              </ng-container>
+            </div>
+          </div>
+
+        </ng-container>
+      </ng-container>
+
+
+
+      <hr>
+      <div class="row" *ngIf="isEditor">
+        <div class="col-md-2">
+          <h1 id="test-result"></h1>
+        </div>
+        <div class="col-md-4">
+          <div class="input-output">
+            <textarea [(ngModel)]="contentTestInput" id="input-test{{id}}" placeholder="Входные данные..."
+              [disabled]="!isEditor"></textarea>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="input-output">
+            <textarea [(ngModel)]="contentTestOutput" id="output-test{{id}}" placeholder="Правильный ответ..."
+              [disabled]="!isEditor"></textarea>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-sm btn-success" (click)="saveContentTest()" id="save-test-code">Cохранить тест</button>
+        </div>
+      </div>
+
+    </mat-tab>
+  </ng-container>
+
 </mat-tab-group>
