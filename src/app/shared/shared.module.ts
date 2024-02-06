@@ -7,6 +7,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from "@angular/material/button";
 import {MatMenuModule} from "@angular/material/menu";
 import { MatTabsModule } from '@angular/material/tabs';
+// import { FileSaverModule } from 'ngx-filesaver';
 @NgModule({
   declarations: [
     BrythonEditorComponent
@@ -18,7 +19,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
-    MatTabsModule
+    MatTabsModule,
+    // FileSaverModule
   ],
   exports: [
     BrythonEditorComponent,

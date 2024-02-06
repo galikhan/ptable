@@ -5,7 +5,8 @@ import * as ace from 'ace-builds';
 import { ContentTestService } from 'src/app/service/content-test.service';
 import { ContentTest } from 'src/app/interface/content-test';
 import { ChangeDetectorRef } from '@angular/core';
-
+// import { FileSaverService } from 'ngx-filesaver';
+import * as FileSaver from 'file-saver';
 @Component({
   selector: 'app-brython-editor',
   templateUrl: './brython-editor.component.html',
@@ -32,7 +33,8 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy 
   constructor(
     public brython: BrythonStateService,
     public contentTestService: ContentTestService,
-    public cRef: ChangeDetectorRef
+    public cRef: ChangeDetectorRef,
+    // private fileSaverService: FileSaverService
   ) {
   }
   ngOnDestroy(): void {
@@ -178,4 +180,12 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy 
     }
   }
 
+  exportToFile() {
+    // const FileSaver = require('file-saver');
+    const data = document.getElementById("hidden-textarea"+this.id);
+    
+    var blob = new Blob([this.content.body], {type: "text/plain;charset=utf-8"});
+    FileSaver.saveAs(blob, 'python.py');
+    // this.fileSaverService.saveText('helloworld', 'python.py');
+  }
 }
