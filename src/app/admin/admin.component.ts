@@ -124,7 +124,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
         topic: this.routeSubtopicId,
         content: null
       },
-      width: '30%'
+      width: '60%'
     })
     dialog.afterClosed().subscribe(result => {
       this.findByTopic();
@@ -137,7 +137,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
         topic: this.routeSubtopicId,
         content: childContent
       },
-      width: '30%'
+      width: '60%'
     })
 
     dialog.afterClosed().subscribe(result => {
@@ -169,7 +169,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
         topic: this.routeSubtopicId,
         content: null
       },
-      width: '50%'
+      width: '60%'
     })
     dialog.afterClosed().subscribe(result => {
       this.findByTopic();
@@ -182,8 +182,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
         topic: this.routeSubtopicId,
         content: content
       },
-      // width: '50%'
-      width: '800px'
+      width: '60%'
     })
 
     dialog.afterClosed().subscribe(() => {
