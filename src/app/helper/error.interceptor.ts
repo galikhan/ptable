@@ -28,7 +28,7 @@ export class ErrorInterceptor implements HttpInterceptor {
           errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
           if (error.status === 401) {
             // Redirect to login page when receiving 401 Unauthorized
-            alert('401')
+            // alert('401')
             this.router.navigate(['/login']);
           }
         }
