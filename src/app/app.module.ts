@@ -26,7 +26,7 @@ import {ErrorInterceptor} from "./helper/error.interceptor";
 		HttpClientModule,
 		// AdminModule,
 		SharedModule,
-		FormsModule
+		FormsModule,
 	],
 	exports: [
 		AddIconModule,

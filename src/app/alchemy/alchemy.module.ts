@@ -6,7 +6,6 @@ import { AlchemyComponent } from './alchemy.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
-import { AddIconModule } from '../icon/add-icon/add-icon.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -40,7 +39,6 @@ import { ElementInfoMobileWrapperComponent } from './components/element-info-mob
     MatSliderModule,
     FormsModule,
     MatIconModule,
-    AddIconModule,
     HttpClientModule,
     MatCardModule,
     MatExpansionModule,

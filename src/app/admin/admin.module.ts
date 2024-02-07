@@ -24,8 +24,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from "@angular/material/select";
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTabsModule} from "@angular/material/tabs";
-import {AddIconModule} from '../icon/add-icon/add-icon.module';
 import {CKEditorModule} from '@ckeditor/ckeditor5-angular';
+import { AddIconModule } from '../icon/add-icon/add-icon.module';
 
 
 @NgModule({
@@ -57,8 +57,8 @@ import {CKEditorModule} from '@ckeditor/ckeditor5-angular';
     FormsModule,
     ReactiveFormsModule,
     MatTabsModule,
-    AddIconModule,
-    CKEditorModule
+    CKEditorModule,
+    // AddIconModule
     // HttpClientModule
   ],
   providers: [

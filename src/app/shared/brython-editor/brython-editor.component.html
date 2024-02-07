@@ -20,7 +20,7 @@
           </span>
           <span>
             <button mat-icon-button [matMenuTriggerFor]="menu">
-              <mat-icon>more_vert</mat-icon>
+              <mat-icon class="svg-icon" svgIcon="brython_settings"></mat-icon>
             </button>
             <mat-menu #menu="matMenu">
               <button mat-menu-item (click)="exportToFile()">
@@ -35,7 +35,7 @@
           </span>
           <span>
             <button mat-icon-button (click)="toggleFullScreen()">
-              <mat-icon>aspect_ratio</mat-icon>
+              <mat-icon class="svg-icon" svgIcon="brython_fullscreen"></mat-icon>
             </button>
           </span>
         </div>
