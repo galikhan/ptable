@@ -27,7 +27,7 @@
                 <mat-icon>download</mat-icon>
                 <span>Выгузĸа в файл python.py</span>
               </button>
-              <button mat-menu-item>
+              <button mat-menu-item (click)="clearEditor()">
                 <mat-icon>clear_all</mat-icon>
                 <span>Очистить редактор</span>
               </button>
@@ -77,7 +77,7 @@
       </div>
     </div>
   </mat-tab>
-  
+
   <ng-container *ngIf="content.id > 0">
     <mat-tab label="Тесты">
       <div id="error{{id}}" class="editor-error"></div>
