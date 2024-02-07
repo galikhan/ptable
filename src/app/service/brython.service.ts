@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { BrythonMessage } from '../interface/brython-message';
+import { Content } from '../interface/content';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,5 @@ export class BrythonStateService {
   public setNext(next: BrythonMessage) {
     return this.tokenSubject.next(next);
   }
-
 
 }

@@ -67,7 +67,7 @@
                     <div [innerHTML]="returnDescription(content.body)"></div>
                   </div>
                   <p *ngIf="content.type == 'task'">
-                    <app-brython-editor [content]="content">
+                    <app-brython-editor [content]="content" [taskId]="getTaskId(content)">
                     </app-brython-editor>
                   </p>
 

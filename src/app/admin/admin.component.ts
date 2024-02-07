@@ -77,7 +77,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
   }
 
   getParentTopics() {
-    this.apiService.getParentTopics().subscribe(response => {
+    this.apiService.getPrivateParentTopics().subscribe(response => {
       this.parentData = response;
       if (this.routeTopicIndex) {
         this.selectedParentIndex = this.routeTopicIndex - 1;

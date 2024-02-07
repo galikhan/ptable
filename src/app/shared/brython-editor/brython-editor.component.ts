@@ -15,6 +15,7 @@ import * as FileSaver from 'file-saver';
 export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() public content!: Content;
   @Input() public isEditor = false;
+  @Input() public taskId!: number;
 
   id!: number;
   defaultId = -777;
@@ -181,12 +182,9 @@ export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy 
   }
 
   exportToFile() {
-    // const FileSaver = require('file-saver');
     const data = document.getElementById("hidden-textarea"+this.id);
-
     var blob = new Blob([this.content.body], {type: "text/plain;charset=utf-8"});
-    FileSaver.saveAs(blob, 'python.py');
-    // this.fileSaverService.saveText('helloworld', 'python.py');
+    FileSaver.saveAs(blob, this.content.taskCounter + '.py');
   }
 
   clearEditor() {

@@ -1,12 +1,13 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import {Topic} from "../admin/constants/interface";
+import { Topic } from "../admin/constants/interface";
 import { ApiService } from "../admin/services/api.service";
 import { ActivatedRoute, Params, Router } from "@angular/router";
-import {ContentService} from "../service/content.service";
-import {Content} from "../interface/content";
-import {Location} from '@angular/common';
-import {environment} from "../../environments/environment";
-import {DomSanitizer} from "@angular/platform-browser";
+import { ContentService } from "../service/content.service";
+import { Content } from "../interface/content";
+import { Location } from '@angular/common';
+import { environment } from "../../environments/environment";
+import { DomSanitizer } from "@angular/platform-browser";
+import { BrythonStateService } from '../service/brython.service';
 
 @Component({
   selector: 'app-informatics',
@@ -22,6 +23,7 @@ export class InformaticsComponent implements OnInit, AfterViewInit {
   routeSubtopicId!: number;
   contents: Content[] = [];
   imageUrlPrefix = environment.domain + '/images';
+  taskId = 0;
 
   constructor(
     private apiService: ApiService,
@@ -102,4 +104,13 @@ export class InformaticsComponent implements OnInit, AfterViewInit {
     return this.sanitizer.bypassSecurityTrustHtml(url);
   }
 
+  getTaskId(content: Content): number {
+    console.log('taskId', this.taskId)
+    if (content.type === 'task') {
+      this.taskId = this.taskId + 1
+      return this.taskId;
+    }
+    
+    return 1;
+  }
 }

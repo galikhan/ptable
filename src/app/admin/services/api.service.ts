@@ -15,6 +15,14 @@ export class ApiService {
     return this.http.get<any>(this.apiUrl + "/parent/1")
   }
 
+  getTopicByParentId(parentId: number) {
+    return this.http.get<any>(this.apiUrl + "/parent/" + parentId)
+  }
+
+  getPrivateParentTopics() {
+    return this.http.get<any>(this.apiPrivateUrl + "/parent/1")
+  }
+
   createTopic(body: ParentDTO) {
     return this.http.post(this.apiPrivateUrl, body)
   }
@@ -27,7 +35,4 @@ export class ApiService {
     return this.http.delete(this.apiPrivateUrl + "/" + topic?.id)
   }
 
-  getTopicByParentId(parentId: number) {
-    return this.http.get<any>(this.apiUrl + "/parent/" + parentId)
-  }
 }

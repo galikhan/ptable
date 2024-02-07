@@ -6,6 +6,7 @@ export interface Content {
   isRemoved?: boolean;
   topic: number;
   editorLen: number;
+  taskCounter?: number;
 }
 
 export interface ContentVideo {

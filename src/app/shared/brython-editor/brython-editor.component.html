@@ -9,35 +9,29 @@
     <div class="card" *ngIf="content" [ngClass]="{'mt-2': !isEditor, 'full-screen': isFullScreen}">
       <div class="card-header d-flex justify-content-between align-items-center">
         <span>
-          Задача
+          Задача {{content.taskCounter + '.py'}}
         </span>
 
         <div id="error{{id}}" class="editor-error"></div>
 
         <div class="header-actions">
-          <span>
-            <button (click)="runCode(id)" class="run-code" id="run-code" style="margin-right:5px">Запустить</button>
-          </span>
-          <span>
-            <button mat-icon-button [matMenuTriggerFor]="menu">
+            <button (click)="runCode(id)" class="run-code" id="run-code">Запустить</button>
+            <button mat-icon-button [matMenuTriggerFor]="menu" >
               <mat-icon class="svg-icon" svgIcon="brython_settings"></mat-icon>
             </button>
             <mat-menu #menu="matMenu">
               <button mat-menu-item (click)="exportToFile()">
                 <mat-icon>download</mat-icon>
-                <span>Выгузĸа в файл python.py</span>
+                <span>Выгузĸа в файл</span>
               </button>
               <button mat-menu-item (click)="clearEditor()">
                 <mat-icon>clear_all</mat-icon>
                 <span>Очистить редактор</span>
               </button>
             </mat-menu>
-          </span>
-          <span>
             <button mat-icon-button (click)="toggleFullScreen()">
               <mat-icon class="svg-icon" svgIcon="brython_fullscreen"></mat-icon>
             </button>
-          </span>
         </div>
 
       </div>
