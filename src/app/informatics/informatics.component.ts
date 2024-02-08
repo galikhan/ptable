@@ -23,7 +23,6 @@ export class InformaticsComponent implements OnInit, AfterViewInit {
   routeSubtopicId!: number;
   contents: Content[] = [];
   imageUrlPrefix = environment.domain + '/images';
-  taskId = 0;
 
   constructor(
     private apiService: ApiService,
@@ -104,13 +103,4 @@ export class InformaticsComponent implements OnInit, AfterViewInit {
     return this.sanitizer.bypassSecurityTrustHtml(url);
   }
 
-  getTaskId(content: Content): number {
-    console.log('taskId', this.taskId)
-    if (content.type === 'task') {
-      this.taskId = this.taskId + 1
-      return this.taskId;
-    }
-    
-    return 1;
-  }
 }

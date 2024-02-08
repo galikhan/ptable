@@ -38,7 +38,7 @@
                   [ngClass]="{'active': isRouteHasSubtopic(j, children)}" data-bs-target="#v-pills-home" type="button"
                   role="tab" aria-controls="v-pills-home" aria-selected="true">
                   <div class="with-icon">
-                    <mat-icon class="svg-icon" [svgIcon]="children.iconType"></mat-icon>
+                    <mat-icon color="primary" class="svg-icon" [svgIcon]="children.iconType"></mat-icon>
                     &nbsp;&nbsp;{{ children.name }}
                   </div>
                 </button>
@@ -67,7 +67,7 @@
                     <div [innerHTML]="returnDescription(content.body)"></div>
                   </div>
                   <p *ngIf="content.type == 'task'">
-                    <app-brython-editor [content]="content" [taskId]="getTaskId(content)">
+                    <app-brython-editor [content]="content">
                     </app-brython-editor>
                   </p>
 
