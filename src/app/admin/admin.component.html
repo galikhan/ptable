@@ -125,7 +125,7 @@
                       <mat-icon>edit</mat-icon>
                     </button>
                   </div>
-                  <p *ngIf="content.type == 'task'">
+                  <div *ngIf="content.type == 'task'">
                     <span class="code-actions mb-2">
                       <button (click)="openEditCodeDialog(content)" class="edit-code" style="margin-right:5px">
                         редактировать задачу
@@ -136,16 +136,17 @@
                     </span>
                     <app-brython-editor class="mt-4" [content]="content" [isEditor]="false">
                     </app-brython-editor>
-                  </p>
-                  <p *ngIf="content.type == 'image'">
+                  </div>
+                  <div *ngIf="content.type == 'image'">
                     <img [src]="imageUrlPrefix +'/'+ content.body" class="uploaded-image" alt="image"/>
                     <button [matTooltip]="'Удалить картинку'" (click)="deleteContent(content)" mat-icon-button
                             class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
                       <mat-icon>delete</mat-icon>
                     </button>
-                  </p>
+                  </div>
                   <div *ngIf="content.type == 'video'">
-                    <div [innerHTML]="returnVideo(content.body)"></div>
+                    <!--                    <div [innerHTML]="returnVideo(content.body)"></div>-->
+                    <app-video-player [videoId]="returnVideoId(content.body)"></app-video-player>
                     <button [matTooltip]="'Удалить видео'" (click)="deleteContent(content)" mat-icon-button
                             class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
                       <mat-icon>delete</mat-icon>

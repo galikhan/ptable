@@ -7,10 +7,13 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatMenuModule} from "@angular/material/menu";
 import { MatTabsModule } from '@angular/material/tabs';
 import { BrythonEditorComponent } from './brython-editor/brython-editor.component';
+import {VideoPlayerComponent} from './video-player/video-player.component';
+import {YouTubePlayerModule} from "@angular/youtube-player";
 
 @NgModule({
   declarations: [
-    BrythonEditorComponent
+    BrythonEditorComponent,
+    VideoPlayerComponent
   ],
   imports: [
     CommonModule,
@@ -20,11 +23,13 @@ import { BrythonEditorComponent } from './brython-editor/brython-editor.componen
     MatButtonModule,
     MatMenuModule,
     MatTabsModule,
+    YouTubePlayerModule,
   ],
   exports: [
     BrythonEditorComponent,
     CommonModule,
     FormsModule,
+    VideoPlayerComponent,
   ]
 })
 export class SharedModule {

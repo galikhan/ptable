@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from "@angular/core";
 import {ApiService} from "./services/api.service";
-import {ChildContent, Topic, CreateParentDto} from "./constants/interface";
+import {CreateParentDto, Topic} from "./constants/interface";
 import {MatDialog} from "@angular/material/dialog";
 import {TopicComponent} from "./dialogs/topic/topic.component";
 import {ContentComponent} from "./dialogs/content/content.component";
@@ -11,7 +11,7 @@ import {Content} from "../interface/content";
 import * as ace from 'ace-builds';
 import {DeleteConfirmationComponent} from "./dialogs/delete-confirmation/delete-confirmation.component";
 import {environment} from "src/environments/environment";
-import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-admin',
@@ -30,8 +30,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
   contents: Content[] = [];
   @ViewChild('supEdit') public supedit!: ElementRef<HTMLElement>;
   imageUrlPrefix = environment.domain + '/images';
-  iframeHtml: SafeHtml = '';
-
+  currentVideoId!: string;
   constructor(
     private apiService: ApiService,
     public dialog: MatDialog,
@@ -337,4 +336,7 @@ export class AdminComponent implements OnInit, AfterViewInit {
     this.router.navigate(['/informatics'])
   }
 
+  returnVideoId(videoUrl: any) {
+    return videoUrl.match(/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+  }
 }
