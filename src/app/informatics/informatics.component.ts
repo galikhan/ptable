@@ -1,13 +1,12 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { Topic } from "../admin/constants/interface";
-import { ApiService } from "../admin/services/api.service";
-import { ActivatedRoute, Params, Router } from "@angular/router";
-import { ContentService } from "../service/content.service";
-import { Content } from "../interface/content";
-import { Location } from '@angular/common';
-import { environment } from "../../environments/environment";
-import { DomSanitizer } from "@angular/platform-browser";
-import { BrythonStateService } from '../service/brython.service';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {Topic} from "../admin/constants/interface";
+import {ApiService} from "../admin/services/api.service";
+import {ActivatedRoute, Params, Router} from "@angular/router";
+import {ContentService} from "../service/content.service";
+import {Content} from "../interface/content";
+import {Location} from '@angular/common';
+import {environment} from "../../environments/environment";
+import {DomSanitizer} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-informatics',
@@ -101,6 +100,15 @@ export class InformaticsComponent implements OnInit, AfterViewInit {
 
   returnDescription(url: string) {
     return this.sanitizer.bypassSecurityTrustHtml(url);
+  }
+
+  returnVideoId(videoUrl: any) {
+    if (videoUrl) {
+      const indexOfEqualSign = videoUrl.indexOf('=');
+      const videoIdFull = videoUrl.substring(indexOfEqualSign + 1);
+      return videoIdFull.split('&')[0];
+    }
+    return '';
   }
 
 }

@@ -1,17 +1,17 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from "@angular/core";
-import { ApiService } from "./services/api.service";
-import { CreateParentDto, Topic } from "./constants/interface";
-import { MatDialog } from "@angular/material/dialog";
-import { TopicComponent } from "./dialogs/topic/topic.component";
-import { ContentComponent } from "./dialogs/content/content.component";
-import { CodeComponent } from "./dialogs/code/code.component";
-import { ActivatedRoute, Params, Router } from "@angular/router";
-import { ContentService } from "../service/content.service";
-import { Content } from "../interface/content";
+import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from "@angular/core";
+import {ApiService} from "./services/api.service";
+import {CreateParentDto, Topic} from "./constants/interface";
+import {MatDialog} from "@angular/material/dialog";
+import {TopicComponent} from "./dialogs/topic/topic.component";
+import {ContentComponent} from "./dialogs/content/content.component";
+import {CodeComponent} from "./dialogs/code/code.component";
+import {ActivatedRoute, Params, Router} from "@angular/router";
+import {ContentService} from "../service/content.service";
+import {Content} from "../interface/content";
 import * as ace from 'ace-builds';
-import { DeleteConfirmationComponent } from "./dialogs/delete-confirmation/delete-confirmation.component";
-import { environment } from "src/environments/environment";
-import { DomSanitizer } from '@angular/platform-browser';
+import {DeleteConfirmationComponent} from "./dialogs/delete-confirmation/delete-confirmation.component";
+import {environment} from "src/environments/environment";
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-admin',
@@ -339,8 +339,8 @@ export class AdminComponent implements OnInit, AfterViewInit {
   returnVideoId(videoUrl: any) {
     if (videoUrl) {
       const indexOfEqualSign = videoUrl.indexOf('=');
-      const videoId = videoUrl.substring(indexOfEqualSign + 1);
-      return videoId;
+      const videoIdFull = videoUrl.substring(indexOfEqualSign + 1);
+      return videoIdFull.split('&')[0];
     }
     return '';
   }
