@@ -15,15 +15,15 @@
         <div class="accordion-item" *ngFor="let item of parentData; let i = index">
           <small>Занятие {{ i + 1 }}</small>
           <button (click)="onClickAccordion(item.id);" class="accordion-button"
-            [ngClass]="{'collapsed' :!ifRouteHasTopic(i) }" type="button" data-bs-toggle="collapse"
-            [attr.data-bs-target]="'#collapse' + i" aria-expanded="true">
+                  [ngClass]="{'collapsed' :!ifRouteHasTopic(i) }" type="button" data-bs-toggle="collapse"
+                  [attr.data-bs-target]="'#collapse' + i" aria-expanded="true">
 
             {{ item.name }}
           </button>
 
 
           <div [id]="'collapse' + i" class="accordion-collapse collapse" [ngClass]="{'show': ifRouteHasTopic(i)}"
-            data-bs-parent="#accordionFlushExample">
+               data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               <!-- Your content here -->
               <div *ngIf="!childData" class="spinner-border" role="status">
@@ -32,11 +32,12 @@
               <!-- Example subtopics -->
 
               <div *ngIf="childData" class="nav w-100 nav-pills" id="v-pills-tab" role="tablist"
-                aria-orientation="vertical">
+                   aria-orientation="vertical">
                 <button (click)="onClickChild(children, i)" *ngFor="let children of childData; let j = index"
-                  class="nav-link" [id]="'v-pills' + j" data-bs-toggle="pill"
-                  [ngClass]="{'active': isRouteHasSubtopic(j, children)}" data-bs-target="#v-pills-home" type="button"
-                  role="tab" aria-controls="v-pills-home" aria-selected="true">
+                        class="nav-link" [id]="'v-pills' + j" data-bs-toggle="pill"
+                        [ngClass]="{'active': isRouteHasSubtopic(j, children)}" data-bs-target="#v-pills-home"
+                        type="button"
+                        role="tab" aria-controls="v-pills-home" aria-selected="true">
                   <div class="with-icon">
                     <mat-icon color="primary" class="svg-icon" [svgIcon]="children.iconType"></mat-icon>
                     &nbsp;&nbsp;{{ children.name }}
@@ -55,25 +56,29 @@
       <div class="tab-content" id="v-pills-tabContent">
         <div class="tab-pane fade show active" [id]="'v-pills' + selectedSubTopic?.id" role="tabpanel">
           <h1 class="body-title"><span>Занятие {{ routeTopicIndex + 1 }}
-              .</span> {{ selectedSubTopic?.name }}</h1>
+            .</span> {{ selectedSubTopic?.name }}</h1>
           <hr>
 
           <ng-container *ngFor="let content of contents">
             <ng-container>
               <div class="row">
                 <div class="col-md-12">
-                  <div *ngIf="content.type == 'text'">
+                  <div *ngIf="content.type == 'text'" class="mb-4">
                     <!--                    {{ content.body }}-->
                     <div [innerHTML]="returnDescription(content.body)"></div>
                   </div>
-                  <p *ngIf="content.type == 'task'">
+                  <div *ngIf="content.type == 'task'" class="mb-4">
                     <app-brython-editor [content]="content">
                     </app-brython-editor>
-                  </p>
+                  </div>
 
-                  <p *ngIf="content.type == 'image'">
+                  <div *ngIf="content.type == 'image'" class="mb-4">
                     <img [src]="imageUrlPrefix +'/'+ content.body" class="uploaded-image" alt="image"/>
-                  </p>
+                  </div>
+
+                  <div *ngIf="content.type == 'video'" class="mb-4">
+                    <app-video-player [videoId]="returnVideoId(content.body)"></app-video-player>
+                  </div>
 
                 </div>
               </div>
