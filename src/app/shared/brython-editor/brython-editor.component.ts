@@ -15,7 +15,6 @@ import * as FileSaver from 'file-saver';
 export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() public content!: Content;
   @Input() public isEditor = false;
-  @Input() public taskId!: number;
 
   id!: number;
   defaultId = -777;
