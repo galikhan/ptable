@@ -14,7 +14,7 @@ const routes: Routes = [
 		path: 'login',
 		component: LoginComponent
 	},
-	{ path: 'chemistry', loadChildren: () => import('./alchemy/alchemy.module').then(m => m.AlchemyModule) },
+	{ path: 'chemistry', loadChildren: () => import('./periodic-table/periodic-table.module').then(m => m.PeriodicTableModule) },
 	{ path: 'informatics', loadChildren: () => import('./informatics/informatics.module').then(m => m.InformaticsModule) },
   {
     path: 'admin',

@@ -8,11 +8,11 @@ import { HighlightTypeService } from '../service/highlight-type.service';
 import { ShowElementService } from '../service/show-element.service';
 
 @Component({
-  selector: 'app-alchemy',
-  templateUrl: './alchemy.component.html',
-  styleUrls: ['./alchemy.component.scss']
+  selector: 'app-periodic-table',
+  templateUrl: './periodic-table.component.html',
+  styleUrls: ['./periodic-table.component.scss']
 })
-export class AlchemyComponent {
+export class PeriodicTableComponent {
 
     //in kelvin 
     max = 5727;
@@ -60,18 +60,11 @@ export class AlchemyComponent {
       const importedJson = json;
       this.elements = importedJson.elements
       this.elementService.setNext(this.elements[0]);
-      //.filter(i=> i.number > 99 && i.number <104);
-      // const unkns=[104]
+
       const cts: Set<string> = new Set();
       const arr: any []= [];
       this.elements.forEach(item => {
         cts.add(item.category);
-        // // if (item.number <= 104) {
-        //   if ((!item.melt || !item.boil) && item.phase != 'Unknown') {
-        //     console.log(item.phase, item.name, item.melt, item.boil);
-        //     arr.push(item);
-        //   }
-        // }
       });
       
   

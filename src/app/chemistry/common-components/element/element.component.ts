@@ -67,6 +67,7 @@ export class ElementComponent implements OnInit {
   metals = []
 
   ngOnInit(): void {
+    console.log('elements', this.elements);
     this.enableAllTypes();
     this.stateService.stateObservable.subscribe(result => {
       if (result === 'C') {
@@ -251,12 +252,14 @@ export class ElementComponent implements OnInit {
       
       this.chemistryIconService.findByElement(element.symbol).subscribe(result => {
         if(result) {
+          console.log('icon result', result);
           result.forEach(item => {
             this.iconRegistry.addSvgIcon(item.name, this.sanitizer.bypassSecurityTrustResourceUrl(item.path));
           });
 
           const color = this.getColorOfElement(element);
           const borderColor = this.getBorderColorOfElement(element);
+
           if (this.deviceService.isDesktop()) {
             this.di.open(DiPopupElementComponent, 
               { width: "700px", 
@@ -267,6 +270,7 @@ export class ElementComponent implements OnInit {
                   color, 
                   borderColor } 
               });
+
           } else {
             this.router.navigate(['/chemistry/element-mobile'], 
             {queryParams: 
@@ -275,10 +279,10 @@ export class ElementComponent implements OnInit {
                 borderColor}
             })
           }
-          console.log('icon pack is loaded')
+          // console.log('icon pack is loaded')
         }
       })
-      console.log('after icons loaded element', element);
+      // console.log('after icons loaded element', element);
 
     }
   }
@@ -362,12 +366,12 @@ export class ElementComponent implements OnInit {
   }
 
   async loadIcons(element: string) {
+    
     await this.chemistryIconService.findByElement(element).subscribe(result => {
       if(result) {
         result.forEach(item => {
           this.iconRegistry.addSvgIcon(item.name, this.sanitizer.bypassSecurityTrustResourceUrl(item.path));
         });
-        console.log('icon pack is loaded')
       }
     })
   }

@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { AlchemyRoutingModule } from './alchemy-routing.module';
-import { AlchemyComponent } from './alchemy.component';
+import { PeriodicTableRoutingModule } from './periodic-table-routing.module';
+import { PeriodicTableComponent } from './periodic-table.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
@@ -22,7 +22,7 @@ import { ElementInfoMobileWrapperComponent } from './components/element-info-mob
 
 @NgModule({
   declarations: [
-    AlchemyComponent,
+    PeriodicTableComponent,
     CoreComponent,
     ElementComponent,
     LightswitchComponent,
@@ -35,7 +35,7 @@ import { ElementInfoMobileWrapperComponent } from './components/element-info-mob
   ],
   imports: [
     CommonModule,
-    AlchemyRoutingModule,
+    PeriodicTableRoutingModule,
     MatSliderModule,
     FormsModule,
     MatIconModule,
@@ -46,4 +46,4 @@ import { ElementInfoMobileWrapperComponent } from './components/element-info-mob
 
   ]
 })
-export class AlchemyModule { }
+export class PeriodicTableModule { }

@@ -17,7 +17,7 @@ export interface DiData {
   templateUrl: './di-popup-element.component.html',
   styleUrls: ['./di-popup-element.component.scss']
 })
-export class DiPopupElementComponent {
+export class DiPopupElementComponent implements OnInit{
 
 
   color = '';
