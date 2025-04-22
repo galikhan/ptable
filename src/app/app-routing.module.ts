@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router'
 import { CoreComponent } from './core/core.component';
 import { LoginComponent } from './login/login.component';
 import {AuthGuard} from "./helper/auth.guard";
