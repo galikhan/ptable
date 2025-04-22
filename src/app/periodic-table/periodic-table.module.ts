@@ -6,7 +6,7 @@ import { PeriodicTableComponent } from './periodic-table.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -20,30 +20,22 @@ import { DiPopupElementComponent } from '../chemistry/di-popup-element/di-popup-
 import { ElementInfoMobileWrapperComponent } from './components/element-info-mobile-wrapper/element-info-mobile-wrapper.component';
 
 
-@NgModule({
-  declarations: [
-    PeriodicTableComponent,
-    CoreComponent,
-    ElementComponent,
-    LightswitchComponent,
-    ElementInfoComponent,
-    IdElementComponent,
-    DiPopupElementComponent,
-    ElementComponent,
-    ElementInfoMobileWrapperComponent,
-
-  ],
-  imports: [
-    CommonModule,
-    PeriodicTableRoutingModule,
-    MatSliderModule,
-    FormsModule,
-    MatIconModule,
-    HttpClientModule,
-    MatCardModule,
-    MatExpansionModule,
-    MatDialogModule,
-
-  ]
-})
+@NgModule({ declarations: [
+        PeriodicTableComponent,
+        CoreComponent,
+        ElementComponent,
+        LightswitchComponent,
+        ElementInfoComponent,
+        IdElementComponent,
+        DiPopupElementComponent,
+        ElementComponent,
+        ElementInfoMobileWrapperComponent,
+    ], imports: [CommonModule,
+        PeriodicTableRoutingModule,
+        MatSliderModule,
+        FormsModule,
+        MatIconModule,
+        MatCardModule,
+        MatExpansionModule,
+        MatDialogModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class PeriodicTableModule { }
