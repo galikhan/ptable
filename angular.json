@@ -92,25 +92,25 @@
 				"serve": {
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"configurations": {
-						"production": {
-							"browserTarget": "ptable:build:production"
+            "production": {
+              "buildTarget": "ptable:build:production"
             },
-						"development": {
-							"browserTarget": "ptable:build:development"
+            "development": {
+              "buildTarget": "ptable:build:development"
             },
             "staging": {
-              "browserTarget": "ptable:build:staging"
+              "buildTarget": "ptable:build:staging"
             },
             "local": {
-              "browserTarget": "ptable:build:local"
+              "buildTarget": "ptable:build:local"
             }
 					},
 					"defaultConfiguration": "development"
 				},
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n",
-					"options": {
-						"browserTarget": "ptable:build"
+          "options": {
+            "buildTarget": "ptable:build"
 					}
 				},
 				"test": {

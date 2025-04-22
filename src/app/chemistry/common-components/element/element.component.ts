@@ -4,7 +4,6 @@ import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { DeviceDetectorService } from 'ngx-device-detector';
-import { iif } from 'rxjs';
 import { ChemicalElement } from 'src/app/interface/chemical-element';
 import { ChemistryIconService } from 'src/app/service/chemistry-icon.service';
 import { HighlightByTemperatureService } from 'src/app/service/highlight-by-temperature.service';
