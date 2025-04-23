@@ -1,175 +1,52 @@
-<p>
-  <mat-toolbar class="d-flex justify-content-between">
-    <span [routerLink]="['/admin']">Админская панель</span>
-    <span>
-      <button (click)="logOut()" mat-icon-button class="example-icon favorite-icon"
-        aria-label="Example icon-button with heart icon">
+<!-- <mat-toolbar class="d-flex justify-content-between">
+  <span [routerLink]="['/admin']">Админская панель</span>
+  <span>
+    <button (click)="logOut()" mat-icon-button class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </span>
+</mat-toolbar> -->
+
+<!-- <mat-sidenav-container class="example-container">
+  <mat-sidenav mode="side" opened>
+    <mat-list role="list">
+      <mat-list-item role="listitem"><a [routerLink]="['chemistry']">Chemistry</a></mat-list-item>
+      <mat-list-item role="listitem"><a [routerLink]="['informatics']">Informatics</a></mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+    <router-outlet></router-outlet>
+  
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+ -->
+
+<nz-layout>
+  <nz-header>
+    <div class="logo"></div>
+    <ul nz-menu nzTheme="dark" nzMode="horizontal" class="header-menu">
+      <li (click)="logOut()">
         <mat-icon>logout</mat-icon>
-      </button>
-    </span>
-  </mat-toolbar>
-</p>
+      </li>
+    </ul>
+  </nz-header>
 
-<!-- <div #supEdit id="sup-edit" style="width: 200px; height: 100px;"></div> -->
+  <nz-content class="outer-content">
 
-
-<div class="container-fluid">
-  <div class="row">
-    <aside class="col-md-4 col-lg-3 d-md-block sidebar">
-      <form class="row g-3">
-        <div class="col-lg-8">
-          <input placeholder="Введите тему" type="text" class="form-control" [(ngModel)]="addTopicName"
-            [ngModelOptions]="{standalone: true}">
-        </div>
-        <div class="col-lg-4">
-          <button [disabled]="addTopicName.length < 3" type="submit" class="btn btn-primary mb-3 w-100"
-            (click)="addTopic()">Добавить
-          </button>
-        </div>
-      </form>
-
-
-      <div class="accordion" id="accordionFlushExample">
-        <div class="accordion-item" *ngFor="let item of parentData; let i = index">
-          <button (click)="onClickAccordion(item.id);" class="accordion-button"
-            [ngClass]="{'collapsed' :!ifRouteHasTopic(i) }" type="button" data-bs-toggle="collapse"
-            [attr.data-bs-target]="'#collapse' + i" aria-expanded="true">
-            {{ item.name }}
-          </button>
-
-
-          <div [id]="'collapse' + i" class="accordion-collapse collapse" [ngClass]="{'show': ifRouteHasTopic(i)}"
-            data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
-              <!-- Your content here -->
-              <div *ngIf="!childData" class="spinner-border" role="status">
-                <span class="visually-hidden">Loading...</span>
-              </div>
-              <!-- Example subtopics -->
-              <div *ngIf="childData" class="nav w-100 nav-pills" id="v-pills-tab" role="tablist"
-                aria-orientation="vertical">
-                <button (click)="onClickChild(child, i)" *ngFor="let child of childData; let j = index"
-                  class="nav-link" [id]="'v-pills' + j" data-bs-toggle="pill"
-                  [ngClass]="{'active': isRouteHasSubtopic(child)}" data-bs-target="#v-pills-home" type="button"
-                  role="tab" aria-controls="v-pills-home" aria-selected="true">
-
-                  <!-- <img [src]="returnIconBy(child)" alt="Image Alt Text" class="icon-image"> -->
-                    <div class="with-icon">
-                      <mat-icon class="svg-icon" [svgIcon]="child.iconType"></mat-icon>
-                      &nbsp;&nbsp;{{ child.name }}
-                    </div>
-                </button>
-
-
-                <form class="row g-3">
-                  <div class="col-lg-auto">
-                    <button [matTooltip]="'Добавить подтему'" (click)="addSubtopic(item)" mat-icon-button
-                      class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-                      <mat-icon>add</mat-icon>
-                    </button>
-
-                    <button [matTooltip]="'Удалить тему'" (click)="deleteTopic(item)" mat-icon-button
-                      class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-                      <mat-icon>delete</mat-icon>
-                    </button>
-
-                    <button [matTooltip]="'Изменить тему'" (click)="editTopicName(item)" mat-icon-button
-                      class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-                      <mat-icon>edit</mat-icon>
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </aside>
-
-    <!-- Main content area -->
-    <main role="main" class="col-md-8 ml-sm-auto col-lg-9 px-md-4" *ngIf="selectedSubTopic">
-      <!-- Your main content goes here -->
-      <div class="tab-content" id="v-pills-tabContent">
-        <div class="tab-pane fade show active" [id]="'v-pills' + selectedSubTopic?.id" role="tabpanel">
-          <h1 class="body-title">
-            <span>Занятие {{ selectedParentIndex + 1 }}.</span>
-            {{ selectedSubTopic?.name }}
-            <span>
-              <button [matTooltip]="'Удалить подтему'" (click)="deleteSubtopic(selectedSubTopic)" mat-icon-button
-                class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-                <mat-icon>delete</mat-icon>
-              </button>
-
-              <button [matTooltip]="'Изменить подтему'" (click)="editSubtopicName(selectedSubTopic)" mat-icon-button
-                class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-                <mat-icon>edit</mat-icon>
-              </button>
-            </span>
-          </h1>
-          <hr>
-
-          <ng-container *ngFor="let content of contents">
-            <ng-container>
-              <div class="row">
-                <div class="col-md-12">
-                  <div *ngIf="content.type == 'text'">
-                    <!--                    {{ content.body }}-->
-                    <div [innerHTML]="returnDescription(content.body)"></div>
-                    <button [matTooltip]="'Удалить контент'" (click)="deleteContent(content)" mat-icon-button
-                      class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-                      <mat-icon>delete</mat-icon>
-                    </button>
-
-                    <button [matTooltip]="'Изменить контент'" (click)="editContent(content)" mat-icon-button
-                      class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-                      <mat-icon>edit</mat-icon>
-                    </button>
-                  </div>
-                  <div *ngIf="content.type == 'task'">
-                    <span class="code-actions mb-2">
-                      <button (click)="openEditCodeDialog(content)" class="edit-code" style="margin-right:5px">
-                        редактировать задачу
-                      </button>
-                      <button (click)="openDeleteCodeDialog(content)" class="edit-code" style="margin-right:5px">
-                        удалить задачу
-                      </button>
-                    </span>
-                    <app-brython-editor class="mt-4" [content]="content" [isEditor]="false">
-                    </app-brython-editor>
-                  </div>
-                  <div *ngIf="content.type == 'image'">
-                    <img [src]="imageUrlPrefix +'/'+ content.body" class="uploaded-image" alt="image"/>
-                    <button [matTooltip]="'Удалить картинку'" (click)="deleteContent(content)" mat-icon-button
-                            class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-                      <mat-icon>delete</mat-icon>
-                    </button>
-                  </div>
-                  <div *ngIf="content.type == 'video'">
-                    <!--                    <div [innerHTML]="returnVideo(content.body)"></div>-->
-                    <app-video-player [videoId]="returnVideoId(content.body)"></app-video-player>
-                    <button [matTooltip]="'Удалить видео'" (click)="deleteContent(content)" mat-icon-button
-                            class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-                      <mat-icon>delete</mat-icon>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </ng-container>
-          </ng-container>
-
-
-          <div class="row mb-4">
-            <div class="col-auto">
-              <div class="body-actions">
-                <button class="edit-code" style="margin-right:5px" (click)="addContent()">добавить контент
-                </button>
-                <button class="edit-code" style="margin-right:5px" (click)="addCode()">добавить код
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-  </div>
-</div>
+    <nz-layout class="inner-layout">
+      <nz-sider nzWidth="200px" nzTheme="light">
+        <ul nz-menu nzMode="inline" class="sider-menu">
+          <li nz-menu-item><a [routerLink]="['chemistry']">Chemistry</a></li>
+          <li nz-menu-item><a [routerLink]="['informatics']">Informatics</a></li>
+        </ul>
+      </nz-sider>
+      <nz-content class="inner-content">
+        <router-outlet></router-outlet>
+      </nz-content>
+    </nz-layout>
+    <nz-footer>Ant Design ©2020 Implement By Angular</nz-footer>
+  </nz-content>
+</nz-layout>

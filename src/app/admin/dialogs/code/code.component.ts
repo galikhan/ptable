@@ -1,15 +1,21 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef, MatDialogModule } from '@angular/material/dialog';
 import { Content } from 'src/app/interface/content';
 import { BrythonStateService } from 'src/app/service/brython.service';
 import { ContentService } from 'src/app/service/content.service';
 import * as ace from 'ace-builds';
 import { DiCodeData } from '../../constants/di-code-data';
+import { BrythonEditorComponent } from 'src/app/shared/brython-editor/brython-editor.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-code',
   templateUrl: './code.component.html',
-  styleUrls: ['./code.component.scss']
+  styleUrls: ['./code.component.scss'],
+  standalone: true,
+  imports: [BrythonEditorComponent, MatDialogModule, CommonModule, FormsModule, MatButtonModule]
 })
 export class CodeComponent implements OnInit {
   content!: Content;

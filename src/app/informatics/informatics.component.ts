@@ -1,17 +1,25 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {Topic} from "../admin/constants/interface";
 import {ApiService} from "../admin/services/api.service";
-import {ActivatedRoute, Params, Router} from "@angular/router";
+import {ActivatedRoute, Params, Router, RouterModule} from "@angular/router";
 import {ContentService} from "../service/content.service";
 import {Content} from "../interface/content";
-import {Location} from '@angular/common';
+import {CommonModule, Location} from '@angular/common';
 import {environment} from "../../environments/environment";
 import {DomSanitizer} from "@angular/platform-browser";
+import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { BrythonEditorComponent } from '../shared/brython-editor/brython-editor.component';
+import { VideoPlayerComponent } from '../shared/video-player/video-player.component';
 
 @Component({
   selector: 'app-informatics',
   templateUrl: './informatics.component.html',
-  styleUrls: ['./informatics.component.scss']
+  styleUrls: ['./informatics.component.scss'],
+  standalone: true,
+  imports: [VideoPlayerComponent,BrythonEditorComponent, CommonModule, FormsModule, MatButtonModule, MatIconModule, MatToolbarModule, RouterModule ]
 })
 
 export class InformaticsComponent implements OnInit, AfterViewInit {

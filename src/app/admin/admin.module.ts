@@ -25,15 +25,17 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTabsModule} from "@angular/material/tabs";
 import {CKEditorModule} from '@ckeditor/ckeditor5-angular';
-import { AddIconModule } from '../icon/add-icon/add-icon.module';
-
-
+import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
 @NgModule({
   declarations: [
     AdminComponent,
     TopicComponent,
     ContentComponent,
-    CodeComponent,
     DeleteConfirmationComponent,
   ],
   imports: [
@@ -58,15 +60,15 @@ import { AddIconModule } from '../icon/add-icon/add-icon.module';
     ReactiveFormsModule,
     MatTabsModule,
     CKEditorModule,
-    // AddIconModule
-    // HttpClientModule
+    MatSidenavModule,
+    MatListModule,
+    NzBreadCrumbModule, 
+    NzIconModule, 
+    NzMenuModule, 
+    NzLayoutModule
   ],
   providers: [
-    // {
-    // 	provide: HTTP_INTERCEPTORS,
-    // 	useClass: AuthInterceptor,
-    // 	multi: true,
-    // },
+
   ]
 })
 export class AdminModule {

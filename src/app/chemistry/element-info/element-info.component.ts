@@ -1,7 +1,6 @@
 import { Component, Inject, Input, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
-import { iif } from 'rxjs';
 import { ChemicalElement } from 'src/app/interface/chemical-element';
 import { ShowElementService } from 'src/app/service/show-element.service';
 import * as json from '../../../assets/ElementsAdditionalInfo.json';

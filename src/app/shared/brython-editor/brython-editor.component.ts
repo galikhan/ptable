@@ -7,10 +7,17 @@ import { ContentTest } from 'src/app/interface/content-test';
 import { ChangeDetectorRef } from '@angular/core';
 // import { FileSaverService } from 'ngx-filesaver';
 import * as FileSaver from 'file-saver';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatMenuModule } from '@angular/material/menu';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'app-brython-editor',
   templateUrl: './brython-editor.component.html',
-  styleUrls: ['./brython-editor.component.scss']
+  styleUrls: ['./brython-editor.component.scss'],
+  standalone: true,
+  imports: [MatTabsModule, MatMenuModule, FormsModule, CommonModule, MatIconModule],
 })
 export class BrythonEditorComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() public content!: Content;

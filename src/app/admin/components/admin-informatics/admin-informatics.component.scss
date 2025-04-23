@@ -1,0 +1,98 @@
+.list-group {
+    margin-left: 1em;
+  }
+  
+  .parent-btn:focus {
+    box-shadow: none !important;
+  }
+  
+  .parent-btn {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  aside small {
+    margin-left: 2em;
+    color: grey;
+  }
+  
+  .list-group-item {
+    border: none;
+  }
+  
+  .nav-link {
+    width: 100%; /* Make the buttons full width */
+    text-align: left; /* Align the text to the left */
+    background-color: transparent; /* Set your custom background color */
+    color: #838383; /* Set text color */
+    border: none; /* Remove button border if needed */
+    margin-bottom: 5px; /* Add margin between buttons */
+    padding: 10px; /* Add padding for better spacing */
+  }
+  
+  .nav-link:hover {
+    background-color: #2980b9; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+  }
+  
+  .nav-pills .nav-link.active {
+    background-color: #E6F1FF; /* Change background color on hover */
+    color: #0e6b9c; /* Change text color on hover */
+  }
+  
+  .accordion {
+    border: 1px solid #80808038;
+    padding: 1em 0;
+  }
+  
+  .accordion-item {
+    border: none;
+  }
+  
+  .accordion-button {
+    box-shadow: none;
+    margin: 0;
+  }
+  .accordion-button:focus {
+    box-shadow: none;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    background-color: transparent;
+  }
+  
+  .accordion-body {
+    padding: 0 15px;
+  }
+  
+  .body-title span {
+    color: #0e6b9c;
+  }
+  
+  .body-actions button {
+    margin-right: 1em;
+  }
+  
+  .app-ace-editor {
+    border: 2px solid #f8f9fa;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+  
+  //////
+  .edit-code {
+    height: 35px !important;
+    width: 200px !important;
+    border: none;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    font-size: 16px;
+    background-color: #d3d7e0;
+    color: #1d3e7d;
+  }
+  
+  .edit-code:hover {
+    background-color: #8a8d94;
+    color: #000;
+  }
+  
+  

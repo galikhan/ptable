@@ -12,8 +12,8 @@ import {YouTubePlayerModule} from "@angular/youtube-player";
 
 @NgModule({
   declarations: [
-    BrythonEditorComponent,
-    VideoPlayerComponent
+    // BrythonEditorComponent,
+    // VideoPlayerComponent
   ],
   imports: [
     CommonModule,
@@ -26,10 +26,10 @@ import {YouTubePlayerModule} from "@angular/youtube-player";
     YouTubePlayerModule,
   ],
   exports: [
-    BrythonEditorComponent,
+    // BrythonEditorComponent,
     CommonModule,
     FormsModule,
-    VideoPlayerComponent,
+    // VideoPlayerComponent,
   ]
 })
 export class SharedModule {

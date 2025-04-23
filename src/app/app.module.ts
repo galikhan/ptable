@@ -9,12 +9,11 @@ import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@a
 import { LoginComponent } from './login/login.component';
 import { SharedModule } from "./shared/shared.module";
 import { FormsModule } from '@angular/forms';
-import { AdminModule } from './admin/admin.module';
-import { InformaticsModule } from './informatics/informatics.module';
 import { AuthInterceptor } from './helper/auth.interceptor';
-import {ErrorInterceptor} from "./helper/error.interceptor";
+import { ErrorInterceptor } from "./helper/error.interceptor";
 
-@NgModule({ declarations: [
+@NgModule({
+    declarations: [
         AppComponent,
         LoginComponent,
     ],
@@ -24,18 +23,21 @@ import {ErrorInterceptor} from "./helper/error.interceptor";
     bootstrap: [AppComponent],
     schemas: [
         CUSTOM_ELEMENTS_SCHEMA
-    ], imports: [BrowserModule,
+    ], 
+    imports: [
+        BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
         // AdminModule,
         SharedModule,
         FormsModule], providers: [
-        {
-            provide: HTTP_INTERCEPTORS,
-            useClass: AuthInterceptor,
-            multi: true,
-        },
-        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-        provideHttpClient(withInterceptorsFromDi())
-    ] })
+            {
+                provide: HTTP_INTERCEPTORS,
+                useClass: AuthInterceptor,
+                multi: true,
+            },
+            { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+            provideHttpClient(withInterceptorsFromDi())
+        ]
+})
 export class AppModule { }
