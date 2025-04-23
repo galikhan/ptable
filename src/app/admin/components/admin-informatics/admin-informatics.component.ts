@@ -122,7 +122,7 @@ export class AdminInformaticsComponent implements OnInit, AfterViewInit {
 
   onClickChild(children: any, parentIndex: number) {
     const parentTopic = parentIndex + 1;
-    this.router.navigate(['/admin/topic/' + parentTopic + '/subtopic/', children.id])
+    this.router.navigate(['/admin/informatics/topic/' + parentTopic + '/subtopic/', children.id])
     this.selectedParentIndex = parentIndex;
     this.selectedSubTopic = children;
   }

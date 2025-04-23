@@ -10,10 +10,10 @@ const routes: Routes = [
 		path: '', component: AdminComponent,
 		children: [
 			{ path: 'informatics', component: AdminInformaticsComponent },
+			{ path: 'informatics/topic/:topicId/subtopic/:subtopicId', component: AdminInformaticsComponent },
 			{ path: 'chemistry', component: AdminChemistryComponent },
 		]
 	},
-	{ path: 'topic/:topicId/subtopic/:subtopicId', component: AdminComponent },
 ];
 
 @NgModule({
