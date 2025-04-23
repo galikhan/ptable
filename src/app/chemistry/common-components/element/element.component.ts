@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, Inject, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatIconRegistry } from '@angular/material/icon';
@@ -16,7 +17,9 @@ import { ElementInfoComponent } from '../../element-info/element-info.component'
 @Component({
   selector: 'app-element',
   templateUrl: './element.component.html',
-  styleUrls: ['./element.component.scss']
+  styleUrls: ['./element.component.scss'],
+  standalone: true,
+  imports: [CommonModule, ElementInfoComponent]
 })
 export class ElementComponent implements OnInit {
 

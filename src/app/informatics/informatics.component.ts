@@ -19,7 +19,7 @@ import { VideoPlayerComponent } from '../shared/video-player/video-player.compon
   templateUrl: './informatics.component.html',
   styleUrls: ['./informatics.component.scss'],
   standalone: true,
-  imports: [VideoPlayerComponent,BrythonEditorComponent, CommonModule, FormsModule, MatButtonModule, MatIconModule, MatToolbarModule, RouterModule ]
+  imports: [VideoPlayerComponent, BrythonEditorComponent, CommonModule, FormsModule, MatButtonModule, MatIconModule, MatToolbarModule, RouterModule ]
 })
 
 export class InformaticsComponent implements OnInit, AfterViewInit {

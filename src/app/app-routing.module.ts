@@ -1,20 +1,15 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router'
-import { CoreComponent } from './core/core.component';
 import { LoginComponent } from './login/login.component';
 import {AuthGuard} from "./helper/auth.guard";
 
 
 const routes: Routes = [
 	{
-		path: 'dashboard',
-		component: CoreComponent
-	},
-	{
 		path: 'login',
 		component: LoginComponent
 	},
-	{ path: 'chemistry', loadChildren: () => import('./periodic-table/periodic-table.module').then(m => m.PeriodicTableModule) },
+	{ path: 'chemistry', loadChildren: () => import('./periodic-table/periodic-table.routes').then(m => m.MAIN_ROUTES) },
 	{ path: 'informatics', loadChildren: () => import('./informatics/informatics.module').then(m => m.InformaticsModule) },
   {
     path: 'admin',

@@ -1,10 +1,14 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ElementInfoComponent } from 'src/app/chemistry/element-info/element-info.component';
 
 @Component({
   selector: 'app-element-info-mobile-wrapper',
   templateUrl: './element-info-mobile-wrapper.component.html',
-  styleUrls: ['./element-info-mobile-wrapper.component.scss']
+  styleUrls: ['./element-info-mobile-wrapper.component.scss'],
+  standalone: true,
+  imports: [ElementInfoComponent, CommonModule]
 })
 export class ElementInfoMobileWrapperComponent {
 

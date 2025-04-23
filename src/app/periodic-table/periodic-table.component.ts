@@ -6,11 +6,35 @@ import { HighlightByTemperatureService } from '../service/highlight-by-temperatu
 import { HighlightStateService } from '../service/highlight-state.service';
 import { HighlightTypeService } from '../service/highlight-type.service';
 import { ShowElementService } from '../service/show-element.service';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSliderModule } from '@angular/material/slider';
+import { ElementComponent } from '../chemistry/common-components/element/element.component';
+import { IdElementComponent } from '../chemistry/common-components/id-element/id-element.component';
+import { ElementInfoComponent } from '../chemistry/element-info/element-info.component';
 
 @Component({
   selector: 'app-periodic-table',
   templateUrl: './periodic-table.component.html',
-  styleUrls: ['./periodic-table.component.scss']
+  styleUrls: ['./periodic-table.component.scss'],
+  standalone: true,
+  imports: [
+    ElementInfoComponent,
+    IdElementComponent,
+    ElementComponent,
+    CommonModule,
+    FormsModule,
+    MatExpansionModule,
+    MatDialogModule,
+    MatIconModule,
+    MatSliderModule,
+    MatCardModule,
+  ]
+
 })
 export class PeriodicTableComponent {
 

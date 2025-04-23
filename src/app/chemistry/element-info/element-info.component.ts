@@ -1,5 +1,7 @@
+import { CommonModule } from '@angular/common';
 import { Component, Inject, Input, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
 import { ActivatedRoute } from '@angular/router';
 import { ChemicalElement } from 'src/app/interface/chemical-element';
 import { ShowElementService } from 'src/app/service/show-element.service';
@@ -13,7 +15,9 @@ export interface DiData {
 @Component({
   selector: 'app-element-info',
   templateUrl: './element-info.component.html',
-  styleUrls: ['./element-info.component.scss']
+  styleUrls: ['./element-info.component.scss'],
+  standalone: true,
+  imports: [CommonModule, MatExpansionModule, MatIconModule]
 })
 export class ElementInfoComponent implements OnInit {
 

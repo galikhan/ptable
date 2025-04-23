@@ -20,6 +20,7 @@ import {DomSanitizer} from '@angular/platform-browser';
   styleUrls: ['./admin.component.scss'],
 })
 export class AdminComponent implements OnInit, AfterViewInit {
+  
   addTopicName: string = "";
   parentData!: Topic[];
   childData!: Topic[];
@@ -29,16 +30,13 @@ export class AdminComponent implements OnInit, AfterViewInit {
   routeTopicIndex!: number;
   routeSubtopicId!: number;
   contents: Content[] = [];
+
   @ViewChild('supEdit') public supedit!: ElementRef<HTMLElement>;
   imageUrlPrefix = environment.domain + '/images';
   currentVideoId!: string;
   constructor(
-    private apiService: ApiService,
     public dialog: MatDialog,
-    private router: Router,
-    private route: ActivatedRoute,
-    private service: ContentService,
-    private sanitizer: DomSanitizer
+    private router: Router
   ) {
   }
 

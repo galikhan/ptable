@@ -1,7 +1,9 @@
+import { CommonModule } from '@angular/common';
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ChemicalElement } from 'src/app/interface/chemical-element';
 import { ShowElementService } from 'src/app/service/show-element.service';
+import { ElementInfoComponent } from '../element-info/element-info.component';
 
 export interface DiData {
   color:string;
@@ -15,7 +17,10 @@ export interface DiData {
 @Component({
   selector: 'app-di-popup-element',
   templateUrl: './di-popup-element.component.html',
-  styleUrls: ['./di-popup-element.component.scss']
+  styleUrls: ['./di-popup-element.component.scss'],
+  standalone: true,
+  imports: [CommonModule, ElementInfoComponent]
+
 })
 export class DiPopupElementComponent implements OnInit{
 
