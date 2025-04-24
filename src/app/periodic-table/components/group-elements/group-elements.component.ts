@@ -11,17 +11,17 @@ import { HighlightByTemperatureService } from 'src/app/service/highlight-by-temp
 import { HighlightStateService } from 'src/app/service/highlight-state.service';
 import { HighlightTypeService } from 'src/app/service/highlight-type.service';
 import { ShowElementService } from 'src/app/service/show-element.service';
-import { DiPopupElementComponent } from '../../di-popup-element/di-popup-element.component';
-import { ElementInfoComponent } from '../../element-info/element-info.component';
+import { DiPopupElementComponent } from '../di-popup-element/di-popup-element.component';
+import { ElementInfoComponent } from '../element-info/element-info.component';
 
 @Component({
-  selector: 'app-element',
-  templateUrl: './element.component.html',
-  styleUrls: ['./element.component.scss'],
+  selector: 'group-elements',
+  templateUrl: './group-elements.component.html',
+  styleUrls: ['./group-elements.component.scss'],
   standalone: true,
   imports: [CommonModule, ElementInfoComponent]
 })
-export class ElementComponent implements OnInit {
+export class GroupElementsComponent implements OnInit {
 
   @Input() xaxis: number[] = [];
   @Input() yaxis: number[] = [];

@@ -6,7 +6,7 @@ import {AuthGuard} from "./helper/auth.guard";
 
 const routes: Routes = [
 	{ path: 'login', component: LoginComponent },
-	{ path: 'chemistry', loadChildren: () => import('./periodic-table/periodic-table.routes').then(m => m.MAIN_ROUTES) },
+	{ path: 'periodic-table', loadChildren: () => import('./periodic-table/periodic-table.routes').then(m => m.MAIN_ROUTES) },
 	{ path: 'informatics', loadChildren: () => import('./informatics/informatics.module').then(m => m.InformaticsModule) },
   {
     path: 'admin',

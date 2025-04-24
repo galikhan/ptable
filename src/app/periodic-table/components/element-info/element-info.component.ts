@@ -5,7 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { ActivatedRoute } from '@angular/router';
 import { ChemicalElement } from 'src/app/interface/chemical-element';
 import { ShowElementService } from 'src/app/service/show-element.service';
-import * as json from '../../../assets/ElementsAdditionalInfo.json';
+import * as json from '../../../../assets/ElementsAdditionalInfo.json';
 
 export interface DiData {
   element: ChemicalElement | undefined;

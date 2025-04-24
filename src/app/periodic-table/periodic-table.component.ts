@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import * as json from '../../assets/PeriodicTableJSON.json'
 import { ChemicalElement } from '../interface/chemical-element';
 import { BrythonStateService } from '../service/brython.service';
@@ -13,9 +13,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSliderModule } from '@angular/material/slider';
-import { ElementComponent } from '../chemistry/common-components/element/element.component';
-import { IdElementComponent } from '../chemistry/common-components/id-element/id-element.component';
-import { ElementInfoComponent } from '../chemistry/element-info/element-info.component';
+import { JustColumnOrRowId } from './components/just-column-or-row-id/just-column-or-row-id.component';
+import { ElementInfoComponent } from './components/element-info/element-info.component';
+import { GroupElementsComponent } from './components/group-elements/group-elements.component';
 
 @Component({
   selector: 'app-periodic-table',
@@ -24,8 +24,8 @@ import { ElementInfoComponent } from '../chemistry/element-info/element-info.com
   standalone: true,
   imports: [
     ElementInfoComponent,
-    IdElementComponent,
-    ElementComponent,
+    JustColumnOrRowId,
+    GroupElementsComponent,
     CommonModule,
     FormsModule,
     MatExpansionModule,

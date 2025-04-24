@@ -2,13 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-id-element',
-  templateUrl: './id-element.component.html',
-  styleUrls: ['./id-element.component.scss'],
+  selector: 'just-column-or-row-id',
+  templateUrl: './just-column-or-row-id.component.html',
+  styleUrls: ['./just-column-or-row-id.component.scss'],
   standalone: true,
   imports: [CommonModule]
 })
-export class IdElementComponent implements OnInit{
+export class JustColumnOrRowId implements OnInit{
 
   @Input() items: number[] = [];
   type: string = 'row';

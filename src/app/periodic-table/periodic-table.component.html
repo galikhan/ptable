@@ -68,14 +68,17 @@
         <div class="element-table">
     
           <div class="header-elements">
+
             <div class="id-row-element">
-              <app-id-element [items]="rows"></app-id-element>
+              <just-column-or-row-id [items]="rows"></just-column-or-row-id>
             </div>
-              <div class="id-column-element">
-              <app-id-element [items]="columns"></app-id-element>
+            
+            <div class="id-column-element">
+              <just-column-or-row-id [items]="columns"></just-column-or-row-id>
             </div>
+
             <div class="lefttop">
-              <app-element [xaxis]="lefttop_xaxis" [yaxis]="lefttop_yaxis" [elements]="leftTopArray"></app-element>
+              <group-elements [xaxis]="lefttop_xaxis" [yaxis]="lefttop_yaxis" [elements]="leftTopArray"></group-elements>
             </div>
             <div class="centertop">
               <div class="centertop_title">Химиялық элементтердің периодтық жүйесі</div>
@@ -109,30 +112,27 @@
     
             </div>
             <div class="righttop">
-              <app-element 
+              <group-elements
                 [hasEmptyCell]="true" 
                 [xaxis]="righttop_xaxis" 
                 [yaxis]="righttop_yaxis"
                 [elements]="rightTopArray">
-              </app-element>
+              </group-elements>
             </div>
           </div>
     
           <!-- <div style="clear: both;"></div> -->
     
           <div class="body-elements">
-            <app-element [xaxis]="body_xaxis" [yaxis]="body_yaxis" [elements]="bodyArray"></app-element>
+            <group-elements [xaxis]="body_xaxis" [yaxis]="body_yaxis" [elements]="bodyArray"></group-elements>
           </div>
     
           <div class="footer-elements">
             <div class="footer-head">
-              <!-- <div class="dummy-cell cell"></div> -->
-              <!-- <div class="footer-text">For elements with no stable isotopes, the mass number of the isotope with the longest
-                half-life is in parentheses.</div> -->
             </div>
     
             <div class="footer-elements-body">
-              <app-element [xaxis]="footer_xaxis" [yaxis]="footer_yaxis" [elements]="footerArray"></app-element>
+              <group-elements [xaxis]="footer_xaxis" [yaxis]="footer_yaxis" [elements]="footerArray"></group-elements>
             </div>
           </div>
         </div>

@@ -57,6 +57,7 @@ export class AdminChemistryComponent implements OnInit {
       next: (result) => {
         if(result.id) {
           this.initForm(result);
+          this.loading = false;
         } else {
           this.validateForm = this.initEmptyForm();
           this.loading = false;
