@@ -250,11 +250,11 @@ export class ElementComponent implements OnInit {
   showElement(element: ChemicalElement | undefined) {
     
     if (element) {
-      // this.loadIcons(element.symbol);  // ChemistryIconService
-      
+
       this.chemistryIconService.findByElement(element.symbol).subscribe(result => {
+
         if(result) {
-          console.log('icon result', result);
+
           result.forEach(item => {
             this.iconRegistry.addSvgIcon(item.name, this.sanitizer.bypassSecurityTrustResourceUrl(item.path));
           });
@@ -263,6 +263,7 @@ export class ElementComponent implements OnInit {
           const borderColor = this.getBorderColorOfElement(element);
 
           if (this.deviceService.isDesktop()) {
+
             this.di.open(DiPopupElementComponent, 
               { width: "700px", 
                 height: "800px",
@@ -279,13 +280,10 @@ export class ElementComponent implements OnInit {
               { symbol: element.symbol, number: element.number, atomic_mass: element.atomic_mass,
                 color, 
                 borderColor}
-            })
+            });
           }
-          // console.log('icon pack is loaded')
         }
-      })
-      // console.log('after icons loaded element', element);
-
+      });
     }
   }
 

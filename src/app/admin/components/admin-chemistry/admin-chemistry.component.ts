@@ -4,6 +4,7 @@ import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { NzMessageService } from 'ng-zorro-antd/message';
 import { FormGroup, FormsModule, NonNullableFormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -13,7 +14,7 @@ import { ElementInfo } from 'src/app/interface/chemistry/element-info';
 @Component({
   selector: 'app-admin-chemistry',
   standalone: true,
-  imports: [ NzButtonModule, NzInputModule, NzSelectModule, NzCardModule, CommonModule, FormsModule, ReactiveFormsModule, NzFormModule],
+  imports: [NzSpinModule, NzButtonModule, NzInputModule, NzSelectModule, NzCardModule, CommonModule, FormsModule, ReactiveFormsModule, NzFormModule],
   templateUrl: './admin-chemistry.component.html',
   styleUrl: './admin-chemistry.component.scss'
 })
@@ -22,36 +23,43 @@ export class AdminChemistryComponent implements OnInit {
   validateForm: FormGroup;
   symbols = ['H', 'He', 'Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'Ne', 'Na', 'Mg', 'Al', 'Si', 'P', 'S', 'Cl', 'Ar', 'K', 'Ca', 'Sc', 'Ti', 'V', 'Cr', 'Mn', 'Fe', 'Co', 'Ni', 'Cu', 'Zn', 'Ga', 'Ge', 'As', 'Se', 'Br', 'Kr', 'Rb', 'Sr', 'Y', 'Zr', 'Nb', 'Mo', 'Tc', 'Ru', 'Rh', 'Pd', 'Ag', 'Cd', 'In', 'Sn', 'Sb', 'Te', 'I', 'Xe', 'Cs', 'Ba', 'La', 'Ce', 'Pr', 'Nd', 'Pm', 'Sm', 'Eu', 'Gd', 'Tb', 'Dy', 'Ho', 'Er', 'Tm', 'Yb', 'Lu', 'Hf', 'Ta', 'W', 'Re', 'Os', 'Ir', 'Pt', 'Au', 'Hg', 'Tl', 'Pb', 'Bi', 'Po', 'At', 'Rn', 'Fr', 'Ra', 'Ac', 'Th', 'Pa', 'U', 'Np', 'Pu', 'Am', 'Cm', 'Bk', 'Cf', 'Es', 'Fm', 'Md', 'No', 'Lr', 'Rf', 'Db', 'Sg', 'Bh', 'Hs', 'Mt', 'Ds', 'Rg', 'Cn', 'Nh', 'Fl', 'Mc', 'Lv', 'Ts', 'Og', 'Uue']
   selectedSymbol!: string;
+  loading = false;
 
   constructor(
     private fb: NonNullableFormBuilder,
     private service: ElementInfoService,
     private messageService: NzMessageService
     ) {
-     this.validateForm =  this.fb.group({
-        id: null,
-        name: this.fb.control('', [Validators.required]),
-        color: this.fb.control('', [Validators.required]),
-        symbol: this.fb.control('', [Validators.required]),
-        atomicProperties: this.fb.control('', [Validators.required]),
-        physicalProperties: this.fb.control('', [Validators.required]),
-        chemicalProperties: this.fb.control('', [Validators.required]),
-        hasTaken: this.fb.control('', [Validators.required]),
-        hasSpread: this.fb.control('', [Validators.required]),
-        howUsed: this.fb.control('', [Validators.required])
-      });
+      this.validateForm = this.initEmptyForm();
     }
 
   ngOnInit(): void {
-    
+  }
+
+  initEmptyForm() {
+    return this.fb.group({
+      id: null,
+      name: this.fb.control('', [Validators.required]),
+      color: this.fb.control('', [Validators.required]),
+      symbol: this.fb.control('', [Validators.required]),
+      atomicProperties: this.fb.control('', [Validators.required]),
+      physicalProperties: this.fb.control('', [Validators.required]),
+      chemicalProperties: this.fb.control('', [Validators.required]),
+      hasTaken: this.fb.control('', [Validators.required]),
+      hasSpread: this.fb.control('', [Validators.required]),
+      howUsed: this.fb.control('', [Validators.required])
+    });
   }
 
   onSymbolSelect(symbol: string) {
-    console.log('symbol',symbol);
+    this.loading = true;
     this.service.findBySymbol(symbol).subscribe({
       next: (result) => {
         if(result.id) {
           this.initForm(result);
+        } else {
+          this.validateForm = this.initEmptyForm();
+          this.loading = false;
         }
       }
     })

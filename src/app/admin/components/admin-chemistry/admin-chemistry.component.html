@@ -7,7 +7,8 @@
 
 </nz-card>
 
-<nz-card *ngIf="selectedSymbol">
+<nz-card class="mt-2" *ngIf="selectedSymbol">
+    <nz-spin [nzSpinning]="loading"></nz-spin>
     <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
 
         <nz-form-item nz-row [nzGutter]="[16, 24]">
