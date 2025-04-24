@@ -15,7 +15,6 @@ import { ErrorInterceptor } from "./helper/error.interceptor";
 @NgModule({
     declarations: [
         AppComponent,
-        LoginComponent,
     ],
     exports: [
         AddIconModule,
@@ -28,16 +27,17 @@ import { ErrorInterceptor } from "./helper/error.interceptor";
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
-        // AdminModule,
         SharedModule,
-        FormsModule], providers: [
-            {
-                provide: HTTP_INTERCEPTORS,
-                useClass: AuthInterceptor,
-                multi: true,
-            },
-            { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-            provideHttpClient(withInterceptorsFromDi())
-        ]
+        FormsModule
+    ], 
+    providers: [
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: AuthInterceptor,
+            multi: true,
+        },
+        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+        provideHttpClient(withInterceptorsFromDi())
+    ]
 })
 export class AppModule { }
