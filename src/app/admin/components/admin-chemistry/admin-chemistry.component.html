@@ -1,6 +1,6 @@
 <nz-card>
-
-    <nz-select nzSize="large" nzShowSearch nzAllowClear nzPlaceHolder="Select chemical symbol" [(ngModel)]="selectedSymbol"
+    
+      <nz-select nzSize="large" nzShowSearch nzAllowClear nzPlaceHolder="Select chemical symbol" [(ngModel)]="selectedSymbol"
         (ngModelChange)="onSymbolSelect($event)">
         <nz-option *ngFor="let symbol of symbols" [nzLabel]="symbol" [nzValue]="symbol"></nz-option>
     </nz-select>
@@ -34,45 +34,45 @@
 
         <nz-form-item nz-row [nzGutter]="[16, 24]">
             <nz-form-label [nzSpan]="5" [nzFor]="'atomicProperties'">Атомикалық қасиеттер</nz-form-label>
-            <nz-form-control [nzSpan]="12" [nzErrorTip]="'Add description'">
+            <nz-form-control [nzSpan]="19" [nzErrorTip]="'Add description'">
               <textarea nz-input formControlName="atomicProperties" id="atomicProperties"></textarea>
             </nz-form-control>
           </nz-form-item>
 
           <nz-form-item nz-row [nzGutter]="[16, 24]">
             <nz-form-label [nzSpan]="5" [nzFor]="'chemicalProperties'">Химиялың қасиеттер</nz-form-label>
-            <nz-form-control [nzSpan]="12" [nzErrorTip]="'chemicalProperties'">
+            <nz-form-control [nzSpan]="19" [nzErrorTip]="'chemicalProperties'">
               <textarea nz-input formControlName="chemicalProperties" id="chemicalProperties"></textarea>
             </nz-form-control>
           </nz-form-item>
 
           <nz-form-item nz-row [nzGutter]="[16, 24]">
             <nz-form-label [nzSpan]="5" [nzFor]="'physicalProperties'">Физикалық қасиеттер</nz-form-label>
-            <nz-form-control [nzSpan]="12" [nzErrorTip]="'physicalProperties'">
+            <nz-form-control [nzSpan]="19" [nzErrorTip]="'physicalProperties'">
               <textarea nz-input formControlName="physicalProperties" id="physicalProperties"></textarea>
             </nz-form-control>
           </nz-form-item>
 
 
           <nz-form-item nz-row [nzGutter]="[16, 24]">
-            <nz-form-label [nzSpan]="5" [nzFor]="'hasTaken'">Алынуы</nz-form-label>
-            <nz-form-control [nzSpan]="12" [nzErrorTip]="'hasTaken'">
-              <textarea nz-input formControlName="hasTaken" id="hasTaken"></textarea>
+            <nz-form-label [nzSpan]="5" [nzFor]="'howTaken'">Алынуы</nz-form-label>
+            <nz-form-control [nzSpan]="19" [nzErrorTip]="'howTaken'">
+              <textarea nz-input formControlName="howTaken" id="howTaken"></textarea>
             </nz-form-control>
           </nz-form-item>
 
 
           <nz-form-item nz-row [nzGutter]="[16, 24]">
-            <nz-form-label [nzSpan]="5" [nzFor]="'hasSpread'">Таратылуы</nz-form-label>
-            <nz-form-control [nzSpan]="12" [nzErrorTip]="'hasSpread'">
-              <textarea nz-input formControlName="hasSpread" id="hasSpread"></textarea>
+            <nz-form-label [nzSpan]="5" [nzFor]="'howSpread'">Таратылуы</nz-form-label>
+            <nz-form-control [nzSpan]="19" [nzErrorTip]="'howSpread'">
+              <textarea nz-input formControlName="howSpread" id="howSpread"></textarea>
             </nz-form-control>
           </nz-form-item>
 
 
           <nz-form-item nz-row [nzGutter]="[16, 24]">
             <nz-form-label [nzSpan]="5" [nzFor]="'howUsed'">Қолдануы</nz-form-label>
-            <nz-form-control [nzSpan]="12" [nzErrorTip]="'howUsed'">
+            <nz-form-control [nzSpan]="19" [nzErrorTip]="'howUsed'">
               <textarea nz-input formControlName="howUsed" id="howUsed"></textarea>
             </nz-form-control>
           </nz-form-item>

@@ -43,7 +43,7 @@ export class PeriodicTableComponent {
     min = -273;
     temparature = 0;
   
-    title = 'ptable';
+    title = 'sart';
     columns = [1,2,3,4,5,6,7];
     rows = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
     
@@ -95,11 +95,9 @@ export class PeriodicTableComponent {
       const leftTopTemp = this.filterBySymbol(['H', 'Li', 'Be', 'Na', 'Mg']);
       this.leftTopArray = this.convertToMap(leftTopTemp);
       const symbols = this.elements.map(item => item.symbol);
-      console.log('this.symbols', symbols);
   
       const rightTopTemp = this.filterBySymbol(['He', 'B', 'C', 'N', 'O', 'F', 'Ne', 'Al', 'Si', 'P', 'S', 'Cl', 'Ar',]);
       this.rightTopArray = this.convertToMap(rightTopTemp);
-      console.log('rightTopArray', this.rightTopArray);
 
       const rangeOfElements_57_71: ChemicalElement = { symbol: '57-71', name: '', xpos: 3, ypos: 6, cpkHex: '00b' };
       const rangeOfElements_89_103: ChemicalElement = { symbol: '89-103', name: '', xpos: 3, ypos: 7, cpkHex: '00b' };
@@ -112,21 +110,20 @@ export class PeriodicTableComponent {
       bodyTemp = bodyTemp.concat(bodyTempContinue).concat(bodyTempLatest);
   
       this.bodyArray = this.convertToMap(bodyTemp);
-      console.log('bodyArray', this.bodyArray);
   
       const line_6: ChemicalElement = { symbol: '6', name: '', xpos: 1, ypos: 9, cpkHex: '00b' };
       const line_7: ChemicalElement = { symbol: '7', name: '', xpos: 1, ypos: 10, cpkHex: '00b' };
   
       let footerTemp = [];
       footerTemp.push(line_6);
+
       let line6Elements = this.filterByNumberRange(57, 71);
       footerTemp = footerTemp.concat(line6Elements);
       footerTemp.push(line_7);
+
       let line7Elements = this.filterByNumberRange(89, 103);
       footerTemp = footerTemp.concat(line7Elements);
       this.footerArray = this.convertToMap(footerTemp);
-  
-  
       this.temperatureUpdated(this.temparature);
     }
   

@@ -1,11 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component, Inject, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
-import { ActivatedRoute } from '@angular/router';
 import { ChemicalElement } from 'src/app/interface/chemical-element';
+import { ElementInfoService } from 'src/app/service/element-info.service';
 import { ShowElementService } from 'src/app/service/show-element.service';
-import * as json from '../../../../assets/ElementsAdditionalInfo.json';
 
 export interface DiData {
   element: ChemicalElement | undefined;
@@ -29,19 +28,54 @@ export class ElementInfoComponent implements OnInit {
   @Input() atomic_mass = 0;
   @Input() symbol = '';
   @Input() isMobile = false;
+  atomicProperties: any;
+  chemicalProperties: any;
+  physicalProperties: any;
+  howTaken: any;
+  howSpread: any;
+  howUsed: any;
 
 
   constructor(
     public elementService: ShowElementService,
-    private route: ActivatedRoute,
+    public service: ElementInfoService
   ) {
   }
 
   ngOnInit(): void {
     if (this.number) {
-      this.importedJson = json;
-      const be = this.importedJson[this.number];
-      this.addInfo = be;
+      // if(this.symbol === 'H') {
+        this.service.findBySymbol(this.symbol).subscribe({
+          next: (result: any) => {
+            this.addInfo = result;
+            if(result.atomicProperties) {
+              this.atomicProperties = JSON.parse(result.atomicProperties);
+            }
+            if(result.physicalProperties) {
+              this.physicalProperties = JSON.parse(result.physicalProperties);
+            }
+            if(result.chemicalProperties) {
+              this.chemicalProperties = JSON.parse(result.chemicalProperties);
+            }
+            if(result.howTaken) {
+              this.howTaken = JSON.parse(result.howTaken);
+            }
+
+            if(result.howSpread) {
+              this.howSpread = JSON.parse(result.howSpread);
+            }
+            if(result.howUsed) {
+              this.howUsed = JSON.parse(result.howUsed);
+            }
+
+          }
+        });
+      // } else {
+      //   this.importedJson = json;
+      //   const be = this.importedJson[this.number];
+      //   this.addInfo = be;
+      //   console.log('this.addInfo', this.addInfo);
+      // }
     }
   }
   

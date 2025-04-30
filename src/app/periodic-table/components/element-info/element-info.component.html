@@ -1,4 +1,4 @@
-<div class="element-info">
+<div class="element-info" *ngIf="addInfo">
     <div class="info-title" [ngStyle]="{background: borderColor}">{{addInfo.name}}</div>
     <div class="info">
         <mat-accordion multi>
@@ -8,13 +8,13 @@
                         <span class="bold">Атомдық қасиеттер</span>
                     </mat-panel-title>
                 </mat-expansion-panel-header>
-                <span class="bold">Э/К</span>&nbsp;{{addInfo.atomic_properties.E_K}}
-                <span class="bold">A/Р</span>&nbsp;{{ addInfo.atomic_properties.A_P }}
-                <span class="bold">И/Р</span>&nbsp;{{ addInfo.atomic_properties.I_P }}
-                <span class="bold">ЭТ</span>&nbsp;{{ addInfo.atomic_properties.ET }}
-                <span class="bold">И/Э</span>&nbsp;{{ addInfo.atomic_properties.I_E }}
-                <span class="bold">Т/Д</span>&nbsp;{{ addInfo.atomic_properties.T_D }}
-                <span class="bold">Изотоптары</span>&nbsp;{{ addInfo.atomic_properties.isotop }}
+                <span class="bold">Э/К</span>&nbsp;{{atomicProperties.E_K}}
+                <span class="bold">A/Р</span>&nbsp;{{ atomicProperties.A_P }}
+                <span class="bold">И/Р</span>&nbsp;{{ atomicProperties.I_P }}
+                <span class="bold">ЭТ</span>&nbsp;{{ atomicProperties.ET }}
+                <span class="bold">И/Э</span>&nbsp;{{ atomicProperties.I_E }}
+                <span class="bold">Т/Д</span>&nbsp;{{ atomicProperties.T_D }}
+                <span class="bold">Изотоптары</span>&nbsp;{{ atomicProperties.isotop }}
             </mat-expansion-panel>
             <mat-expansion-panel [expanded]="true">
                 <mat-expansion-panel-header>
@@ -24,29 +24,29 @@
                     </mat-panel-title>
                 </mat-expansion-panel-header>
                 <!-- 7052300522 wamgun -->
-                <ng-container *ngIf="addInfo && addInfo.physical_properties">
+                <ng-container *ngIf="physicalProperties">
                     <div class="physical-panel">
 
                     </div>
                     <div class="state-temperature">
-                        <span class="bold">Күйi:</span>{{ addInfo.physical_properties.phase }} &nbsp;&nbsp;
-                        <span class="bold">Еруі:</span>{{ addInfo.physical_properties.melt }} C
-                        <span class="bold">Қайнауы:</span>{{ addInfo.physical_properties.boil }} C
+                        <span class="bold">Күйi:</span>{{ physicalProperties.phase }} &nbsp;&nbsp;
+                        <span class="bold">Еруі:</span>{{ physicalProperties.melt }} C
+                        <span class="bold">Қайнауы:</span>{{ physicalProperties.boil }} C
                     </div>
 
                     <div class="phys-image-1">
-                        <mat-icon *ngIf="addInfo.physical_properties.icon_1"
-                            [svgIcon]="toLower(addInfo.how_taken?.iconaddInfo?.physical_properties?.icon_1)" class="svg-icon"></mat-icon>
-                        {{ addInfo.physical_properties.icon_info_1 }}
+                        <mat-icon *ngIf="physicalProperties.icon_1"
+                            [svgIcon]="toLower(howTaken?.iconaddInfo?.physicalProperties?.icon_1)" class="svg-icon"></mat-icon>
+                        {{ physicalProperties.icon_info_1 }}
                     </div>
                     <!-- <div class="phys-image-info-1"></div> -->
                     <div class="phys-image-2">
-                        <mat-icon *ngIf="addInfo.physical_properties.icon_2"
-                            [svgIcon]="toLower(addInfo.physical_properties.icon_2)" class="svg-icon"></mat-icon>
-                        {{ addInfo.physical_properties.icon_info_2 }}
+                        <mat-icon *ngIf="physicalProperties.icon_2"
+                            [svgIcon]="toLower(physicalProperties.icon_2)" class="svg-icon"></mat-icon>
+                        {{ physicalProperties.icon_info_2 }}
                     </div>
                     <!-- <div class="phys-image-info-2"></div> -->
-                    <div class="phys-description">{{ addInfo.physical_properties.description }}</div>
+                    <div class="phys-description">{{ physicalProperties.description }}</div>
                 </ng-container>
 
 
@@ -60,26 +60,26 @@
                     </mat-panel-title>
                 </mat-expansion-panel-header>
 
-                <div class="how-spread-container" *ngIf="addInfo && addInfo.how_spread">
+                <div class="how-spread-container" *ngIf="howSpread">
                     <div class="how-spread-item">
                         <div class="popup-panel-50-50">
                             <div>
-                                <span class="bold">Ғарыш</span>{{addInfo.how_spread.space}}<br>
-                                <span class="bold">Күн</span> {{addInfo.how_spread.sun}}<br>
-                                <span class="bold">Жер қыртысы</span> {{addInfo.how_spread.earth}}<br>
+                                <span class="bold">Ғарыш</span> {{howSpread.space}}<br>
+                                <span class="bold">Күн</span> {{howSpread.sun}}<br>
+                                <span class="bold">Жер қыртысы</span> {{howSpread.earth}}<br>
                             </div>
                             <div>
-                                <span class="bold">Cу</span> {{addInfo.how_spread.water}}<br>
-                                <span class="bold">Адам денесі</span> {{addInfo.how_spread.man}}<br>
+                                <span class="bold">Cу</span> {{howSpread.water}}<br>
+                                <span class="bold">Адам денесі</span> {{howSpread.man}}<br>
                             </div>
                         </div>
 
                         <br>
 
                         <div class="how-spread-desc-speed popup-panel-60-40">
-                            <div class="description" [innerHtml]="addInfo.how_spread.description"></div>
+                            <div class="description" [innerHtml]="howSpread.description"></div>
                             <div>
-                                <ng-container *ngIf="addInfo.how_spread.description">
+                                <ng-container *ngIf="howSpread.description">
                                     <mat-icon svgIcon="picker" class="svg-icon"></mat-icon>
                                 </ng-container>
                             </div>
@@ -97,16 +97,16 @@
                     </mat-panel-title>
                 </mat-expansion-panel-header>
 
-                <ng-container *ngIf="addInfo && addInfo.how_taken">
-                    <div class="description" [innerHtml]="addInfo.how_taken.description">
+                <ng-container *ngIf="addInfo && howTaken">
+                    <div class="description" [innerHtml]="howTaken.description">
                     </div>
                     <br>
 
                     <div class="popup-panel-80-20">
-                        <div class="float-left formula" [innerHtml]="addInfo.how_taken.formula">
+                        <div class="float-left formula" [innerHtml]="howTaken.formula">
                         </div>
-                        <div class="float-right" *ngIf="addInfo.how_taken.icon">
-                            <mat-icon [svgIcon]="toLower(addInfo.how_taken.icon)" class="svg-icon"></mat-icon>
+                        <div class="float-right" *ngIf="howTaken.icon">
+                            <mat-icon [svgIcon]="toLower(howTaken.icon)" class="svg-icon"></mat-icon>
                         </div>
                     </div>
                 </ng-container>
@@ -122,13 +122,13 @@
 
                 <div class="popup-panel-80-20">
                     <div class="float-left">
-                        <div *ngIf="addInfo && addInfo.chemical_properties"
-                            [innerHtml]="addInfo.chemical_properties.description">
+                        <div *ngIf="chemicalProperties"
+                            [innerHtml]="chemicalProperties.description">
                         </div>
                     </div>
                     <div class="float-right">
-                        <div *ngIf="addInfo && addInfo.chemical_properties && addInfo.chemical_properties.icon">
-                            <mat-icon [svgIcon]="toLower(addInfo.chemical_properties.icon)" class="svg-icon"></mat-icon>
+                        <div *ngIf="addInfo && chemicalProperties && chemicalProperties.icon">
+                            <mat-icon [svgIcon]="toLower(chemicalProperties.icon)" class="svg-icon"></mat-icon>
                         </div>
                     </div>
                 </div>
@@ -142,20 +142,20 @@
                         <span class="bold">Қолданыс орындары</span>
                     </mat-panel-title>
                 </mat-expansion-panel-header>
-                <div class="how-used" *ngIf="addInfo && addInfo.how_used">
+                <div class="how-used" *ngIf="addInfo && howUsed">
                     <div class="grid-item">
-                        <mat-icon class="svg-icon" [svgIcon]="toLower(addInfo.how_used.icon_1)"></mat-icon>
-                        <div>{{addInfo.how_used.icon_info_1}}</div>
+                        <mat-icon class="svg-icon" [svgIcon]="toLower(howUsed.icon_1)"></mat-icon>
+                        <div>{{howUsed.icon_info_1}}</div>
                     </div>
 
                     <div class="grid-item">
-                        <mat-icon class="svg-icon" [svgIcon]="toLower(addInfo.how_used.icon_2)"></mat-icon>
-                        <div>{{addInfo.how_used.icon_info_2}}</div>
+                        <mat-icon class="svg-icon" [svgIcon]="toLower(howUsed.icon_2)"></mat-icon>
+                        <div>{{howUsed.icon_info_2}}</div>
                     </div>
 
                     <div class="grid-item">
-                        <mat-icon class="svg-icon" [svgIcon]="toLower(addInfo.how_used.icon_3)"></mat-icon>
-                        <div>{{addInfo.how_used.icon_info_3}}</div>
+                        <mat-icon class="svg-icon" [svgIcon]="toLower(howUsed.icon_3)"></mat-icon>
+                        <div>{{howUsed.icon_info_3}}</div>
                     </div>
                 </div>
             </mat-expansion-panel>

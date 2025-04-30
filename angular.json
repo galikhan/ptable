@@ -8,7 +8,7 @@
 		}
 	},
 	"projects": {
-		"ptable": {
+		"sart": {
 			"projectType": "application",
 			"schematics": {},
 			"root": "",
@@ -18,7 +18,7 @@
 				"build": {
 					"builder": "@angular-devkit/build-angular:browser",
 					"options": {
-						"outputPath": "dist/ptable",
+						"outputPath": "dist/sart",
 						"index": "src/index.html",
 						"main": "src/main.ts",
 						"polyfills": [
@@ -84,16 +84,16 @@
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"configurations": {
 						"production": {
-							"buildTarget": "ptable:build:production"
+							"buildTarget": "sart:build:production"
 						},
 						"development": {
-							"buildTarget": "ptable:build:development"
+							"buildTarget": "sart:build:development"
 						},
 						"staging": {
-							"buildTarget": "ptable:build:staging"
+							"buildTarget": "sart:build:staging"
 						},
 						"local": {
-							"buildTarget": "ptable:build:local"
+							"buildTarget": "sart:build:local"
 						}
 					},
 					"defaultConfiguration": "development"
@@ -101,7 +101,7 @@
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n",
 					"options": {
-						"buildTarget": "ptable:build"
+						"buildTarget": "sart:build"
 					}
 				},
 				"test": {

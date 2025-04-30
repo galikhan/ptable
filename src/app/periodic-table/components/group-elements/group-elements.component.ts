@@ -69,7 +69,6 @@ export class GroupElementsComponent implements OnInit {
   metals = []
 
   ngOnInit(): void {
-    console.log('elements', this.elements);
     this.enableAllTypes();
     this.stateService.stateObservable.subscribe(result => {
       if (result === 'C') {

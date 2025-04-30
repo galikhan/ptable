@@ -6,7 +6,7 @@ export interface ElementInfo {
     atomicProperties: string;
     chemicalProperties: string;
     physicalProperties: string;
-    hasTaken: string;
-    hasSpread: string;
+    howTaken: string;
+    howSpread: string;
     howUsed: string;
 }

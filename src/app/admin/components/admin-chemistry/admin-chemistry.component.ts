@@ -45,8 +45,8 @@ export class AdminChemistryComponent implements OnInit {
       atomicProperties: this.fb.control('', [Validators.required]),
       physicalProperties: this.fb.control('', [Validators.required]),
       chemicalProperties: this.fb.control('', [Validators.required]),
-      hasTaken: this.fb.control('', [Validators.required]),
-      hasSpread: this.fb.control('', [Validators.required]),
+      howTaken: this.fb.control('', [Validators.required]),
+      howSpread: this.fb.control('', [Validators.required]),
       howUsed: this.fb.control('', [Validators.required])
     });
   }
@@ -76,8 +76,8 @@ export class AdminChemistryComponent implements OnInit {
         atomicProperties: this.fb.control(elementInfo.atomicProperties, [Validators.required]),
         physicalProperties: this.fb.control(elementInfo.physicalProperties, [Validators.required]),
         chemicalProperties: this.fb.control(elementInfo.chemicalProperties, [Validators.required]),
-        hasTaken: this.fb.control(elementInfo.hasTaken, [Validators.required]),
-        hasSpread: this.fb.control(elementInfo.hasSpread, [Validators.required]),
+        howTaken: this.fb.control(elementInfo.howTaken, [Validators.required]),
+        howSpread: this.fb.control(elementInfo.howSpread, [Validators.required]),
         howUsed: this.fb.control(elementInfo.howUsed, [Validators.required])
       });
     }
